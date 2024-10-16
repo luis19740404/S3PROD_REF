@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_GESSOC",
+  "description" : "Gestion des sociétés",
+  "creationDate" : "2004-07-30 09:50:15",
+  "updateDate" : "2007-03-30 11:23:06",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcgestionsoc",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCGSSO",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

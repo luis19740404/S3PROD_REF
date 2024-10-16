@@ -1,0 +1,433 @@
+DECLARER WFINI;W_FLG_INIT 1
+DECLARER WFOPO;W_FLG_OPT_OK 1
+DECLARER WFERR;W_FLG_ERREUR 1
+DECLARER WFTRO;W_FLG_TRT_OPT 1
+DECLARER I 3;0
+%QUESTION *LI TITRE_TRS_01
+%%  Indiquez le titre de l'écran de gestion
+%QUESTION *EN ENTITE_GEREE
+%%  Indiquez le nom de l'entité à gérer.
+%CREER_TRS 01 $TITRE_TRS_01 GES_POS
+%AFFECTER 01 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 01
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez visualiser sur
+%%  l'écran de gestion. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 01
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin et notamment les options
+%%  disponibles : définissez la zone de positionnement en E/S et donnez lui
+%%  un nom significatif. Si vous générez sur AS/400, définissez également les
+%%  références d'aide UIM : nom aide = XXXXXX01 ;
+%%  Nom panel groupe =XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%QUESTION *LI TITRE_TRS_02
+%%  Indiquez le titre de l'écran de confirmation de suppression
+%CREER_TRS 02 $TITRE_TRS_02 CONFIR_SUPPRESS
+%AFFECTER 02 $ENTITE_GEREE
+%TRS 02
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez visualiser sur
+%%  l'écran de confirmation de suppression.
+%%  Pour cela choisissez  Entités.
+%% Ne spécifiez aucun accès pour le chargement du sous-fichier.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 02
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%QUESTION *ON 95
+%%  L'accès à l'entité défini au moment de la sélection des informations
+%%  se fait-il sur une zone alphabétique ?
+%QUESTION *FI FICHIER_R
+%%  Donnez le nomexact du fichier (physique ou logique) dont la clé
+%%  représente l'identifiant de l'entité gérée
+%QUESTION *ON 94
+%%  La dernière zone de cette clé est-elle alphabétique ?
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  accédez à la définition de la cinématique et controlez
+%%  qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%
+%%           Faire ENTREE pour continuer.
+%RECUPERER_ID *LIMDA $ENTITE_GEREE LIST_PARAM
+%RECUPERER_ID *VAMDA $ENTITE_GEREE ** ZONE_GEREE
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1
+%RECUPERER_VUE *VA $ENTITE_GEREE ** CLE_VUE
+%TRS 01
+%QUESTION *VA ZONE_POSITION
+%%  Donnez le nom de la zone "A partir de" qui correspond à l'accès
+%%  défini sur l'entité.
+*
+*
+INITIALISER 01
+TRAITER     01
+******************
+TRANSACTION 01
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+*
+SI *F12
+  P_COD_ACTION = 'PR'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+DECLARER PCRET;P_COD_RETOUR 1
+DECLARER PCACT;P_COD_ACTION 2
+%*
+***MODIF
+%* Créez le programme de mise à jour avec le type de dialogue
+%* CUA_MISE_A_JOUR, et les paramètres cités dans l'énoncé des
+%* exercices.
+%*
+***MODIF
+%* Passez le contexe
+%*
+SI *F06
+  *
+    *
+    * Mise à blanc de la zone clé
+    *
+    %SI 94
+    $ZONE_GEREE = *BLANK
+    %FIN
+    %SI N94
+    $ZONE_GEREE = 0
+    %FIN
+    *
+    ***MODIF
+    %* Initialisez les paramètres
+    %* Appelez le programme de mise à jour avec les paramètres
+    %*
+    SI *IN90 = '1'
+      *
+      * Erreur dans l'appel du programme
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+    SI W_FLG_ERREUR = '1'
+      ENVOYER_MSG SYS0010
+      TRAITER 01
+    FIN
+    SI P_COD_ACTION = 'EX'
+      *
+      * Retour du programme de création par F3 : Arret du programme de
+      * gestion
+      *
+      P_COD_RETOUR = *BLANK
+      TERMINER
+    FIN
+    INITIALISER 01
+    TRAITER 01
+FIN
+%*
+SI *PAGAV
+    PAGINER_AVANT
+FIN
+VERIFIER 01
+SI P_COD_ACTION = 'EX'
+  *
+  * Le traitement d'une option s'est terminé par F3=Exit
+  *
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *DEL04 > 0
+  *
+  * Des éléments ont été placés dans le sous-fichier de confirmation
+  * de suppression ; positionnement en début de liste et envoi de
+  * l'écran
+  *
+  *IN84 = '1'
+  WRAN04 = 1
+  TRAITER 02
+FIN
+SI W_FLG_INIT = '1'
+  *
+  * Réinitialisation à effectuer à la suite d'une copie
+  *
+  INITIALISER 01
+FIN
+*
+* Positionnement dans la liste
+*
+%SI 95
+SI $ZONE_POSITION <> *BLANK
+%FIN
+%SI N95
+SI $ZONE_POSITION <> 0
+%FIN
+  INITIALISER 01
+FIN
+TRAITER 01
+******************
+TRANSACTION 02
+******************
+SI *F12
+  *
+  * Demande de suppression non confirmée
+  *
+  P_COD_ACTION = *BLANK
+  ENVOYER_MSG *EFF_ANCIEN
+  TRAITER 01
+FIN
+VALIDER 01
+SI W_FLG_ERREUR = '0'
+  *
+  * Pas d'erreur pendant la suppression
+  *
+  INITIALISER 01
+FIN
+TRAITER     01
+******************
+INITIALISATION  01
+******************
+P_COD_ACTION = *BLANK
+EFFACER 1
+*
+* La zone clé de la vue de chargement du sous-fichier est
+* remplie avec la valeur de la zone de positionnement
+*
+$CLE_VUE = $ZONE_POSITION
+INSERER_STD
+GESTION_SFL     1
+INSERER_STD
+*
+* Pour le cas où la dernière ligne de la page précedente
+* était en erreur
+*
+INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+MAJ_SFL
+FIN_GESTION_SFL
+**********************
+VERIFICATION    01
+**********************
+EFFACER 4
+ENVOYER_MSG *EFF_ANCIEN
+W_FLG_ERREUR = '0'
+W_FLG_INIT = '0'
+*EFF_SFLMSG = '0'
+P_COD_ACTION = *BLANK
+INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+GESTION_SFL     1
+INSERER_STD
+W_FLG_OPT_OK = *BLANK
+*
+* Traitement des options standards
+*
+SI ZZ_COD_OPTION = ' 2';'2 '
+    W_FLG_OPT_OK = '1'
+    *
+    ***MODIF
+    %* Initialisez les paramètres
+    %* Appelez le programme de mise à jour avec les paramètres
+    %*
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+    *
+    * Rafraichissement de la ligne modifiée
+    *
+    SI P_COD_ACTION <> 'EX';'PR' ET W_FLG_ERREUR = '0' ET P_COD_RETOUR = *BLANK
+      P_COD_ACTION = *BLANK
+      PLACER_A_GAUCHE $CLE_VUE W_SV_CLE
+      LIRE VUE_RAFRAICH
+      PRESENTER $ENTITE_GEREE
+      PLACER_A_GAUCHE W_SV_CLE $CLE_VUE
+      POSITIONNER_AP $ENTITE_GEREE
+    FIN
+FIN
+*
+SI ZZ_COD_OPTION = '4 ';' 4'
+    *
+    * Chargement du sous-fichier de confirmation
+    *
+    P_COD_RETOUR = *BLANK
+    W_FLG_OPT_OK = '1'
+&CREER_LIGNE_SOUS_FICHIER (4)
+FIN
+%*
+***MODIF
+%* Créez le programme de visualisation avec le type de dialogue
+%* CUA_VISUR, et les paramètres cités dans l'énoncé des
+%* exercices.
+%*
+***MODIF
+%* Passez le contexe
+%*
+SI ZZ_COD_OPTION = ' 5';'5 '
+    W_FLG_OPT_OK = '1'
+    *
+    ***MODIF
+    %* Initialisez les paramètres
+    %* Appelez le programme de mise à jour avec les paramètres
+    %*
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+FIN
+*
+* Traitement des erreurs
+*
+%QUESTION **
+%%  Vous allez devoir maintenant spécifier des numéros de messages.
+%%  Auparavant accédez au glossaire pour retrouver ou définir ces
+%%  messages.Ces messages sont prévus pour passer en paramètre
+%% l'ensemble des zones constituant l'identifiant . Il faut donc
+%%  définir ces paramètres dans le message dansl'ordre des clés.
+%%           Faire ENTREE pour continuer.
+%QUESTION *MG MSG_VERR
+%%  Donnez l'identifiant du message "Enregistrement verrouillé"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%% Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+%QUESTION *MG MSG_NTRV
+%%  Donnez l'identifiant du message "Enregistrement non trouvé"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%% Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+SI ZZ_COD_OPTION <> *BLANK ET W_FLG_OPT_OK = '1'
+  *
+  * Erreur lors du traitement de l'option
+  *
+  REGLE_GESTION SYS0010 ZZ_COD_OPTION
+  SI W_FLG_ERREUR = '1'
+    ENVOYER_MSG *EFF_TOUT
+    ANOMALIE
+  FIN
+  *
+  REGLE_GESTION $MSG_VERR ZZ_COD_OPTION
+  *
+  * Elément verrouillé lors de l'appel de l'option
+  *
+  SI P_COD_RETOUR = '2'
+    INIT_MSG $LIST_PARAM
+    ANOMALIE
+  FIN
+  *
+  REGLE_GESTION $MSG_NTRV ZZ_COD_OPTION
+  *
+  * Elément non trouvé lors de l'appel de l'option
+  *
+  SI P_COD_RETOUR = '1'
+    INIT_MSG $LIST_PARAM
+    ANOMALIE
+  FIN
+  *
+  SI P_COD_ACTION = 'PR' OU P_COD_ACTION = 'EX'
+    *
+    * L'option a été terminée par F3=Exit ou F12=Précédent
+    *
+    QUITTER_SFL
+  FIN
+  SI W_FLG_ERREUR = '0' ET P_COD_RETOUR = *BLANK ET ZZ_COD_OPTION <> '4 ';' 4'
+    ZZ_COD_OPTION = *BLANK
+    *
+    * Pour le cas où la ligne précédemment traitée
+    * était en erreur
+    *
+    INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+  FIN
+FIN
+*
+REGLE_GESTION SYS0006 ZZ_COD_OPTION
+SI ZZ_COD_OPTION <> *BLANK ET W_FLG_OPT_OK = *BLANK
+  *
+  * Option saisie incorrecte
+  *
+  INIT_MSG ZZ_COD_OPTION
+  ERREUR
+FIN
+FIN_GESTION_SFL
+**********************
+VALIDATION      01
+**********************
+W_FLG_ERREUR = '0'
+GESTION_SFL     1
+INSERER_STD
+SI ZZ_COD_OPTION = '4 ';' 4'
+  *
+  * Appel du programme de maintenance avec code action SU
+  *
+  ***MODIF
+  %* Initialisez les paramètres
+  %* Appelez le programme de mise à jour avec les paramètres
+  %*
+  SI *IN90 = '1'
+    *
+    * Erreur lors du traitement de suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG SYS0010
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  SI P_COD_RETOUR = '2'
+    *
+    * Elément verrouillé lors de la suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG $MSG_VERR $LIST_PARAM
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  *
+  SI P_COD_RETOUR = '1'
+    *
+    * Elément non trouvé lors de la suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG $MSG_NTRV $LIST_PARAM
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  *
+FIN
+FIN_GESTION_SFL
+*
+*
+%SI 94
+DECLARER WSVCL;W_SV_CLE 100
+%FIN
+%SI N94
+DECLARER WSVCL;W_SV_CLE 18;0
+%FIN
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

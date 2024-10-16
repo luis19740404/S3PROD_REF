@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CALTOT_COMMANDE",
+  "description" : "Calcul du total de la commande",
+  "creationDate" : "1999-01-18 13:04:21",
+  "updateDate" : "1999-01-18 13:04:21",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CA",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

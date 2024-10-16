@@ -1,0 +1,6 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   * Initialisation de $$_AN		
+*ROW_METADATA(ADELIA                 )   SI $$_AN = 0	
+*ROW_METADATA(ADELIA                 )      $$_AN = *ANNEE4
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

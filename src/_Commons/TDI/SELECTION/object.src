@@ -1,0 +1,227 @@
+%QUESTION *LI TITRE_TRS_01
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 01
+%%  L'écran est-il en fenêtre ?
+%QUESTION *ON 02
+%%  Voulez-vous définir un critère de chargement
+%%  par égalité sur clé? (Exemple : sélection d'un paramètre
+%%  d'un type donné)
+%SI N02
+%QUESTION *ON 09
+%%  Voulez-vous définir un "Afficher à partir de" ?
+%FIN
+%SI 01
+%SI N09
+%CREER_TRS 01 $TITRE_TRS_01 FEN_SFL_SELECT
+%FIN
+%SI 09
+%CREER_TRS 01 $TITRE_TRS_01 FEN_SFL_SEL_POS
+%FIN
+%FIN
+%SI N01
+%SI N09
+%CREER_TRS 01 $TITRE_TRS_01 SFL_SELECTION
+%FIN
+%SI 09
+%CREER_TRS 01 $TITRE_TRS_01 SFL_SEL_POS
+%FIN
+%FIN
+%QUESTION *EN ENTITE_GEREE
+%%  Indiquez le nom de l'entité dans laquelle l'information est
+%%  sélectionnée.
+%AFFECTER 01 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 01
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez visualiser sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 01
+%SI N01
+%SI N09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%FIN
+%SI 09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin : définissez la zone
+%%  de positionnement en E/S et donnez lui un nom significatif.
+%%  Si vous générez sur AS/400, définissez également les références d'aide
+%%  UIM : nom aide = XXXXXX01 ; Nom panel groupe =XXXXXX oùXXXXXX représente
+%%  le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%FIN
+%FIN
+%SI 01
+%SI N09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le nom de l'objet
+%%  programme.
+%% Vous devez également tracer le cadre de la fenêtre.
+%%
+%% Utilisez le menu de service pour définir l'aide générale.
+%FIN
+%SI 09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin : définissez la zone
+%%  de positionnement en E/S et donnez lui un nom significatif.
+%%  Si vous générez sur AS/400, définissez également les références d'aide
+%%  UIM : nom aide = XXXXXX01 ; Nom panel groupe =XXXXXX oùXXXXXX représente
+%%  le code maquette.
+%% Vous devez également tracer le cadre de la fenêtre.
+%% Utilisez le menu de service pour définir l'aide générale.
+%FIN
+%FIN
+%SI 09
+%QUESTION *ON 95
+%%  L'accès à l'entité se fait-il sur une zone alphabétique ?
+%FIN
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  accédez à la définition de la cinématique et controlez
+%%  qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%
+%%           Faire ENTREE pour continuer.
+%RECUPERER_ID *VAMDA $ENTITE_GEREE ** ZONE_GEREE
+%RECUPERER_VUE *VA $ENTITE_GEREE ** CLE_VUE
+%QUESTION *VA PARAM_SELECT
+%%  Créez la zone paramètre recevant l'information sélectionnée
+%%  en faisant référence à celle-ci.
+%%  Choisissez  Données  pour accéder à l'environnement de
+%%  données.
+%%  Spécifiez ici le nom de la zone après l'avoir créée.
+%QUESTION *ON 03
+%%  Voulez-vous récupérer une seconde information (par exemple un
+%%  libellé lié à un code) ?
+%SI 03
+%QUESTION *VA ZONE_SUPPL
+%%  Spécifiez le nom de la zone écran qui alimente cette
+%%  seconde information.
+%QUESTION *VA PARAM_SELECT_S
+%%  Créez la zone paramètre recevant l'information sélectionnée
+%%  en faisant référence à la zone écran préalablement indiquée.
+%%  Choisissez  Données  pour accéder à l'environnement de
+%%  données.
+%%  Spécifiez ici le nom de la zone après l'avoir créée.
+%FIN
+%SI 09
+%QUESTION *VA ZONE_POSITION
+%%  Donner le nom de la zone "A partir de"
+%FIN
+%SI 02
+%RECUPERER_VUE *LI $ENTITE_GEREE LIST_PARAM
+%SI N03
+RECEVOIR P_COD_RETOUR P_COD_ACTION $LIST_PARAM $PARAM_SELECT
+%FIN
+%SI 03
+RECEVOIR P_COD_RETOUR P_COD_ACTION $LIST_PARAM $PARAM_SELECT $PARAM_SELECT_S
+%FIN
+%FIN
+%SI N02
+%SI N03
+RECEVOIR P_COD_RETOUR P_COD_ACTION $PARAM_SELECT
+%FIN
+%SI 03
+RECEVOIR P_COD_RETOUR P_COD_ACTION $PARAM_SELECT $PARAM_SELECT_S
+%FIN
+%FIN
+INITIALISER 01
+TRAITER     01
+******************
+TRANSACTION 01
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  P_COD_ACTION = 'PR'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+VERIFIER 01
+*
+* Fin du programme si une sélection a été effectuée
+*
+SI ZZ_COD_SELECT = '1'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+%SI 09
+*
+* Positionnement dans la liste
+*
+%SI 95
+SI $ZONE_POSITION <> *BLANK
+%FIN
+%SI N95
+SI $ZONE_POSITION <> 0
+%FIN
+  INITIALISER 01
+FIN
+%FIN
+TRAITER 01
+******************
+INITIALISATION  01
+******************
+%SI 09
+*
+* La zone clé de la vue de chargement du sous-fichier est
+* remplie avec la valeur de la zone de positionnement
+*
+$CLE_VUE = $ZONE_POSITION
+%FIN
+INSERER_STD
+EFFACER 1
+GESTION_SFL     1
+INSERER_STD
+MAJ_SFL
+FIN_GESTION_SFL
+******************
+VERIFICATION 01
+******************
+GESTION_SFL 1
+REGLE_GESTION 0006 ZZ_COD_SELECT
+SI ZZ_COD_SELECT <> ' ';'1'
+  INIT_MSG ZZ_COD_SELECT
+  ERREUR
+FIN
+SI ZZ_COD_SELECT = '1'
+  $PARAM_SELECT = $ZONE_GEREE
+  %SI 03
+  $PARAM_SELECT_S = $ZONE_SUPPL
+  %FIN
+  QUITTER_SFL
+FIN
+FIN_GESTION_SFL
+*
+*
+DECLARER PCRET;P_COD_RETOUR 1
+DECLARER PCACT;P_COD_ACTION 2
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

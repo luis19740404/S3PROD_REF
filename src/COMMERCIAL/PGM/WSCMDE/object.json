@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "WSCMDE",
+  "description" : "W-S Commande",
+  "creationDate" : "2022-11-21 15:00:09",
+  "updateDate" : "2022-11-21 15:00:09",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WSCMDE",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "WSCMDE",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "manageHistoryButtons" : "N"
+}

@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "SAI_2T_ENTREE",
+  "description" : "MAJ 2 Trs / validation par ENTREE",
+  "creationDate" : "1996-06-14 12:47:18",
+  "updateDate" : "1996-06-24 09:02:19",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

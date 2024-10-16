@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO5_BIS",
+  "description" : "Programme de création",
+  "creationDate" : "1999-01-18 13:54:50",
+  "updateDate" : "2000-07-07 15:12:33",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAEX5B",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEX5B",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

@@ -1,0 +1,16 @@
+[ {
+  "id" : {
+    "name" : "_WMDSZ_ENTRY"
+  },
+  "value" : "N"
+}, {
+  "id" : {
+    "name" : "_WMDSZ_REALM"
+  },
+  "value" : "adelia"
+}, {
+  "id" : {
+    "name" : "ERROR_MESSAGE_PLATFORM"
+  },
+  "value" : "C"
+} ]

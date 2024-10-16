@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="CLIENT"/>
+    </entities>
+    <fields>
+        <field description="EDTETQ" guideWord="ZCADR_01_CLI" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.ADR_01_CLI" scale="-1" type="STRING"/>
+        <field description="EDTETQ" guideWord="ZCADR_02_CLI" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.ADR_02_CLI" scale="-1" type="STRING"/>
+        <field description="EDTETQ" guideWord="ZCBUR_DIS_CLI" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.BUR_DIS_CLI" scale="-1" type="STRING"/>
+        <field description="EDTETQ" guideWord="ZCNOM_CLIENT" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.NOM_CLIENT" scale="-1" type="STRING"/>
+        <field description="EDTETQ" guideWord="WLIBELLE" kind="VARIABLE" layoutCode="_data" length="21" type="STRING"/>
+        <field description="EDTETQ" kind="CONSTANT" length="2" scale="4">
+            <text text="ffffffff"/>
+        </field>
+    </fields>
+</report>

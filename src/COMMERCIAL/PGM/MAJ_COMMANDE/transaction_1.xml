@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<transaction format1="01" functionKeys="  AX       A            " transactionType="FORMAT_LIGNE" updateDate="2011-02-08" updateTime="10:59:02" windowType="SCREEN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml transaction.xsd">
+    <formats>
+        <format addMode="false" assume="false" blink="false" clear="false" code="01" eraseInput="false" guideWord="FOR01" help="false" jumpLinesBefore="1" keep="false" lock="false" nbColumns="1" nbLines="23" overlay="false" protect="false" putOvr="true" rollDown="false" rollUp="false" shortName="FOR01" truncate="false"/>
+    </formats>
+    <entities>
+        <entity format="01" name="ENTCDE">
+            <properties>
+                <property access="1" name="NUM_COMMANDE"/>
+            </properties>
+        </entity>
+        <entity format="01" name="CLIENT">
+            <properties>
+                <property access="1" name="COD_CLIENT"/>
+            </properties>
+        </entity>
+        <entity format="01" name="REGLEMT">
+            <properties>
+                <property access="1" name="COD_REGLEMT"/>
+            </properties>
+        </entity>
+    </entities>
+    <fields>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="41" y="1">
+            <text/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="NOM DU PROGRAMME" formatCode="01" guideWord="XNOM_PGM" kind="USER_VARIABLE" layoutCode="XLIPGM" length="10" lowerCase="false" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" x="2" y="1">
+            <parameters>
+                <parameter key="DFT" value="*NOM_PGM"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="UTILISATEUR" formatCode="01" guideWord="XUSER" kind="USER_VARIABLE" layoutCode="XUSER" length="10" lowerCase="false" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" x="2" y="2">
+            <parameters>
+                <parameter key="DFT" value="*USER"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Date du système" formatCode="01" guideWord="DATE" hilight="true" kind="DATE" layoutCode="DATE" length="6" lowerCase="false" mandatoryFieldEnd="false" mode="OUTPUT" type="NUMBER" validExtendedFieldName="false" validFieldName="false" x="71" y="1">
+            <parameters>
+                <parameter key="EDW" value="'  /  /  '"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Heure du système" formatCode="01" guideWord="TIME" hilight="true" kind="TIME" layoutCode="TIME" length="6" lowerCase="false" mandatoryFieldEnd="false" mode="OUTPUT" type="NUMBER" validExtendedFieldName="false" validFieldName="false" x="71" y="2">
+            <parameters>
+                <parameter key="EDW" value="'  :  :  '"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="7" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="23">
+            <text text="F3=Exit"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="8" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="11" y="23">
+            <text text="F4=Guide"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="11" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="21" y="23">
+            <text text="F12=Annuler"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" hilight="true" kind="CONSTANT" layoutCode="*" length="20" lowerCase="false" mandatoryFieldEnd="false" underscore="true" validExtendedFieldName="false" validFieldName="false" x="27" y="1">
+            <text text="Mise à jour commande"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Numero de commande" editCode="CODE_Z" formatCode="01" guideWord="ZENUM_COMMANDE" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.NUM_COMMANDE" layoutCode="ZENCDE" length="5" logicalProperty="ENTCDE.NUM_COMMANDE" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="NUMBER" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="4"/>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="4">
+            <text text="Numero de commande . . . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Objet de la commande" formatCode="01" guideWord="ZELIB_OBJ_CDE" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.LIB_OBJ_CDE" layoutCode="ZELOBC" length="30" logicalProperty="ENTCDE.LIB_OBJ_CDE" lowerCase="true" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="STRING" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="6"/>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="6">
+            <text text="Objet de la commande . . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Date commande" formatCode="01" guideWord="ZZ_DAT_COMMANDE" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.DAT_COMMANDE" layoutCode="ZZATCOM" length="8" logicalProperty="ENTCDE.DAT_COMMANDE" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="NUMBER" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="8">
+            <parameters>
+                <parameter key="EDW" value="'  /  /    '"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="8">
+            <text text="Date commande. . . . . . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Code client" formatCode="01" guideWord="ZECOD_CLIENT" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.COD_CLIENT" layoutCode="ZECCLI" length="6" logicalProperty="ENTCDE.COD_CLIENT" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="STRING" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="10">
+            <parameters>
+                <parameter key="EXP" value="000001"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="10">
+            <text text="Code client. . . . . . . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Code règlement" formatCode="01" guideWord="ZECOD_REGLEMT" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.COD_REGLEMT" layoutCode="ZECRGT" length="2" logicalProperty="ENTCDE.COD_REGLEMT" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="STRING" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="11">
+            <parameters>
+                <parameter key="EXP" value="ES"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="11">
+            <text text="Code règlement . . . . . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Commande validée (O/N)" formatCode="01" guideWord="ZECOD_COM_VALID" kind="VARIABLE" kinematicLogicalProperty="ENTCDE.COD_COM_VALID" layoutCode="ZZDCOMVAL" length="1" logicalProperty="ENTCDE.COD_COM_VALID" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="STRING" underscore="true" validExtendedFieldName="false" validFieldName="false" viewCode="DA" x="33" y="15"/>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="01" kind="CONSTANT" layoutCode="*" length="30" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="2" y="15">
+            <text text="Commande validée (O/N) . . . ."/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Nom client" formatCode="01" guideWord="ZCNOM_CLIENT" kind="VARIABLE" kinematicLogicalProperty="CLIENT.NOM_CLIENT" layoutCode="ZCLCLI" length="30" logicalProperty="CLIENT.NOM_CLIENT" lowerCase="true" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" viewCode="DB" x="40" y="10">
+            <parameters>
+                <parameter key="EXP" value="HARDIS Progiciel"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Libelle de réglement" formatCode="01" guideWord="ZRLIB_REGLEMT" kind="VARIABLE" kinematicLogicalProperty="REGLEMT.LIB_REGLEMT" layoutCode="ZRLRGT" length="10" logicalProperty="REGLEMT.LIB_REGLEMT" lowerCase="true" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" viewCode="DC" x="40" y="11">
+            <parameters>
+                <parameter key="EXP" value="Espèces"/>
+            </parameters>
+        </field>
+    </fields>
+</transaction>

@@ -1,0 +1,7 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(FMT_PYM        20050728)   * Contrôle Numérique sur $$ : erreur si à zéro
+*ROW_METADATA(FMT_PYM        20050728)   PREPARER_MSG 0007 $$
+*ROW_METADATA(FMT_PYM        20050728)   SI $$ = 0
+*ROW_METADATA(ADELIA         00000000)      ERREUR
+*ROW_METADATA(ADELIA         00000000)   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

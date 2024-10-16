@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="SOCIETE"/>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDPES3" formatCode="  " guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="SOCIETE.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="EDPES3" formatCode="  " guideWord="ZZ_NOM_SOCIETE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="SOCIETE.NOM_SOCIETE" scale="-1" type="STRING"/>
+        <field description="EDPES3" formatCode="  " guideWord="WTOTO" kind="VARIABLE" layoutCode="_data" length="30" type="STRING"/>
+        <field description="EDPES3" formatCode="  " guideWord="*PGM" kind="VARIABLE" layoutCode="_data" length="10" type="STRING"/>
+        <field description="EDPES3" formatCode="  " guideWord="*USER" kind="VARIABLE" layoutCode="_data" length="10" type="STRING"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" scale="-1" type="STRING"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="PERSONNEL.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" layoutCode="_data" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" scale="2" type="NUMBER"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" scale="-1" type="STRING"/>
+        <field description="employes_societe" formatCode="  " guideWord="ZZ_PRN_PERSONNE" kind="VARIABLE" layoutCode="_data" length="20" logicalProperty="PERSONNEL.PRN_PERSONNE" scale="-1" type="STRING"/>
+        <field description="EDPES3" formatCode="  " kind="CONSTANT" length="1" scale="2"/>
+        <field description="EDPES3" formatCode="  " kind="CONSTANT" length="2" scale="2"/>
+        <field description="EDPES3" formatCode="  " kind="CONSTANT" length="3" scale="2"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="1" scale="1"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="2" scale="1"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="3" scale="1"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="4" scale="1"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="6" scale="1"/>
+        <field description="employes_societe" formatCode="  " kind="CONSTANT" length="13" scale="8"/>
+    </fields>
+</report>

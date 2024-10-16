@@ -1,0 +1,9 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   ********************************************
+*ROW_METADATA(ADELIA                 )   * CONTROLE TOUCHE GUIDE EFFECTUEE SUR ZONE *
+*ROW_METADATA(ADELIA                 )   * NON OPERATIONNELLE                       *
+*ROW_METADATA(ADELIA                 )   ********************************************
+*ROW_METADATA(ADELIA                 )   SI *F04
+*ROW_METADATA(ADELIA                 )     ENVOYER_MSG SYS9900
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

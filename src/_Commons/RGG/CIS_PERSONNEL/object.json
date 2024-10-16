@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CIS_PERSONNEL",
+  "description" : "Controle en cas suppression sur fichier personnel",
+  "creationDate" : "1999-01-18 12:50:00",
+  "updateDate" : "1999-01-18 13:18:11",
+  "visibility" : "PUBLIC",
+  "mrClass" : "SU",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

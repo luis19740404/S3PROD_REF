@@ -1,0 +1,795 @@
+DECLARER PCRET;P_COD_RETOUR 1
+DECLARER PCACT;P_COD_ACTION 2
+DECLARER WSVCL;W_SV_CLE 100
+DECLARER WSVCD;W_SV_CLE_DEP 100
+%QUESTION *ON 99
+%%  Ce programme a-t-il été préalablement défini dans un programme
+%%  de gestion ?
+%SI N99
+%QUESTION *EN ENTITE_GEREE
+%%  Donnez le nom de l'entité "maître" visualisée dans le programme.
+%FIN
+%QUESTION *LI TITRE_TRS_01
+%%  Indiquez le titre du premier écran
+%QUESTION *ON 10
+%%  L'écran permet-il de faire de la visualisation en sous-fichier?
+%SI 10
+%QUESTION *ON 11
+%%  Y a-t-il affichage simultané d'un second sous-fichier?
+%SI 11
+%CREER_TRS 01 $TITRE_TRS_01 SFL_2_AFFICHAGE
+%FIN
+%SI N11
+%CREER_TRS 01 $TITRE_TRS_01 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N10
+%QUESTION *ON 13
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 13
+%CREER_TRS 01 $TITRE_TRS_01 FORMAT_LIGNE
+%FIN
+%SI N13
+%CREER_TRS 01 $TITRE_TRS_01 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 01 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 01
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 01
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 02
+%%  Y a t'il un deuxième écran ?
+%SI 02
+%QUESTION *LI TITRE_TRS_02
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 20
+%%  L'écran permet-il de faire de la visualisation en sous-fichier ?
+%SI 20
+%QUESTION *ON 21
+%%  Y a-t-il affichage simultané d'un second sous-fichier ?
+%SI 21
+%CREER_TRS 02 $TITRE_TRS_02 SFL_2_AFFICHAGE
+%FIN
+%SI N21
+%CREER_TRS 02 $TITRE_TRS_02 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N20
+%QUESTION *ON 23
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 23
+%CREER_TRS 02 $TITRE_TRS_02 FORMAT_LIGNE
+%FIN
+%SI N23
+%CREER_TRS 02 $TITRE_TRS_02 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 02 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 02
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 02
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 03
+%%  Y a t'il un troisième écran ?
+%SI 03
+%QUESTION *LI TITRE_TRS_03
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 30
+%%  L'écran permet-il de faire de la visualisation en sous-fichier ?
+%SI 30
+%QUESTION *ON 31
+%%  Y a-t-il affichage simultané d'un second sous-fichier ?
+%SI 31
+%CREER_TRS 03 $TITRE_TRS_03 SFL_2_AFFICHAGE
+%FIN
+%SI N31
+%CREER_TRS 03 $TITRE_TRS_03 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N30
+%QUESTION *ON 33
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 33
+%CREER_TRS 03 $TITRE_TRS_03 FORMAT_LIGNE
+%FIN
+%SI N33
+%CREER_TRS 03 $TITRE_TRS_03 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 03 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 03
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 03
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 04
+%%  Y a t'il un quatrième écran ?
+%SI 04
+%QUESTION *LI TITRE_TRS_04
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 40
+%%  L'écran permet-il de faire de la visualisation en sous-fichier ?
+%SI 40
+%QUESTION *ON 41
+%%  Y a-t-il affichage simultané d'un second sous-fichier ?
+%SI 41
+%CREER_TRS 04 $TITRE_TRS_04 SFL_2_AFFICHAGE
+%FIN
+%SI N41
+%CREER_TRS 04 $TITRE_TRS_04 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N40
+%QUESTION *ON 43
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 43
+%CREER_TRS 04 $TITRE_TRS_04 FORMAT_LIGNE
+%FIN
+%SI N43
+%CREER_TRS 04 $TITRE_TRS_04 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 04 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 04
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 04
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 05
+%%  Y a t'il un cinquième écran ?
+%SI 05
+%QUESTION *LI TITRE_TRS_05
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 50
+%%  L'écran permet-il de faire de la visualisation en sous-fichier ?
+%SI 50
+%QUESTION *ON 51
+%%  Y a-t-il affichage simultané d'un second sous-fichier ?
+%SI 51
+%CREER_TRS 05 $TITRE_TRS_05 SFL_2_AFFICHAGE
+%FIN
+%SI N51
+%CREER_TRS 05 $TITRE_TRS_05 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N50
+%QUESTION *ON 53
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 53
+%CREER_TRS 05 $TITRE_TRS_05 FORMAT_LIGNE
+%FIN
+%SI N53
+%CREER_TRS 05 $TITRE_TRS_05 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 05 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 05
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 05
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 06
+%%  Y a t'il un sixième écran ?
+%SI 06
+%QUESTION *LI TITRE_TRS_06
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 60
+%%  L'écran permet-il de faire de la visualisation en sous-fichier?
+%SI 60
+%QUESTION *ON 61
+%%  Y a-t-il affichage simultané d'un second sous-fichier?
+%SI 61
+%CREER_TRS 06 $TITRE_TRS_06 SFL_2_AFFICHAGE
+%FIN
+%SI N61
+%CREER_TRS 06 $TITRE_TRS_06 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N60
+%QUESTION *ON 63
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 63
+%CREER_TRS 06 $TITRE_TRS_06 FORMAT_LIGNE
+%FIN
+%SI N63
+%CREER_TRS 06 $TITRE_TRS_06 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 06 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 06
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 06
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 07
+%%  Y a t'il un septième écran ?
+%SI 07
+%QUESTION *LI TITRE_TRS_07
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 70
+%%  L'écran permet-il de faire de la visualisation en sous-fichier?
+%SI 70
+%QUESTION *ON 71
+%%  Y a-t-il affichage simultané d'un second sous-fichier?
+%SI 71
+%CREER_TRS 07 $TITRE_TRS_07 SFL_2_AFFICHAGE
+%FIN
+%SI N71
+%CREER_TRS 07 $TITRE_TRS_07 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N70
+%QUESTION *ON 73
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 73
+%CREER_TRS 07 $TITRE_TRS_07 FORMAT_LIGNE
+%FIN
+%SI N73
+%CREER_TRS 07 $TITRE_TRS_07 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 07 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 07
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 07
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 08
+%%  Y a t'il un huitième écran ?
+%SI 08
+%QUESTION *LI TITRE_TRS_08
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 80
+%%  L'écran permet-il de faire de la visualisation en sous-fichier?
+%SI 80
+%QUESTION *ON 81
+%%  Y a-t-il affichage simultané d'un second sous-fichier?
+%SI 81
+%CREER_TRS 08 $TITRE_TRS_08 SFL_2_AFFICHAGE
+%FIN
+%SI N81
+%CREER_TRS 08 $TITRE_TRS_08 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N80
+%QUESTION *ON 83
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 83
+%CREER_TRS 08 $TITRE_TRS_08 FORMAT_LIGNE
+%FIN
+%SI N83
+%CREER_TRS 08 $TITRE_TRS_08 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 08 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 08
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 08
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 09
+%%  Y a t'il un neuvième écran ?
+%SI 09
+%QUESTION *LI TITRE_TRS_09
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 90
+%%  L'écran permet-il de faire de la visualisation en sous-fichier?
+%SI 90
+%QUESTION *ON 91
+%%  Y a-t-il affichage simultané d'un second sous-fichier?
+%SI 91
+%CREER_TRS 09 $TITRE_TRS_09 SFL_2_AFFICHAGE
+%FIN
+%SI N91
+%CREER_TRS 09 $TITRE_TRS_09 SFL_AFFICHAGE
+%FIN
+%FIN
+%SI N90
+%QUESTION *ON 93
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 93
+%CREER_TRS 09 $TITRE_TRS_09 FORMAT_LIGNE
+%FIN
+%SI N93
+%CREER_TRS 09 $TITRE_TRS_09 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 09 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 09
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  accédez à la définition de la cinématique et controlez
+%%  qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%
+%%           Faire ENTREE pour continuer.
+%RECUPERER_VUE *LI $ENTITE_GEREE LIST_PARAM
+%RECUPERER_ID *VAMDA $ENTITE_GEREE ** ZONE_ECRAN_CLE
+RECEVOIR P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+*
+*
+INITIALISER 01
+%SI N10
+SI P_COD_RETOUR <> *BLANK
+  *
+  * Erreur irrémédiable durant l'initialisation
+  *
+  TERMINER
+FIN
+%FIN
+TRAITER 01
+******************
+TRANSACTION 01
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 01
+FIN
+SI *F12
+  P_COD_ACTION = 'PR'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+%SI 10
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N02
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 02
+INITIALISER 02
+TRAITER 02
+******************
+TRANSACTION 02
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 02
+FIN
+SI *F12
+  TRAITER 01
+FIN
+%SI 20
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N03
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 03
+INITIALISER 03
+TRAITER 03
+******************
+TRANSACTION 03
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 03
+FIN
+SI *F12
+  TRAITER 02
+FIN
+%SI 30
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N04
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 04
+INITIALISER 04
+TRAITER 04
+******************
+TRANSACTION 04
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 04
+FIN
+SI *F12
+  TRAITER 03
+FIN
+VERIFIER 04
+%SI 40
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N05
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 05
+INITIALISER 05
+TRAITER 05
+******************
+TRANSACTION 05
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 05
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 04
+  FIN
+  TRAITER 04
+FIN
+%SI 50
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N06
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 06
+INITIALISER 06
+TRAITER 06
+******************
+TRANSACTION 06
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 06
+FIN
+SI *F12
+  TRAITER 05
+FIN
+VERIFIER 06
+%SI 60
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N07
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 07
+INITIALISER 07
+TRAITER 07
+******************
+TRANSACTION 07
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 07
+FIN
+SI *F12
+  TRAITER 06
+FIN
+VERIFIER 07
+%SI 70
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N08
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 08
+INITIALISER 08
+TRAITER 08
+******************
+TRANSACTION 08
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 08
+FIN
+SI *F12
+  TRAITER 07
+FIN
+VERIFIER 08
+%SI 80
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N09
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 09
+INITIALISER 09
+TRAITER 09
+******************
+TRANSACTION 09
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F04
+  ENVOYER_MSG SYS9900
+  TRAITER 09
+FIN
+SI *F12
+  TRAITER 08
+FIN
+VERIFIER 09
+%SI 90
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+*****************
+TRT_GUIDE 01
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%SI 02
+*****************
+TRT_GUIDE 02
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 03
+*****************
+TRT_GUIDE 03
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 04
+*****************
+TRT_GUIDE 04
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 05
+*****************
+TRT_GUIDE 05
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 06
+*****************
+TRT_GUIDE 06
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 07
+*****************
+TRT_GUIDE 07
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 08
+*****************
+TRT_GUIDE 08
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 09
+*****************
+TRT_GUIDE 09
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

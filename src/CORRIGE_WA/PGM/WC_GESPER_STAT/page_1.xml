@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_GESPERSTAT" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_ENTREE">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="11" guide="0" kinematic="0" name="CND_AFF_LISTE">
+            <properties>
+                <property id="-9" stringValue="7 0 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="10" guide="0" kinematic="0" name="TBL_EMPL">
+            <properties>
+                <property id="1" stringValue="ZZ_COD_MATRICUL -6 2 6 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1 # ZZ_COD_SIT_FAMI -6 2 1 -1 # ZZ_COD_SOCIETE -6 2 2 -1"/>
+                <property id="4"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 6 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_SIT_FAMIL" name="ZZ_COD_SIT_FAMI">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 1 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_SOCIETE" name="ZZ_COD_SOCIETE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 2 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="8" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_SIT_FAMIL" name="CBX_SITFAM">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="11"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="8" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_SOCIETE" name="CBX_SOCIETE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 2 -1"/>
+                <property id="11"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_PRINT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="1" kinematic="0" name="CHS_VILLE_SEL">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 15 -1"/>
+                <property id="8"/>
+            </properties>
+        </control>
+    </controls>
+</page>

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "MA_REGLE",
+  "description" : "Ma règle",
+  "creationDate" : "2010-10-08 12:47:35",
+  "updateDate" : "2010-10-08 12:58:57",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

@@ -1,0 +1,19 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070809)      liste lst_entcde *ref_mld(entcde)
+*ROW_METADATA(FMT_PYM        20070809)      
+*ROW_METADATA(FMT_PYM        20070809)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070809)         charger_sql_lst lst_entcde entcde
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      ouvrir EDTCOM
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      lecture_lst lst_entcde
+*ROW_METADATA(FMT_PYM        20070809)         imprimer
+*ROW_METADATA(FMT_PYM        20070809)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      fermer EDTCOM *prv
+*ROW_METADATA(FMT_PYM        20070809)   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

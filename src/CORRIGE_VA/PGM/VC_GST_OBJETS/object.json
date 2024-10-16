@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_GST_OBJETS",
+  "description" : "Gestion générique d'objets graphiques",
+  "creationDate" : "2007-09-27 09:08:10",
+  "updateDate" : "2007-10-03 16:26:02",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCGSOB",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCGSOB",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_PAGEWEB",
+  "description" : "Exemple de page web simple",
+  "creationDate" : "2004-07-29 08:56:23",
+  "updateDate" : "2007-03-06 08:14:11",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcpagewebs",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCPGWB",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true
+}

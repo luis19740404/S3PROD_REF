@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "CUA_VISU",
+  "description" : "Visualisation CUA",
+  "creationDate" : "1995-05-04 13:06:15",
+  "updateDate" : "1995-11-30 12:46:33",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

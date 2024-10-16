@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO5_TER",
+  "description" : "Guide mat hiérarchique",
+  "creationDate" : "1999-02-01 09:19:19",
+  "updateDate" : "2000-07-07 15:12:55",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VA5TER",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VA5TER",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

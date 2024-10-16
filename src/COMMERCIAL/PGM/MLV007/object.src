@@ -1,0 +1,202 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)      * Variables de travail
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wFormat
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 workbookHandle
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wrc
+*ROW_METADATA(MLIVAIN        20240530)      alpha(50) wName
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wIndex
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wlgValues
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wNbValues
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_2 wLength
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_2 wScale
+*ROW_METADATA(MLIVAIN        20240530)      alpha(100) wsmg_trace
+*ROW_METADATA(MLIVAIN        20240530)      alpha(9) wrc_a
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wStyle
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wStyleMask
+*ROW_METADATA(MLIVAIN        20240530)      alpha(200) wPlage
+*ROW_METADATA(MLIVAIN        20240530)      num_e(5,0) wi
+*ROW_METADATA(MLIVAIN        20240530)      alpha(15) wEntete
+*ROW_METADATA(MLIVAIN        20240530)      alpha(260) wCheminFichier
+*ROW_METADATA(MLIVAIN        20240530)      num_e(11,0) nbSelection
+*ROW_METADATA(MLIVAIN        20240530)      num_e(11,0) indexCentaines
+*ROW_METADATA(MLIVAIN        20240530)      num_e(11,0) nbCentaines
+*ROW_METADATA(MLIVAIN        20240530)      num_e(11,2) totalCa
+*ROW_METADATA(MLIVAIN        20240530)      alpha(10) totalString
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_2 totalPrecision
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_2 totalScale
+*ROW_METADATA(MLIVAIN        20240530)      num_e(5,0) windexall
+*ROW_METADATA(MLIVAIN        20240530)      alpha(14) strformat
+*ROW_METADATA(MLIVAIN        20240530)      *Déclaration de la liste mémoire reçue en paramètre
+*ROW_METADATA(MLIVAIN        20240530)      ref(ccod_client client) wcod_client
+*ROW_METADATA(MLIVAIN        20240530)      ref(cnom_client client) wnom_client
+*ROW_METADATA(MLIVAIN        20240530)      ref(ccod_pos_cli client) wcod_pos_cli
+*ROW_METADATA(MLIVAIN        20240530)      liste lsm_client wcod_client wnom_client wcod_pos_cli
+*ROW_METADATA(MLIVAIN        20240530)      * Déclaration de la liste mémoire pour l'export excel
+*ROW_METADATA(MLIVAIN        20240530)      ref (ccod_reglemt client) wcod_reglemt
+*ROW_METADATA(MLIVAIN        20240530)      ref(cmht_caf_cli client) wmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)      liste lsm_client_xls wcod_client wnom_client wcod_pos_cli wcod_reglemt wmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)      * Déclaration des tableaux de placement
+*ROW_METADATA(MLIVAIN        20240530)      ref(ccod_client client) tcod_client(100)
+*ROW_METADATA(MLIVAIN        20240530)      ref(cnom_client client) tnom_client(100)
+*ROW_METADATA(MLIVAIN        20240530)      ref(ccod_pos_cli client) tcod_pos_cli(100)
+*ROW_METADATA(MLIVAIN        20240530)      ref (ccod_reglemt client) tcod_reglemt(100)
+*ROW_METADATA(MLIVAIN        20240530)      ref(cmht_caf_cli client) tmht_caf_cli(100)
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      *Paramètre en entrée
+*ROW_METADATA(MLIVAIN        20240530)      param LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240530)      * Préchargement de la dll
+*ROW_METADATA(MLIVAIN        20240530)      charger_dll 'XlsxToolBx'
+*ROW_METADATA(MLIVAIN        20240530)      * Création d'un nouveau classeur
+*ROW_METADATA(MLIVAIN        20240530)      wformat = _xlsx_format_xlsx
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'WorkbookCreate' wformat workbookHandle wrc
+*ROW_METADATA(MLIVAIN        20240530)      * Ajout d'une feuille Excel
+*ROW_METADATA(MLIVAIN        20240530)      wname = 'client'
+*ROW_METADATA(MLIVAIN        20240530)      windex = 0
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SheetAdd' workbookHandle wname windex wrc
+*ROW_METADATA(MLIVAIN        20240530)      * Placement des en-tête de colonnes (sur la ligne 1 du classeur)
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'A1'
+*ROW_METADATA(MLIVAIN        20240530)      wentete = 'Code'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage wentete wrc
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'B1'
+*ROW_METADATA(MLIVAIN        20240530)      wentete = 'Nom client'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage wentete wrc
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'C1'
+*ROW_METADATA(MLIVAIN        20240530)      wentete = 'Code postal'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage wentete wrc
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'D1'
+*ROW_METADATA(MLIVAIN        20240530)      wentete = 'Code règlement'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage wentete wrc
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'E1'
+*ROW_METADATA(MLIVAIN        20240530)      wentete = 'C.A. client'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage wentete wrc
+*ROW_METADATA(MLIVAIN        20240530)      * Mise en gras ligne de titres
+*ROW_METADATA(MLIVAIN        20240530)      wstyle = _xlsx_text_prop_bold
+*ROW_METADATA(MLIVAIN        20240530)      wstylemask = _xlsx_text_prop_bold
+*ROW_METADATA(MLIVAIN        20240530)      wPlage = 'A1:E1'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'StyleSetTextProperties' workbookHandle wPlage wstyle wstylemask wrc
+*ROW_METADATA(MLIVAIN        20240530)      *Initialisation liste mémoire intermédiaire
+*ROW_METADATA(MLIVAIN        20240530)      vider_lst LSM_CLIENT_XLS
+*ROW_METADATA(MLIVAIN        20240530)      * Récupération des valeurs complémentaires depuis la table client
+*ROW_METADATA(MLIVAIN                )      DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240530)         * lecture_lst LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)         *    *lire_sql client *col(cnom_client, ccod_pos_cli, ccod_reglemt, cmht_caf_cli) *cond(ccod_client=:wcod_client)
+*ROW_METADATA(MLIVAIN        20240530)         *    wcod_client = ccod_client
+*ROW_METADATA(MLIVAIN        20240530)         *    wnom_client = cnom_client
+*ROW_METADATA(MLIVAIN        20240530)         *    wcod_pos_cli = ccod_pos_cli
+*ROW_METADATA(MLIVAIN        20240530)         *    wcod_reglemt = ccod_reglemt
+*ROW_METADATA(MLIVAIN        20240530)         *    wmht_caf_cli = cmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)         *    inserer_elt LSM_CLIENT_XLS
+*ROW_METADATA(MLIVAIN        20240530)         * fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)         nbSelection = 0
+*ROW_METADATA(MLIVAIN        20240530)         lecture_lst LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)            lire_sql client *col(ccod_reglemt, cmht_caf_cli) *cond(ccod_client=:wcod_client)
+*ROW_METADATA(MLIVAIN        20240530)            wcod_reglemt = ccod_reglemt
+*ROW_METADATA(MLIVAIN        20240530)            wmht_caf_cli = cmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)            nbSelection = nbSelection+1
+*ROW_METADATA(MLIVAIN        20240530)            inserer_elt LSM_CLIENT_XLS
+*ROW_METADATA(MLIVAIN        20240530)         fin_lecture_lst
+*ROW_METADATA(MLIVAIN                )      FIN_SRV
+*ROW_METADATA(MLIVAIN        20240530)      *
+*ROW_METADATA(MLIVAIN        20240530)      indexCentaines = 0
+*ROW_METADATA(MLIVAIN        20240530)      nbCentaines = nbSelection/100
+*ROW_METADATA(MLIVAIN        20240530)      wi = 0
+*ROW_METADATA(MLIVAIN        20240530)      totalCa = 0
+*ROW_METADATA(MLIVAIN        20240530)      * Valorisation des tableaux de placement
+*ROW_METADATA(MLIVAIN        20240530)      lecture_lst LSM_CLIENT_XLS
+*ROW_METADATA(MLIVAIN        20240530)         wi = wi+1
+*ROW_METADATA(MLIVAIN        20240530)         tcod_client(wi) = wcod_client
+*ROW_METADATA(MLIVAIN        20240530)         tnom_client(wi) = wnom_client
+*ROW_METADATA(MLIVAIN        20240530)         tcod_pos_cli(wi) = wcod_pos_cli
+*ROW_METADATA(MLIVAIN        20240530)         tcod_reglemt(wi) = wcod_reglemt
+*ROW_METADATA(MLIVAIN        20240530)         tmht_caf_cli(wi) = wmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)         totalCa = totalCa + wmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240530)         si wi = 100 ou nbSelection = (indexCentaines*100)+wi
+*ROW_METADATA(MLIVAIN        20240530)            * Placement des tableaux de valeurs à partir de la ligne 2
+*ROW_METADATA(MLIVAIN        20240530)            wnbvalues = wi
+*ROW_METADATA(MLIVAIN        20240530)            wi =  (indexCentaines*100)+wi+1
+*ROW_METADATA(MLIVAIN        20240530)            windexall = (indexCentaines*100)+2
+*ROW_METADATA(MLIVAIN        20240530)            * Tableau des codes client
+*ROW_METADATA(MLIVAIN        20240530)            wplage = 'A'//windexall//':A' /// wi
+*ROW_METADATA(MLIVAIN        20240530)            wlgvalues = 6
+*ROW_METADATA(MLIVAIN        20240530)            appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValueArray' workbookHandle wPlage tcod_client wlgvalues wnbvalues wrc
+*ROW_METADATA(MLIVAIN        20240530)            * Tableau des noms client
+*ROW_METADATA(MLIVAIN        20240530)            wplage = 'B'//windexall//':B' /// wi
+*ROW_METADATA(MLIVAIN        20240530)            wlgvalues = 30
+*ROW_METADATA(MLIVAIN        20240530)            appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValueArray' workbookHandle wPlage tnom_client wlgvalues wnbvalues wrc
+*ROW_METADATA(MLIVAIN        20240530)            *Tableau des codes postaux
+*ROW_METADATA(MLIVAIN        20240530)            wplage = 'C'//windexall//':C' /// wi
+*ROW_METADATA(MLIVAIN        20240530)            wlength = 5
+*ROW_METADATA(MLIVAIN        20240530)            wscale=0
+*ROW_METADATA(MLIVAIN        20240530)            appeler_dll 'XlsxToolBx' 'SelectionSetNumericValueArray' workbookHandle wPlage tcod_pos_cli wlength wscale wnbvalues wrc
+*ROW_METADATA(MLIVAIN        20240530)            * Tableau des codes règlement
+*ROW_METADATA(MLIVAIN        20240530)            wplage = 'D'//windexall//':D' /// wi
+*ROW_METADATA(MLIVAIN        20240530)            wlgvalues = 2
+*ROW_METADATA(MLIVAIN        20240530)            appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValueArray' workbookHandle wPlage tcod_reglemt wlgvalues wnbvalues wrc
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)            *Tableau des C.A. client
+*ROW_METADATA(MLIVAIN        20240530)            wplage = 'E'//windexall//':E' /// wi
+*ROW_METADATA(MLIVAIN        20240530)            wlength = 11
+*ROW_METADATA(MLIVAIN        20240530)            wscale=2
+*ROW_METADATA(MLIVAIN        20240530)            appeler_dll 'XlsxToolBx' 'SelectionSetNumericValueArray' workbookHandle wPlage tmht_caf_cli wlength wscale wnbvalues wrc
+*ROW_METADATA(MLIVAIN        20240530)              
+*ROW_METADATA(MLIVAIN        20240530)            indexCentaines = indexCentaines + 1
+*ROW_METADATA(MLIVAIN        20240530)               
+*ROW_METADATA(MLIVAIN        20240530)            wi = 0
+*ROW_METADATA(MLIVAIN        20240530)            *          tcod_client = *BLANK
+*ROW_METADATA(MLIVAIN        20240530)            *          tnom_client = *BLANK
+*ROW_METADATA(MLIVAIN        20240530)            *          tcod_pos_cli = 0
+*ROW_METADATA(MLIVAIN        20240530)            *          tcod_reglemt = *BLANK
+*ROW_METADATA(MLIVAIN        20240530)            *          tmht_caf_cli = 0
+*ROW_METADATA(MLIVAIN        20240530)         fin
+*ROW_METADATA(MLIVAIN        20240530)      fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      * Ajout de la ligne total chiffre d'affaire
+*ROW_METADATA(MLIVAIN        20240530)      *Saut d'une ligne
+*ROW_METADATA(MLIVAIN        20240530)      wi = nbSelection+3
+*ROW_METADATA(MLIVAIN        20240530)      *Initialisation de la chaîne de charactères à envoyer
+*ROW_METADATA(MLIVAIN        20240530)      totalString = 'Total C.A.'
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'D'///wi///':D'///wi
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetAlphaValue' workbookHandle wPlage totalString wrc
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'E'///wi///':E'///wi
+*ROW_METADATA(MLIVAIN        20240530)      totalPrecision = 11
+*ROW_METADATA(MLIVAIN        20240530)      totalScale = 2
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'SelectionSetNumericValue' workbookHandle wPlage totalCa totalPrecision totalScale  wrc
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      * Ajustement à la taille des colonnes 
+*ROW_METADATA(MLIVAIN        20240530)      wi = wi+1
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'A1:E'///wi
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'StyleAdjustColumnWidth' workbookHandle wPlage wrc
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      * Changement de la police de la colonne nom client
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'B2:B'///wi
+*ROW_METADATA(MLIVAIN        20240530)      strformat = 'Calibri Light'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'StyleSetFontFace' workbookHandle wPlage strformat wrc
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      * Format des données code postal
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'C2:C'///wi
+*ROW_METADATA(MLIVAIN        20240530)      strformat = '00000'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'StyleSetFormat' workbookHandle wPlage strformat wrc
+*ROW_METADATA(MLIVAIN        20240530)       
+*ROW_METADATA(MLIVAIN        20240530)      * Format des données décimales chiffre  d'affaire
+*ROW_METADATA(MLIVAIN        20240530)      wplage = 'E2:E'///wi
+*ROW_METADATA(MLIVAIN        20240530)      strformat = '# ### ###.##'
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'StyleSetFormat' workbookHandle wPlage strformat wrc
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      *Enregistrement du clas
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      si *systeme_gen = 'CLOUD' 
+*ROW_METADATA(MLIVAIN        20240530)         wCheminFichier = 'TEMP:\export_client.xlsx'
+*ROW_METADATA(MLIVAIN        20240530)      sinon
+*ROW_METADATA(MLIVAIN        20240530)         wCheminFichier = 'C:\temp\export_client.xlsx'
+*ROW_METADATA(MLIVAIN        20240530)      fin
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'WorkbookSaveAs' workbookHandle wCheminFichier wrc
+*ROW_METADATA(MLIVAIN        20240530)      * Fermeture du classeur
+*ROW_METADATA(MLIVAIN        20240530)      appeler_dll 'XlsxToolBx' 'WorkbookClose' workbookHandle wrc
+*ROW_METADATA(MLIVAIN        20240530)      *
+*ROW_METADATA(MLIVAIN        20240530)      decharger_dll 'XlsxToolBx'
+*ROW_METADATA(MLIVAIN        20240530)   FIN_INIT
+*ROW_METADATA(MLIVAIN                )FIN_PGM

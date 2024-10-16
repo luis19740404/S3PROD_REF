@@ -1,0 +1,1 @@
+Affichage d'une liste avec sélection d'un élément par option 1.

@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_EDIT_PERSO",
+  "description" : "Edition extraction employés",
+  "creationDate" : "2005-10-14 08:53:50",
+  "updateDate" : "2005-10-14 09:25:34",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wceditperso",
+  "programType" : "B",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCEDPE",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "keepState" : true
+}

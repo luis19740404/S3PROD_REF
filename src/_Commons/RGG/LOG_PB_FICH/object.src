@@ -1,0 +1,7 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_RGG
+*ROW_METADATA(FMT_PYM        20120522)   * Consignation en cas de pb
+*ROW_METADATA(FMT_PYM        20120522)   * Accès en mise à jour
+*ROW_METADATA(FMT_PYM        20120522)   SI *BLOQUE = '1'
+*ROW_METADATA(FMT_PYM        20120522)      *RG_ERREUR = 1
+*ROW_METADATA(FMT_PYM        20120522)   FIN
+*ROW_METADATA(FMT_PYM                )FIN_RGG

@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "WSTEST",
+  "description" : "Web service REST pour test",
+  "creationDate" : "2022-11-21 15:00:09",
+  "updateDate" : "2022-11-21 15:00:09",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WSTEST",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "WSTEST",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "manageHistoryButtons" : "N"
+}

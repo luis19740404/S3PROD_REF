@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "VNS_TITRE_FEN",
+  "description" : "Titre de fenêtres",
+  "creationDate" : "2021-02-17 10:14:18",
+  "updateDate" : "2021-02-17 10:19:22",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

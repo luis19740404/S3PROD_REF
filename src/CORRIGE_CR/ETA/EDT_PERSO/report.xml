@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <formats>
+        <format blankLinesBefore="1" code="01" guideWord="ENTETE" jumpLinesBefore="1" nbLines="5" overlay="false" shortName="SOR01"/>
+        <format blankLinesBefore="1" code="02" guideWord="DETAIL" nbLines="1" overlay="false" shortName="SOR02"/>
+        <format blankLinesBefore="1" code="03" guideWord="TOTAL" nbLines="4" overlay="false" shortName="SOR03"/>
+    </formats>
+    <entities>
+        <entity format="02" name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="28" x="21" y="1">
+            <text text="Liste des employées société "/>
+        </field>
+        <field description="Date du système" formatCode="01" guideWord="DATE" kind="DATE" layoutCode="DATE" length="6" mode="OUTPUT" type="NUMBER" x="63" y="1">
+            <parameters>
+                <parameter key="EDW" value="'  /  /  '"/>
+            </parameters>
+        </field>
+        <field description="Numéro de page" editCode="CODE_Z" formatCode="01" guideWord="PAGE" kind="PAGE" layoutCode="PAGE" length="4" mode="OUTPUT" type="NUMBER" x="80" y="1"/>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="2" x="60" y="1">
+            <text text="Le"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="4" x="75" y="1">
+            <text text="Page"/>
+        </field>
+        <field description="NOM DU PROGRAMME" formatCode="01" guideWord="XNOM_PGM" kind="USER_VARIABLE" layoutCode="XLIPGM" length="10" mode="OUTPUT" type="STRING" x="2" y="1">
+            <parameters>
+                <parameter key="DFT" value="*NOM_PGM"/>
+            </parameters>
+        </field>
+        <field description="Heure du système" formatCode="01" guideWord="TIME" kind="TIME" layoutCode="TIME" length="6" mode="OUTPUT" type="NUMBER" x="63" y="2">
+            <parameters>
+                <parameter key="EDW" value="'  :  :  '"/>
+            </parameters>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="61" y="2">
+            <text text="à"/>
+        </field>
+        <field description="Code matricule" formatCode="02" guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" layoutCode="ZZPMAT" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" mode="OUTPUT" type="STRING" x="4" y="6"/>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="4" x="4" y="4">
+            <text text="Code"/>
+        </field>
+        <field description="Nom de la personne" formatCode="02" guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" layoutCode="ZZPNPE" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" mode="OUTPUT" type="STRING" x="13" y="6"/>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="3" x="13" y="4">
+            <text text="Nom"/>
+        </field>
+        <field description="Prénom de la personne" formatCode="02" guideWord="ZZ_PRN_PERSONNE" kind="VARIABLE" layoutCode="ZZPPRP" length="20" logicalProperty="PERSONNEL.PRN_PERSONNE" mode="OUTPUT" type="STRING" x="46" y="6">
+            <parameters>
+                <parameter key="EXP" value="Paul"/>
+            </parameters>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="6" x="46" y="4">
+            <text text="Prénom"/>
+        </field>
+        <field description="Salaire mensuel" editCode="CODE_N" formatCode="02" guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" layoutCode="ZZPSAL" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" mode="OUTPUT" scale="2" type="NUMBER" x="69" y="6">
+            <parameters>
+                <parameter key="EXP" value="11250,50"/>
+            </parameters>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="7" x="74" y="4">
+            <text text="Salaire"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="83" x="3" y="5">
+            <text text="----------------------------------------------------------------------------------!"/>
+        </field>
+        <field formatCode="02" kind="CONSTANT" layoutCode="*" length="1" x="2" y="6">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="2" y="5">
+            <text text="!"/>
+        </field>
+        <field formatCode="02" kind="CONSTANT" layoutCode="*" length="1" x="11" y="6">
+            <text text="!"/>
+        </field>
+        <field formatCode="02" kind="CONSTANT" layoutCode="*" length="1" x="44" y="6">
+            <text text="!"/>
+        </field>
+        <field formatCode="02" kind="CONSTANT" layoutCode="*" length="1" x="67" y="6">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="11" y="4">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="44" y="4">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="67" y="4">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="85" y="4">
+            <text text="!"/>
+        </field>
+        <field formatCode="02" kind="CONSTANT" layoutCode="*" length="1" x="85" y="6">
+            <text text="!"/>
+        </field>
+        <field formatCode="01" kind="CONSTANT" layoutCode="*" length="1" x="2" y="4">
+            <text text="!"/>
+        </field>
+        <field formatCode="03" kind="CONSTANT" layoutCode="*" length="83" x="3" y="7">
+            <text text="----------------------------------------------------------------------------------!"/>
+        </field>
+        <field formatCode="03" kind="CONSTANT" layoutCode="*" length="1" x="2" y="7">
+            <text text="!"/>
+        </field>
+        <field formatCode="03" kind="CONSTANT" layoutCode="*" length="8" x="7" y="8">
+            <text text="Total : "/>
+        </field>
+        <field description="Total employés" editCode="CODE_1" formatCode="03" guideWord="ZTOT_EMPLOYE" kind="USER_VARIABLE" layoutCode="ZTOEMP" length="7" mode="OUTPUT" type="NUMBER" x="15" y="8"/>
+    </fields>
+</report>

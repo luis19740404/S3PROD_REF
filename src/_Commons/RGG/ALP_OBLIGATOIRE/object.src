@@ -1,0 +1,7 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(FMT_PYM        20050728)   * Contrôle Alphanumérique sur $$ : erreur si à blanc
+*ROW_METADATA(FMT_PYM        20050728)   PREPARER_MSG 0008 $$
+*ROW_METADATA(FMT_PYM        20050728)   SI $$ = *BLANK
+*ROW_METADATA(FMT_PYM        20110118)      ANOMALIE
+*ROW_METADATA(ADELIA         00000000)   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

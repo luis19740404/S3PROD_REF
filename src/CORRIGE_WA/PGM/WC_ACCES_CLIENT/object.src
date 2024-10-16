@@ -1,0 +1,49 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA         20070308)   DEBUT_DECL
+*ROW_METADATA(ADELIA         20070308)      
+*ROW_METADATA(ADELIA         20070308)   FIN_DECL
+*ROW_METADATA(ADELIA         20070308)   DEBUT_INIT
+*ROW_METADATA(ADELIA         20070308)      
+*ROW_METADATA(ADELIA         20070308)   FIN_INIT
+*ROW_METADATA(ADELIA         20070308)   DEBUT_PROCEDURE CLIENT_CHARG_GLOBAL *PUBLIC
+*ROW_METADATA(ADELIA         20070308)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20070308)         liste lst_client CCOD_CLIENT CNOM_CLIENT CBUR_DIS_CLI CMHT_CAF_CLI
+*ROW_METADATA(ADELIA         20070308)         param lst_client
+*ROW_METADATA(ADELIA         20070308)      FIN_DECL
+*ROW_METADATA(ADELIA         20070308)      * Récupère tous les enregistrements du fichiers Client
+*ROW_METADATA(ADELIA         20070308)      charger_sql_lst lst_client client *tri(CNOM_CLIENT)
+*ROW_METADATA(ADELIA         20070308)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA         20070308)   DEBUT_PROCEDURE CLIENT_MAJ *PUBLIC
+*ROW_METADATA(ADELIA         20070308)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20070308)         alpha(6) wCCOD_CLIENT
+*ROW_METADATA(ADELIA         20070308)         alpha(30) wCNOM_CLIENT
+*ROW_METADATA(ADELIA         20070308)         alpha(30) wCADR_01_CLI
+*ROW_METADATA(ADELIA         20070308)         alpha(30) wCADR_02_CLI
+*ROW_METADATA(ADELIA         20070308)         num_e(5,0) wCCOD_POS_CLI
+*ROW_METADATA(ADELIA         20070308)         alpha(30) wCBUR_DIS_CLI
+*ROW_METADATA(ADELIA         20070308)         alpha(11) wCNUM_TEL_CLI
+*ROW_METADATA(ADELIA         20070308)         num_e(11,2) wCMHT_CAF_CLI
+*ROW_METADATA(ADELIA         20070308)         alpha(2) wCCOD_REGLEMT
+*ROW_METADATA(ADELIA         20070308)         ds client_maj wCCOD_CLIENT wCNOM_CLIENT wCADR_01_CLI wCADR_02_CLI -
+*ROW_METADATA(ADELIA         20070308)         wCCOD_POS_CLI wCBUR_DIS_CLI wCNUM_TEL_CLI wCMHT_CAF_CLI wCCOD_REGLEMT
+*ROW_METADATA(ADELIA         20070308)         alpha(2) wcode_action
+*ROW_METADATA(ADELIA         20070308)         num_bin_4 wcode_retour
+*ROW_METADATA(ADELIA         20070308)         param wcode_action wcode_retour client_maj
+*ROW_METADATA(ADELIA         20070308)      FIN_DECL
+*ROW_METADATA(ADELIA         20070308)      ccod_client = wccod_client
+*ROW_METADATA(ADELIA         20070308)      cnom_client = wcnom_client
+*ROW_METADATA(ADELIA         20070308)      cadr_01_cli = wcadr_01_cli
+*ROW_METADATA(ADELIA         20070308)      cadr_02_cli = wcadr_02_cli
+*ROW_METADATA(ADELIA         20070308)      ccod_pos_cli = wccod_pos_cli
+*ROW_METADATA(ADELIA         20070308)      cbur_dis_cli = wcbur_dis_cli
+*ROW_METADATA(ADELIA         20070308)      cnum_tel_cli = wcnum_tel_cli
+*ROW_METADATA(ADELIA         20070308)      cmht_caf_cli = wcmht_caf_cli
+*ROW_METADATA(ADELIA         20070308)      ccod_reglemt = wccod_reglemt
+*ROW_METADATA(ADELIA         20070308)      si wcode_action = 'C'
+*ROW_METADATA(ADELIA         20070308)         creer_sql client
+*ROW_METADATA(ADELIA         20070308)      sinon
+*ROW_METADATA(ADELIA         20070308)         maj_sql client *all *cond(ccod_client=:wccod_client)
+*ROW_METADATA(ADELIA         20070308)      fin
+*ROW_METADATA(ADELIA         20070308)      wcode_retour = *sqlcode
+*ROW_METADATA(ADELIA         20070308)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

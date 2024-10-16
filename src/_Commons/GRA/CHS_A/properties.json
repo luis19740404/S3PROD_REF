@@ -1,0 +1,233 @@
+[ {
+  "id" : {
+    "property" : -48
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -47
+  },
+  "modifiability" : -3,
+  "intValue" : 4,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -41
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -39
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -38
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -25
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -24
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -23
+  },
+  "modifiability" : -3,
+  "stringValue" : "Microsoft Sans Serif;8;1;1",
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -22
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -21
+  },
+  "modifiability" : -3,
+  "stringValue" : "Microsoft Sans Serif;8;1;1",
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -13
+  },
+  "modifiability" : -2,
+  "intValue" : 2,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -12
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -11
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -10
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -9
+  },
+  "modifiability" : -3,
+  "stringValue" : "2 50 -1",
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -5
+  },
+  "modifiability" : -2,
+  "stringValue" : "CHS_A",
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -4
+  },
+  "modifiability" : -3,
+  "intValue" : 20,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -3
+  },
+  "modifiability" : -3,
+  "intValue" : 90,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -2
+  },
+  "modifiability" : -1,
+  "intValue" : 128,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : -1
+  },
+  "modifiability" : -1,
+  "intValue" : 283,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 3
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 6
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 7
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 8
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 9
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 10
+  },
+  "modifiability" : -3,
+  "intValue" : 12632256,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 11
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 12
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 13
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 14
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 15
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 16
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 17
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 18
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+}, {
+  "id" : {
+    "property" : 19
+  },
+  "modifiability" : -3,
+  "longValue" : 1630248
+} ]

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "PAG_AVANT",
+  "description" : "Pagination avant",
+  "creationDate" : "1996-06-24 09:11:21",
+  "updateDate" : "1996-06-24 09:14:17",
+  "visibility" : "PUBLIC",
+  "mrClass" : "DT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

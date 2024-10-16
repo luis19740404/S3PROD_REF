@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_PARAM",
+  "description" : "Edition avec paramètre en entrée",
+  "creationDate" : "2000-03-03 09:13:15",
+  "updateDate" : "2000-03-03 09:13:15",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPEPA",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPEPA",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

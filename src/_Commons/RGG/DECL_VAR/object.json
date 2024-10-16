@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "DECL_VAR",
+  "description" : "Déclaration de variable de travail",
+  "creationDate" : "2012-05-22 08:17:02",
+  "updateDate" : "2012-05-22 08:30:42",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL", "WADELIA" ]
+}

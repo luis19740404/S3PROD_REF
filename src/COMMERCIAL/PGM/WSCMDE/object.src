@@ -1,0 +1,150 @@
+*ROW_METADATA(FMT_LTA                )DEBUT_PGM
+*ROW_METADATA(ADELIA         20210525)   DEBUT_DECL
+*ROW_METADATA(ADELIA         20210525)      * 
+*ROW_METADATA(ADELIA         20210525)      sw_configurer *SERVICE '@Path' '/commandes'
+*ROW_METADATA(ADELIA         20210525)      alpha(200) wmsg
+*ROW_METADATA(ADELIA         20210525)   FIN_DECL
+*ROW_METADATA(ADELIA         20210525)   DEBUT_INIT
+*ROW_METADATA(ADELIA         20210525)      
+*ROW_METADATA(ADELIA         20210525)   FIN_INIT
+*ROW_METADATA(ADELIA         20210525)   DEBUT_PROCEDURE POSTCOMMANDE *PUBLIC
+*ROW_METADATA(ADELIA         20210525)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20210525)         * Création d'une nouvelle commande avec son détail
+*ROW_METADATA(ADELIA         20210525)         * sw_configurer *OPERATION '@Path' '/{iNoCommande}'
+*ROW_METADATA(ADELIA         20210525)         sw_configurer *OPERATION '@POST' *BLANK
+*ROW_METADATA(ADELIA         20210525)         sw_configurer *OPERATION '@Consumes' '{"application/xml","application/json"}'
+*ROW_METADATA(ADELIA         20210525)         sw_configurer *OPERATION '@Produces' '{"application/xml","application/json"}'
+*ROW_METADATA(ADELIA         20210525)         *
+*ROW_METADATA(ADELIA         20210525)         * Variables de travail
+*ROW_METADATA(ADELIA         20210525)         num_bin_2 wcodehttp
+*ROW_METADATA(ADELIA         20210525)         num_bin_2 wi
+*ROW_METADATA(ADELIA         20210525)         num_bin_2 wnbligcde
+*ROW_METADATA(ADELIA         20210526)         alpha(100) wliberreur
+*ROW_METADATA(ADELIA         20210525)         alpha(10) wcible
+*ROW_METADATA(ADELIA         20210526)         num_e(8,0) wdate
+*ROW_METADATA(ADELIA         20210526)         liste lsm_commande *ref_mld(entcde)
+*ROW_METADATA(ADELIA         20210526)         liste lsm_ligcde *ref_mld(detcde)
+*ROW_METADATA(ADELIA         20210525)         * Classes référencées
+*ROW_METADATA(ADELIA         20210525)         ref_classe(LIGNECDE) oLignecde
+*ROW_METADATA(ADELIA         20210525)         ref_classe(COMMANDE) oCommande
+*ROW_METADATA(ADELIA         20210525)         *
+*ROW_METADATA(ADELIA         20210525)         Param wcible,i[query:required],cible_serveur oCommande,i[content] wliberreur,o[content],liberreur wcodehttp,o[httpstatus]
+*ROW_METADATA(ADELIA         20210525)      FIN_DECL
+*ROW_METADATA(ADELIA         20210525)      traiter_proc cnx_serveur wcible
+*ROW_METADATA(ADELIA         20210525)      wcodehttp = 200
+*ROW_METADATA(ADELIA         20210525)      wliberreur =*blank
+*ROW_METADATA(ADELIA         20210525)      * Récupération du n°de commande à créer
+*ROW_METADATA(ADELIA         20210525)      enum_commande = oCommande.getenum_commande()
+*ROW_METADATA(ADELIA         20210526)      * lire_sql entcde *cond(enum_commande=:enum_commande)
+*ROW_METADATA(ADELIA         20210526)      * si *sqlcode = *normal
+*ROW_METADATA(ADELIA         20210526)      *    wcodehttp = 400 /* Bad request
+*ROW_METADATA(ADELIA         20210526)      *    wliberreur = 'La commande existe déjà'
+*ROW_METADATA(ADELIA         20210526)      *    quitter
+*ROW_METADATA(ADELIA         20210526)      * fin
+*ROW_METADATA(ADELIA         20210526)      * Récupération des valeurs d'attributs de l'entete commande
+*ROW_METADATA(ADELIA         20210525)      elib_obj_cde = oCommande.getelib_obj_cde()
+*ROW_METADATA(ADELIA         20210525)      wdate = oCommande.getedat_commande() 
+*ROW_METADATA(ADELIA         20210525)      edat_commande = wdate
+*ROW_METADATA(ADELIA         20210525)      emnt_total_cde = oCommande.getwmontcom()
+*ROW_METADATA(ADELIA         20210525)      wmsg = 'elib_obj_cde : ' // elib_obj_cde /// ' emnt_total_cde : ' // -
+*ROW_METADATA(ADELIA         20210526)      emnt_total_cde /// ' date : ' // edat_commande
+*ROW_METADATA(ADELIA         20210525)      ajouter_trace wmsg *info
+*ROW_METADATA(ADELIA         20210525)      wnbligcde = &dim_tableau(oCommande.getlstlignecde())
+*ROW_METADATA(ADELIA         20210525)      wmsg = 'Nb lignes cde : ' // wnbligcde
+*ROW_METADATA(ADELIA         20210525)      ajouter_trace wmsg *info
+*ROW_METADATA(ADELIA         20210525)      * Création de l'entête de commande
+*ROW_METADATA(ADELIA         20210526)      * creer_sql entcde 
+*ROW_METADATA(ADELIA         20210526)      * si *sqlcode <> *normal
+*ROW_METADATA(ADELIA         20210526)      *    wcodehttp = 400 /* Bad request
+*ROW_METADATA(ADELIA         20210526)      *    wliberreur = 'La création de l''entete commande a échoué'
+*ROW_METADATA(ADELIA         20210526)      *    quitter
+*ROW_METADATA(ADELIA         20210526)      * fin
+*ROW_METADATA(ADELIA         20210526)      * Création des lignes de détail commande
+*ROW_METADATA(ADELIA         20210526)      wi = 0
+*ROW_METADATA(ADELIA         20210526)      tant_que wi < wnbligcde
+*ROW_METADATA(ADELIA         20210526)         wi = wi + 1
+*ROW_METADATA(ADELIA         20210525)         dnum_commande = enum_commande
+*ROW_METADATA(ADELIA         20210525)         oLignecde = oCommande.getlstlignecde()(wi)
+*ROW_METADATA(ADELIA         20210525)         dnum_lig_cde = oLignecde.getdnum_lig_cde()
+*ROW_METADATA(ADELIA         20210525)         dcod_article = oLignecde.getdcod_article()
+*ROW_METADATA(ADELIA         20210525)         dqte_commande = oLignecde.getdqte_commande()
+*ROW_METADATA(ADELIA         20210525)         dprx_unitaire = oLignecde.getdprx_unitaire()
+*ROW_METADATA(ADELIA         20210525)         wmsg = 'dnum_lig_cde : ' // dnum_lig_cde /// ' dcod_article : ' -
+*ROW_METADATA(ADELIA         20210525)         /// dcod_article
+*ROW_METADATA(ADELIA         20210525)         ajouter_trace wmsg *info
+*ROW_METADATA(ADELIA         20210526)         *    creer_sql detcde
+*ROW_METADATA(ADELIA         20210526)         *    si *sqlcode <> *normal
+*ROW_METADATA(ADELIA         20210526)         *       wcodehttp = 400 /* Bad request
+*ROW_METADATA(ADELIA         20210526)         *       wliberreur = 'La création de la ligne de commande a échoué'
+*ROW_METADATA(ADELIA         20210526)         *       quitter_boucle
+*ROW_METADATA(ADELIA         20210526)         *    fin
+*ROW_METADATA(ADELIA         20210526)      
+*ROW_METADATA(ADELIA         20210525)      refaire
+*ROW_METADATA(ADELIA         20210525)      *
+*ROW_METADATA(ADELIA         20210526)      * valider_maj
+*ROW_METADATA(ADELIA         20210526)      *
+*ROW_METADATA(ADELIA         20210525)      wcodehttp = 201 /* Created
+*ROW_METADATA(ADELIA         20210526)      wliberreur = 'La commande n° ' // enum_commande /// ' a été créée avec ' // wi /// ' ligne(s) !'
+*ROW_METADATA(ADELIA         20210525)      * Suppression de la connexion middleware Adelia
+*ROW_METADATA(ADELIA         20210525)      APPELER_DLL 'VaToolBx' 'VaToolBxCloseConnection' '*ALL'
+*ROW_METADATA(ADELIA         20210525)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA         20210525)   DEBUT_PROCEDURE CNX_SERVEUR
+*ROW_METADATA(ADELIA         20210525)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20210525)         alpha(30) wServLog
+*ROW_METADATA(ADELIA         20210525)         alpha(50) wDescription
+*ROW_METADATA(ADELIA         20210525)         bool wcoderetour
+*ROW_METADATA(ADELIA         20210525)         alpha(30) wservphy
+*ROW_METADATA(ADELIA         20210525)         alpha(20) whost
+*ROW_METADATA(ADELIA         20210525)         alpha(5) wport
+*ROW_METADATA(ADELIA         20210525)         alpha(20) wprofil
+*ROW_METADATA(ADELIA         20210525)         alpha(20) wpassword
+*ROW_METADATA(ADELIA         20210525)         alpha(20) wnombd
+*ROW_METADATA(ADELIA         20210525)         alpha(10) pcible
+*ROW_METADATA(ADELIA         20210525)         *
+*ROW_METADATA(ADELIA         20210525)         param pcible
+*ROW_METADATA(ADELIA         20210525)      FIN_DECL
+*ROW_METADATA(ADELIA         20210525)      * Ajout serveur logique
+*ROW_METADATA(ADELIA         20210525)      wServLog = 'LAN'
+*ROW_METADATA(ADELIA         20210525)      wDescription = 'Serveur LAN'
+*ROW_METADATA(ADELIA         20210525)      APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxAddLogicalServer' wServLog wDescription *vrai wCodeRetour
+*ROW_METADATA(ADELIA         20210525)      * Ajout du serveur physique
+*ROW_METADATA(ADELIA         20210525)      choix_selon pcible
+*ROW_METADATA(ADELIA         20210525)         si_valeur '400'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'HGBUSAP'
+*ROW_METADATA(ADELIA         20210525)            wDescription = 'hgbusap'
+*ROW_METADATA(ADELIA         20210525)            wHost = 'hgbusap'
+*ROW_METADATA(ADELIA         20210525)            wPort = '910'
+*ROW_METADATA(ADELIA         20210525)            wProfil = 'exiws1'
+*ROW_METADATA(ADELIA         20210525)            wpassword = 'exiws1'
+*ROW_METADATA(ADELIA         20210525)         si_valeur 'WIN'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'MONPC'
+*ROW_METADATA(ADELIA         20210525)            wDescription = 'PC Local'
+*ROW_METADATA(ADELIA         20210525)            wHost = '127.0.0.1'
+*ROW_METADATA(ADELIA         20210525)            wPort = '910'
+*ROW_METADATA(ADELIA         20210525)            wProfil = 'demofra'
+*ROW_METADATA(ADELIA         20210525)            wpassword = 'demofra'
+*ROW_METADATA(ADELIA         20210525)         si_valeur 'JAVA'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'MONPC_JAVA'
+*ROW_METADATA(ADELIA         20210525)            wDescription = 'PC Local en Java'
+*ROW_METADATA(ADELIA         20210525)            wHost = '127.0.0.1'
+*ROW_METADATA(ADELIA         20210525)            wPort = '3500'
+*ROW_METADATA(ADELIA         20210525)            wProfil = 'demofrajava'
+*ROW_METADATA(ADELIA         20210525)            wpassword = 'demofrajava'
+*ROW_METADATA(ADELIA         20210525)      fin_choix_selon
+*ROW_METADATA(ADELIA         20210525)      APPELER_DLL 'VATOOLBX.DLL'  'VaToolBxAddPhysicalServer' wservphy wDescription wHost wPort wProfil wpassword wCodeRetour
+*ROW_METADATA(ADELIA         20210525)      * Ajout de l'association
+*ROW_METADATA(ADELIA         20210525)      wServLog = 'LAN'
+*ROW_METADATA(ADELIA         20210525)      choix_selon pcible
+*ROW_METADATA(ADELIA         20210525)         si_valeur '400'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'HGBUSAP'
+*ROW_METADATA(ADELIA         20210525)            wNomBD = '*DFT'
+*ROW_METADATA(ADELIA         20210525)         si_valeur 'WIN'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'MONPC'
+*ROW_METADATA(ADELIA         20210525)            wNomBD = 'EXIWS_MYSQL'
+*ROW_METADATA(ADELIA         20210525)         si_valeur 'JAVA'
+*ROW_METADATA(ADELIA         20210525)            wservphy = 'MONPC_JAVA'
+*ROW_METADATA(ADELIA         20210525)            wNomBD = 'EXIWS_MYSQL'
+*ROW_METADATA(ADELIA         20210525)      fin_choix_selon
+*ROW_METADATA(ADELIA         20210525)      APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxAddAssociation' wServLog wservphy wNomBD wCodeRetour
+*ROW_METADATA(ADELIA         20210525)   FIN_PROCEDURE
+*ROW_METADATA(FMT_LTA                )FIN_PGM

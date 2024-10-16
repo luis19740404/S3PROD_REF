@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDPEHI" guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" scale="-1" type="STRING"/>
+        <field description="EDPEHI" guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="EDPEHI" guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" scale="2" type="NUMBER"/>
+        <field description="EDPEHI" guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" scale="-1" type="STRING"/>
+        <field description="EDPEHI" guideWord="ZZ_PRN_PERSONNE" kind="VARIABLE" length="20" logicalProperty="PERSONNEL.PRN_PERSONNE" scale="-1" type="STRING"/>
+        <field description="EDPEHI" kind="CONSTANT" length="10" scale="8">
+            <text text="Page :"/>
+        </field>
+    </fields>
+</report>

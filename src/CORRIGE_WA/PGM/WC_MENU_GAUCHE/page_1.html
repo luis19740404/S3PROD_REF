@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+<link href="../styles/stylegeneral.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+
+<body><form name="WC_MENU_GAUCHE_1_FORM_1" id="WC_MENU_GAUCHE_1_FORM_1" method="post">
+  <table width="100%" height="100%" background="../images/bande_cad.jpg">
+    <tr>
+      <td><table width="100%" height="514">
+        <tr>
+          <td height="100"><adelia:hlink>
+              <a href="::ADELIA_EVT" name="HLK_ACCUEIL" class="liennonsoul" id="HLK_ACCUEIL"> Accueil </a>
+            </adelia:hlink>
+&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="100"><adelia:cond name="CND_PERS_DYNAMIC" ><adelia:hlink ><a href="::ADELIA_EVT" name="HLK_LISTE_DYN" class="liennonsoul" id="HLK_LISTE_DYN" >Personnel (dynamique) </a></adelia:hlink></adelia:cond></td>
+        </tr>
+        <tr>
+          <td height="100"><adelia:b_cond name="CND_PERS_STATIC" />
+<adelia:hlink ><a href="::ADELIA_EVT" name="HLK_LISTE_STAT" class="liennonsoul" id="HLK_LISTE_STAT" >Personnel (statique) </a></adelia:hlink>&nbsp;
+<adelia:e_cond /></td>
+        </tr>
+        <tr>
+          <td height="100"><adelia:cond name="CND_SOCIETE">
+&nbsp;<adelia:hlink>
+  <a href="::ADELIA_EVT" name="HLK_SOCIETE" class="liennonsoul" id="HLK_SOCIETE"> Soci&eacute;t&eacute; </a>
+</adelia:hlink>
+</adelia:cond>
+&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="100"><adelia:hlink>
+            <a href="::ADELIA_EVT" name="HLK_CLIENT" class="liennonsoul" id="HLK_CLIENT"> Clients </a>
+          </adelia:hlink></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  </form>
+
+
+</body>
+</html>

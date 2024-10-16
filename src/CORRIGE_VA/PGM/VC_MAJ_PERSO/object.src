@@ -1,0 +1,249 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(FMT_PYM        20070926)      FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070926)      alpha(128) wnom_objet
+*ROW_METADATA(FMT_PYM        20070926)      alpha(15) wtype_objet
+*ROW_METADATA(FMT_PYM        20070926)      liste lst_objet wnom_objet wtype_objet
+*ROW_METADATA(FMT_PYM        20071005)      *
+*ROW_METADATA(FMT_PYM        20071005)      alpha(250) w_CheminFichier
+*ROW_METADATA(FMT_PYM        20070913)      num_bin_4  w_Taille
+*ROW_METADATA(FMT_PYM        20070913)      bool w_CodeRetour
+*ROW_METADATA(FMT_PYM        20101203)      alpha(2) pcod_action
+*ROW_METADATA(FMT_PYM        20101203)      alpha(1) wtop_verrou 
+*ROW_METADATA(FMT_PYM        20101203)      alpha(500) wmsg_erreur
+*ROW_METADATA(FMT_PYM        20101203)      alpha(200) wmsgtext
+*ROW_METADATA(FMT_PYM        20101203)      alpha(10) wnompgm
+*ROW_METADATA(FMT_PYM        20070913)      *
+*ROW_METADATA(FMT_PYM        20070927)      liste lsm_societe *ref_mld(societe)
+*ROW_METADATA(FMT_PYM        20070927)      *
+*ROW_METADATA(FMT_PYM        20070920)      param zz_cod_matricul pcod_action
+*ROW_METADATA(FMT_PYM        20070920)      
+*ROW_METADATA(FMT_PYM        20070913)      DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070913)         ALPHA(1) P_COD_RETOUR
+*ROW_METADATA(FMT_PYM        20070913)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070611)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070913)      DEBUT_STD_D
+*ROW_METADATA(FMT_PYM        20101203)      FIN_STD
+*ROW_METADATA(FMT_PYM        20101203)      wtop_verrou = *blank
+*ROW_METADATA(FMT_PYM        20070926)      traiter_proc rempl_objets
+*ROW_METADATA(FMT_PYM        20101203)      INITIALISER FEN_MAJ_PERSO
+*ROW_METADATA(FMT_PYM        20101203)      si wtop_verrou <> *blank
+*ROW_METADATA(FMT_PYM        20101203)         terminer
+*ROW_METADATA(FMT_PYM        20101203)      fin
+*ROW_METADATA(FMT_PYM        20070611)      EXECUTER FEN_MAJ_PERSO
+*ROW_METADATA(FMT_PYM        20070913)      DEBUT_STD_F
+*ROW_METADATA(FMT_PYM        20070913)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070611)      
+*ROW_METADATA(FMT_PYM        20070611)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_FENETRE FEN_MAJ_PERSO
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070611)         
+*ROW_METADATA(FMT_PYM        20070611)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070927)         zz_cod_sit_fami:valeur_courante = 'C'
+*ROW_METADATA(FMT_PYM        20070927)         inserer_elt zz_cod_sit_fami:liste
+*ROW_METADATA(FMT_PYM        20070927)         zz_cod_sit_fami:valeur_courante = 'M'
+*ROW_METADATA(FMT_PYM        20070927)         inserer_elt zz_cod_sit_fami:liste
+*ROW_METADATA(FMT_PYM        20070927)         zz_cod_sit_fami:valeur_courante = 'D'
+*ROW_METADATA(FMT_PYM        20070927)         inserer_elt zz_cod_sit_fami:liste
+*ROW_METADATA(FMT_PYM        20070927)         zz_cod_sit_fami:valeur_courante = 'V'
+*ROW_METADATA(FMT_PYM        20070927)         inserer_elt zz_cod_sit_fami:liste
+*ROW_METADATA(FMT_PYM        20070927)         zz_cod_sit_fami:valeur_courante = 'P'
+*ROW_METADATA(FMT_PYM        20070927)         inserer_elt zz_cod_sit_fami:liste
+*ROW_METADATA(FMT_PYM        20070927)         *
+*ROW_METADATA(FMT_PYM                )         DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20070927)            charger_sql_lst lsm_societe societe *tri(so_nom_societe)
+*ROW_METADATA(FMT_PYM        20070913)            lecture_lst lsm_societe
+*ROW_METADATA(FMT_PYM        20070913)               zz_cod_societe = so_cod_societe
+*ROW_METADATA(FMT_PYM        20070913)               zz_nom_societe = so_nom_societe
+*ROW_METADATA(FMT_PYM        20070913)               inserer_elt lsv_societe:liste
+*ROW_METADATA(FMT_PYM        20070913)            fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20101203)               maj_sql PERSONNEL PE_COD_MATRICUL= :ZZ_COD_MATRICUL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(FMT_PYM        20101203)               si *bloque = '1'
+*ROW_METADATA(FMT_PYM        20101203)                  exec_sql(get diagnostics condition 1 :wmsg_erreur = message_text)
+*ROW_METADATA(FMT_PYM        20101203)                  wnompgm = 'RTVMSGTXT'
+*ROW_METADATA(FMT_PYM        20101203)                  appeler &wnompgm wmsgtext
+*ROW_METADATA(FMT_PYM        20101203)                  wtop_verrou = 'O'
+*ROW_METADATA(FMT_PYM        20101203)               sinon
+*ROW_METADATA(FMT_PYM        20101203)                  LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(FMT_PYM        20070913)                  DEBUT_STD PERSONNEL
+*ROW_METADATA(FMT_PYM        20070913)                     SI *BLOQUE = '1'
+*ROW_METADATA(FMT_PYM        20101203)                        P_COD_RETOUR = '1'
+*ROW_METADATA(FMT_PYM        20101203)                        
+*ROW_METADATA(FMT_PYM        20070913)                     FIN
+*ROW_METADATA(FMT_PYM        20070913)                     PRESENTER PERSONNEL
+*ROW_METADATA(FMT_PYM        20070913)                  FIN_STD
+*ROW_METADATA(FMT_PYM        20101203)               fin
+*ROW_METADATA(FMT_PYM                )         FIN_SRV
+*ROW_METADATA(FMT_PYM        20101203)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070913)               * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070913)               * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070913)               *
+*ROW_METADATA(FMT_PYM        20070913)               ZZ_DAT_ENTREE = &FORMAT_DATE8(ZZ_DAT_ENTREE;'YMD';'DMY')
+*ROW_METADATA(FMT_PYM        20070913)               * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070913)               * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070913)               *
+*ROW_METADATA(FMT_PYM        20070913)               ZZ_DAT_NAIS_PER = &FORMAT_DATE8(ZZ_DAT_NAIS_PER;'YMD';'DMY')
+*ROW_METADATA(FMT_PYM        20070913)            FIN_STD
+*ROW_METADATA(FMT_PYM        20070611)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070927)         *
+*ROW_METADATA(FMT_PYM        20070927)         si pcod_action = 'MJ'
+*ROW_METADATA(FMT_PYM        20070927)            zz_cod_matricul:lecture_seule = *vrai
+*ROW_METADATA(FMT_PYM        20070927)         sinon
+*ROW_METADATA(FMT_PYM        20070927)            zz_cod_matricul:lecture_seule = *faux
+*ROW_METADATA(FMT_PYM        20070927)         fin
+*ROW_METADATA(FMT_PYM        20070913)         lsv_societe:valeur = pe_cod_societe
+*ROW_METADATA(FMT_PYM        20070611)      FIN_INIT
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_OBJET BTN_ANNULER
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT BTN_ANNULER:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20071008)               pcod_action = 'AN'
+*ROW_METADATA(FMT_PYM        20071008)               terminer
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_OBJET BTN_VALIDER
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT BTN_VALIDER:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               verifier
+*ROW_METADATA(FMT_PYM        20070913)               valider
+*ROW_METADATA(FMT_PYM        20070913)               terminer
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_CAL_1
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_CAL_1:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               appeler vc_aff_calend zz_dat_nais_per
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_CAL_2
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_CAL_2:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               appeler vc_aff_calend zz_dat_entree
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_RECHERCHE
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_RECHERCHE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               w_CheminFichier = 'C:\config'
+*ROW_METADATA(FMT_PYM        20070913)               w_Taille = 250
+*ROW_METADATA(FMT_PYM        20070913)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFileSelection' fen_maj_perso 'Fichiers images' '*.bmp; *.gif; *.jpg' '*.bmp; *.gif; *.jpg' w_CheminFichier w_Taille w_CodeRetour
+*ROW_METADATA(FMT_PYM        20071005)               *
+*ROW_METADATA(FMT_PYM        20071005)               APPELER_METHODE img_employe CHARGER_BITMAP w_cheminfichier
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070927)         DEBUT_OBJET BTN_POLICE
+*ROW_METADATA(FMT_PYM        20070927)            DEBUT_EVT BTN_POLICE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070927)               appeler VC_GST_OBJETS.police 'VCMAPE' 'FEN_MAJ_PERSO' LST_OBJET
+*ROW_METADATA(FMT_PYM        20070927)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070927)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070927)         DEBUT_OBJET BTN_LECT_SEULE
+*ROW_METADATA(FMT_PYM        20070927)            DEBUT_EVT BTN_LECT_SEULE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070927)               appeler VC_GST_OBJETS.lecture_seule 'VCMAPE' 'FEN_MAJ_PERSO' LST_OBJET
+*ROW_METADATA(FMT_PYM        20070927)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070927)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070611)      FIN_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_VERIF
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070913)               * Contrôle Alphanumérique sur ZZ_NOM_PERSONNE : erreur si à blanc
+*ROW_METADATA(FMT_PYM        20070913)               PREPARER_MSG 0008 ZZ_NOM_PERSONNE
+*ROW_METADATA(FMT_PYM        20070913)               SI ZZ_NOM_PERSONNE = *BLANK
+*ROW_METADATA(FMT_PYM        20070913)                  ERREUR
+*ROW_METADATA(FMT_PYM        20070913)               FIN
+*ROW_METADATA(FMT_PYM        20070913)               * Contrôle Alphanumérique sur ZZ_PRN_PERSONNE : erreur si à blanc
+*ROW_METADATA(FMT_PYM        20070913)               PREPARER_MSG 0008 ZZ_PRN_PERSONNE
+*ROW_METADATA(FMT_PYM        20070913)               SI ZZ_PRN_PERSONNE = *BLANK
+*ROW_METADATA(FMT_PYM        20070913)                  ERREUR
+*ROW_METADATA(FMT_PYM        20070913)               FIN
+*ROW_METADATA(FMT_PYM        20070913)            FIN_STD
+*ROW_METADATA(FMT_PYM        20070611)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)      FIN_VERIF
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_VALID
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070913)               * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070913)               * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070913)               *
+*ROW_METADATA(FMT_PYM        20070913)               ZZ_DAT_ENTREE= &FORMAT_DATE8(ZZ_DAT_ENTREE;'DMY';'YMD')
+*ROW_METADATA(FMT_PYM        20070913)               * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070913)               * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070913)               *
+*ROW_METADATA(FMT_PYM        20070913)               ZZ_DAT_NAIS_PER= &FORMAT_DATE8(ZZ_DAT_NAIS_PER;'DMY';'YMD')
+*ROW_METADATA(FMT_PYM        20070913)            FIN_STD
+*ROW_METADATA(FMT_PYM                )         DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20070611)               LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(FMT_PYM        20070611)               CODE_RET_SQL = *SQLCODE
+*ROW_METADATA(FMT_PYM        20070913)               DEBUT_STD PERSONNEL
+*ROW_METADATA(FMT_PYM        20070913)                  RAPATRIER PERSONNEL
+*ROW_METADATA(FMT_PYM        20070913)               FIN_STD
+*ROW_METADATA(FMT_PYM        20070611)               SI CODE_RET_SQL = *NORMAL
+*ROW_METADATA(FMT_PYM        20070611)                  MAJ_SQL PERSONNEL *ALL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(FMT_PYM        20070611)               SINON
+*ROW_METADATA(FMT_PYM        20070611)                  SI CODE_RET_SQL = *NON_TROUVE
+*ROW_METADATA(FMT_PYM        20070611)                     CREER_SQL PERSONNEL
+*ROW_METADATA(FMT_PYM        20070611)                  FIN
+*ROW_METADATA(FMT_PYM        20101203)               FIN
+*ROW_METADATA(FMT_PYM        20101203)               valider_maj
+*ROW_METADATA(FMT_PYM                )         FIN_SRV
+*ROW_METADATA(FMT_PYM        20070611)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)      FIN_VALID
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070611)      FIN_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070611)   FIN_FENETRE
+*ROW_METADATA(FMT_PYM        20070926)   DEBUT_PROCEDURE REMPL_OBJETS
+*ROW_METADATA(FMT_PYM        20070926)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070926)         
+*ROW_METADATA(FMT_PYM        20070926)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070926)      wtype_objet = 'CHAMP_DE_SAISIE'
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_COEFFICI'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_EMPLOI'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_MATRICUL'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_POS_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_SERVICE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_SEXE_PER'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_DAT_ENTREE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_DAT_NAIS_PER'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_LIB_AD1_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_LIB_AD2_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_LIB_BUD_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_LIB_LIEU_NAI'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_LIB_VIL_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_MTT_SALAIRE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_NBR_HEURE_ME'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_NOM_PERSONNE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_NUM_SS_PERS'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_PRN_PERSONNE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_TYP_DE_PAIE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      *
+*ROW_METADATA(FMT_PYM        20070927)      wtype_objet = 'LISTE_VALEUR'
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_SIT_FAMI'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'LSM_SOCIETE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      *
+*ROW_METADATA(FMT_PYM        20070926)      wtype_objet = 'COLONNE_LST_VAL'
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_COD_SOCIETE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)      wnom_objet = 'ZZ_NOM_SOCIETE'
+*ROW_METADATA(FMT_PYM        20070926)      inserer_elt lst_objet
+*ROW_METADATA(FMT_PYM        20070926)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

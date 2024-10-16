@@ -1,0 +1,8 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   * Controle que la Qté commandée est > au mini de vente .
+*ROW_METADATA(ADELIA                 )   PREPARER_MSG EXP0108 $$QTE_COMM
+*ROW_METADATA(ADELIA                 )   SI $$QTE_COMM < AR_QTE_MIN_VEN
+*ROW_METADATA(ADELIA                 )     INIT_MSG $$QTE_COMM AR_QTE_MIN_VEN
+*ROW_METADATA(ADELIA                 )     ANOMALIE
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

@@ -1,0 +1,24 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      liste lst_personnel *ref_mld(personnel)
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      ouvrir EDPEPA
+*ROW_METADATA(ADELIA                 )      *
+*ROW_METADATA(ADELIA                 )      DEBUT_SRV LOCAL
+*ROW_METADATA(ADELIA                 )         charger_sql_lst lst_personnel personnel, societe *cond(SO_COD_SOCIETE=PE_COD_SOCIETE) *tri(PE_LIB_VIL_PERS)
+*ROW_METADATA(ADELIA                 )      FIN_SRV
+*ROW_METADATA(ADELIA                 )      *
+*ROW_METADATA(ADELIA                 )      lire_p_elt lst_personnel
+*ROW_METADATA(ADELIA                 )      tant_que &code_lst(lst_personnel) = *normal
+*ROW_METADATA(ADELIA                 )         imprimer
+*ROW_METADATA(ADELIA                 )         lire_av_elt lst_personnel
+*ROW_METADATA(ADELIA                 )      refaire
+*ROW_METADATA(ADELIA                 )      *
+*ROW_METADATA(ADELIA                 )      fermer EDPEPA *prv
+*ROW_METADATA(ADELIA                 )      *
+*ROW_METADATA(ADELIA                 )      terminer
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )FIN_PGM

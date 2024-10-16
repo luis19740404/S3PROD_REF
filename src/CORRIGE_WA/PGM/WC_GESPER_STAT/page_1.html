@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+<script language="JavaScript" type="text/javascript">
+function affiche_pdf()
+{
+window.open(document.WC_GESPER_STAT_1_FORM_1.CHS_CHEMIN_PDF.value,_blank);
+}
+</script>
+</head>
+
+<body><form name="WC_GESPER_STAT_1_FORM_1" id="WC_GESPER_STAT_1_FORM_1" method="post">
+  <p align="center"><strong>Liste des employ&eacute;s</strong> <a name="Haut" id="Haut"></a></p>
+  <table width="30%"  border="1" align="center" bgcolor="#999966">
+    <tr>
+      <td colspan="2"><div align="center"><strong>S&eacute;lection par</strong> </div></td>
+    </tr>
+    <tr>
+      <td width="50%"><strong>Ville</strong></td>
+      <td width="60%"><adelia:entryfield type="ALPHA" length="15">
+<input type="text" name="CHS_VILLE_SEL" id="CHS_VILLE_SEL" size="15" maxlength="15"/>
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="50%"><strong>Sit.fam</strong></td>
+      <td width="60%"><adelia:combobox type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SIT_FAMIL" dataflow="yes" >
+<select name="CBX_SITFAM" id="CBX_SITFAM" >
+</select>
+</adelia:combobox></td>
+    </tr>
+    <tr>
+      <td width="50%"><strong>Soci&eacute;t&eacute;</strong></td>
+      <td width="60%"><adelia:combobox type="ALPHA" length="2" lentity="PERSONNEL" lproperty="COD_SOCIETE" dataflow="yes" >
+<select name="CBX_SOCIETE" id="CBX_SOCIETE" >
+</select>
+</adelia:combobox>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="50%"><div align="center"><adelia:button default="true" ><input name="BTN_ENTREE" type="submit" class="BordureBouton" id="BTN_ENTREE" onclick="::ADELIA_EVT" value="Entr&eacute;e" /></adelia:button>
+&nbsp;</div></td>
+      <td width="60%"><div align="center"><adelia:button>
+        <input type="button" name="BTN_PRINT" id="BTN_PRINT" value="Imprimer" onclick="::ADELIA_EVT"/>
+      </adelia:button></div></td>
+    </tr>
+  </table>
+  <p><adelia:cond name="CND_AFF_LISTE">
+&nbsp;</p>
+<table width="75%" border="1" align="center" cellpadding="1" cellspacing="1" cols="5">
+<tr>
+<td><strong>Matricule</strong></td>
+<td><strong>Nom</strong></td>
+<td><strong>Ville</strong></td>
+<td><strong>Sit.fam.</strong></td>
+<td><strong>Soci&eacute;t&eacute;</strong></td>
+</tr>
+<adelia:tablelist name="TBL_EMPL" eveneltcolor="#00CCCC" oddeltcolor="#FF0000">
+<tr>
+<td><adelia:outputfield name="ZZ_COD_MATRICUL" type="ALPHA" length="6" lentity="PERSONNEL" lproperty="COD_MATRICULE" dataflow="yes" >
+<a href="::ADELIA_EVT" class="liennonsoul" > </a>
+</adelia:outputfield>  </td>
+<td><adelia:outputfield name="ZZ_NOM_PERSONNE" type="ALPHA" length="30" lentity="PERSONNEL" lproperty="NOM_PERSONNE" dataflow="yes" />
+ </td>
+<td><adelia:outputfield name="ZZ_LIB_VIL_PERS" type="ALPHA" length="30" lentity="PERSONNEL" lproperty="LIB_VIL_PERS" dataflow="yes" />
+</td>
+<td><adelia:outputfield name="ZZ_COD_SIT_FAMI" type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SIT_FAMIL" dataflow="yes" />
+&nbsp;</td>
+<td><adelia:outputfield name="ZZ_COD_SOCIETE" type="ALPHA" length="2" lentity="PERSONNEL" lproperty="COD_SOCIETE" dataflow="yes" />
+&nbsp;</td>
+</tr>
+</adelia:tablelist>
+</table>
+<p>
+
+</adelia:cond>
+&nbsp; </p>
+<p align="center"><a href="#Haut">Haut</a> </p>
+</form>
+
+
+</body>
+</html>

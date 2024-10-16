@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_GESPERS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="10" guide="0" kinematic="0" name="TBL_PERSO">
+            <properties>
+                <property id="1" stringValue="ZZ_COD_MATRICUL -6 2 6 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1"/>
+                <property id="4" intValue="10"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_POSIT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 6 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_PREC">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_SUIVANT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_CREER">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_MODIFIER">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="1" kinematic="0" name="CHS_POSIT">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 15 -1"/>
+                <property id="8"/>
+            </properties>
+        </control>
+    </controls>
+</page>

@@ -1,0 +1,9 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   * Contrôle de $$_DATE6
+*ROW_METADATA(ADELIA                 )   DECLARER WRESD6;WRES_DATE6 1
+*ROW_METADATA(ADELIA                 )   WRES_DATE6=&CONTROLE_DATE6('DMY';$$_DATE6)
+*ROW_METADATA(ADELIA                 )   SI WRES_DATE6 = '0'
+*ROW_METADATA(ADELIA                 )     PREPARER_MSG 9001 $$_DATE6
+*ROW_METADATA(ADELIA                 )     ANOMALIE
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

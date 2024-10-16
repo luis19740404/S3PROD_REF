@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_HIST",
+  "description" : "Edition personnel avec histogramme",
+  "creationDate" : "2000-03-03 09:13:14",
+  "updateDate" : "2000-03-03 09:13:14",
+  "visibility" : "PUBLIC",
+  "ibmName" : "EDPEHI",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPEHI",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

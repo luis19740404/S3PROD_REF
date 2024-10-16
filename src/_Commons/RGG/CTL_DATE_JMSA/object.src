@@ -1,0 +1,5 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   SI $$_DATE <> 0
+*ROW_METADATA(ADELIA                 )     &CONTROLE_DATE_JMSA ($$_DATE )
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

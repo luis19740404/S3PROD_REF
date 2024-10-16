@@ -1,0 +1,50 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      ALPHA(80) R1
+*ROW_METADATA(ADELIA                 )      CHARGEMENT C1 FEN_PERSO.LST_PERSO:LISTE *SQL_D REQUETE ZZ_COD_MATRICUL ZZ_NOM_PERSONNE ZZ_PRN_PERSONNE ZZ_COD_SEXE_PER ZZ_LIB_VIL_PERS
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      R1='select PEPMAT, PEPNPE, PEPPRP, PEPSEX, PEPBDP FROM $$.PERSONP '
+*ROW_METADATA(ADELIA                 )      REQUETE= R1 /// ' WHERE  ( PEPSEX = ''F'' ) '
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_PERSO
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_PERSO
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_PERSO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         VIDER_LST FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )            CHARGT_LST C1
+*ROW_METADATA(ADELIA                 )               INSERER_ELT  FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )            FIN_CHARGT_LST 
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         W_SQL=*SQLCODE
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_GO
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_GO:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               INITIALISER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LBR_SEXE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LBR_SEXE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               R2=' WHERE  ( PEPSEX = ''' // W_SEXE // ''') ORDER BY  PEPMAT ASC '
+*ROW_METADATA(ADELIA                 )               REQUETE=R1 /// R2
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

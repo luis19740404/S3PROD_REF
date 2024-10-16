@@ -1,0 +1,14 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   SI $$_PRX_UNIT = 0
+*ROW_METADATA(ADELIA                 )     * Recherche si prix spécial; si pas de prix spécial pour le
+*ROW_METADATA(ADELIA                 )     * client, le prix public est utilisé.
+*ROW_METADATA(ADELIA                 )     LIRE VUE_TARIF
+*ROW_METADATA(ADELIA                 )     SI VUE_TARIF EXISTE
+*ROW_METADATA(ADELIA                 )       $$_PRX_UNIT = TA_PRX_SPEC
+*ROW_METADATA(ADELIA                 )     SINON
+*ROW_METADATA(ADELIA                 )       $$_PRX_UNIT = AR_PRX_VEN_UNI
+*ROW_METADATA(ADELIA                 )     FIN
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   IDENTIFIER VUE_TARIF TARIFL1 CLE ;ZZ_COD_CLIENT ;ZZ_COD_ARTICLE
+*ROW_METADATA(ADELIA                 )FIN_RGG

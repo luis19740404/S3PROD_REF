@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO12",
+  "description" : "Utilisation de l'arbre liste",
+  "creationDate" : "2000-04-04 13:32:13",
+  "updateDate" : "2000-07-07 15:12:02",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAEX12",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEX12",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERS_POURC",
+  "description" : "Edition personnel avec pourcentage",
+  "creationDate" : "2000-03-03 09:13:16",
+  "updateDate" : "2000-03-03 09:13:16",
+  "visibility" : "PUBLIC",
+  "layoutCode" : "EDPEPC",
+  "nature" : "CRYSTAL"
+}

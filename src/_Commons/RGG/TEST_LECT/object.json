@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "TEST_LECT",
+  "description" : "Test lecture",
+  "creationDate" : "2007-11-09 08:36:09",
+  "updateDate" : "2022-11-21 15:00:06",
+  "visibility" : "PUBLIC",
+  "mrClass" : "LE",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL", "WADELIA" ]
+}

@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "FEN_CLIENT",
+  "description" : "Guide client",
+  "creationDate" : "2011-02-09 15:37:13",
+  "updateDate" : "2011-02-09 16:05:24",
+  "visibility" : "PRIVATE",
+  "ibmName" : "FENCLI",
+  "programType" : "I",
+  "sourceType" : "ADELIA",
+  "layoutCode" : "FENCLI",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "NATIVE"
+}

@@ -1,0 +1,97 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070912)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070912)      num_bin_4 w_nb_employe
+*ROW_METADATA(FMT_PYM        20070912)      *
+*ROW_METADATA(FMT_PYM        20070912)      num_bin_4 w_NbParts
+*ROW_METADATA(FMT_PYM        20070912)      num_e(15,4) TabValeurs(10)
+*ROW_METADATA(FMT_PYM        20070912)      alpha(250) TabLegendes(10)
+*ROW_METADATA(FMT_PYM        20070912)      bool TabParts(10)
+*ROW_METADATA(FMT_PYM        20070912)      *
+*ROW_METADATA(FMT_PYM        20070912)      alpha(6) w_code_matricule
+*ROW_METADATA(FMT_PYM        20070912)      alpha(1) w_sit_fam
+*ROW_METADATA(FMT_PYM        20070912)      liste lsm_employes w_code_matricule w_sit_fam
+*ROW_METADATA(FMT_PYM        20070912)      *
+*ROW_METADATA(FMT_PYM        20070912)      param lsm_employes
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070912)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD_D
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)      INITIALISER FEN_CAM_SIT_FAM
+*ROW_METADATA(FMT_PYM        20071005)      EXECUTER FEN_CAM_SIT_FAM
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD_F
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)      
+*ROW_METADATA(FMT_PYM        20070912)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20070912)   DEBUT_FENETRE FEN_CAM_SIT_FAM
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070912)         
+*ROW_METADATA(FMT_PYM        20070912)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070912)         trier_lst lsm_employes w_sit_fam
+*ROW_METADATA(FMT_PYM        20070912)         *
+*ROW_METADATA(FMT_PYM        20070912)         lire_p_elt lsm_employes
+*ROW_METADATA(FMT_PYM        20070912)         tant_que &code_lst(lsm_employes) = *normal
+*ROW_METADATA(FMT_PYM        20070912)            traiter_chg sit_fam
+*ROW_METADATA(FMT_PYM        20070912)            w_nb_employe = w_nb_employe + 1
+*ROW_METADATA(FMT_PYM        20070912)            lire_av_elt lsm_employes
+*ROW_METADATA(FMT_PYM        20070912)            traiter_total sit_fam
+*ROW_METADATA(FMT_PYM        20070912)         refaire
+*ROW_METADATA(FMT_PYM        20070912)         *
+*ROW_METADATA(FMT_PYM        20070912)         APPELER_METHODE cam_sit_fam DESSINER_DONNEES w_NbParts TabValeurs TabLegendes
+*ROW_METADATA(FMT_PYM        20070912)         
+*ROW_METADATA(FMT_PYM        20070912)      FIN_INIT
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_OBJET CAM_SIT_FAM
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT CAM_SIT_FAM:HotHit
+*ROW_METADATA(FMT_PYM        20070912)               si tabparts(cam_sit_fam:point_clique) = *vrai
+*ROW_METADATA(FMT_PYM        20070912)                  tabparts(cam_sit_fam:point_clique) = *faux
+*ROW_METADATA(FMT_PYM        20070912)               sinon
+*ROW_METADATA(FMT_PYM        20070912)                  tabparts(cam_sit_fam:point_clique) = *vrai
+*ROW_METADATA(FMT_PYM        20070912)               fin
+*ROW_METADATA(FMT_PYM        20070912)               APPELER_METHODE cam_sit_fam DETACHER_PARTS TabParts
+*ROW_METADATA(FMT_PYM        20070912)               
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               terminer
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070912)      FIN_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_VERIF
+*ROW_METADATA(FMT_PYM        20070912)         
+*ROW_METADATA(FMT_PYM        20070912)      FIN_VERIF
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_VALID
+*ROW_METADATA(FMT_PYM        20070912)         
+*ROW_METADATA(FMT_PYM        20070912)      FIN_VALID
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070912)      FIN_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070912)   FIN_FENETRE
+*ROW_METADATA(FMT_PYM        20070912)   DEBUT_RUPTURE SIT_FAM
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070912)         rupture w_sit_fam *liste(lsm_employes)
+*ROW_METADATA(FMT_PYM        20070912)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070912)      TRT_CHANGEMENT
+*ROW_METADATA(FMT_PYM        20070913)         w_nb_employe = 0
+*ROW_METADATA(FMT_PYM        20070913)         w_nbparts = w_nbparts + 1
+*ROW_METADATA(FMT_PYM        20070912)         choix_selon w_sit_fam
+*ROW_METADATA(FMT_PYM        20070912)            si_valeur 'C'
+*ROW_METADATA(FMT_PYM        20070921)               tablegendes(w_nbparts) = _CELIBATAIRE
+*ROW_METADATA(FMT_PYM        20070912)            si_valeur 'M'
+*ROW_METADATA(FMT_PYM        20070921)               tablegendes(w_nbparts) = _MARIE
+*ROW_METADATA(FMT_PYM        20070912)            si_valeur 'D'
+*ROW_METADATA(FMT_PYM        20070926)               tablegendes(w_nbparts) = _DIVORCE
+*ROW_METADATA(FMT_PYM        20070912)            si_valeur 'V'
+*ROW_METADATA(FMT_PYM        20070926)               tablegendes(w_nbparts) = _VEUF
+*ROW_METADATA(FMT_PYM        20070912)            si_valeur 'P'
+*ROW_METADATA(FMT_PYM        20070926)               tablegendes(w_nbparts) = _PACSE
+*ROW_METADATA(FMT_PYM        20070912)         fin_choix_selon
+*ROW_METADATA(FMT_PYM        20070912)         
+*ROW_METADATA(FMT_PYM        20070912)      FIN_TRAITEMENT
+*ROW_METADATA(FMT_PYM        20070912)      TRT_TOTAL
+*ROW_METADATA(FMT_PYM        20070912)         tabvaleurs(w_nbparts) = w_nb_employe
+*ROW_METADATA(FMT_PYM        20070912)      FIN_TRAITEMENT
+*ROW_METADATA(FMT_PYM        20070912)   FIN_RUPTURE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

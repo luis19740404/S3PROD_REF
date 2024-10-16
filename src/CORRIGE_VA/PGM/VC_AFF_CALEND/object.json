@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_AFF_CALEND",
+  "description" : "Affichage du calendrier",
+  "creationDate" : "2007-09-13 07:52:11",
+  "updateDate" : "2007-09-13 14:36:34",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCAFCA",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCAFCA",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

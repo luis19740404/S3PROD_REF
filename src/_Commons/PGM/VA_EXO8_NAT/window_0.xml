@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="0" name="FEN_MAIN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="352"/>
+        <property id="-3" intValue="542"/>
+        <property id="-2" intValue="100"/>
+        <property id="-1" intValue="100"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9/DSo9ljWQaqLI9umjUJ/eBAQM17cVq7+EK2hAmxRaD/nNPozSnor/c1JKE3p6CPQERCb06x9yMScnKOvn9Wojs3D31jXOjNFLirPxqh3QNr9w66y21xSWj3gJ21t6CXJmBlRtBJFbByryCfLmBlFbIlAla+h1yZgNXZIVMqYPWAfYmAF7JpAvrsgWyKgL7rtxHkwgIKWW+eXLoAkPd0yPyngBfuXgK/I1A1XoFGsGr0Xx/nAcvm7lfXqc4jAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4Xq2MUQrAMAxCe/+DdcfqyJARE6Vl7IE/5sUxfmIdxrJ2hINIqt8IZ17TjjS5El0MuJEmuy6FsLICN0IJdgQ9oQQ7go5QQku5E+m9D1TQE01IIt1ST1TnBbLqCBIykFVHkLBDDnzIww3Nu+sjMeaOXAAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_GO">
+            <properties>
+                <property id="-8" stringValue="&amp;Go"/>
+                <property id="-2" intValue="293"/>
+                <property id="-1" intValue="446"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_PERSO">
+            <properties>
+                <property id="-4" intValue="222"/>
+                <property id="-3" intValue="498"/>
+                <property id="-2" intValue="40"/>
+                <property id="-1" intValue="27"/>
+                <property id="6" stringValue="ZZ_COD_MATRICUL -6 2 6 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_PRN_PERSONNE -6 2 20 -1 # ZZ_LIB_AD1_PERS -6 2 30 -1 # ZZ_COD_POS_PERS -6 2 5 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1 # ZZ_MTT_SALAIRE -6 3 11 2 # ZZ_DAT_ENTREE -6 3 8 0 # ZZ_LIB_BUD_PERS -6 2 24 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_COD_MATRICUL" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="11" stringValue="ZZ_COD_MATRICUL 9 2 6 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="95"/>
+                        <property id="11" stringValue="ZZ_NOM_PERSONNE 9 2 30 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_PRN_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.PRN_PERSONNE" name="ZZ_PRN_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 20 -1"/>
+                        <property id="-8" stringValue="Prénom"/>
+                        <property id="-3" intValue="63"/>
+                        <property id="11" stringValue="ZZ_PRN_PERSONNE 9 2 20 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_AD1_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_AD1_PERS" name="ZZ_LIB_AD1_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Adresse"/>
+                        <property id="-3" intValue="124"/>
+                        <property id="11" stringValue="ZZ_LIB_AD1_PERS 9 2 30 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_POS_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_POS_PERS" name="ZZ_COD_POS_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 5 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="49"/>
+                        <property id="11" stringValue="ZZ_COD_POS_PERS 9 2 5 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Adresse"/>
+                        <property id="-3" intValue="250"/>
+                        <property id="11" stringValue="ZZ_LIB_VIL_PERS 9 2 30 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_MTT_SALAIRE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.MTT_SALAIRE" name="ZZ_MTT_SALAIRE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="4"/>
+                        <property id="-11" intValue="18"/>
+                        <property id="-9" stringValue="3 11 2"/>
+                        <property id="-8" stringValue="Salaire"/>
+                        <property id="-3" intValue="91"/>
+                        <property id="8" intValue="2"/>
+                        <property id="11" stringValue="ZZ_MTT_SALAIRE 9 3 11 2"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_DAT_ENTREE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.DAT_ENTREE" name="ZZ_DAT_ENTREE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-10" stringValue="  /  /    "/>
+                        <property id="-9" stringValue="3 8 0"/>
+                        <property id="-8" stringValue="Date"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="11" stringValue="ZZ_DAT_ENTREE 9 3 8 0"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_BUD_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_BUD_PERS" name="ZZ_LIB_BUD_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 24 -1"/>
+                        <property id="-8" stringValue="Bureau"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="11" stringValue="ZZ_LIB_BUD_PERS 9 2 24 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+    </controls>
+</window>

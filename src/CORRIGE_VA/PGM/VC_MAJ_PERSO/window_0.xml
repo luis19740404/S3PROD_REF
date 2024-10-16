@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Mise à jour employé" help="" id="0" name="FEN_MAJ_PERSO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+        <property binaryType="bin" id="-20">AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC7u7u7AAAAAAAAAAAAAAu7u7u7u7uwAAAAAAAAAAC7u7u7u7u7uwAAAAAAAAC7u7u7u7u7u7u7AAAAAAALu7u7u7u7u7u7u7AAAAAAu7u7u7AAAAC7u7u7AAAAALu7u7ALu7u7ALu7uwAAAAu7u7sAu7u7u7ALu7uwAAC7u7uwC7u7u7u7ALu7uwAAu7u7sLu7u7u7u7C7u7sAALu7uwu7u7u7u7u7C7u7AAu7u7sLu7u7u7u7uwu7u7ALu7u7C7u7u7u7u7sLu7uwC7u7u7u7u7u7u7u7u7u7sAu7u7u7u7u7u7u7u7u7u7ALu7u7u7u7u7u7u7u7u7uwC7u7u7uwC7u7sAu7u7u7sAu7u7u7AAC7uwAAu7u7u7ALu7u7uwAAu7sAALu7u7uwALu7u7sAALu7AAC7u7u7AAC7u7u7AAC7uwAAu7u7uwAAu7u7uwAAu7sAALu7u7sAAAu7u7uwC7u7sAu7u7uwAAAAu7u7u7u7u7u7u7u7AAAAALu7u7u7u7u7u7u7uwAAAAALu7u7u7u7u7u7u7AAAAAAALu7u7u7u7u7u7sAAAAAAAAAu7u7u7u7u7sAAAAAAAAAAAu7u7u7u7uwAAAAAAAAAAAAALu7u7sAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//AP//+AAf/+AAB//AAAP/gAAB/wAAAP4AAAB8AAAAPAAAADgAAAAYAAAAGAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABgAAAAYAAAAHAAAADwAAAA+AAAAfwAAAP+AAAH/wAAD/+AAB//4AB///wD/8oAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAALu7uwAAAAC7u7u7uwAAC7sAAAO7sAALsAu7sDuwALuwu7u7C7sAu7C7u7sLuwC7u7u7u7u7ALu7ALsAu7sAu7sAuwC7uwC7uwC7ALu7AAu7ALsAu7AAC7u7u7u7sAAAu7u7u7sAAAAAu7u7AAAAAAAAAAAAAA+B8AAOAHAADAAwAAhAEAAIgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADgBwAA+B8AAA==</property>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="600"/>
+        <property id="-3" intValue="800"/>
+        <property id="-2" intValue="86"/>
+        <property id="-1" intValue="70"/>
+        <property id="3" stringValue="Mise à jour employé"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABAElEQVR4Xu2SwQ6DMAxD+f+fZsrUomIncUqLtMMsvQux4wg4jnmdgld0FZxnzui9bXioUmlEz8POspbKV4+gRavYTiyJROFd2G4sQ1FoN9aBpV1bvrmi90D3V2RGzJP51Bx8N5EJaaGwRM2R5rtEBkQVqDnSfJfIgKgCNUear1Y+BMICNffoR9DAQxWoucfUAUOAnlfnyPQBu/kfUDpAzRVZ/mcOSI/IZhWi/FieHpAtUWS56QOUB1EZPMBEJidAzz2Ut81JaaiyuOLp86H3Jgp4mC8CvUjzpaLQLmw3lkWi8Cq2E0uUSq9U0ffA7rKWjuh52PlIsz/ZtmJPWIJM6QPlQiZLSDVmwgAAAABJRU5ErkJggg==</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAZ0lEQVR4XrWPUQ7AIAxCPbo37+KSLkhhLsaR8IHtQ21NK4yXuhcjtHNOzKMCOI/dbdiVqKHNXODabeYSN7D5/4KvlgWc32bHCqYSzrjcu4YLkGdohFXBULnVWcGp8k8BWhg1PR9cdAGavNo2wYWFiQAAAABJRU5ErkJggg==</property>
+        <property id="12" intValue="1"/>
+        <property id="13" intValue="50"/>
+        <property id="16" intValue="20"/>
+        <property id="22" intValue="792"/>
+        <property id="23" intValue="566"/>
+    </properties>
+    <tabs>
+        <tab text="Général">
+            <controls>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Matricule"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="73"/>
+                        <property id="-2" intValue="137"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_MATRICUL" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="-2" intValue="134"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_0">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="98"/>
+                        <property id="-2" intValue="167"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="164"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_1">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Prénom"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="113"/>
+                        <property id="-2" intValue="197"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_PRN_PERSONNE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.PRN_PERSONNE" name="ZZ_PRN_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 20 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="154"/>
+                        <property id="-2" intValue="194"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SEXE_PER" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SEXE_PERS" name="ZZ_COD_SEXE_PER">
+                    <properties>
+                        <property id="-23" stringValue="MS Sans Serif;8;1"/>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="-8"/>
+                        <property id="-6" stringValue="F"/>
+                        <property id="-4" intValue="38"/>
+                        <property id="-3" intValue="156"/>
+                        <property id="-2" intValue="224"/>
+                        <property id="-1" intValue="342"/>
+                        <property id="9" intValue="2"/>
+                        <property id="14" stringValue="Femme¤Homme¤"/>
+                        <property id="15" stringValue="F¤H¤"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_2">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Sexe"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="79"/>
+                        <property id="-2" intValue="236"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SIT_FAMI" className="LISTE_VALEUR" dll="COMBOBOX" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SIT_FAMIL" name="ZZ_COD_SIT_FAMI">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="-4" intValue="21"/>
+                        <property id="-3" intValue="72"/>
+                        <property id="-2" intValue="272"/>
+                        <property id="-1" intValue="342"/>
+                        <property id="14" stringValue="ZZ_COD_SIT_FAMI 12 2 1 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_3">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Situation familiale"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="113"/>
+                        <property id="-2" intValue="276"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_5">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Date de naissance"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="117"/>
+                        <property id="-2" intValue="306"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_DAT_NAIS_PER" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.DAT_NAIS_PERS" name="ZZ_DAT_NAIS_PER">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-10" stringValue="  /  /    "/>
+                        <property id="-9" stringValue="3 8 0"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="303"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_6">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Lieu de naissance"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="115"/>
+                        <property id="-2" intValue="336"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_LIEU_NAI" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_LIEU_NAISS" name="ZZ_LIB_LIEU_NAI">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="333"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_7">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Numéro de sécurité sociale"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="160"/>
+                        <property id="-2" intValue="366"/>
+                        <property id="-1" intValue="176"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NUM_SS_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.NUM_SS_PERS" name="ZZ_NUM_SS_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-9" stringValue="3 13 0"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="105"/>
+                        <property id="-2" intValue="363"/>
+                        <property id="-1" intValue="342"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_GENERAL">
+                    <properties>
+                        <property id="-8"/>
+                        <property id="-4" intValue="300"/>
+                        <property id="-3" intValue="530"/>
+                        <property id="-2" intValue="100"/>
+                        <property id="-1" intValue="130"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CAL_1">
+                    <properties>
+                        <property id="-8"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="17"/>
+                        <property id="-2" intValue="303"/>
+                        <property id="-1" intValue="428"/>
+                        <property id="4"/>
+                        <property binaryType="dib" id="7" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWlTUpKTaVKTUqlpqXW09b///////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA44KYLAAAATUlEQVR4Xm2NCw7AIAhD28l2//s6ZUZkxA82KE0f8sFcTPOsgmqvazh+/yXtKEPlkFCY3j41eRg3Mo9LHUHuPRAxcEPS4mgg468N4ep8K5IbNiRb+/oAAAAASUVORK5CYII=</property>
+                        <property id="23" intValue="16777215"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Adresse">
+            <controls>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_ADR">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Adresse"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="92"/>
+                        <property id="-2" intValue="171"/>
+                        <property id="-1" intValue="186"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_AD1_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_AD1_PERS" name="ZZ_LIB_AD1_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="168"/>
+                        <property id="-1" intValue="305"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_VILLE">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Ville"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="73"/>
+                        <property id="-2" intValue="231"/>
+                        <property id="-1" intValue="186"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="228"/>
+                        <property id="-1" intValue="305"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_BUR_DIS">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Bureau distributeur"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="112"/>
+                        <property id="-2" intValue="261"/>
+                        <property id="-1" intValue="186"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_BUD_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_BUD_PERS" name="ZZ_LIB_BUD_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 24 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="182"/>
+                        <property id="-2" intValue="258"/>
+                        <property id="-1" intValue="305"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_AD2_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_AD2_PERS" name="ZZ_LIB_AD2_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="198"/>
+                        <property id="-1" intValue="305"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_4">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Code postal"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="110"/>
+                        <property id="-2" intValue="291"/>
+                        <property id="-1" intValue="186"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_POS_PERS" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.COD_POS_PERS" name="ZZ_COD_POS_PERS">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 5 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="49"/>
+                        <property id="-2" intValue="288"/>
+                        <property id="-1" intValue="305"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_ADRESSE">
+                    <properties>
+                        <property id="-8"/>
+                        <property id="-4" intValue="300"/>
+                        <property id="-3" intValue="530"/>
+                        <property id="-2" intValue="100"/>
+                        <property id="-1" intValue="130"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Emploi">
+            <controls>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_EMPLOI">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Désignation"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="95"/>
+                        <property id="-2" intValue="155"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_EMPLOI" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.COD_EMPLOI" name="ZZ_COD_EMPLOI">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="-2" intValue="152"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_COD_SERVICE">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Code service"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="108"/>
+                        <property id="-2" intValue="185"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SERVICE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SERVICE" name="ZZ_COD_SERVICE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 4 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="42"/>
+                        <property id="-2" intValue="182"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_DAT_ENTREE">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Date d'embauche"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="113"/>
+                        <property id="-2" intValue="215"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_DAT_ENTREE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.DAT_ENTREE" name="ZZ_DAT_ENTREE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-10" stringValue="  /  /    "/>
+                        <property id="-9" stringValue="3 8 0"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="212"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_SALAIRE">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Salaire mensuel"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="116"/>
+                        <property id="-2" intValue="245"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_MTT_SALAIRE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.MTT_SALAIRE" name="ZZ_MTT_SALAIRE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="4"/>
+                        <property id="-11" intValue="16"/>
+                        <property id="-9" stringValue="3 11 2"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="91"/>
+                        <property id="-2" intValue="242"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_EMPLOI">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8"/>
+                        <property id="-4" intValue="300"/>
+                        <property id="-3" intValue="530"/>
+                        <property id="-2" intValue="100"/>
+                        <property id="-1" intValue="130"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_8">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Coefficient"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="117"/>
+                        <property id="-2" intValue="275"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_COEFFICI" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.COD_COEFFICIENT" name="ZZ_COD_COEFFICI">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-9" stringValue="3 5 0"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="49"/>
+                        <property id="-2" intValue="272"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_9">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Code société"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="107"/>
+                        <property id="-2" intValue="306"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_10">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Horaire mensuel"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="111"/>
+                        <property id="-2" intValue="335"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NBR_HEURE_ME" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.NBR_HEURE_MENS" name="ZZ_NBR_HEURE_ME">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="4"/>
+                        <property id="-9" stringValue="3 5 2"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="49"/>
+                        <property id="-2" intValue="332"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_11">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="Type de paie"/>
+                        <property id="-4" intValue="13"/>
+                        <property id="-3" intValue="97"/>
+                        <property id="-2" intValue="365"/>
+                        <property id="-1" intValue="206"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_TYP_DE_PAIE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="PERSONNEL.TYP_DE_PAIE" name="ZZ_TYP_DE_PAIE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 2 -1"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="28"/>
+                        <property id="-2" intValue="362"/>
+                        <property id="-1" intValue="329"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CAL_2">
+                    <properties>
+                        <property id="-8"/>
+                        <property id="-4" intValue="20"/>
+                        <property id="-3" intValue="17"/>
+                        <property id="-2" intValue="212"/>
+                        <property id="-1" intValue="415"/>
+                        <property id="4"/>
+                        <property binaryType="dib" id="7" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWlTUpKTaVKTUqlpqXW09b///////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA44KYLAAAATUlEQVR4Xm2NCw7AIAhD28l2//s6ZUZkxA82KE0f8sFcTPOsgmqvazh+/yXtKEPlkFCY3j41eRg3Mo9LHUHuPRAxcEPS4mgg468N4ep8K5IbNiRb+/oAAAAASUVORK5CYII=</property>
+                        <property id="23" intValue="16777215"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="LISTE_VALEUR" dll="COMBOBOX" help="" kinematic="0" name="LSV_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 2 -1"/>
+                        <property id="-4" intValue="21"/>
+                        <property id="-3" intValue="223"/>
+                        <property id="-2" intValue="302"/>
+                        <property id="-1" intValue="329"/>
+                        <property id="6" intValue="2"/>
+                        <property id="14" stringValue="ZZ_NOM_SOCIETE -6 2 30 -1 # ZZ_COD_SOCIETE -6 2 2 -1"/>
+                        <property id="16" intValue="2"/>
+                        <property id="17"/>
+                    </properties>
+                    <controls>
+                        <control associatedVariable="ZZ_NOM_SOCIETE" className="COLONNE_LST_VAL" dll="COLCOMBO" help="" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+                            <properties>
+                                <property id="-39" intValue="1"/>
+                                <property id="-13" intValue="1"/>
+                                <property id="-9" stringValue="2 30 -1"/>
+                                <property id="-3" intValue="60"/>
+                            </properties>
+                        </control>
+                        <control associatedVariable="ZZ_COD_SOCIETE" className="COLONNE_LST_VAL" dll="COLCOMBO" help="" kinematic="1" logicalProperty="SOCIETE.COD_SOCIETE" name="ZZ_COD_SOCIETE">
+                            <properties>
+                                <property id="-13" intValue="1"/>
+                                <property id="-9" stringValue="2 2 -1"/>
+                                <property id="-3" intValue="60"/>
+                            </properties>
+                        </control>
+                    </controls>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Photo">
+            <controls>
+                <control associatedVariable="" className="IMAGE" dll="BITMAP" help="" kinematic="0" name="IMG_EMPLOYE">
+                    <properties>
+                        <property id="-4" intValue="281"/>
+                        <property id="-3" intValue="372"/>
+                        <property id="-2" intValue="100"/>
+                        <property id="-1" intValue="196"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_RECHERCHE">
+                    <properties>
+                        <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                        <property id="-8" stringValue="..."/>
+                        <property id="-4" intValue="23"/>
+                        <property id="-3" intValue="34"/>
+                        <property id="-2" intValue="353"/>
+                        <property id="-1" intValue="608"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+    </tabs>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-8" stringValue="Annuler"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="531"/>
+                <property id="-1" intValue="631"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_VALIDER">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="Valider"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="531"/>
+                <property id="-1" intValue="546"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_POLICE">
+            <properties>
+                <property id="-8" stringValue="Police"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="531"/>
+                <property id="-1" intValue="461"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_LECT_SEULE">
+            <properties>
+                <property id="-8" stringValue="Lecture seule"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="531"/>
+                <property id="-1" intValue="376"/>
+            </properties>
+        </control>
+    </controls>
+</window>

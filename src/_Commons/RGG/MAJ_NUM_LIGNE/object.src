@@ -1,0 +1,6 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   SI $$NUM_LIGNE = 0
+*ROW_METADATA(ADELIA                 )     DERN_LIGNE = DERN_LIGNE + 1
+*ROW_METADATA(ADELIA                 )     $$NUM_LIGNE = DERN_LIGNE
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

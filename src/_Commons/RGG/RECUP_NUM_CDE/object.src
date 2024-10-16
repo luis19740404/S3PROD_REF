@@ -1,0 +1,16 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   SI P_COD_ACTION = 'CR' ET EN_NUM_CDE = 0
+*ROW_METADATA(ADELIA                 )     EN_NUM_CDE = *HIVAL
+*ROW_METADATA(ADELIA                 )     POSITIONNER_AP RECUP_DERCDE
+*ROW_METADATA(ADELIA                 )     LIRE_ARRIERE RECUP_DERCDE
+*ROW_METADATA(ADELIA                 )     SI RECUP_DERCDE N_EXISTE_PAS
+*ROW_METADATA(ADELIA                 )       $$ZONE = 1
+*ROW_METADATA(ADELIA                 )       EN_NUM_CDE = $$ZONE
+*ROW_METADATA(ADELIA                 )     SINON
+*ROW_METADATA(ADELIA                 )       $$ZONE = EN_NUM_CDE + 1
+*ROW_METADATA(ADELIA                 )       EN_NUM_CDE = $$ZONE
+*ROW_METADATA(ADELIA                 )     FIN
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   IDENTIFIER RECUP_DERCDE ENTETEL1 CLE ;EN_NUM_CDE
+*ROW_METADATA(ADELIA                 )FIN_RGG

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CAL_MTT_LIGNE",
+  "description" : "Calcul du montant ligne commande",
+  "creationDate" : "1999-01-18 13:04:22",
+  "updateDate" : "1999-01-18 13:04:22",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CA",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

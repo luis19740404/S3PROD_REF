@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "CUA_EDT_LIST",
+  "description" : "Edition liste (contexte gestion par liste CUA)",
+  "creationDate" : "1995-06-30 11:03:36",
+  "updateDate" : "1995-06-30 11:03:36",
+  "visibility" : "PUBLIC",
+  "templateType" : "B"
+}

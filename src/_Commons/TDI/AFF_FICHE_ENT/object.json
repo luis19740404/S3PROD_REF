@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "AFF_FICHE_ENT",
+  "description" : "Affichage interactif d'infos sous forme de fiche",
+  "creationDate" : "1995-11-30 12:46:36",
+  "updateDate" : "1995-11-30 12:46:36",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

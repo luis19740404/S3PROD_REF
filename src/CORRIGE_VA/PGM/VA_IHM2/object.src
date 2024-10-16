@@ -1,0 +1,62 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      ALPHA(1) W_TRT
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_PERSO
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_PERSO
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_PERSO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         SI W_TRT='C'
+*ROW_METADATA(ADELIA                 )            BTN_OK:TEXTE='&Créer'
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )            BTN_OK:TEXTE='&Modifier'
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE ZZ_COD_MATRICUL METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_SUIV
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_SUIV:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FEN_PERSO:PAGE_COURANTE=FEN_PERSO:PAGE_COURANTE+1
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_SUIV0
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_SUIV0:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FEN_PERSO:PAGE_COURANTE=FEN_PERSO:PAGE_COURANTE+1
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_DAT_NAIS_PE0
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_DAT_NAIS_PE0:BoutonGaucheDoubleClic
+*ROW_METADATA(ADELIA                 )                  ZZ_DAT_NAIS_PE0:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_COD_SOCIETE
+*ROW_METADATA(ADELIA                 )            GUIDE ZZ_COD_SOCIETE 04 'Guide'
+*ROW_METADATA(ADELIA                 )            FIN_GUIDE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_DAT_NAIS_PER
+*ROW_METADATA(ADELIA                 )            GUIDE ZZ_DAT_NAIS_PER 04 'Calendrier'
+*ROW_METADATA(ADELIA                 )               ZZ_DAT_NAIS_PE0:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FIN_GUIDE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_HIECOD_MATRI
+*ROW_METADATA(ADELIA                 )            GUIDE ZZ_HIECOD_MATRI 04 'Guide'
+*ROW_METADATA(ADELIA                 )            APPELER VA_IHM4
+*ROW_METADATA(ADELIA                 )            FIN_GUIDE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

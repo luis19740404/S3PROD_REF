@@ -1,0 +1,6 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(ADELIA                 )   * interne ADELIA .
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   $$_DATE = &FORMAT_DATE6($$_DATE ;'YMD';'DMY')
+*ROW_METADATA(ADELIA                 )FIN_RGG

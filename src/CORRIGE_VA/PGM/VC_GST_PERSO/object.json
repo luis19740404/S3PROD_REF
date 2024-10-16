@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_GST_PERSO",
+  "description" : "Gestion du personnel",
+  "creationDate" : "2007-06-11 10:41:27",
+  "updateDate" : "2011-01-03 10:18:29",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCGSPE",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCGSPE",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

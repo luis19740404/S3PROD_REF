@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV007",
+  "description" : "Programme export excel",
+  "creationDate" : "2024-05-30 07:47:19",
+  "updateDate" : "2024-05-30 08:01:34",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV007",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV007",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "manageHistoryButtons" : "N"
+}

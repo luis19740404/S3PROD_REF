@@ -1,0 +1,27 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070809)      alpha(10) wlibelle
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070814)      liste lst_clients *ref_mld(client)
+*ROW_METADATA(FMT_PYM        20070814)      *
+*ROW_METADATA(FMT_PYM        20070814)      liste lst_commande *ref_mld(entcde)
+*ROW_METADATA(FMT_PYM        20070809)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070814)         charger_sql_lst lst_clients client
+*ROW_METADATA(FMT_PYM        20070814)         charger_sql_lst lst_commande entcde
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM        20070813)      *
+*ROW_METADATA(FMT_PYM        20070813)      ouvrir EDTCLI 
+*ROW_METADATA(FMT_PYM        20070809)      lecture_lst lst_clients 
+*ROW_METADATA(FMT_PYM        20070809)         imprimer
+*ROW_METADATA(FMT_PYM        20070809)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070814)      *
+*ROW_METADATA(FMT_PYM        20070814)      lecture_lst lst_commande
+*ROW_METADATA(FMT_PYM        20070814)         imprimer EDTCLI *sous_etat(Commandes)
+*ROW_METADATA(FMT_PYM        20070814)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070814)      *
+*ROW_METADATA(FMT_PYM        20070813)      fermer EDTCLI *prv
+*ROW_METADATA(FMT_PYM        20070809)   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

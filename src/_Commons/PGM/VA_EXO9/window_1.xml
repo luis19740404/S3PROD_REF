@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Histogramme" help="" id="1" name="FEN_HISTO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="503"/>
+        <property id="-3" intValue="790"/>
+        <property id="-2" intValue="70"/>
+        <property id="-1" intValue="5"/>
+        <property id="3" stringValue="Histogramme"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAApElEQVR4Xu2TXQrAMAiDe/QdrTfbUJpOU/u2dT8YCEom9WO0pZzaI9VaOVJdkZvdCfAsABodWmkAQAyokkErGWNb8TwU5QmwBKBsZXD/9hYANO6GzszLxTzj5gOA8ywvw614o+dxlxxsxcujP5AA1wBIZUv5AgAad3uHLe17ELf5EWDtKwgANA4AoARIgL4YNV+BE29JgD8DoJG62u/SjOju/Fkd6ORkoY9fvPUAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAaElEQVR4Xt2PUQ7AIAhDOfqOxs1cEDHViUr4G0lJg/JCibSKFTOHfNvPAaTVIUqYpvlt/OdcgACczz4MoIe69B9EwC0EDCcD4BvBAZwuOANAK4C0bQQPcB/BAdgFaYC0P0RIqFY3Uf8CokM9u9pa8kgAAAAASUVORK5CYII=</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="HISTOGRAMME" dll="HISTOGRA" help="" kinematic="0" name="HISTO_DATA">
+            <properties>
+                <property id="-4" intValue="426"/>
+                <property id="-3" intValue="763"/>
+                <property id="-2" intValue="46"/>
+                <property id="-1" intValue="10"/>
+                <property id="4"/>
+                <property id="5" stringValue="Nombres d'habitants par ville et par sexe"/>
+                <property id="6"/>
+                <property id="7"/>
+                <property id="9"/>
+                <property id="41" intValue="16777215"/>
+                <property id="50"/>
+                <property id="51" intValue="100"/>
+                <property id="59" intValue="30"/>
+                <property id="64"/>
+                <property id="67" intValue="255"/>
+                <property id="90"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="LBR_GROUPEMENT">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="6 -1 -1"/>
+                <property id="-8" stringValue="Groupement"/>
+                <property id="-6" intValue="1"/>
+                <property id="-4" intValue="40"/>
+                <property id="-3" intValue="270"/>
+                <property id="-2" intValue="1"/>
+                <property id="-1" intValue="9"/>
+                <property id="8" intValue="3"/>
+                <property id="9" intValue="3"/>
+                <property id="14" stringValue="Simple¤Empilé¤Empilé %¤"/>
+                <property id="15" stringValue="1¤2¤3¤"/>
+            </properties>
+        </control>
+    </controls>
+</window>

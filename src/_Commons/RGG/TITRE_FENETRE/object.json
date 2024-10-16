@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "TITRE_FENETRE",
+  "description" : "Titre des fenêtres",
+  "creationDate" : "2020-10-19 12:02:22",
+  "updateDate" : "2020-10-19 12:24:53",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

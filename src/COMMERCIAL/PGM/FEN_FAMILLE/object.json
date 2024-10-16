@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "FEN_FAMILLE",
+  "description" : "Fenêtre IBM d'interrogation familles d'articles",
+  "creationDate" : "1996-06-24 16:04:37",
+  "updateDate" : "2012-10-03 08:43:06",
+  "visibility" : "PRIVATE",
+  "ibmName" : "FENFAM",
+  "programType" : "I",
+  "sourceType" : "ADELIA",
+  "layoutCode" : "FENFAM",
+  "programTemplateName" : "QR_CONSTIT_FEN",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "NATIVE",
+  "manageHistoryButtons" : " "
+}

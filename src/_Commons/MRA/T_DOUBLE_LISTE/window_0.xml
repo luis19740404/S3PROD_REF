@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Double liste" help="{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fnil\fprq1\fcharset0 Times New Roman;}{\f1\fnil\fcharset0 Times New Roman;}}&#13;&#10;{\colortbl ;\red255\green0\blue0;}&#13;&#10;\viewkind4\uc1\pard\f0\fs24 ###Ce programme a \'e9t\'e9 construit avec l'assistant RAD.\par&#13;&#10;\par&#13;&#10;Pensez \'e0 mettre \'e0 jour le texte de cette aide par l'option &quot;\cf1\b G\'e9rer l'aide...\cf0\b0 &quot; depuis la maquette de cette fen\'eatre.\f1\fs20\par&#13;&#10;}&#13;&#10;" id="0" name="RAD1_FENETRE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="548"/>
+        <property id="-3" intValue="697"/>
+        <property id="-2" intValue="153"/>
+        <property id="-1" intValue="152"/>
+        <property id="3" stringValue="Double liste"/>
+        <property id="7"/>
+        <property id="9"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="689"/>
+        <property id="23" intValue="514"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="RAD1_LISTE">
+            <properties>
+                <property id="-4" intValue="204"/>
+                <property id="-3" intValue="670"/>
+                <property id="-2" intValue="46"/>
+                <property id="-1" intValue="10"/>
+                <property id="6"/>
+                <property id="7" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="RAD2_QUITTER">
+            <properties>
+                <property id="-8" stringValue="&amp;Quitter"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="482"/>
+                <property id="-1" intValue="12"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="RAD2_AIDE">
+            <properties>
+                <property id="-8" stringValue="&amp;Aide"/>
+                <property id="-7" intValue="1"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="482"/>
+                <property id="-1" intValue="97"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="RAD1_LISTE2">
+            <properties>
+                <property id="-4" intValue="204"/>
+                <property id="-3" intValue="670"/>
+                <property id="-2" intValue="266"/>
+                <property id="-1" intValue="11"/>
+                <property id="6"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_CREER" state="4112" text="Créer..." type="1"/>
+                <item key1="0" key2="0" name="MNU_MODIFIER" state="69648" text="Modifier..." type="1"/>
+                <item key1="0" key2="0" name="MNU_AFFICHER" state="4112" text="Afficher..." type="1"/>
+                <item key1="0" key2="0" name="MNU_SUPPRIMER" state="4112" text="Supprimer" type="1"/>
+            </menu>
+        </control>
+        <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="RAD2_CHS_APARTIR">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 10 -1"/>
+                <property id="-4" intValue="20"/>
+                <property id="-3" intValue="157"/>
+                <property id="-2" intValue="13"/>
+                <property id="-1" intValue="161"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="RAD2_BTN_APARTIR">
+            <properties>
+                <property id="-39"/>
+                <property id="-8"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="12"/>
+                <property id="-2" intValue="12"/>
+                <property id="-1" intValue="321"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_APARTIR">
+            <properties>
+                <property id="-8" stringValue="Afficher à partrir de :"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="137"/>
+                <property id="-2" intValue="16"/>
+                <property id="-1" intValue="15"/>
+            </properties>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Liste des sociétés" help="" id="0" name="FEN_SOC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-2" intValue="132"/>
+        <property id="-1" intValue="138"/>
+        <property id="3" stringValue="Liste des sociétés"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9/DSo9ljWQaqLI9umjUJ/eBAQM17cVq7+EK2hAmxRaD/nNPozSnor/c1JKE3p6CPQERCb06x9yMScnKOvn9Wojs3D31jXOjNFLirPxqh3QNr9w66y21xSWj3gJ21t6CXJmBlRtBJFbByryCfLmBlFbIlAla+h1yZgNXZIVMqYPWAfYmAF7JpAvrsgWyKgL7rtxHkwgIKWW+eXLoAkPd0yPyngBfuXgK/I1A1XoFGsGr0Xx/nAcvm7lfXqc4jAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4Xq2MUQrAMAxCe/+DdcfqyJARE6Vl7IE/5sUxfmIdxrJ2hINIqt8IZ17TjjS5El0MuJEmuy6FsLICN0IJdgQ9oQQ7go5QQku5E+m9D1TQE01IIt1ST1TnBbLqCBIykFVHkLBDDnzIww3Nu+sjMeaOXAAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_SOC">
+            <properties>
+                <property id="-4" intValue="209"/>
+                <property id="-3" intValue="285"/>
+                <property id="-2" intValue="18"/>
+                <property id="-1" intValue="24"/>
+                <property id="6" stringValue="ZZ_COD_SOCIETE -6 2 2 -1 # ZZ_NOM_SOCIETE -6 2 30 -1"/>
+                <property id="15" intValue="1"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_SUPPRIMER" state="4112" text="&amp;Supprimer" type="1"/>
+            </menu>
+            <controls>
+                <control associatedVariable="ZZ_COD_SOCIETE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="SOCIETE.COD_SOCIETE" name="ZZ_COD_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 2 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="38"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_COD_SOCIETE 9 2 2 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_SOCIETE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Désignation"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_NOM_SOCIETE 9 2 30 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_OK">
+            <properties>
+                <property id="-8" stringValue="&amp;Valider"/>
+                <property id="-2" intValue="244"/>
+                <property id="-1" intValue="214"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-8" stringValue="A&amp;nnuler"/>
+                <property id="-2" intValue="243"/>
+                <property id="-1" intValue="297"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_INIT">
+            <properties>
+                <property id="-8" stringValue="Init"/>
+                <property id="-3" intValue="26"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="326"/>
+            </properties>
+        </control>
+    </controls>
+</window>

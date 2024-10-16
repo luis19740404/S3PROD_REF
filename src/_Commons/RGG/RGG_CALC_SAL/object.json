@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "RGG_CALC_SAL",
+  "description" : "Calcul Salaire",
+  "creationDate" : "1999-01-18 12:50:12",
+  "updateDate" : "1999-01-18 13:18:22",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CA",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

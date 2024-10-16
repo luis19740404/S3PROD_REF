@@ -1,0 +1,119 @@
+[ {
+  "id" : {
+    "property" : -75
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : -48
+  },
+  "modifiability" : -3,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : -47
+  },
+  "modifiability" : -3,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : -42
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : -39
+  },
+  "modifiability" : -3,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : -38
+  },
+  "modifiability" : -3,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : -25
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240
+}, {
+  "id" : {
+    "property" : -24
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240
+}, {
+  "id" : {
+    "property" : -23
+  },
+  "modifiability" : -3,
+  "stringValue" : "Microsoft Sans Serif;8;1;1"
+}, {
+  "id" : {
+    "property" : -22
+  },
+  "modifiability" : -3,
+  "stringValue" : "Fermeture de la fenêtre"
+}, {
+  "id" : {
+    "property" : -21
+  },
+  "modifiability" : -3,
+  "stringValue" : "Microsoft Sans Serif;8;1;1"
+}, {
+  "id" : {
+    "property" : -16
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : -8
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : -7
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : -5
+  },
+  "modifiability" : -2,
+  "stringValue" : "BTN_FERMER"
+}, {
+  "id" : {
+    "property" : -4
+  },
+  "modifiability" : -3,
+  "intValue" : 30
+}, {
+  "id" : {
+    "property" : -3
+  },
+  "modifiability" : -3,
+  "intValue" : 30
+}, {
+  "id" : {
+    "property" : -2
+  },
+  "modifiability" : -1
+}, {
+  "id" : {
+    "property" : -1
+  },
+  "modifiability" : -1
+}, {
+  "id" : {
+    "property" : 4
+  },
+  "modifiability" : -3
+}, {
+  "id" : {
+    "property" : 7
+  },
+  "modifiability" : -3,
+  "fileName" : "property_7"
+} ]

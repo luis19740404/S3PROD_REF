@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "WC_LISTE_CLIENT",
+  "description" : "Liste des clients (multi-niveaux)",
+  "creationDate" : "2007-03-08 13:51:13",
+  "updateDate" : "2007-08-22 14:32:06",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wclisteclients",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCLICL",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true,
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

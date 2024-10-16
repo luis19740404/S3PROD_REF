@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Choix de langue" help="" id="2" name="FEN_LANGUE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-3" intValue="302"/>
+        <property id="-2" intValue="168"/>
+        <property id="-1" intValue="226"/>
+        <property id="3" stringValue="Choix de langue"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAyElEQVR4Xu2X2woDIQwF/fj+d8tCA+lsoonuxhY6cB7UXObV1t48WntWRvZuWS7ZulxymcAB7yK5REDgfSTLAhq+RbIkQOSOdb1MC1joe9Z7mRLw0G/s8XKbgJxHSQv04Dt7raQERlg1nMGEBSJYdZzDhASieLWcpzMUyNCr59zfEMgy6uH8rsAMoz7ucAVmifRy10lghUg/930IrBKd8b0CO2IK3AF3lApwfqkAZzOmgJagUObMmVZcgar8Bbb+D/UHuVxC9r4AIyAgegw727EAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAcElEQVR4Xq2QAQ6AIAwD9/9PY6qpg9pBIF6yIHStjIgGomE9rPw04ltAz+56xDQT3RMb4JohsBQb4KgCQPXjgVkA+cj91WdjECupaTsA0KRhSin9coPjNwD9CFxdkDlK1LwdACojCRV1dldj/6JhxQWtXmXFmpyLMQAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="RDB_PAYS">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 2 -1"/>
+                <property id="-8" stringValue="Pays"/>
+                <property id="-6" stringValue="FR"/>
+                <property id="-3" intValue="74"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="19"/>
+                <property id="14" stringValue="France¤Suisse¤"/>
+                <property id="15" stringValue="FR¤CH¤"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ4">
+            <properties>
+                <property id="-8" stringValue="La langue parlée est le :"/>
+                <property id="-3" intValue="118"/>
+                <property id="-2" intValue="156"/>
+                <property id="-1" intValue="87"/>
+            </properties>
+        </control>
+        <control associatedVariable="W_LANGAGE" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="OF_REPONSE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 15 -1"/>
+                <property id="-4" intValue="43"/>
+                <property id="-3" intValue="287"/>
+                <property id="-2" intValue="175"/>
+                <property id="-1" intValue="3"/>
+                <property id="0" stringValue="Times New Roman;22;1"/>
+                <property id="3" intValue="1"/>
+                <property id="5" intValue="255"/>
+            </properties>
+        </control>
+        <control associatedVariable="W_LANGUE" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="RDB_LANGUE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="-8" stringValue="Langue"/>
+                <property id="-6" stringValue="F"/>
+                <property id="-4" intValue="114"/>
+                <property id="-3" intValue="106"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="170"/>
+                <property id="8" intValue="4"/>
+                <property id="14" stringValue="Français¤Italien¤Allemand¤Romanche¤"/>
+                <property id="15" stringValue="F¤I¤A¤R¤"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_QUITTER">
+            <properties>
+                <property id="-8" stringValue="&amp;Quitter"/>
+                <property id="-2" intValue="245"/>
+                <property id="-1" intValue="108"/>
+            </properties>
+        </control>
+    </controls>
+</window>

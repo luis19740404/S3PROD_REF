@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "GUI_REGLEMT",
+  "description" : "Guide de saisie des règlements",
+  "creationDate" : "1995-05-04 09:52:22",
+  "updateDate" : "1996-06-13 13:39:43",
+  "visibility" : "PUBLIC",
+  "mrClass" : "GS",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

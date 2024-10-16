@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "BOUTON_VNS",
+  "description" : "Objet de base Bouton poussoir",
+  "creationDate" : "2021-02-17 10:46:53",
+  "updateDate" : "2021-02-17 10:46:53",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "BOUTON",
+  "tooltip" : "Bouton fermer vns",
+  "prefix" : "BTN_",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BOUTON"
+}

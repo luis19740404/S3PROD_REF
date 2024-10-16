@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="0" name="FEN_CLIENT" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-3" intValue="343"/>
+        <property id="-2" intValue="91"/>
+        <property id="-1" intValue="24"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_CLIENT">
+            <properties>
+                <property id="-4" intValue="203"/>
+                <property id="-3" intValue="281"/>
+                <property id="-2" intValue="26"/>
+                <property id="-1" intValue="23"/>
+                <property id="6" stringValue="ZCCOD_CLIENT -6 2 6 -1 # ZCNOM_CLIENT -6 2 30 -1"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_CREER" state="4112" text="Création" type="1"/>
+                <item key1="0" key2="0" name="MNU_MODIF" state="4112" text="Modification" type="1"/>
+                <item key1="0" key2="0" name="MNU_SUPPRESSION" state="4112" text="Supprimer" type="1"/>
+            </menu>
+            <controls>
+                <control associatedVariable="ZCCOD_CLIENT" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="CLIENT.COD_CLIENT" name="ZCCOD_CLIENT">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-8" stringValue="Client"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="11" stringValue="ZCCOD_CLIENT 9 2 6 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZCNOM_CLIENT" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="CLIENT.NOM_CLIENT" name="ZCNOM_CLIENT">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom    du     client"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="11" stringValue="ZCNOM_CLIENT 9 2 30 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_QUITTER">
+            <properties>
+                <property id="-8" stringValue="Quitter"/>
+                <property id="-2" intValue="244"/>
+                <property id="-1" intValue="229"/>
+            </properties>
+        </control>
+    </controls>
+</window>

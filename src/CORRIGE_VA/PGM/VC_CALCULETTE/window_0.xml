@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Calculette" help="{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fnil\fprq14\fcharset0 Times New Roman;}}&#13;&#10;{\colortbl ;\red255\green0\blue0;}&#13;&#10;\viewkind4\uc1\pard\qc\cf1\ul\b\f0\fs20 ###Calculette\cf0\ulnone\b0\par&#13;&#10;\pard\par&#13;&#10;Calcul basique 4 op\'e9rations\par&#13;&#10;}&#13;&#10;" id="0" name="CALCULETTE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property binaryType="bin" id="-20">AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAPd3d3d3d3d3d3d3d3d3dwD/d3d3d3d3d3d3d3d3d3cA/4iIiIiIiIiIiIiIiIh3AP+Ah3d3d3d3d3d3d4AIdwD/gId3d3d3d3d3d3eACHcA/4gId3d3d3d3d3d3gAh3AP+ICHd3d3d3d3d3d4AIdwD/iIAAAAAAh3d3d3eACHcA/4iIiIiIgId3d3d3gAh3AP+IiIiIiICHd3d3d4AIdwD/iIiIiIiAh3d3d3eACHcA/4iIiIiIgAAAAAAAAAh3AP+IiIiIiIiAhwDwhwCIdwD/iIiIiIiIgIcA8IcAiHcA/4iIiIiIiICHAPCHAIh3AP+IiIiIiIiAhwDwhwCIdwD/iIiIiIiIgIcA8IcAiHcA/4iIiIiIiICHAPCHAIh3AP+IiIiIiIiAhwDwhwCIdwD/iIiIiIiIgAAA8AAAiHcA/4iIiIiIiIiIiIiIiIh3AP+IiIiIiIiIiIiIiIiIdwD/iIiIiIiIiIiIiIiIiHcA/4iIiIiIiIiIiIiIiIh3AP+IiIiIiIiIiIiIiIiIdwD/iIiIiIiIiIiIiIiIiHcA/4iIiIiIiIiIiIiIiIh3AP+IiIiIiIiIiIiIiIiIdwD///////////////////cA////////////////////AAAAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEoAAAAEAAAACAAAAABAAQAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAD3d3d3d3d3APiIiIiIiIcA8Id3d3dwhwD4CHd3d3CHAPiAAAh3cIcA+IiICHdwhwD4iIgAAACHAPiIiIcIcIcA+IiIhwhwhwD4iIiHCHCHAPiIiIAIAIcA+IiIiIiIhwD4iIiIiIiHAP////////cAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAA==</property>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="307"/>
+        <property id="-3" intValue="400"/>
+        <property id="-2" intValue="106"/>
+        <property id="-1" intValue="24"/>
+        <property id="3" stringValue="Calculette"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAfUlEQVR4Xu3O0QqAIAyFYR99j+abGVoDPZEYuYlxBv+N6fpCOCctqkxaNYrAc5cRkTsgxuhS/jkBBBDwH8C1pCkPnuXMALoUAXiubwgggIApAF36tqmAelmvGkzAMEAf9DID4MWv7QXASzPaC+DRIwDl1jUA/OiRAgpiUeEADLCvrctEv7gAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAWUlEQVR4Xs2PQQoAIAgEfbpP82cFlh000zxECwMS60gAI60Ip1WCiEvCD0R0xTvBLJk5LZCiN38umAXDlUDKQijwrqUEuwWNK8gsHwX6/xFGoC9lEAFLikAHDJli1WC5uMwAAAAASUVORK5CYII=</property>
+        <property id="22" intValue="392"/>
+        <property id="23" intValue="273"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fnil\fprq13\fcharset0 Times New Roman;}}&#13;&#10;\viewkind4\uc1\pard\b\f0\fs20 ###Op\'e9rande 1\par&#13;&#10;\b0  zone num\'e9rique 15 dont 4\par&#13;&#10;}&#13;&#10;" kinematic="0" name="CHS_OPERANDE_1">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="4"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 15 4"/>
+                <property id="-4" intValue="20"/>
+                <property id="-3" intValue="183"/>
+                <property id="-2" intValue="23"/>
+                <property id="-1" intValue="92"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fnil\fprq13\fcharset0 Times New Roman;}}&#13;&#10;\viewkind4\uc1\pard\b\f0\fs20 ###Op\'e9rande 2\par&#13;&#10;\b0  zone num\'e9rique 15 dont 4\par&#13;&#10;\par&#13;&#10;}&#13;&#10;" kinematic="0" name="CHS_OPERANDE2">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="4"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 15 4"/>
+                <property id="-4" intValue="20"/>
+                <property id="-3" intValue="183"/>
+                <property id="-2" intValue="70"/>
+                <property id="-1" intValue="92"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="{\rtf1\ansi\ansicpg1252\deff0\deflang1036{\fonttbl{\f0\fnil\fprq13\fcharset0 Times New Roman;}{\f1\fnil\fprq14\fcharset0 Times New Roman;}}&#13;&#10;\viewkind4\uc1\pard\b\f0\fs20 ###R\'e9sultat\par&#13;&#10;\b0  zone num\'e9rique 15 dont 4\par&#13;&#10;\f1\par&#13;&#10;}&#13;&#10;" kinematic="0" name="CHO_RESULTAT">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 15 4"/>
+                <property id="-4" intValue="20"/>
+                <property id="-3" intValue="183"/>
+                <property id="-2" intValue="118"/>
+                <property id="-1" intValue="92"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_PLUS">
+            <properties>
+                <property id="-22" stringValue="Somme"/>
+                <property id="-8" stringValue="+"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="180"/>
+                <property id="-1" intValue="18"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_MULT">
+            <properties>
+                <property id="-8" stringValue="*"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="216"/>
+                <property id="-1" intValue="18"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_MOINS">
+            <properties>
+                <property id="-22" stringValue="Soustraction"/>
+                <property id="-8" stringValue="-"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="180"/>
+                <property id="-1" intValue="109"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_DIV">
+            <properties>
+                <property id="-8" stringValue="/"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="216"/>
+                <property id="-1" intValue="109"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_FERMER">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="Fermer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="237"/>
+                <property id="-1" intValue="260"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_OPERANDE1">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Opérande 1"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="73"/>
+                <property id="-2" intValue="26"/>
+                <property id="-1" intValue="18"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_OPERANDE2">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Opérande 2"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="69"/>
+                <property id="-2" intValue="73"/>
+                <property id="-1" intValue="18"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_RESULTAT">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Résultat"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="65"/>
+                <property id="-2" intValue="118"/>
+                <property id="-1" intValue="18"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_">
+            <properties>
+                <property id="-8"/>
+                <property id="-4" intValue="99"/>
+                <property id="-3" intValue="184"/>
+                <property id="-2" intValue="160"/>
+                <property id="-1" intValue="10"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_0">
+            <properties>
+                <property id="-8"/>
+                <property id="-4" intValue="148"/>
+                <property id="-3" intValue="377"/>
+                <property id="-2" intValue="6"/>
+                <property id="-1" intValue="6"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_AIDE">
+            <properties>
+                <property id="-8" stringValue="Aide"/>
+                <property id="-7" intValue="1"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="195"/>
+                <property id="-1" intValue="260"/>
+            </properties>
+        </control>
+    </controls>
+</window>

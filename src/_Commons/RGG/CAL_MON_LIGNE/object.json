@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CAL_MON_LIGNE",
+  "description" : "Calcul du montant d'une ligne de commande",
+  "creationDate" : "1995-05-04 12:00:38",
+  "updateDate" : "2021-02-11 13:59:20",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CA",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

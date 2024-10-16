@@ -1,0 +1,10 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_RGG
+*ROW_METADATA(FMT_PYM        20101008)   
+*ROW_METADATA(FMT_PYM        20101008)   DEBUT_PROCEDURE PROC_TOTO
+*ROW_METADATA(FMT_PYM        20101008)      *********************************************
+*ROW_METADATA(FMT_PYM        20101008)      DCL WA;WA 5;0
+*ROW_METADATA(FMT_PYM        20101008)      *
+*ROW_METADATA(FMT_PYM        20101008)      WA = WA + 1 + :01
+*ROW_METADATA(FMT_PYM        20101008)      *********************************************
+*ROW_METADATA(FMT_PYM        20101008)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM                )FIN_RGG

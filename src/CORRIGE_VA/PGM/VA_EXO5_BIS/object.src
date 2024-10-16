@@ -1,0 +1,208 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      ALPHA(6) W_MAT
+*ROW_METADATA(ADELIA                 )      ALPHA(1) W_COD
+*ROW_METADATA(ADELIA                 )      ALPHA(1) W_RES
+*ROW_METADATA(ADELIA                 )      PARAM W_MAT W_COD W_RES
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )         NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(ADELIA                 )      FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )       
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      CHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )      W_RES='0'
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_CREATION
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_CREATION
+*ROW_METADATA(ADELIA                 )      DECHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_CREATION
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         ALPHA(6) W_MAT_HIE
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCenterWindow' FEN_CREATION
+*ROW_METADATA(ADELIA                 )         SI W_COD='C'
+*ROW_METADATA(ADELIA                 )            FEN_CREATION:TITRE='Création d''une personne'
+*ROW_METADATA(ADELIA                 )            BTN_OK:TEXTE='&Créer'
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )            FEN_CREATION:TITRE='Modification d''une personne'
+*ROW_METADATA(ADELIA                 )            BTN_OK:TEXTE='&Modifier'
+*ROW_METADATA(ADELIA                 )            ZZ_COD_MATRICUL:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                  LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL = :W_MAT)
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )               DEBUT_STD PERSONNEL
+*ROW_METADATA(ADELIA                 )                  PRESENTER PERSONNEL
+*ROW_METADATA(ADELIA                 )               FIN_STD
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )               DEBUT_STD
+*ROW_METADATA(ADELIA                 )               FIN_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET IMG_PHOTO
+*ROW_METADATA(ADELIA                 )            IMG_PHOTO:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_OK
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_OK:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               VERIFIER
+*ROW_METADATA(ADELIA                 )               VALIDER
+*ROW_METADATA(ADELIA                 )               W_RES='1'
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_ANNULER
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_ANNULER:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               W_RES='0'
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET FEN_CREATION
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_CREATION:ChangementPage
+*ROW_METADATA(ADELIA                 )               SI FEN_CREATION:PAGE_COURANTE=2
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                     LIRE_SQL BITMAP *COND(PP_COD_MATRICUL = :W_MAT)
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                  SI *SQLCODE=*NORMAL
+*ROW_METADATA(ADELIA                 )                     IMG_PHOTO:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )                     IMG_PHOTO:BITMAP=PE_COD_IMAGE
+*ROW_METADATA(ADELIA                 )                  SINON
+*ROW_METADATA(ADELIA                 )                     IMG_PHOTO:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  SI FEN_CREATION:PAGE_COURANTE=3
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                        LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL=:ZZ_HIECOD_MATRI)
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                     SI *SQLCODE=*NORMAL
+*ROW_METADATA(ADELIA                 )                        W_PRENOM_HIE=PE_PRN_PERSONNE
+*ROW_METADATA(ADELIA                 )                        W_NOM_HIE=PE_NOM_PERSONNE
+*ROW_METADATA(ADELIA                 )                     FIN
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_CLEAR
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_CLEAR:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               IMG_PHOTO:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_PARCOURIR
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_PARCOURIR:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_BROWSE
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAL_DATE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAL_DATE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAL_DATE:BoutonGaucheDoubleClic
+*ROW_METADATA(ADELIA                 )               ZZ_DAT_NAIS_PER=W_DATE
+*ROW_METADATA(ADELIA                 )               CAL_DATE:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         SI W_COD='C'
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )               LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )            SI *SQLCODE= *NORMAL
+*ROW_METADATA(ADELIA                 )               PREPARER_MSG COR0002 ZZ_COD_MATRICUL *BOITE
+*ROW_METADATA(ADELIA                 )               INIT_MSG ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )               ERREUR
+*ROW_METADATA(ADELIA                 )            FIN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               DEBUT_STD
+*ROW_METADATA(ADELIA                 )               FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )               LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(ADELIA                 )               CODE_RET_SQL = *SQLCODE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )               DEBUT_STD PERSONNEL
+*ROW_METADATA(ADELIA                 )                  RAPATRIER PERSONNEL
+*ROW_METADATA(ADELIA                 )               FIN_STD
+*ROW_METADATA(ADELIA                 )               SI IMG_PHOTO:VISIBILITE
+*ROW_METADATA(ADELIA                 )                  PE_COD_IMAGE=IMG_PHOTO:BITMAP
+*ROW_METADATA(ADELIA                 )                  PP_COD_MATRICUL = ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               SI CODE_RET_SQL = 0
+*ROW_METADATA(ADELIA                 )                  MAJ_SQL PERSONNEL *ALL *COND(PE_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(ADELIA                 )                  SI IMG_PHOTO:VISIBILITE
+*ROW_METADATA(ADELIA                 )                     SUPPRIMER_SQL BITMAP *COND(PP_COD_MATRICUL = :ZZ_COD_MATRICUL)
+*ROW_METADATA(ADELIA                 )                     CREER_SQL BITMAP
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  SI CODE_RET_SQL = 100
+*ROW_METADATA(ADELIA                 )                     CREER_SQL PERSONNEL
+*ROW_METADATA(ADELIA                 )                     SI IMG_PHOTO:VISIBILITE
+*ROW_METADATA(ADELIA                 )                        CREER_SQL BITMAP 
+*ROW_METADATA(ADELIA                 )                     FIN
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               VALIDER_MAJ
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_HIECOD_MATRI
+*ROW_METADATA(ADELIA                 )            GUIDE ZZ_HIECOD_MATRI 04 'Guide'
+*ROW_METADATA(ADELIA                 )               APPELER VA_EXO5_TER W_MAT_HIE
+*ROW_METADATA(ADELIA                 )               SI W_MAT_HIE=*BLANK
+*ROW_METADATA(ADELIA                 )                  W_PRENOM_HIE=*BLANK
+*ROW_METADATA(ADELIA                 )                  W_NOM_HIE=*BLANK
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )            DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                     LIRE_SQL PERSONNEL *COND(PE_COD_MATRICUL=:W_MAT_HIE)
+*ROW_METADATA(ADELIA                 )            FIN_SRV
+*ROW_METADATA(ADELIA                 )                  ZZ_HIECOD_MATRI=W_MAT_HIE
+*ROW_METADATA(ADELIA                 )                  W_PRENOM_HIE=PE_PRN_PERSONNE
+*ROW_METADATA(ADELIA                 )                  W_NOM_HIE=PE_NOM_PERSONNE
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_GUIDE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_DAT_NAIS_PER
+*ROW_METADATA(ADELIA                 )            GUIDE ZZ_DAT_NAIS_PER 04 'Calendrier'
+*ROW_METADATA(ADELIA                 )            CAL_DATE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FIN_GUIDE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE PROC_BROWSE
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         ALPHA(250) DIR
+*ROW_METADATA(ADELIA                 )         ALPHA(50) TITRE
+*ROW_METADATA(ADELIA                 )         ALPHA(50) FILTRE
+*ROW_METADATA(ADELIA                 )         ALPHA(50) EXT
+*ROW_METADATA(ADELIA                 )         BOOL OK
+*ROW_METADATA(ADELIA                 )         NUM_E(8,0) LGDIR
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      TITRE = 'Charger les images'
+*ROW_METADATA(ADELIA                 )      FILTRE = 'Images'
+*ROW_METADATA(ADELIA                 )      EXT = '*.bmp'
+*ROW_METADATA(ADELIA                 )      LGDIR=250
+*ROW_METADATA(ADELIA                 )      DIR=*BLANK
+*ROW_METADATA(ADELIA                 )      APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFileSelection' FEN_CREATION TITRE FILTRE EXT DIR LGDIR OK
+*ROW_METADATA(ADELIA                 )      SI OK
+*ROW_METADATA(ADELIA                 )         FEN_CREATION.IMG_PHOTO:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_CREATION.IMG_PHOTO CHARGER_BITMAP DIR
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

@@ -1,0 +1,86 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070510)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070913)      liste lsm_nb_emp_soc *ref_l(fen_stat_perso.lst_nb_empl_soc:liste)
+*ROW_METADATA(FMT_PYM        20070914)      alpha(1) wtri_nb
+*ROW_METADATA(FMT_PYM        20070914)      alpha(1) wtri_nom
+*ROW_METADATA(FMT_PYM        20070914)      DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070510)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070510)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070510)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_STD_D
+*ROW_METADATA(FMT_PYM        20070510)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070510)      INITIALISER FEN_STAT_PERSO
+*ROW_METADATA(FMT_PYM        20070510)      EXECUTER FEN_STAT_PERSO
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_STD_F
+*ROW_METADATA(FMT_PYM        20070510)      FIN_STD
+*ROW_METADATA(FMT_PYM        20070510)      
+*ROW_METADATA(FMT_PYM        20070510)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20070510)   DEBUT_FENETRE FEN_STAT_PERSO
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070510)         
+*ROW_METADATA(FMT_PYM        20070510)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070914)         
+*ROW_METADATA(FMT_PYM        20070510)      FIN_INIT
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               terminer
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070914)         DEBUT_OBJET BTN_CALC_MENSUEL
+*ROW_METADATA(FMT_PYM        20070914)            DEBUT_EVT BTN_CALC_MENSUEL:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070914)               * Récupération de la masse salariale mensuelle
+*ROW_METADATA(FMT_PYM        20070914)               appeler VC_PERSO_PROC.calc_mensuel lbr_sexe:valeur -
+*ROW_METADATA(FMT_PYM        20070914)               cho_masse_salariale_mensuelle:valeur cho_moy_salariale:valeur -
+*ROW_METADATA(FMT_PYM        20070914)               cho_max_salaire:valeur cho_min_salaire:valeur
+*ROW_METADATA(FMT_PYM        20070914)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070914)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070914)         DEBUT_OBJET BTN_CALC_ANCIEN
+*ROW_METADATA(FMT_PYM        20070914)            DEBUT_EVT BTN_CALC_ANCIEN:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070914)               * Récupération de l'ancienneté moyenne 
+*ROW_METADATA(FMT_PYM        20070914)               appeler VC_PERSO_PROC.ancien_moyenne lbr_sexe:valeur -
+*ROW_METADATA(FMT_PYM        20070914)                  cho_anc_moyenne:valeur cho_nb_employes:valeur
+*ROW_METADATA(FMT_PYM        20070914)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070914)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070914)         DEBUT_OBJET BTN_CALC_NB_EMP
+*ROW_METADATA(FMT_PYM        20070914)            DEBUT_EVT BTN_CALC_NB_EMP:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070914)               vider_lst lsm_nb_emp_soc
+*ROW_METADATA(FMT_PYM        20070914)               appeler VC_PERSO_PROC.nb_employe_societe lbr_sexe:valeur lsm_nb_emp_soc
+*ROW_METADATA(FMT_PYM        20070914)               copier_lst lsm_nb_emp_soc lst_nb_empl_soc:liste
+*ROW_METADATA(FMT_PYM        20070914)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070914)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070914)         DEBUT_OBJET COL_NB_EMPL_SOCIETE
+*ROW_METADATA(FMT_PYM        20070914)            DEBUT_EVT COL_NB_EMPL_SOCIETE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070914)               si wtri_nb = *blank
+*ROW_METADATA(FMT_PYM        20070914)                  trier_lst lst_nb_empl_soc:liste col_nb_empl_societe:valeur
+*ROW_METADATA(FMT_PYM        20070914)                  wtri_nb = 'D'
+*ROW_METADATA(FMT_PYM        20070914)               sinon
+*ROW_METADATA(FMT_PYM        20070914)                  trier_lst lst_nb_empl_soc:liste col_nb_empl_societe:valeur *desc
+*ROW_METADATA(FMT_PYM        20070914)                  wtri_nb = *blank
+*ROW_METADATA(FMT_PYM        20070914)               fin
+*ROW_METADATA(FMT_PYM        20070914)               
+*ROW_METADATA(FMT_PYM        20070914)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070914)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070914)         DEBUT_OBJET ZZ_NOM_SOCIETE
+*ROW_METADATA(FMT_PYM        20070914)            DEBUT_EVT ZZ_NOM_SOCIETE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070914)               si wtri_nom = *blank
+*ROW_METADATA(FMT_PYM        20070914)                  trier_lst lst_nb_empl_soc:liste zz_nom_societe
+*ROW_METADATA(FMT_PYM        20070914)                  wtri_nom = 'D'
+*ROW_METADATA(FMT_PYM        20070914)               sinon
+*ROW_METADATA(FMT_PYM        20070914)                  trier_lst lst_nb_empl_soc:liste zz_nom_societe *desc
+*ROW_METADATA(FMT_PYM        20070914)                  wtri_nom = *blank
+*ROW_METADATA(FMT_PYM        20070914)               fin
+*ROW_METADATA(FMT_PYM        20070914)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070914)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070510)      FIN_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_VERIF
+*ROW_METADATA(FMT_PYM        20070510)         
+*ROW_METADATA(FMT_PYM        20070510)      FIN_VERIF
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_VALID
+*ROW_METADATA(FMT_PYM        20070510)         
+*ROW_METADATA(FMT_PYM        20070510)      FIN_VALID
+*ROW_METADATA(FMT_PYM        20070510)      DEBUT_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070510)      FIN_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070510)   FIN_FENETRE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "DAT_6_VALIDE",
+  "description" : "Contrôle de validité d'une date sur 6",
+  "creationDate" : "1995-05-04 12:00:40",
+  "updateDate" : "1996-06-13 08:01:31",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

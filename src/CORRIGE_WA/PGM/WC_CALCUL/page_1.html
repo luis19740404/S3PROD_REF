@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body><form name="WA_CALCUL_1_FORM_1" id="WA_CALCUL_1_FORM_1" method="post">
+  <p align="center">Calculette</p>
+  <div align="center">
+    <table width="50%"  border="1">
+      <tr>
+        <td>Op&eacute;rande 1 </td>
+        <td><adelia:entryfield type="NUMP" length="15" decimals="3" editcode="CDE_1" inputctrl="EXTENDED_NUMBER" ><input type="text" name="CHS_OPERANDE1" id="CHS_OPERANDE1" size="19" maxlength="19" /></adelia:entryfield>
+&nbsp;</td>
+        <td><adelia:button>
+<input type="button" name="BTN_PLUS" id="BTN_PLUS" value="+" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+        <td><adelia:button>
+<input type="button" name="BTN_MOINS" id="BTN_MOINS" value="-" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Op&eacute;rande 2 </td>
+        <td><adelia:entryfield type="NUMP" length="15" decimals="3" editcode="CDE_1" inputctrl="EXTENDED_NUMBER" >
+<input type="text" name="CHS_OPERANDE2" id="CHS_OPERANDE2" size="19" maxlength="19" />
+</adelia:entryfield></td>
+        <td><adelia:button>
+<input type="button" name="BTN_MULT" id="BTN_MULT" value="*" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+        <td><adelia:button>
+<input type="button" name="BTN_DIV" id="BTN_DIV" value="/" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+      </tr>
+      <tr>
+        <td>R&eacute;sultat</td>
+        <td><adelia:outputfield name="CHO_RESULTAT" type="NUMP" length="15" decimals="3" editcode="CDE_1" />
+&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      </table>
+  </div>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "RGG_INIT_MAT",
+  "description" : "initialise od matricul",
+  "creationDate" : "1999-01-18 12:50:10",
+  "updateDate" : "1999-01-18 13:18:20",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IP",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

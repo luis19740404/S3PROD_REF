@@ -1,0 +1,5 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(STGIWS4        20210217)   * gestion de la couleur des en-têtes de colonnes
+*ROW_METADATA(STGIWS4        20210217)   %objet:en_tete_coul_fond = _lst_coul_bleu
+*ROW_METADATA(STGIWS4        20210217)   %objet:en_tete_coul_txt = _lst_coul_blanc
+*ROW_METADATA(ADELIA                 )FIN_RGG

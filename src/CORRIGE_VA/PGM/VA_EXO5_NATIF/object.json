@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO5_NATIF",
+  "description" : "Pgm Gestion du personnel",
+  "creationDate" : "1999-01-18 13:23:37",
+  "updateDate" : "2000-07-07 15:12:50",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VANA05",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VANA05",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "NATIVE"
+}

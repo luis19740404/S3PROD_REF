@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body>
+<form name="WC_STATIS_PERSO_1_FORM_1" id="WC_STATIS_PERSO_1_FORM_1" method="post">
+<table width="600" height="500" border="1" align="center">
+     <tr>
+       <td colspan="2"><div align="center"><strong>Statistiques du personnel</strong></div></td>
+     </tr>
+     <tr>
+       <td colspan="2"><div align="center">
+         <table width="200" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><adelia:radio type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SEXE_PERS" ><input type="radio" name="CHO_SEXE" id="CHO_SEXE" value="F" />Femme</adelia:radio></td>
+              <td><adelia:radio type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SEXE_PERS" dataflow="yes" ><input type="radio" name="CHO_SEXE" id="CHO_SEXE" value="H" />Homme</adelia:radio></td>
+              <td><adelia:radio type="ALPHA" length="1" ><input name="CHO_SEXE" id="CHO_SEXE" type="radio" value="T" checked="true" />Tous</adelia:radio></td>
+            </tr>
+                </table>
+       </div></td>
+     </tr>
+     <tr>
+       <td><table width="300" cellpadding="0" cellspacing="0">
+         <tr>
+           <td><strong>Total salaire </strong></td>
+           <td><adelia:outputfield name="CHO_TOTAL_SALAIRE" type="NUME" length="13" decimals="2" editcode="CDE_2" refc="false" /></td>
+         </tr>
+         <tr>
+           <td>Salaire moyen </td>
+           <td><adelia:outputfield name="CHO_MOY_SALAIRE" type="NUME" length="13" decimals="2" editcode="CDE_2" refc="false" /></td>
+         </tr>
+         <tr>
+           <td>Salaire minimum </td>
+           <td><adelia:outputfield name="CHO_MIN_SALAIRE" type="NUME" length="13" decimals="2" editcode="CDE_2" refc="false" /></td>
+         </tr>
+         <tr>
+           <td>Salaire maximum </td>
+           <td><adelia:outputfield name="CHO_MAX_SALAIRE" type="NUME" length="13" decimals="2" editcode="CDE_2" refc="false" /></td>
+         </tr>
+         <tr>
+           <td>&nbsp;</td>
+           <td><adelia:button ><input type="button" name="BTN_CALCUL_STAT_GEN" id="BTN_CALCUL_STAT_GEN" value="Calcul" onclick="::ADELIA_EVT(:AJAX,:ASYNC,:COMP=1)" /></adelia:button></td>
+         </tr>
+       </table></td>
+       <td>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <table width="100%"  border="0">
+  <tr>
+    <td colspan="3"><table cols="2" width="75%" border="1" cellpadding="1" cellspacing="1">
+      <tr>
+        <td><strong>Soci&eacute;t&eacute;</strong></td>
+        <td><strong>Nb</strong></td>
+      </tr>
+      <tbody>
+        <adelia:tablelist name="TBL_EMPL_SOC" step="5">
+        <tr>
+          <td><adelia:outputfield name="ZZ_NOM_SOCIETE" type="ALPHA" length="30" lentity="SOCIETE" lproperty="NOM_SOCIETE" dataflow="yes" /></td>
+          <td><adelia:outputfield name="CHO_NB_EMPL_SOC" type="NB4" refc="false" /></td>
+        </tr>
+        </adelia:tablelist>
+      </tbody>
+    </table></td>
+    </tr>
+  <tr>
+    <td><adelia:hlink ><a name="HLK_1" id="HLK_1" href="::ADELIA_ONROLLUP(TBL_EMPL_SOC,:AJAX,:ASYNC,:COMP=1)" >Avant</a></adelia:hlink></td>
+    <td><adelia:hlink><a name="HLK_2" id="HLK_2" href="::ADELIA_ONROLLDOWN(TBL_EMPL_SOC,:AJAX,:ASYNC,:COMP=1)">Arri&egrave;re</a></adelia:hlink></td>
+    <td><adelia:button>
+      <input type="button" name="BTN_CALC_NB_EMPL" id="BTN_CALC_NB_EMPL" value="Calcul" onclick="::ADELIA_EVT(:AJAX,:ASYNC,:COMP=1)"/>
+    </adelia:button></td>
+  </tr>
+</table></td>
+     </tr>
+     <tr>
+       <td><table width="300" cellpadding="0" cellspacing="0">
+         <tr>
+           <td><strong>Anciennet&eacute; moyenne</strong></td>
+           <td><adelia:outputfield name="CHO_ANCIENNETE_MOYENNE" type="NUME" length="9" decimals="0" editcode="CDE_Z"/> (en ann&eacute;es) </td>
+         </tr>
+         <tr>
+           <td>Nombre d'employ&eacute;s</td>
+           <td><adelia:outputfield name="CHO_NB_TOT_EMPL" type="NB4" refc="false" /></td>
+         </tr>
+         <tr>
+           <td>&nbsp;</td>
+           <td><adelia:button>
+             <input type="button" name="BTN_ANCIENNETE" id="BTN_ANCIENNETE" value="Calcul" onclick="::ADELIA_EVT(:AJAX,:ASYNC,:COMP=1)"/>
+           </adelia:button></td>
+         </tr>
+       </table></td>
+       <td>&nbsp;</td>
+     </tr>
+   </table>
+   <p align="center">&nbsp;</p>
+   <div align="center">  </div>
+   <p>&nbsp;</p>
+</form>
+
+</body>
+</html>

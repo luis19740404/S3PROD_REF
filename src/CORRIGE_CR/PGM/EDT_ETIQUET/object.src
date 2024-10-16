@@ -1,0 +1,27 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070809)      alpha(10) wlibelle
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      num_bin_4 wmontant
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      date wdate_facture
+*ROW_METADATA(FMT_PYM        20070809)      num_e(13,2) wmont_butoir
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      liste lst_clients *ref_mld(client) 
+*ROW_METADATA(FMT_PYM        20070809)      param wlibelle
+*ROW_METADATA(FMT_PYM        20070809)      
+*ROW_METADATA(FMT_PYM        20070809)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070809)         charger_sql_lst lst_clients client
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      ouvrir EDTETQ 
+*ROW_METADATA(FMT_PYM        20070809)      lecture_lst lst_clients
+*ROW_METADATA(FMT_PYM        20070809)         imprimer
+*ROW_METADATA(FMT_PYM        20070809)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      fermer EDTETQ *prv
+*ROW_METADATA(FMT_PYM        20070809)   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

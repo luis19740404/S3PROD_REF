@@ -1,0 +1,34 @@
+Squelette de programmes de mise à jour de fichiers aux normes CUA.
+Nombre d'écrans : de 1 à 9.
+Pour chaque écran, possibilité de sélectionner le type de transaction :
+    - pas de sous-fichier, présentation en ligne
+    - pas de sous-fichier, présentation "maximum"
+    - un sous-fichier
+    - deux sous-fichiers.
+
+Paramètres déclarés (en plus du code retour et du code action) : liste des
+zones clés de la vue liée au fichier mis à jour.
+
+Codes actions gérés : 'CR' : création
+                      'MO' : modification
+                      'CO' : copie
+                      'SU' : suppression : le programme n'affiche pas d'écran
+et n'exécute que les pavés d'initialisation et de validation de la première
+transaction.
+
+Si le programme comporte plusieurs transactions, la validation de la saisie est
+globale en création/copie et transaction par transaction en modification ; ceci
+permet à l'utilisateur d'annuler une création/copie après le premier écran et
+lui évite de "passer en revue" tous les écrans en cas de modification.
+Ces particularités nécessitent de prendre quelques précautions :
+  - si des zones non clés figurent en E/S sur un écran puis en sortie sur
+  des écrans suivants, il faut retoucher la cinématique après la génération
+  en enlevant la provenance pour ces zones dans les formats où elles figurent
+  en sortie sinon les valeurs saisies sur le premier écran sont perdues
+  du fait de la génération d'un PRESENTER de la vue sur chaque transaction.
+  - si des règles de gestion de type IP sont affectées à des zones figurant
+  dans plusieurs transactions, les instructions correspondantes seront
+  générées dans tous les pavés d'initialisation ce qui peut entraîner des
+  erreurs ; il faut donc éventuellement penser à les exclure (remarque : les
+  règles de gestion d'inversion de dates de la base de connaissance prennent en
+  compte ce problème et n'ont pas besoin d'être retirées).

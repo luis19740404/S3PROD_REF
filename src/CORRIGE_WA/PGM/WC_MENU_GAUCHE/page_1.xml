@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_MENU_GAUCHE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_ACCUEIL">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_SOCIETE">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_CLIENT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_LISTE_DYN">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_LISTE_STAT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="11" guide="0" kinematic="0" name="CND_SOCIETE">
+            <properties>
+                <property id="-9" stringValue="7 0 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="11" guide="0" kinematic="0" name="CND_PERS_STATIC">
+            <properties>
+                <property id="-9" stringValue="7 0 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="11" guide="0" kinematic="0" name="CND_PERS_DYNAMIC">
+            <properties>
+                <property id="-9" stringValue="7 0 0"/>
+            </properties>
+        </control>
+    </controls>
+</page>

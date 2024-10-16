@@ -1,0 +1,162 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      ALPHA(2) W_DEV
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_EURO
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_EURO
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_EURO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         T_EURO=1
+*ROW_METADATA(ADELIA                 )         T_FR=6.55957
+*ROW_METADATA(ADELIA                 )         T_LU=40.3399
+*ROW_METADATA(ADELIA                 )         T_BE=40.3399
+*ROW_METADATA(ADELIA                 )         T_IT=1936.27
+*ROW_METADATA(ADELIA                 )         T_AL=1.95583
+*ROW_METADATA(ADELIA                 )         T_ES=166.386
+*ROW_METADATA(ADELIA                 )         T_IR=0.787564
+*ROW_METADATA(ADELIA                 )         T_NL=2.20371
+*ROW_METADATA(ADELIA                 )         T_AU=13.7603
+*ROW_METADATA(ADELIA                 )         T_PO=200.482
+*ROW_METADATA(ADELIA                 )         T_FI=5.94573
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_EURO
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_EURO:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV=*BLANK
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_FR
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_FR:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='FR'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_FR/T_FR
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_LU
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_LU:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='LU'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_LU/T_LU
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_BE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_BE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='BE'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_BE/T_BE
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_IT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_IT:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='IT'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_IT/T_IT
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_D
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_D:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='AL'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_AL/T_AL
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_SP
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_SP:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='ES'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_ES/T_ES
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_IR
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_IR:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='IR'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_IR/T_IR
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_NL
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_NL:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='NL'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_NL/T_NL
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_AU
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_AU:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='AU'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_AU/T_AU
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_P
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_P:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='PO'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_PO/T_PO
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CHS_FI
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CHS_FI:ChangementValeur
+*ROW_METADATA(ADELIA                 )               W_DEV='FI'
+*ROW_METADATA(ADELIA                 )               V_EURO=V_FI/T_FI
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_CALCUL
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE PROC_CALCUL
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'FR'
+*ROW_METADATA(ADELIA                 )         V_FR H = V_EURO*T_FR
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'LU'
+*ROW_METADATA(ADELIA                 )         V_LU H = V_EURO*T_LU
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'BE'
+*ROW_METADATA(ADELIA                 )         V_BE H = V_EURO*T_BE
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'IT'
+*ROW_METADATA(ADELIA                 )         V_IT H = V_EURO*T_IT
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'AL'
+*ROW_METADATA(ADELIA                 )         V_AL H = V_EURO*T_AL
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'ES'
+*ROW_METADATA(ADELIA                 )         V_ES H = V_EURO*T_ES
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'IR'
+*ROW_METADATA(ADELIA                 )         V_IR H = V_EURO*T_IR
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'NL'
+*ROW_METADATA(ADELIA                 )         V_NL H = V_EURO*T_NL
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'AU'
+*ROW_METADATA(ADELIA                 )         V_AU H = V_EURO*T_AU
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'PO'
+*ROW_METADATA(ADELIA                 )         V_PO H = V_EURO*T_PO
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      SI W_DEV<>'FI'
+*ROW_METADATA(ADELIA                 )         V_FI H = V_EURO*T_FI
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

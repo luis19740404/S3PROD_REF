@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "NUM_OBLIGATOIRE",
+  "description" : "Numérique obligatoire",
+  "creationDate" : "1995-05-04 09:52:23",
+  "updateDate" : "2022-11-21 15:00:06",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

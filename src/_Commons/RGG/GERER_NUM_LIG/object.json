@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "GERER_NUM_LIG",
+  "description" : "Gestion incrémentation n° de ligne",
+  "creationDate" : "1999-01-18 12:50:03",
+  "updateDate" : "1999-01-18 13:04:19",
+  "visibility" : "PUBLIC",
+  "mrClass" : "VE",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "DAT_8_VALIDE",
+  "description" : "Validation d'une date sur 8 ",
+  "creationDate" : "1996-05-31 09:56:17",
+  "updateDate" : "1996-06-13 08:01:57",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

@@ -1,0 +1,5 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_RGG
+*ROW_METADATA(FMT_PYM                )   *
+*ROW_METADATA(FMT_PYM                )   * Montant ligne de facture = Quantité facturée * Prix unitaire 
+*ROW_METADATA(FMT_PYM                )   *
+*ROW_METADATA(FMT_PYM                )FIN_RGG

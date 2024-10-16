@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_GUIDSOC",
+  "description" : "Guide sociétés",
+  "creationDate" : "2004-07-29 12:48:26",
+  "updateDate" : "2004-07-29 13:50:43",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcguidesoc",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCGSOC",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true
+}

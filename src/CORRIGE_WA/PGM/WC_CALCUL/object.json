@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_CALCUL",
+  "description" : "Calculette",
+  "creationDate" : "2004-07-29 10:00:41",
+  "updateDate" : "2007-03-19 15:36:12",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wccalculette",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCALC",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true
+}

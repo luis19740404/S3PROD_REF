@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO9_BIS",
+  "description" : "Pgm Rupture Rapide/ Lent",
+  "creationDate" : "1999-02-12 11:08:17",
+  "updateDate" : "2000-07-07 15:13:23",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VAEX9B",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEX9B",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

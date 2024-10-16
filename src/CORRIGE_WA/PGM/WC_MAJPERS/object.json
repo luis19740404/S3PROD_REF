@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_MAJPERS",
+  "description" : "Mise à jour employés",
+  "creationDate" : "2004-07-29 11:03:07",
+  "updateDate" : "2007-08-30 09:19:15",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcmajperso",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCMJPR",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

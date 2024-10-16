@@ -1,0 +1,70 @@
+%QUESTION *ON 99
+%%  Ce programme a-t-il été préalablement défini dans un programme
+%%  de gestion ?
+%SI N99
+%QUESTION *EN ENTITE_GEREE
+%%  Donnez le nom de l'entité "maître" gérée dans le programme.
+%FIN
+%CREER_ETAT LISTE_GESTION
+%AFFECTER $ENTITE_GEREE $ENTITE_GEREE
+LIRE_AVANT $ENTITE_GEREE
+EDITER ENTETE
+TANT_QUE $ENTITE_GEREE EXISTE
+PRESENTER $ENTITE_GEREE
+%QUESTION *ON 01
+%%  Y a t'il au moins une entité annexe pour éditer une information
+%%  ne provenant pas de l'entité gérée ?
+%SI 01
+%ETIQUETTE AUTRE_ENTITE
+%QUESTION *EN ENTITE_ANNEXE
+%%  Indiquez le nom de cette entité
+%AFFECTER $ENTITE_ANNEXE $ENTITE_ANNEXE
+LIRE $ENTITE_ANNEXE
+PRESENTER $ENTITE_ANNEXE
+%QUESTION *ON 02
+%%  Y a t'il une autre entité annexe pour éditer une information
+%%  ne provenant pas de l'entité gérée ?
+%SI 02
+%ALLER_A AUTRE_ENTITE
+%FIN
+%FIN
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez éditer
+%%  sur la liste. Pour cela, choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_ETAT
+%QUESTION **
+%%  Vous pouvez maintenant visualiser et éventuellement modifier le
+%%  dessin généré. Pour cela utilisez le maquetteur.
+%%  Vous pouvez également définir la documentation utilisateur.
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  accédez à la définition de la cinématique et controlez
+%%  qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%
+%%           Faire ENTREE pour continuer.
+EDITER DETAIL
+LIRE_AVANT $ENTITE_GEREE
+REFAIRE
+CHANGEMENT_PAGE
+EDITER ENTETE
+FIN_TRAITEMENT
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="SOCIETE"/>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDTPEA" guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" scale="-1" type="STRING"/>
+        <field description="EDTPEA" guideWord="ZZ_COD_SEXE_PER" kind="VARIABLE" layoutCode="_data" length="1" logicalProperty="PERSONNEL.COD_SEXE_PERS" scale="-1" type="STRING"/>
+        <field description="EDTPEA" guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="PERSONNEL.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="EDTPEA" guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="EDTPEA" guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" layoutCode="_data" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" scale="2" type="NUMBER"/>
+        <field description="EDTPEA" guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" scale="-1" type="STRING"/>
+        <field description="Nom_societe" guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="SOCIETE.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="Nom_societe" guideWord="ZZ_NOM_SOCIETE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="SOCIETE.NOM_SOCIETE" scale="-1" type="STRING"/>
+        <field description="EDTPEA" kind="CONSTANT" length="1" scale="1">
+            <text text="Liste du personnel"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="4" scale="1">
+            <text text="Nb pages :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="5" scale="2">
+            <text text="Société"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="6" scale="2">
+            <text text="Sexe"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="7" scale="2">
+            <text text="Matricule"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="8" scale="2">
+            <text text="Nom"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="9" scale="2">
+            <text text="Salaire"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="10" scale="2">
+            <text text="Ville"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="12" scale="2">
+            <text text="Graphique récapitulatif"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="24" scale="502">
+            <text text="Moyenne sexe :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="27" scale="501">
+            <text text="Nb societe :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="28" scale="501">
+            <text text="Moyenne societe :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="31" scale="8">
+            <text text="Moyenne générale :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="32" scale="8">
+            <text text="Nb total :"/>
+        </field>
+        <field description="EDTPEA" kind="CONSTANT" length="38" scale="7">
+            <text text="Récap nb  : []"/>
+        </field>
+    </fields>
+</report>

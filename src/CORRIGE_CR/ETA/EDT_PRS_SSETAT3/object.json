@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PRS_SSETAT3",
+  "description" : "Edition employés par société, ss-état lié",
+  "creationDate" : "2000-05-22 12:31:36",
+  "updateDate" : "2000-05-22 12:31:36",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDPES3",
+  "nature" : "CRYSTAL"
+}

@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PRS_SSETAT2",
+  "description" : "Edition employés par société, ss-état lié",
+  "creationDate" : "2000-03-03 09:13:19",
+  "updateDate" : "2000-03-03 09:13:19",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPES2",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPES2",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

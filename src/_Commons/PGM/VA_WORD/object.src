@@ -1,0 +1,618 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      * indice pour informer et déclencher les actions
+*ROW_METADATA(ADELIA                 )      NUM_BIN_2 N
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      * visibilité
+*ROW_METADATA(ADELIA                 )      BOOL V
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      * paramètres des méthodes
+*ROW_METADATA(ADELIA                 )      NUM_BIN_4 CR
+*ROW_METADATA(ADELIA                 )      NUM_BIN_4 L1
+*ROW_METADATA(ADELIA                 )      NUM_BIN_4 L2
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      * gestion des signets Word
+*ROW_METADATA(ADELIA                 )      ALPHA(50) SIGN
+*ROW_METADATA(ADELIA                 )      ALPHA(250) T
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      ALPHA(3) DEVISE
+*ROW_METADATA(ADELIA                 )      ALPHA(20) L_DEVISE
+*ROW_METADATA(ADELIA                 )      LISTE DEVISES DEVISE L_DEVISE
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      * gestion bulle
+*ROW_METADATA(ADELIA                 )      NUM_BIN_2 X
+*ROW_METADATA(ADELIA                 )      NUM_BIN_2 Y
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      ALPHA(260) OF
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      BOOL B
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_WORD
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_WORD
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_WORD
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCenterWindow' FEN_WORD
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZS_NF
+*ROW_METADATA(ADELIA                 )            OF='Confirm_commande.doc'
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_CORRES
+*ROW_METADATA(ADELIA                 )            CORRES='Françoise Michel'
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_PR
+*ROW_METADATA(ADELIA                 )            PRODUIT='shampooing bio 250 ml'
+*ROW_METADATA(ADELIA                 )            PRIX=17,3
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            PRODUIT='réparation mobylette'
+*ROW_METADATA(ADELIA                 )            PRIX=1
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            PRODUIT='pansements assortis (boîte de 30)'
+*ROW_METADATA(ADELIA                 )            PRIX=12,4
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            PRODUIT='panier garni (1,8 kg)'
+*ROW_METADATA(ADELIA                 )            PRIX=-22
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            PRODUIT='Alka-Seltzer (28 comprimés)'
+*ROW_METADATA(ADELIA                 )            PRIX=8,85
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            PRODUIT='construction d''un rond-point'
+*ROW_METADATA(ADELIA                 )            PRIX=455841,33
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_PR:LISTE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_DEVISE
+*ROW_METADATA(ADELIA                 )            DEVISE='$'
+*ROW_METADATA(ADELIA                 )            L_DEVISE='Dollar'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT DEVISES
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            DEVISE='£'
+*ROW_METADATA(ADELIA                 )            L_DEVISE='Livre Sterling'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT DEVISES
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            DEVISE='DM'
+*ROW_METADATA(ADELIA                 )            L_DEVISE='Deutch Mark'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT DEVISES
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            DEVISE='LI'
+*ROW_METADATA(ADELIA                 )            L_DEVISE='Lire'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT DEVISES
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            DEVISE='F'
+*ROW_METADATA(ADELIA                 )            L_DEVISE='Franc français'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT DEVISES
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            LECTURE_LST DEVISES
+*ROW_METADATA(ADELIA                 )               LST_DEVISE:VALEUR_COURANTE=L_DEVISE
+*ROW_METADATA(ADELIA                 )               INSERER_ELT LST_DEVISE:LISTE
+*ROW_METADATA(ADELIA                 )            FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            LST_DEVISE:VALEUR=L_DEVISE
+*ROW_METADATA(ADELIA                 )            DEVISE='F'
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_USER
+*ROW_METADATA(ADELIA                 )            USER='Philippe Feuillebois'
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE=USER
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='Bernard Morin'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='"Popeye"'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='Marius'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='Nicolas Coudurier'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='Michaël Vervacke'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )            LST_USER:VALEUR_COURANTE='Francis Réat'
+*ROW_METADATA(ADELIA                 )            INSERER_ELT LST_USER:LISTE
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_TAUX
+*ROW_METADATA(ADELIA                 )            TAUX=18,4
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         N=1
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC SUITE
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_N
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_N:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               N=N+1
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC SUITE
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_LIGHT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_LIGHT:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               V=NON V
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD APP_FIXER_VISIBILITE V CR
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_LIGHT:MouvementSouris
+*ROW_METADATA(ADELIA                 )               X=BTN_LIGHT:ABSCISSE+20
+*ROW_METADATA(ADELIA                 )               Y=BTN_LIGHT:ORDONNEE+20
+*ROW_METADATA(ADELIA                 )               BULLE='Rendre Word visible/invisible'
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC BULLE_ON
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_FLASH
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_FLASH:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               B=*FAUX
+*ROW_METADATA(ADELIA                 )               LECTURE_LST FEN_WORD.LST_PR:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )                  B=*VRAI
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )               SI B
+*ROW_METADATA(ADELIA                 )                  APPELER_METHODE FEN_WORD.WRD_WORD APP_DECONNECTER CR
+*ROW_METADATA(ADELIA                 )                  *
+*ROW_METADATA(ADELIA                 )                  N=1
+*ROW_METADATA(ADELIA                 )                  BTN_N:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )                  TANT_QUE BTN_N:VISIBILITE
+*ROW_METADATA(ADELIA                 )                     TRAITER_PROC SUITE
+*ROW_METADATA(ADELIA                 )                     N=N+1
+*ROW_METADATA(ADELIA                 )                  REFAIRE
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  TRAITER_PROC NO_SEL
+*ROW_METADATA(ADELIA                 )                  IND=IND///'  Utilisez ensuite à nouveau le bouton portant l''éclair.'
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_FLASH:MouvementSouris
+*ROW_METADATA(ADELIA                 )               X=BTN_FLASH:ABSCISSE+20
+*ROW_METADATA(ADELIA                 )               Y=BTN_FLASH:ORDONNEE+20
+*ROW_METADATA(ADELIA                 )               BULLE='Enchaînement des méthodes du Client Word'
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC BULLE_ON
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_DEVISE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_DEVISE:Selection
+*ROW_METADATA(ADELIA                 )               LECTURE_LST DEVISES
+*ROW_METADATA(ADELIA                 )                  SI L_DEVISE=LST_DEVISE:VALEUR
+*ROW_METADATA(ADELIA                 )                     QUITTER_BOUCLE
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET FEN_WORD
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_WORD:Fermeture
+*ROW_METADATA(ADELIA                 )               SI NON V
+*ROW_METADATA(ADELIA                 )                  L1=_WRD_MODIFICATIONS_ABANDON
+*ROW_METADATA(ADELIA                 )                  L2=_WRD_FORMAT_ORIGINAL_DOCUMENT
+*ROW_METADATA(ADELIA                 )                  APPELER_METHODE FEN_WORD.WRD_WORD APP_QUITTER L1 L2 CR
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_WORD:MouvementSouris
+*ROW_METADATA(ADELIA                 )               C_BULLE:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )               ZS_BULLE:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET WRD_WORD
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT WRD_WORD:Fermeture
+*ROW_METADATA(ADELIA                 )               IND=*BLANK
+*ROW_METADATA(ADELIA                 )               IND='Mais, vous avez fermé Word ?  Aïe.  Je crains que tout'
+*ROW_METADATA(ADELIA                 )               IND=IND///' soit malheureusement à recommencer...  Au revoir.'
+*ROW_METADATA(ADELIA                 )               BTN_LIGHT:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )               BTN_FLASH:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )               BTN_N:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE SUITE
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         * quantités et paramètres méthode DOC_IMPRIMER
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 I1
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 JUSQUA
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 COPIES
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * coordonnées cellule
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 L
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 C
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * formats pour cellules
+*ROW_METADATA(ADELIA                 )         ALPHA(250) FA
+*ROW_METADATA(ADELIA                 )         ALPHA(250) FP
+*ROW_METADATA(ADELIA                 )         ALPHA(250) FQ
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         NUM_E(15,3) TVA
+*ROW_METADATA(ADELIA                 )         NUM_E(2,0) N2
+*ROW_METADATA(ADELIA                 )         NUM_E(1,0) N1
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * chemin et nom de fichier
+*ROW_METADATA(ADELIA                 )         ALPHA(25) TIT
+*ROW_METADATA(ADELIA                 )         ALPHA(35) FILTRE
+*ROW_METADATA(ADELIA                 )         ALPHA(5) EXT
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 S
+*ROW_METADATA(ADELIA                 )         ALPHA(1) AS
+*ROW_METADATA(ADELIA                 )         ALPHA(260) PATH
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         ALPHA(800) IND_S
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      SI N=1
+*ROW_METADATA(ADELIA                 )         IND='Bienvenue.  Vous voici aux commandes d''un exemple de petite application'
+*ROW_METADATA(ADELIA                 )         IND=IND///' développée avec Visual Adelia, qui présente les possibilités du composant'
+*ROW_METADATA(ADELIA                 )         IND=IND///' appelé "Client Word".'
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=2
+*ROW_METADATA(ADELIA                 )         IND='Supposons que votre société dispose de données informatiques de gestion'
+*ROW_METADATA(ADELIA                 )         IND=IND///' commerciale, exploitables par des applications Visual Adélia et que vous'
+*ROW_METADATA(ADELIA                 )         IND=IND///' souhaitiez automatiser certaines tâches visant à établir du courrier de'
+*ROW_METADATA(ADELIA                 )         IND=IND///' manière normalisée et rapide, sans qu''il s''agisse systématiquement'
+*ROW_METADATA(ADELIA                 )         IND=IND///' d''analyse de données.   Par souci de simplicité, et pour que cette application'
+*ROW_METADATA(ADELIA                 )         IND=IND///' soit exploitable par n''importe qui, elle ne gère pas réellement de base de'
+*ROW_METADATA(ADELIA                 )         IND=IND///' données, mais des éléments définis statiquement au démarrage.  Mais c''est'
+*ROW_METADATA(ADELIA                 )         IND=IND///' sans incidence sur les possibilités du composant Client Word, qui pourra'
+*ROW_METADATA(ADELIA                 )         IND=IND///' exploiter des données aussi dynamiques que votre imagination...'
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=3
+*ROW_METADATA(ADELIA                 )         IND='Pour utiliser le Client Word, il faut tout d''abord lui faire connecter'
+*ROW_METADATA(ADELIA                 )         IND=IND///' l''application Visual Adelia à Microsoft Word, qui est lancé dans le cas où une'
+*ROW_METADATA(ADELIA                 )         IND=IND///' session n''existe pas déjà.'
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * connexion
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD APP_CONNECTER V CR
+*ROW_METADATA(ADELIA                 )         SI NON V
+*ROW_METADATA(ADELIA                 )            IND=IND///'  -- Qui est lancé ?  Vous pouvez penser que c''est faux.  C''est seulement que'
+*ROW_METADATA(ADELIA                 )            IND=IND///' Word n''est pas visible.  Il n''interragit pas avec le bureau'
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         IND=IND///'  La session de Word peut être rendue visible ou invisible avec le bouton'
+*ROW_METADATA(ADELIA                 )         IND=IND///' portant l''ampoule.'
+*ROW_METADATA(ADELIA                 )         FEN_WORD.BTN_LIGHT:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=4
+*ROW_METADATA(ADELIA                 )         IND='Lorsque Word est visible, souvenez-vous toujours de ce qui suit.  L''application'
+*ROW_METADATA(ADELIA                 )         IND=IND///' Visual Adelia connectée à Word ne gère pas une sorte de "copie" de ce que vous'
+*ROW_METADATA(ADELIA                 )         IND=IND///' voyez dans Word, mais bien l''original.  Toute modification dans Word est à'
+*ROW_METADATA(ADELIA                 )         IND=IND///' prendre en compte pour le déroulement de l''application connectée.  Ainsi'
+*ROW_METADATA(ADELIA                 )         IND=IND///' lorsque vous développerez une application visant à automatiser le travail avec'
+*ROW_METADATA(ADELIA                 )         IND=IND///' Word, veillez à toujours indiquer très clairement quelles opérations et règles'
+*ROW_METADATA(ADELIA                 )         IND=IND///' l''utilisateur doit suivre pour que l''application connectée ne perde pas le'
+*ROW_METADATA(ADELIA                 )         IND=IND///' nord.'
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=5
+*ROW_METADATA(ADELIA                 )         IND='Voici.  Vous avez récemment eu un contact avec un client, dont vous pouvez'
+*ROW_METADATA(ADELIA                 )         IND=IND///' préciser les coordonnées, vous sollicitant pour un certain nombre de produits'
+*ROW_METADATA(ADELIA                 )         IND=IND///' ou services.  Vous serez tout d''abord sollicité pour indiquer à Word le'
+*ROW_METADATA(ADELIA                 )         IND=IND///' document maquette contenant les parties normalisées d''un type de courrier à'
+*ROW_METADATA(ADELIA                 )         IND=IND///' gérer, qui devrait normalement s''appeler "Confirm_commande.doc".'
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         FEN_WORD.BTR_GENRE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.ZZ_CORRES:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.TXT_NF:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.ZS_NF:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=6
+*ROW_METADATA(ADELIA                 )         IND='Le document est ouvert.  Les coordonnées et dénomination du correspondant sont'
+*ROW_METADATA(ADELIA                 )         IND=IND///' insérées grâce à des signets.  Les produits et services concernés ainsi que la'
+*ROW_METADATA(ADELIA                 )         IND=IND///' devise qui apparaîtra sur le document peuvent être choisis.  N.B. : Il n''y a ni'
+*ROW_METADATA(ADELIA                 )         IND=IND///' recherche de taux, ni conversion de devises.  Il s''agit seulement d''une'
+*ROW_METADATA(ADELIA                 )         IND=IND///' ébauche d''extension possible de ce type d''application.'
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * ouverture document
+*ROW_METADATA(ADELIA                 )         FILTRE='Document Word (*.doc)'
+*ROW_METADATA(ADELIA                 )         EXT='*.doc'
+*ROW_METADATA(ADELIA                 )         S=260
+*ROW_METADATA(ADELIA                 )         NF=OF
+*ROW_METADATA(ADELIA                 )         * ancien nom
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD DOC_OUVRIR NF CR
+*ROW_METADATA(ADELIA                 )         * boîte de dialogue
+*ROW_METADATA(ADELIA                 )         SI CR<>0
+*ROW_METADATA(ADELIA                 )            TIT='Document Word d''origine'
+*ROW_METADATA(ADELIA                 )            NF=*BLANK
+*ROW_METADATA(ADELIA                 )            APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFileSelection' FEN_WORD TIT FILTRE EXT NF S B
+*ROW_METADATA(ADELIA                 )            SI B
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD DOC_OUVRIR NF CR
+*ROW_METADATA(ADELIA                 )               OF=NF
+*ROW_METADATA(ADELIA                 )            SINON
+*ROW_METADATA(ADELIA                 )               IND='Dommage, c''était bien parti.'
+*ROW_METADATA(ADELIA                 )               FEN_WORD.BTN_N:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * insertion coordonnées
+*ROW_METADATA(ADELIA                 )         SI FEN_WORD.BTN_N:VISIBILITE
+*ROW_METADATA(ADELIA                 )            FEN_WORD.TXT_PROD:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FEN_WORD.LST_PR:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FEN_WORD.TXT_DEVISE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FEN_WORD.LST_DEVISE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            *
+*ROW_METADATA(ADELIA                 )            TRAITER_PROC SEL_TXT_PR
+*ROW_METADATA(ADELIA                 )            SIGN='Destinataire'
+*ROW_METADATA(ADELIA                 )            T=CORRES
+*ROW_METADATA(ADELIA                 )            TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )            SIGN='Dénomination'
+*ROW_METADATA(ADELIA                 )            T=GENRE
+*ROW_METADATA(ADELIA                 )            TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=7
+*ROW_METADATA(ADELIA                 )         B=*FAUX
+*ROW_METADATA(ADELIA                 )         LECTURE_LST FEN_WORD.LST_PR:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )            B=*VRAI
+*ROW_METADATA(ADELIA                 )         FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )         SI B
+*ROW_METADATA(ADELIA                 )            IND='Puis les données des lignes sélectionnées sont insérées dans le tableau.'
+*ROW_METADATA(ADELIA                 )            IND=IND///'  Viendront ensuite des portions de texte déjà faites ainsi que la signature de'
+*ROW_METADATA(ADELIA                 )            IND=IND///' l''utilisateur.  N.B. : Les quantités dans le tableau sont toutes fixées à "1"'
+*ROW_METADATA(ADELIA                 )            IND=IND///' et ne sont pas gérées par des variables de l''application, comme il se devrait'
+*ROW_METADATA(ADELIA                 )            IND=IND///'  d''une "bonne" gestion commerciale.  Dans une telle situation, l''application'
+*ROW_METADATA(ADELIA                 )            IND=IND///' connectée doit indiquer à l''utilisateur, par exemple : "Saisissez s.v.p. les'
+*ROW_METADATA(ADELIA                 )            IND=IND///' quantités de chacun des produits choisis dans le tableau Microsoft Word, avant'
+*ROW_METADATA(ADELIA                 )            IND=IND///' de poursuivre avec [Entrée]." ou, plus sommairement : "Saisir quantités dans'
+*ROW_METADATA(ADELIA                 )            IND=IND///' Word".'
+*ROW_METADATA(ADELIA                 )            *
+*ROW_METADATA(ADELIA                 )            FEN_WORD.TXT_USER:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FEN_WORD.LST_USER:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )            *
+*ROW_METADATA(ADELIA                 )            TRAITER_PROC SEL_TXT_PR
+*ROW_METADATA(ADELIA                 )            *
+*ROW_METADATA(ADELIA                 )            * remplissage tableau (valeurs)
+*ROW_METADATA(ADELIA                 )            I1=1
+*ROW_METADATA(ADELIA                 )            L=2
+*ROW_METADATA(ADELIA                 )            FP='0,00'
+*ROW_METADATA(ADELIA                 )            FQ='0'
+*ROW_METADATA(ADELIA                 )            LECTURE_LST FEN_WORD.LST_PR:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD LGN_CREER L CR
+*ROW_METADATA(ADELIA                 )               C=1
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C PRODUIT FA CR
+*ROW_METADATA(ADELIA                 )               C=2
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C I1 FQ CR
+*ROW_METADATA(ADELIA                 )               C=3
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C PRIX FP CR
+*ROW_METADATA(ADELIA                 )               C=4
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C DEVISE FA CR
+*ROW_METADATA(ADELIA                 )               C=6
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C DEVISE FA CR
+*ROW_METADATA(ADELIA                 )               *
+*ROW_METADATA(ADELIA                 )               L=L+1
+*ROW_METADATA(ADELIA                 )            FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            L1=_WRD_SUPP_CELL_LIGNE_ENTIERE
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE FEN_WORD.WRD_WORD CEL_SUPPRIMER L C L1 CR
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )            N=N-1
+*ROW_METADATA(ADELIA                 )      TRAITER_PROC NO_SEL
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=8
+*ROW_METADATA(ADELIA                 )         *   '         .         .         .         .         .         .         .         .'
+*ROW_METADATA(ADELIA                 )         *         '         .         .         .         .         .         .         .         .'
+*ROW_METADATA(ADELIA                 )         IND='Il ne reste plus qu''à faire les calculs.  Pour la T.V.A., il y a beaucoup de'
+*ROW_METADATA(ADELIA                 )         IND=IND///' solutions possibles.  On pourrait utiliser différents taux rattachés à des'
+*ROW_METADATA(ADELIA                 )         IND=IND///' codes pour chaque produit ou service et obtenir une moyenne applicable au total'
+*ROW_METADATA(ADELIA                 )         IND=IND///' hors taxe, tenant compte des quantités et prix unitaires du tableau.  La valeur'
+*ROW_METADATA(ADELIA                 )         IND=IND///' proposée ici est une complètement arbitraire.'
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         FEN_WORD.TXT_TVA:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.ZZ_TAUX:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * insertion de textes
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         SIGN='Introduction'
+*ROW_METADATA(ADELIA                 )         T='Suite à notre entretien, je me charge de vous faire parvenir, dans les plus'
+*ROW_METADATA(ADELIA                 )         T=T///' brefs délais, les produits et services suivants :'
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         SIGN='Conclusion'
+*ROW_METADATA(ADELIA                 )         T=*BLANK
+*ROW_METADATA(ADELIA                 )         T='Sauf incidents ou demande de votre part, cette confirmation fait office de'
+*ROW_METADATA(ADELIA                 )         T=T///' facture, payable à la livraison, à l''ordre du nom de notre société.'
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         SIGN='Politesse'
+*ROW_METADATA(ADELIA                 )         T=*BLANK
+*ROW_METADATA(ADELIA                 )         T='Restant à l''écoute de vos souhaits, je vous prie de croire,'
+*ROW_METADATA(ADELIA                 )         SI GENRE='Madame';'Monsieur'
+*ROW_METADATA(ADELIA                 )            T=T///' '//GENRE
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )            T=T///' Madame, Monsieur'
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         T=T///', à l''expression de nos meilleurs voeux pour l''année 2000.'
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         SIGN='Nom'
+*ROW_METADATA(ADELIA                 )         T=USER
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC REMPL_SIGN
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=9
+*ROW_METADATA(ADELIA                 )         IND='Vous choisissez finalement si le document doit être imprimé et/ou s''il doit être'
+*ROW_METADATA(ADELIA                 )         IND=IND///' sauvegardé sous un nouveau nom, qui apparaîtra en place de l''original.  N.B. :'
+*ROW_METADATA(ADELIA                 )         IND=IND///' L''impression se fait sans paramétrage, qui doit être fait antérieurement dans'
+*ROW_METADATA(ADELIA                 )         IND=IND///' Word.'
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         FEN_WORD.CAC_PRINT:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.CAC_SAVE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * remplissage tableau
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * formules
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC SEL_TXT_PR
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD LGNS_COMPTER L1 CR
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         FP='0,00'
+*ROW_METADATA(ADELIA                 )         T='=PRODUIT(GAUCHE)'
+*ROW_METADATA(ADELIA                 )         L=L1-3
+*ROW_METADATA(ADELIA                 )         C=5
+*ROW_METADATA(ADELIA                 )         TANT_QUE L>1
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_FORMULE L C T FP CR
+*ROW_METADATA(ADELIA                 )            L=L-1
+*ROW_METADATA(ADELIA                 )         REFAIRE
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         L=L1-2
+*ROW_METADATA(ADELIA                 )         C=2
+*ROW_METADATA(ADELIA                 )         T='=SOMME(AUDESSUS)'
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_FORMULE L C T FP CR
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_OBTENIR_VALEUR L C PRIX CR
+*ROW_METADATA(ADELIA                 )         C=3
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C DEVISE FA CR
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * valeurs calculées
+*ROW_METADATA(ADELIA                 )         * 
+*ROW_METADATA(ADELIA                 )         L=L+1
+*ROW_METADATA(ADELIA                 )         C=1
+*ROW_METADATA(ADELIA                 )         N2=TAUX
+*ROW_METADATA(ADELIA                 )         SI N2>9
+*ROW_METADATA(ADELIA                 )            T='T.V.A. '//N2
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )            N1=N2
+*ROW_METADATA(ADELIA                 )            T='T.V.A. '//N1
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         N2=100*(TAUX-N2)
+*ROW_METADATA(ADELIA                 )         T=T///','//N2//' %'
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C T FA CR
+*ROW_METADATA(ADELIA                 )         C=2
+*ROW_METADATA(ADELIA                 )         TVA=PRIX*TAUX/100
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C TVA FP CR
+*ROW_METADATA(ADELIA                 )         C=3
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C DEVISE FA CR
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         L=L+1
+*ROW_METADATA(ADELIA                 )         C=2
+*ROW_METADATA(ADELIA                 )         PRIX=PRIX+TVA
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C PRIX FP CR
+*ROW_METADATA(ADELIA                 )         C=3
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD CEL_FIXER_VALEUR L C DEVISE FA CR
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      SI N=10
+*ROW_METADATA(ADELIA                 )         IND='Voilà.  Maintenant que tous les paramètres ont été mis en place, comme pour un'
+*ROW_METADATA(ADELIA                 )         IND=IND///' utilisateur expérimenté, voyez se dérouler toutes les opérations précédentes,'
+*ROW_METADATA(ADELIA                 )         IND=IND///' grâce au bouton portant l''éclair.  N.B. : Saisissez tous les paramètres avant'
+*ROW_METADATA(ADELIA                 )         IND=IND///' d''utiliser le bouton, car vous ne pourrez intervenir pendant la séquence.'
+*ROW_METADATA(ADELIA                 )         IND=IND///'  D''autre part, les quantités du tableau resteront à "1", puisqu''elles ne font'
+*ROW_METADATA(ADELIA                 )         IND=IND///' pas partie de l''application, qui se déroulera comme en "batch".'
+*ROW_METADATA(ADELIA                 )         IND_S=IND
+*ROW_METADATA(ADELIA                 )         FEN_WORD.BTN_FLASH:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )         FEN_WORD.BTN_N:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * impression
+*ROW_METADATA(ADELIA                 )         SI FEN_WORD.CAC_PRINT:VALEUR
+*ROW_METADATA(ADELIA                 )            I1=1
+*ROW_METADATA(ADELIA                 )            JUSQUA=_WRD_TOUTES_LES_PAGES
+*ROW_METADATA(ADELIA                 )            COPIES=1
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE FEN_WORD.WRD_WORD DOC_IMPRIMER I1 JUSQUA COPIES CR
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         *
+*ROW_METADATA(ADELIA                 )         * sauvegarde
+*ROW_METADATA(ADELIA                 )         B=FEN_WORD.CAC_SAVE:VALEUR
+*ROW_METADATA(ADELIA                 )         SI B
+*ROW_METADATA(ADELIA                 )            L1=&LONGUEUR_CHAINE(OF)
+*ROW_METADATA(ADELIA                 )            TANT_QUE L1>0
+*ROW_METADATA(ADELIA                 )               AS=&EXTRACTION(OF;L1;1)
+*ROW_METADATA(ADELIA                 )               SI AS='\'
+*ROW_METADATA(ADELIA                 )                  L2=L1
+*ROW_METADATA(ADELIA                 )                  L1=1
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               L1=L1-1
+*ROW_METADATA(ADELIA                 )            REFAIRE
+*ROW_METADATA(ADELIA                 )            PATH=*BLANK
+*ROW_METADATA(ADELIA                 )            SI AS='\'
+*ROW_METADATA(ADELIA                 )               PATH=&EXTRACTION(OF;1;L2)
+*ROW_METADATA(ADELIA                 )            FIN
+*ROW_METADATA(ADELIA                 )            *
+*ROW_METADATA(ADELIA                 )            TIT='Nouveau document Word'
+*ROW_METADATA(ADELIA                 )            FILTRE='Document Word (*.doc)'
+*ROW_METADATA(ADELIA                 )            EXT='*.doc'
+*ROW_METADATA(ADELIA                 )            S=260
+*ROW_METADATA(ADELIA                 )            CR=1
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )         TANT_QUE B ET (CR<>0)
+*ROW_METADATA(ADELIA                 )            NF=PATH
+*ROW_METADATA(ADELIA                 )            APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxSaveFileSelection' FEN_WORD TIT FILTRE EXT NF S B
+*ROW_METADATA(ADELIA                 )            SI B
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE FEN_WORD.WRD_WORD DOC_ENREGISTRER_SOUS NF CR
+*ROW_METADATA(ADELIA                 )               SI CR<>0
+*ROW_METADATA(ADELIA                 )                  IND='Le fichier spécifié est inaccessible pour Word en écriture.'
+*ROW_METADATA(ADELIA                 )                  IND=IND///'  Veuillez recommencer.'
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN
+*ROW_METADATA(ADELIA                 )         REFAIRE
+*ROW_METADATA(ADELIA                 )         IND=IND_S
+*ROW_METADATA(ADELIA                 )         SI NON B
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE FEN_WORD.WRD_WORD DOC_FERMER B CR
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE REMPL_SIGN
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         BOOL EX
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 VERS
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 TYPE
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 NBR
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      * signet : vérification d'existence, sélection (plage) et insertion texte dans
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      APPELER_METHODE FEN_WORD.WRD_WORD SGN_EXISTE SIGN EX CR
+*ROW_METADATA(ADELIA                 )      SI EX
+*ROW_METADATA(ADELIA                 )         VERS=_WRD_VERS_SIGNET
+*ROW_METADATA(ADELIA                 )         TYPE=_WRD_DEPLACEMENT_ABSOLU
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD PLG_ALLER_A VERS TYPE NBR SIGN CR
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE FEN_WORD.WRD_WORD PLG_FIXER_TEXTE T CR
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE SEL_TXT_PR
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 ART
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 SECT
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      * sélection plage = article texte principal
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      ART=_WRD_ARTICLE_TEXTE_PRINCIPAL
+*ROW_METADATA(ADELIA                 )      SECT=1
+*ROW_METADATA(ADELIA                 )      APPELER_METHODE FEN_WORD.WRD_WORD PLG_FIXER_ARTICLE ART SECT CR
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE BULLE_ON
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 oX
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 oY
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      * apparition de la bulle à X, Y
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      oX=FEN_WORD.C_BULLE:ABSCISSE
+*ROW_METADATA(ADELIA                 )      oY=FEN_WORD.C_BULLE:ORDONNEE
+*ROW_METADATA(ADELIA                 )      FEN_WORD.C_BULLE:ABSCISSE=X
+*ROW_METADATA(ADELIA                 )      FEN_WORD.C_BULLE:ORDONNEE=Y
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      FEN_WORD.ZS_BULLE:ABSCISSE=FEN_WORD.ZS_BULLE:ABSCISSE+X-oX
+*ROW_METADATA(ADELIA                 )      FEN_WORD.ZS_BULLE:ORDONNEE=FEN_WORD.ZS_BULLE:ORDONNEE+Y-oY
+*ROW_METADATA(ADELIA                 )      FEN_WORD.ZS_BULLE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )      FEN_WORD.C_BULLE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE NO_SEL
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      IND='Aucune ligne n''a été sélectionnée.  Créer un courrier de confirmation de'
+*ROW_METADATA(ADELIA                 )      IND=IND///' commande pour rien serait une pure perte de temps.  Veuillez choisir quelque'
+*ROW_METADATA(ADELIA                 )      IND=IND///' chose dans la liste.  Ne craignez rien : c''est une simulation.'
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

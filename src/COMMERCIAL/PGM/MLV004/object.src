@@ -1,0 +1,109 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)      * Déclaration du curseur commun de lecture de l'entité personnel
+*ROW_METADATA(MLIVAIN        20240528)      curseur curs_calc_sal_brut personnel *tri(PE_COD_MATRICUL) 
+*ROW_METADATA(MLIVAIN        20240528)      * Déclaration du curseur group by societe pour calcul du nb d'meplotés
+*ROW_METADATA(MLIVAIN        20240528)      * curseur curs_calc_nb_emp personnel *tri(pe_cod_societe) *groupe)
+*ROW_METADATA(MLIVAIN        20240528)      * Déclaration de variables de travail communes
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_4 wsqlcode
+*ROW_METADATA(MLIVAIN        20240528)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_PROCEDURE CALC_SAL_BRUT *PUBLIC
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration des variables de travail locales
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wsal_brut
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de la liste mémoire locale
+*ROW_METADATA(MLIVAIN        20240528)         liste lsm_sal_brut pe_cod_matricul pe_nom_personne wsal_brut pe_nbr_heure_me
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)         * Liste des salaires bruts calculés en paramètre retour
+*ROW_METADATA(MLIVAIN        20240528)         param lsm_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)      * Initialisation
+*ROW_METADATA(MLIVAIN        20240528)      vider_lst LSM_SAL_BRUT
+*ROW_METADATA(MLIVAIN        20240528)      * Ouverture du curseur
+*ROW_METADATA(MLIVAIN        20240528)      ouvrir_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      lire_av_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)      tant_que wsqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240528)         * Si le nombre d'heure est à 0, utilisation du salaire saisi
+*ROW_METADATA(MLIVAIN        20240528)         si pe_nbr_heure_me <> 0
+*ROW_METADATA(MLIVAIN        20240528)            wsal_brut = pe_mtt_salaire * (pe_nbr_heure_me/100)
+*ROW_METADATA(MLIVAIN        20240528)         sinon
+*ROW_METADATA(MLIVAIN        20240528)            wsal_brut = pe_mtt_salaire
+*ROW_METADATA(MLIVAIN        20240528)         fin
+*ROW_METADATA(MLIVAIN        20240528)         inserer_elt LSM_SAL_BRUT
+*ROW_METADATA(MLIVAIN        20240528)         lire_av_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)         wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)      refaire
+*ROW_METADATA(MLIVAIN        20240528)      fermer_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)   FIN_PROCEDURE
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_PROCEDURE CALC_ANC_SOC *PUBLIC
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration des variables de travail locales
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wanc_soc
+*ROW_METADATA(MLIVAIN        20240528)         date wdate_courante
+*ROW_METADATA(MLIVAIN        20240528)         date wdate_embauche
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de la liste mémoire locale
+*ROW_METADATA(MLIVAIN        20240528)         liste lsm_anc_soc pe_cod_matricul pe_nom_personne wanc_soc pe_dat_entree 
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)         * Liste des salaires bruts calculés en paramètre retour
+*ROW_METADATA(MLIVAIN        20240528)         param lsm_anc_soc
+*ROW_METADATA(MLIVAIN        20240528)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)      vider_lst LSM_ANC_SOC
+*ROW_METADATA(MLIVAIN        20240528)      heure wdate_courante
+*ROW_METADATA(MLIVAIN        20240528)      ouvrir_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      lire_av_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)      wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)      tant_que wsqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240528)         *Calcul de l'ancienneté
+*ROW_METADATA(MLIVAIN        20240528)         si pe_dat_entree <> 0 
+*ROW_METADATA(MLIVAIN        20240528)            wdate_embauche = &num_date(pe_dat_entree)
+*ROW_METADATA(MLIVAIN        20240528)            wanc_soc = &ecart_dates(wdate_embauche;wdate_courante) /365
+*ROW_METADATA(MLIVAIN        20240528)         sinon
+*ROW_METADATA(MLIVAIN        20240528)            wanc_soc = 0
+*ROW_METADATA(MLIVAIN        20240528)         fin
+*ROW_METADATA(MLIVAIN        20240528)         inserer_elt LSM_ANC_SOC
+*ROW_METADATA(MLIVAIN        20240528)         lire_av_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)         wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)      refaire
+*ROW_METADATA(MLIVAIN        20240528)      fermer_sql_c curs_calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240528)   FIN_PROCEDURE
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_PROCEDURE LST_CAMEMBERT *PUBLIC
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)         num_e(5,0) nbPersonnel
+*ROW_METADATA(MLIVAIN        20240530)         alpha(2) pcodsoc
+*ROW_METADATA(MLIVAIN        20240530)         liste lsm_camembert nbPersonnel pcodsoc
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         ALPHA(200) WREQUETE
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         num_e(5,0) cnt_pepmat
+*ROW_METADATA(MLIVAIN        20240530)         alpha(2) cod_soc
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         CURSEUR curs_lst_camember :WREQUETE
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         param LSM_CAMEMBERT
+*ROW_METADATA(MLIVAIN        20240530)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)      vider_lst LSM_CAMEMBERT
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      WREQUETE = 'select COUNT(PEPMAT) as cnt_pepmat , pecste as cod_soc from personp group by pecste'
+*ROW_METADATA(MLIVAIN        20240530)      ouvrir_sql_c curs_lst_camember
+*ROW_METADATA(MLIVAIN        20240530)      lire_av_sql_c curs_lst_camember :cnt_pepmat, :cod_soc
+*ROW_METADATA(MLIVAIN        20240530)      wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240530)      tant_que wsqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240530)         si cod_soc <> *blank
+*ROW_METADATA(MLIVAIN        20240530)            pcodsoc = cod_soc
+*ROW_METADATA(MLIVAIN        20240530)         sinon
+*ROW_METADATA(MLIVAIN        20240530)            pcodsoc = '##'
+*ROW_METADATA(MLIVAIN        20240530)         fin
+*ROW_METADATA(MLIVAIN        20240530)         nbPersonnel = cnt_pepmat
+*ROW_METADATA(MLIVAIN        20240530)         inserer_elt lsm_camembert
+*ROW_METADATA(MLIVAIN        20240530)         lire_av_sql_c curs_lst_camember  :cnt_pepmat, :cod_soc
+*ROW_METADATA(MLIVAIN        20240530)         wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240530)      refaire
+*ROW_METADATA(MLIVAIN        20240530)      fermer_sql_c curs_lst_camember
+*ROW_METADATA(MLIVAIN        20240530)   FIN_PROCEDURE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

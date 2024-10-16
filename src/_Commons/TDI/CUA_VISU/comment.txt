@@ -1,0 +1,10 @@
+Squelette de programmes de visualisation de fichiers aux normes CUA.
+Nombre d'écrans : de 1 à 9.
+Pour chaque écran, possibilité de sélectionner le type de transaction :
+    - pas de sous-fichier, présentation en ligne
+    - pas de sous-fichier, présentation "maximum"
+    - un sous-fichier
+    - deux sous-fichiers.
+
+Paramètres déclarés (en plus du code retour et du code action) : liste des
+zones clés de la vue liée au fichier visualisé.

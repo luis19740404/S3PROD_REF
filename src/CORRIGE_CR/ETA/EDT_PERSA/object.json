@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERSA",
+  "description" : "edition personnel",
+  "creationDate" : "2007-08-09 16:07:53",
+  "updateDate" : "2007-08-13 07:45:36",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDTPEA",
+  "nature" : "CRYSTAL"
+}

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="1" name="FEN_MAJ_ENTCOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-3" intValue="431"/>
+        <property id="-2" intValue="115"/>
+        <property id="-1" intValue="78"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_VALIDER">
+            <properties>
+                <property id="-8" stringValue="Valider"/>
+                <property id="-2" intValue="243"/>
+                <property id="-1" intValue="220"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="Annuler"/>
+                <property id="-2" intValue="243"/>
+                <property id="-1" intValue="307"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ12">
+            <properties>
+                <property id="-8" stringValue="Numero de commande"/>
+                <property id="-3" intValue="146"/>
+                <property id="-2" intValue="41"/>
+                <property id="-1" intValue="7"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZENUM_COMMANDE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.NUM_COMMANDE" name="ZENUM_COMMANDE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="3"/>
+                <property id="-11" intValue="14"/>
+                <property id="-9" stringValue="3 5 0"/>
+                <property id="-3" intValue="49"/>
+                <property id="-2" intValue="38"/>
+                <property id="-1" intValue="191"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ14">
+            <properties>
+                <property id="-8" stringValue="Objet de la commande"/>
+                <property id="-3" intValue="145"/>
+                <property id="-2" intValue="71"/>
+                <property id="-1" intValue="7"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZELIB_OBJ_CDE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.LIB_OBJ_CDE" name="ZELIB_OBJ_CDE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 30 -1"/>
+                <property id="-3" intValue="224"/>
+                <property id="-2" intValue="68"/>
+                <property id="-1" intValue="191"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ16">
+            <properties>
+                <property id="-8" stringValue="Date de commande"/>
+                <property id="-3" intValue="125"/>
+                <property id="-2" intValue="101"/>
+                <property id="-1" intValue="7"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ18">
+            <properties>
+                <property id="-8" stringValue="Code client"/>
+                <property id="-3" intValue="72"/>
+                <property id="-2" intValue="131"/>
+                <property id="-1" intValue="7"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZECOD_CLIENT" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.COD_CLIENT" name="ZECOD_CLIENT">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="1"/>
+                <property id="-9" stringValue="2 6 -1"/>
+                <property id="-3" intValue="56"/>
+                <property id="-2" intValue="128"/>
+                <property id="-1" intValue="191"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ20">
+            <properties>
+                <property id="-8" stringValue="Code règlement"/>
+                <property id="-3" intValue="102"/>
+                <property id="-2" intValue="161"/>
+                <property id="-1" intValue="7"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZECOD_REGLEMT" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.COD_REGLEMT" name="ZECOD_REGLEMT">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="1"/>
+                <property id="-9" stringValue="2 2 -1"/>
+                <property id="-3" intValue="28"/>
+                <property id="-2" intValue="158"/>
+                <property id="-1" intValue="191"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZEJOU_COMMANDE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.JOU_COMMANDE" name="ZEJOU_COMMANDE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="3"/>
+                <property id="-9" stringValue="3 2 0"/>
+                <property id="-3" intValue="26"/>
+                <property id="-2" intValue="98"/>
+                <property id="-1" intValue="191"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZEMOI_COMMANDE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.MOI_COMMANDE" name="ZEMOI_COMMANDE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="3"/>
+                <property id="-9" stringValue="3 2 0"/>
+                <property id="-3" intValue="25"/>
+                <property id="-2" intValue="98"/>
+                <property id="-1" intValue="233"/>
+            </properties>
+        </control>
+        <control associatedVariable="ZEANN_COMMANDE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="1" logicalProperty="ENTCDE.ANN_COMMANDE" name="ZEANN_COMMANDE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="3"/>
+                <property id="-9" stringValue="3 4 0"/>
+                <property id="-3" intValue="47"/>
+                <property id="-2" intValue="98"/>
+                <property id="-1" intValue="278"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_SLASH">
+            <properties>
+                <property id="-8" stringValue="/"/>
+                <property id="-3" intValue="10"/>
+                <property id="-2" intValue="101"/>
+                <property id="-1" intValue="222"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_SLASH0">
+            <properties>
+                <property id="-8" stringValue="/"/>
+                <property id="-3" intValue="10"/>
+                <property id="-2" intValue="101"/>
+                <property id="-1" intValue="261"/>
+            </properties>
+        </control>
+    </controls>
+</window>

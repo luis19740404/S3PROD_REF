@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_IHM4",
+  "description" : "Guide mat hiérarchique",
+  "creationDate" : "2000-04-04 13:33:11",
+  "updateDate" : "2000-07-07 15:14:19",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAIHM4",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAIHM4",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

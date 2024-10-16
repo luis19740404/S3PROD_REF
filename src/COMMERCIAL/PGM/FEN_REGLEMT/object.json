@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "FEN_REGLEMT",
+  "description" : "Fenêtre Adélia d'interrogation modes reglement",
+  "creationDate" : "1995-07-04 14:26:41",
+  "updateDate" : "2012-11-13 15:38:14",
+  "visibility" : "PRIVATE",
+  "ibmName" : "FENREG",
+  "programType" : "I",
+  "sourceType" : "ADELIA",
+  "layoutCode" : "FENREG",
+  "programTemplateName" : "QR_CONSTIT_FEN",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "NATIVE",
+  "manageHistoryButtons" : " "
+}

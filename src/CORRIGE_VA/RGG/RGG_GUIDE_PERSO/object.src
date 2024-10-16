@@ -1,0 +1,8 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   DECL VUE VUE_TOTO PERSONNEL $$:
+*ROW_METADATA(ADELIA                 )   * $$:
+*ROW_METADATA(ADELIA                 )   GUIDE $$ 04 'Guide'
+*ROW_METADATA(ADELIA                 )   * $$:
+*ROW_METADATA(ADELIA                 )     APPELER PGM2 $$:
+*ROW_METADATA(ADELIA                 )   FIN_GUIDE
+*ROW_METADATA(ADELIA                 )FIN_RGG

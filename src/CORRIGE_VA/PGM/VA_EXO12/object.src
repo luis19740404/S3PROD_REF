@@ -1,0 +1,110 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )         NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(ADELIA                 )         CHARGEMENT CHRG_PERSONNEL FEN_ARBRE.ARL_PERSO:LISTE *SQL PERSONNEL -
+*ROW_METADATA(ADELIA                 )         *TRI(PE_LIB_VIL_PERS,PE_COD_SEXE_PER)
+*ROW_METADATA(ADELIA                 )      FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      DEBUT_STD
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_D
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_ARBRE
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_ARBRE
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_F
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_ARBRE
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 NumItem	
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 TypeLigne	
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 NumLigneSrc	
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 NumLigneDest
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 Position
+*ROW_METADATA(ADELIA                 )         NUM_BIN_2 CodeRetour	
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ARL_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               VIDER_LST FEN_ARBRE.ARL_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )            DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                  CHARGT_LST CHRG_PERSONNEL
+*ROW_METADATA(ADELIA                 )                     DEBUT_STD PERSONNEL
+*ROW_METADATA(ADELIA                 )                        PRESENTER PERSONNEL
+*ROW_METADATA(ADELIA                 )                     FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     DEBUT_STD
+*ROW_METADATA(ADELIA                 )                     FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     INSERER_ELT FEN_ARBRE.ARL_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )                  FIN_CHARGT_LST
+*ROW_METADATA(ADELIA                 )            FIN_SRV
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_NOM_PERSONNE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_NOM_PERSONNE:FinDragDrop
+*ROW_METADATA(ADELIA                 )               NumItem = 3
+*ROW_METADATA(ADELIA                 )               TypeLigne=_ARL_LIGNE_SIMPLE
+*ROW_METADATA(ADELIA                 )               Position=_ARL_DEPLACER_AVANT
+*ROW_METADATA(ADELIA                 )               NumLigneDest=ARL_PERSO:numero_ligne_action
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE  ARL_PERSO  DEPLACER_LIGNES  NumItem  TypeLigne  NumLigneSrc  NumLigneDest  Position  CodeRetour 
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_NOM_PERSONNE:DebutDragDrop
+*ROW_METADATA(ADELIA                 )               NumLigneSrc = ARL_PERSO:numero_ligne_action
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ARL_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               LECTURE_LST FEN_ARBRE.ARL_PERSO:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  DEBUT_STD
+*ROW_METADATA(ADELIA                 )                  FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  MODIFIER_ELT FEN_ARBRE.ARL_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ARL_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               LECTURE_LST FEN_ARBRE.ARL_PERSO:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  DEBUT_STD
+*ROW_METADATA(ADELIA                 )                  FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

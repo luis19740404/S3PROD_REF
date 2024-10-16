@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_DAT",
+  "description" : "Edition personnel avec gestion date",
+  "creationDate" : "2000-03-03 09:13:12",
+  "updateDate" : "2000-03-03 09:13:12",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPEDT",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPEDT",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

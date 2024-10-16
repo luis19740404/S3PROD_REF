@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "SALAIRE_COEF",
+  "description" : "Salaire avec coefficient",
+  "creationDate" : "2012-05-22 07:56:12",
+  "updateDate" : "2012-05-22 08:27:49",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL", "WADELIA" ]
+}

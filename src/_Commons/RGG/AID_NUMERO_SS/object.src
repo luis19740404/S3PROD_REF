@@ -1,0 +1,9 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   GUIDE $$ZONE 01
+*ROW_METADATA(ADELIA                 )   WW_NOM_MEMBRE = 'TNUSS     '
+*ROW_METADATA(ADELIA                 )   APPELER HB£ASZ WW_NOM_MEMBRE
+*ROW_METADATA(ADELIA                 )   LIBERER_PGM HB£ASZ
+*ROW_METADATA(ADELIA                 )   FIN_GUIDE
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   DECLARER WWNMBR;WW_NOM_MEMBRE 10
+*ROW_METADATA(ADELIA                 )FIN_RGG

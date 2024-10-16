@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "GUI_CLIENT",
+  "description" : "Guide de saisie clients",
+  "creationDate" : "1995-05-04 09:52:22",
+  "updateDate" : "1996-06-21 14:35:22",
+  "visibility" : "PUBLIC",
+  "mrClass" : "GS",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

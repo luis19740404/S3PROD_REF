@@ -1,0 +1,97 @@
+[ {
+  "id" : {
+    "property" : -5
+  },
+  "modifiability" : -2,
+  "stringValue" : "BAO_PERSO"
+}, {
+  "id" : {
+    "property" : -4
+  },
+  "modifiability" : -1,
+  "intValue" : 30
+}, {
+  "id" : {
+    "property" : -3
+  },
+  "modifiability" : -1,
+  "intValue" : 1004
+}, {
+  "id" : {
+    "property" : -2
+  },
+  "modifiability" : -1,
+  "intValue" : -2
+}, {
+  "id" : {
+    "property" : -1
+  },
+  "modifiability" : -1,
+  "intValue" : -2
+}, {
+  "id" : {
+    "property" : 100
+  },
+  "modifiability" : -1,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : 107
+  },
+  "modifiability" : -2,
+  "intValue" : 4
+}, {
+  "id" : {
+    "property" : 109
+  },
+  "modifiability" : -1,
+  "intValue" : 1
+}, {
+  "id" : {
+    "property" : 400
+  },
+  "modifiability" : -1,
+  "stringValue" : "CALENDRIER¤GESTIONLANGUE¤SEPARATEUR¤GESTPERS2"
+}, {
+  "id" : {
+    "property" : 401
+  },
+  "modifiability" : -1,
+  "fileName" : "property_401"
+}, {
+  "id" : {
+    "property" : 402
+  },
+  "modifiability" : -1,
+  "stringValue" : "¤¤¤"
+}, {
+  "id" : {
+    "property" : 403
+  },
+  "modifiability" : -1,
+  "stringValue" : "Calendrier¤Gestion des langues¤¤Gestion personnel (2)"
+}, {
+  "id" : {
+    "property" : 404
+  },
+  "modifiability" : -1,
+  "stringValue" : "¤¤¤"
+}, {
+  "id" : {
+    "property" : 405
+  },
+  "modifiability" : -1,
+  "fileName" : "property_405"
+}, {
+  "id" : {
+    "property" : 406
+  },
+  "modifiability" : -1,
+  "fileName" : "property_406"
+}, {
+  "id" : {
+    "property" : 407
+  },
+  "modifiability" : -1,
+  "fileName" : "property_407"
+} ]

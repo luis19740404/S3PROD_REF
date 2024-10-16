@@ -1,0 +1,132 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )         NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(ADELIA                 )         CHARGEMENT CHRG_SOCIETE FEN_SOC.LST_SOC:LISTE *SQL SOCIETE -
+*ROW_METADATA(ADELIA                 )         *TRI(SO_COD_SOCIETE) 30 *AJOUT
+*ROW_METADATA(ADELIA                 )      FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )      DEBUT_STD
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_D
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_SOC
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_SOC
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_F
+*ROW_METADATA(ADELIA                 )      FIN_STD
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_SOC
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_SOC
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               VIDER_LST FEN_SOC.LST_SOC:LISTE
+*ROW_METADATA(ADELIA                 )            DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                  CHARGT_LST CHRG_SOCIETE
+*ROW_METADATA(ADELIA                 )                     DEBUT_STD SOCIETE
+*ROW_METADATA(ADELIA                 )                        PRESENTER SOCIETE
+*ROW_METADATA(ADELIA                 )                     FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     DEBUT_STD
+*ROW_METADATA(ADELIA                 )                     FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     INSERER_ELT FEN_SOC.LST_SOC:LISTE
+*ROW_METADATA(ADELIA                 )                  FIN_CHARGT_LST
+*ROW_METADATA(ADELIA                 )            FIN_SRV
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_OK
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_OK:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               VALIDER
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_ANNULER
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_ANNULER:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_INIT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_INIT:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               INITIALISER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_SOC
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_SOC:MNU_SUPPRIMER
+*ROW_METADATA(ADELIA                 )               LECTURE_LST LST_SOC:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                     SUPPRIMER_SQL SOCIETE *COND(SO_COD_SOCIETE = :ZZ_COD_SOCIETE)
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                  SUPPRIMER_ELT LST_SOC:LISTE
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST 
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_SOC
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               LECTURE_LST FEN_SOC.LST_SOC:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  DEBUT_STD
+*ROW_METADATA(ADELIA                 )                  FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  MODIFIER_ELT FEN_SOC.LST_SOC:LISTE
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            DEBUT_STD
+*ROW_METADATA(ADELIA                 )            FIN_STD
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_SOC
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )               LECTURE_LST FEN_SOC.LST_SOC:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                  DEBUT_STD
+*ROW_METADATA(ADELIA                 )                  FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )            DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )                     LIRE_SQL SOCIETE *COND(SO_COD_SOCIETE = :ZZ_COD_SOCIETE)
+*ROW_METADATA(ADELIA                 )                     CODE_RET_SQL = *SQLCODE
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     DEBUT_STD SOCIETE
+*ROW_METADATA(ADELIA                 )                        RAPATRIER SOCIETE
+*ROW_METADATA(ADELIA                 )                     FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                     SI CODE_RET_SQL = *NORMAL
+*ROW_METADATA(ADELIA                 )                        MAJ_SQL SOCIETE *ALL *COND(SO_COD_SOCIETE = :ZZ_COD_SOCIETE)
+*ROW_METADATA(ADELIA                 )                     SINON
+*ROW_METADATA(ADELIA                 )                        SI CODE_RET_SQL = *NON_TROUVE
+*ROW_METADATA(ADELIA                 )                           CREER_SQL SOCIETE
+*ROW_METADATA(ADELIA                 )                        FIN
+*ROW_METADATA(ADELIA                 )                     FIN
+*ROW_METADATA(ADELIA                 )            FIN_SRV
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

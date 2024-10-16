@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_GESPERS",
+  "description" : "Gestion du personnel",
+  "creationDate" : "2004-07-29 10:20:59",
+  "updateDate" : "2007-03-30 10:51:59",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcgestionperso",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCGESP",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CTL_TYP_FOR",
+  "description" : "Contrôle type de formation",
+  "creationDate" : "1999-01-18 13:15:34",
+  "updateDate" : "1999-01-18 13:18:17",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

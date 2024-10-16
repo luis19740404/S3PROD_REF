@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Gestion personnel" help="" id="0" name="FEN_PERSO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="504"/>
+        <property id="-3" intValue="781"/>
+        <property id="-2" intValue="65"/>
+        <property id="-1" intValue="11"/>
+        <property id="3" stringValue="Gestion personnel"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9/DSo9ljWQaqLI9umjUJ/eBAQM17cVq7+EK2hAmxRaD/nNPozSnor/c1JKE3p6CPQERCb06x9yMScnKOvn9Wojs3D31jXOjNFLirPxqh3QNr9w66y21xSWj3gJ21t6CXJmBlRtBJFbByryCfLmBlFbIlAla+h1yZgNXZIVMqYPWAfYmAF7JpAvrsgWyKgL7rtxHkwgIKWW+eXLoAkPd0yPyngBfuXgK/I1A1XoFGsGr0Xx/nAcvm7lfXqc4jAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4Xq2MUQrAMAxCe/+DdcfqyJARE6Vl7IE/5sUxfmIdxrJ2hINIqt8IZ17TjjS5El0MuJEmuy6FsLICN0IJdgQ9oQQ7go5QQku5E+m9D1TQE01IIt1ST1TnBbLqCBIykFVHkLBDDnzIww3Nu+sjMeaOXAAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_GO">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="Go"/>
+                <property id="-2" intValue="18"/>
+                <property id="-1" intValue="468"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_PERSO">
+            <properties>
+                <property id="-4" intValue="266"/>
+                <property id="-3" intValue="517"/>
+                <property id="-2" intValue="196"/>
+                <property id="-1" intValue="11"/>
+                <property id="6" stringValue="ZZ_COD_MATRICUL -6 2 6 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_PRN_PERSONNE -6 2 20 -1 # ZZ_COD_SEXE_PER -6 2 1 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_COD_MATRICUL" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="11" stringValue="ZZ_COD_MATRICUL 9 2 6 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="154"/>
+                        <property id="11" stringValue="ZZ_NOM_PERSONNE 9 2 30 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_PRN_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.PRN_PERSONNE" name="ZZ_PRN_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 20 -1"/>
+                        <property id="-8" stringValue="Prénom"/>
+                        <property id="-3" intValue="154"/>
+                        <property id="11" stringValue="ZZ_PRN_PERSONNE 9 2 20 -1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SEXE_PER" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SEXE_PERS" name="ZZ_COD_SEXE_PER">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="-8" stringValue="Sexe"/>
+                        <property id="-3" intValue="34"/>
+                        <property id="8" intValue="1"/>
+                        <property id="11" stringValue="ZZ_COD_SEXE_PER 9 2 1 -1"/>
+                        <property id="12" intValue="2"/>
+                        <property id="14" stringValue="H"/>
+                        <property id="15" stringValue="F"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Ville"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="11" stringValue="ZZ_LIB_VIL_PERS 9 2 30 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="W_SEXE" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="LBR_SEXE">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="-8" stringValue="Sexe"/>
+                <property id="-6" stringValue="H"/>
+                <property id="-4" intValue="42"/>
+                <property id="-3" intValue="163"/>
+                <property id="-1" intValue="11"/>
+                <property id="9" intValue="2"/>
+                <property id="14" stringValue="Homme¤Femme¤"/>
+                <property id="15" stringValue="H¤F¤"/>
+            </properties>
+        </control>
+        <control associatedVariable="W_SQL" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="ID_OBJ20">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="6 -1 -1"/>
+                <property id="-2" intValue="16"/>
+                <property id="-1" intValue="283"/>
+            </properties>
+        </control>
+        <control associatedVariable="REQUETE" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ21">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 250 -1"/>
+                <property id="-4" intValue="72"/>
+                <property id="-3" intValue="593"/>
+                <property id="-2" intValue="51"/>
+                <property id="-1" intValue="11"/>
+                <property id="6" intValue="1"/>
+                <property id="8" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="R2" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ22">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 250 -1"/>
+                <property id="-4" intValue="54"/>
+                <property id="-3" intValue="593"/>
+                <property id="-2" intValue="132"/>
+                <property id="-1" intValue="11"/>
+                <property id="6" intValue="1"/>
+                <property id="8" intValue="1"/>
+                <property id="12" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,90 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240529)      chargement charg_personnel fen_staper.LST_STAT_EMPLOYES:liste *sql personnel -
+*ROW_METADATA(MLIVAIN        20240528)      *tri(PE_COD_MATRICUL)
+*ROW_METADATA(MLIVAIN        20240528)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240528)      initialiser fen_staper
+*ROW_METADATA(MLIVAIN        20240528)      executer fen_staper
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_FENETRE FEN_STAPER
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wsal_brut
+*ROW_METADATA(MLIVAIN        20240528)         num_p(5,2) wnb_heure
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wanc_soc
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de la liste mémoire salaire brut
+*ROW_METADATA(MLIVAIN        20240528)         liste lsm_sal_brut pe_cod_matricul pe_nom_personne wsal_brut wnb_heure
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de la liste mémoire ancienneté
+*ROW_METADATA(MLIVAIN        20240528)         liste lsm_anc_soc pe_cod_matricul pe_nom_personne wanc_soc pe_dat_entree 
+*ROW_METADATA(MLIVAIN        20240528)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240528)         *Vidage de la liste graphique
+*ROW_METADATA(MLIVAIN        20240529)         VIDER_LST LST_STAT_EMPLOYES:liste
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)         *Itération de lecture de la table client (chargt_lst /fin_chargt_liste)
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240528)            chargt_lst charg_personnel
+*ROW_METADATA(MLIVAIN        20240528)               *Transfert des valeurs des zones de la table client dans les zones de la liste graphique
+*ROW_METADATA(MLIVAIN        20240528)               presenter personnel
+*ROW_METADATA(MLIVAIN        20240528)               *Insertion dans la liste
+*ROW_METADATA(MLIVAIN        20240529)               inserer_elt LST_STAT_EMPLOYES:liste
+*ROW_METADATA(MLIVAIN        20240529)            fin_chargt_lst
+*ROW_METADATA(MLIVAIN        20240529)            col_anc:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240529)            col_sal_brut:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240529)            COL_NB_HEURE:visibilite = *faux
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240528)      FIN_INIT
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240528)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240528)               terminer
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240528)         DEBUT_OBJET BTN_ANCIENNETE
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT BTN_ANCIENNETE:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240529)               * Appel de la procédure publique calc_anc_soc
+*ROW_METADATA(MLIVAIN        20240529)               vider_lst LST_STAT_EMPLOYES:liste
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240529)                  appeler MLV004.calc_anc_soc LSM_ANC_SOC
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240529)               *
+*ROW_METADATA(MLIVAIN        20240529)               lecture_lst LSM_ANC_SOC
+*ROW_METADATA(MLIVAIN        20240529)                  col_anc:valeur = wanc_soc
+*ROW_METADATA(MLIVAIN        20240529)                  inserer_elt lst_stat_employes:liste
+*ROW_METADATA(MLIVAIN        20240529)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240529)               col_anc:visibilite = *vrai
+*ROW_METADATA(MLIVAIN        20240529)               col_sal_brut:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240529)               col_nb_heure:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240529)         DEBUT_OBJET BTN_SAL_BRUT
+*ROW_METADATA(MLIVAIN        20240529)            DEBUT_EVT BTN_SAL_BRUT:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240529)               * Appel de la procédure publique calc_sal_brut
+*ROW_METADATA(MLIVAIN        20240529)               vider_lst lst_stat_employes:liste
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240529)                  appeler mlv004.calc_sal_brut lsm_sal_brut
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240529)               
+*ROW_METADATA(MLIVAIN        20240529)               lecture_lst LSM_SAL_BRUT
+*ROW_METADATA(MLIVAIN        20240529)                  col_sal_brut:valeur = wsal_brut
+*ROW_METADATA(MLIVAIN        20240529)                  COL_NB_HEURE:valeur = wnb_heure
+*ROW_METADATA(MLIVAIN        20240529)                  inserer_elt LST_STAT_EMPLOYES:liste
+*ROW_METADATA(MLIVAIN        20240529)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240529)               *Visibilité ancienneté desactivée, visibilité salaire brut activée
+*ROW_METADATA(MLIVAIN        20240529)               col_anc:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240529)               col_sal_brut:visibilite = *vrai
+*ROW_METADATA(MLIVAIN        20240529)               COL_NB_HEURE:visibilite = *vrai
+*ROW_METADATA(MLIVAIN        20240529)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240529)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240528)      FIN_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_VERIF
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)      FIN_VERIF
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_VALID
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)      FIN_VALID
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240528)      FIN_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240528)   FIN_FENETRE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

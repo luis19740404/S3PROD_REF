@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "CUA_MISE_A_JOUR",
+  "description" : "Mise à jour CUA",
+  "creationDate" : "1995-05-04 13:06:26",
+  "updateDate" : "1995-11-30 12:46:31",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

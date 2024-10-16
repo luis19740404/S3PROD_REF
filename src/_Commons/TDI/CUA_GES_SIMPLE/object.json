@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "CUA_GES_SIMPLE",
+  "description" : "Gestion CUA allégé",
+  "creationDate" : "1995-11-30 12:46:20",
+  "updateDate" : "1995-11-30 12:46:20",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

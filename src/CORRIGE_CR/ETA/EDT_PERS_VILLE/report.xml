@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDPEVI" guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" scale="-1" type="STRING"/>
+        <field description="EDPEVI" guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="EDPEVI" guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" scale="-1" type="STRING"/>
+        <field description="EDPEVI" guideWord="ZZ_PRN_PERSONNE" kind="VARIABLE" length="20" logicalProperty="PERSONNEL.PRN_PERSONNE" scale="-1" type="STRING"/>
+        <field description="EDPEVI" kind="CONSTANT" length="3" scale="2">
+            <text text="Matricule"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="4" scale="2">
+            <text text="Nom"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="5" scale="2">
+            <text text="Prénom"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="6" scale="2">
+            <text text="Ville"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="7" scale="2">
+            <text text="Total cumulé"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="22" scale="501">
+            <text text="Total   ville :"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="26" scale="8">
+            <text text="Total   général :"/>
+        </field>
+        <field description="EDPEVI" kind="CONSTANT" length="29" scale="7">
+            <text text="Page :"/>
+        </field>
+    </fields>
+</report>

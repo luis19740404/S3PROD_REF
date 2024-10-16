@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_LISTE_CLIENTS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="10" guide="0" kinematic="0" name="TBL_CLIENTS">
+            <properties>
+                <property id="1" stringValue="ZCCOD_CLIENT -6 2 6 -1 # ZCNOM_CLIENT -6 2 30 -1 # ZCBUR_DIS_CLI -6 2 30 -1 # ZCMHT_CAF_CLI -6 3 11 2"/>
+                <property id="4" intValue="10"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="CLIENT.COD_CLIENT" name="ZCCOD_CLIENT">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 6 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="CLIENT.NOM_CLIENT" name="ZCNOM_CLIENT">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="CLIENT.BUR_DIS_CLI" name="ZCBUR_DIS_CLI">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="CLIENT.MHT_CAF_CLI" name="ZCMHT_CAF_CLI">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="3 11 2"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_PREC">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_SUIV">
+            <properties/>
+        </control>
+    </controls>
+</page>

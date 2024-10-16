@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<transaction format1="EN" format2="*1" format3="BP" functionKeys="           A            " updateDate="2012-10-03" updateTime="10:36:12" windowType="IBM_WITHOUT_POSITIONNING" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml transaction.xsd">
+    <formats>
+        <format addMode="false" assume="false" blink="false" clear="false" code="*1" eraseInput="false" guideWord="SFL01" help="false" jumpLinesBefore="9" keep="true" lock="false" nbColumns="1" nbLines="8" overlay="false" pagination="STATIC" protect="false" putOvr="true" rollDown="false" rollUp="false" shortName="SFL01" subFilePageSize="8" subFileSize="9" truncate="false"/>
+        <format addMode="false" assume="false" blink="false" clear="false" code="BP" eraseInput="false" guideWord="FORBP" help="false" jumpLinesBefore="17" keep="true" lock="false" nbColumns="1" nbLines="7" overlay="true" protect="false" putOvr="true" rollDown="false" rollUp="false" shortName="FORBP" truncate="false"/>
+        <format addMode="false" assume="false" blink="false" clear="false" code="EN" eraseInput="false" guideWord="FOREN" help="false" jumpLinesBefore="1" keep="true" lock="false" nbColumns="1" nbLines="8" overlay="false" protect="false" putOvr="true" rollDown="false" rollUp="false" shortName="FOREN" subFileCode="*1" truncate="false"/>
+    </formats>
+    <entities>
+        <entity access="SEQUENTIAL_WITH_KEY" format="*1" name="FAMILLE"/>
+    </entities>
+    <fields>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Code famille" formatCode="*1" guideWord="ZFCOD_FAMILLE" hilight="true" kind="VARIABLE" layoutCode="ZFCFAM" length="2" logicalProperty="FAMILLE.COD_FAMILLE" lowerCase="false" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" x="43" y="9">
+            <parameters>
+                <parameter key="EXP" value="10"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" hilight="true" kind="CONSTANT" layoutCode="*" length="4" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="42" y="8">
+            <text text="Code"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Libellé famille" formatCode="*1" guideWord="ZFLIB_FAMILLE" hilight="true" kind="VARIABLE" layoutCode="ZFLFAM" length="30" logicalProperty="FAMILLE.LIB_FAMILLE" lowerCase="true" mandatoryFieldEnd="false" mode="OUTPUT" type="STRING" validExtendedFieldName="false" validFieldName="false" x="47" y="9">
+            <parameters>
+                <parameter key="EXP" value="Listing"/>
+            </parameters>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" hilight="true" kind="CONSTANT" layoutCode="*" length="20" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="47" y="8">
+            <text text="libellé      famille"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" description="Code option" formatCode="*1" guideWord="ZCODOPT" hilight="true" kind="USER_VARIABLE" layoutCode="ZCODOPT" length="1" lowerCase="false" mandatoryFieldEnd="false" mode="INPUT_OUTPUT" type="STRING" underscore="true" validExtendedFieldName="false" validFieldName="false" x="39" y="9"/>
+        <field allowBlanks="false" automaticForward="false" color="WHITE" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" hilight="true" kind="CONSTANT" layoutCode="*" length="3" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="38" y="8">
+            <text text="Opt"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="BLUE" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="CONSTANT" layoutCode="*" length="13" lowerCase="false" mandatoryFieldEnd="false" validExtendedFieldName="false" validFieldName="false" x="45" y="18">
+            <text text="F12=Précédent"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" hilight="true" kind="CONSTANT" layoutCode="*" length="18" lowerCase="false" mandatoryFieldEnd="false" underscore="true" validExtendedFieldName="false" validFieldName="false" x="47" y="6">
+            <text text="Liste des familles"/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="FRAME" layoutCode="*" length="43" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="5">
+            <text text="                                           "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="6">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="6">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="7">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="7">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="8">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="EN" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="8">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="9">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="9">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="10">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="10">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="11">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="11">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="12">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="12">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="13">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="13">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="14">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="14">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="15">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="15">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="16">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="*1" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="16">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="17">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="17">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="18">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="WINDOW" layoutCode="*" length="1" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="78" y="18">
+            <text text=" "/>
+        </field>
+        <field allowBlanks="false" automaticForward="false" color="GREEN" completeWithBlanks="false" completeWithZeros="false" formatCode="BP" kind="WINDOW" layoutCode="*" length="43" lowerCase="false" mandatoryFieldEnd="false" reverseImage="true" validExtendedFieldName="false" validFieldName="false" x="36" y="19">
+            <text text="                                           "/>
+        </field>
+    </fields>
+</transaction>

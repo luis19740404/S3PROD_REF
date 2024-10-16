@@ -1,0 +1,5 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   SI $NBR_HEURE_MENS=0
+*ROW_METADATA(ADELIA                 )   $$PE_MTT_SALAIRE=1234
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

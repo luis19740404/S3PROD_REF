@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "MAJ_NUM_LIGNE",
+  "description" : "Mise à jour du dernier numéro de ligne",
+  "creationDate" : "1995-05-04 12:00:41",
+  "updateDate" : "1996-05-31 08:56:41",
+  "visibility" : "PUBLIC",
+  "mrClass" : "VP",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

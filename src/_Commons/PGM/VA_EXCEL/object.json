@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXCEL",
+  "description" : "Client Excel - exemple B.C.",
+  "creationDate" : "2000-04-04 13:31:49",
+  "updateDate" : "2000-07-07 15:11:23",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VAMSXL",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAMSXL",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL"
+}

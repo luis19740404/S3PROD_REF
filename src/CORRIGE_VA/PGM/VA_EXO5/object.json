@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO5",
+  "description" : "Pgm Gestion du personnel",
+  "creationDate" : "1999-01-18 13:23:34",
+  "updateDate" : "2000-07-07 15:12:25",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAEXO5",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEXO5",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

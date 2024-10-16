@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PRS_SSETAT1",
+  "description" : "Edition personnel avec sous-état non lié",
+  "creationDate" : "2000-03-03 09:13:18",
+  "updateDate" : "2000-03-03 09:13:18",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPES1",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPES1",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

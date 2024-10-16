@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="ENTCDE"/>
+    </entities>
+    <fields>
+        <field description="EDTCOM" guideWord="ZEANN_COMMANDE" kind="VARIABLE" layoutCode="_data" length="4" logicalProperty="ENTCDE.ANN_COMMANDE" type="INT"/>
+        <field description="EDTCOM" guideWord="ZECOD_CLIENT" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="ENTCDE.COD_CLIENT" scale="-1" type="STRING"/>
+        <field description="EDTCOM" guideWord="ZECOD_REGLEMT" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="ENTCDE.COD_REGLEMT" scale="-1" type="STRING"/>
+        <field description="EDTCOM" guideWord="ZEJOU_COMMANDE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="ENTCDE.JOU_COMMANDE" type="INT"/>
+        <field description="EDTCOM" guideWord="ZEMOI_COMMANDE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="ENTCDE.MOI_COMMANDE" type="INT"/>
+    </fields>
+</report>

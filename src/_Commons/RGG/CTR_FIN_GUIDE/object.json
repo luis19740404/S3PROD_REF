@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CTR_FIN_GUIDE",
+  "description" : "Contrôle touche guide non opérationnelle sur zone",
+  "creationDate" : "1995-05-04 13:05:58",
+  "updateDate" : "1996-06-25 07:27:08",
+  "visibility" : "PUBLIC",
+  "mrClass" : "GU",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

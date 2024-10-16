@@ -1,0 +1,107 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA         20070308)   DEBUT_DECL
+*ROW_METADATA(ADELIA         20070308)      
+*ROW_METADATA(ADELIA         20070308)   FIN_DECL
+*ROW_METADATA(ADELIA         20070308)   DEBUT_INIT
+*ROW_METADATA(ADELIA         20070308)      
+*ROW_METADATA(ADELIA         20070308)   FIN_INIT
+*ROW_METADATA(ADELIA         20070308)   DEBUT_PROCEDURE CALC_MENSUEL *PUBLIC
+*ROW_METADATA(ADELIA         20070308)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070914)         num_e(13,2) ww_total_mensuel
+*ROW_METADATA(FMT_PYM        20070914)         num_e(13,2) ww_moy_salaire
+*ROW_METADATA(FMT_PYM        20070914)         num_e(13,2) ww_max_salaire
+*ROW_METADATA(FMT_PYM        20070914)         num_e(13,2) ww_min_salaire
+*ROW_METADATA(FMT_PYM        20070914)         alpha(1) ww_code_sexe
+*ROW_METADATA(ADELIA         20070308)         *
+*ROW_METADATA(FMT_PYM        20070914)         param ww_code_sexe ww_total_mensuel ww_moy_salaire ww_max_salaire ww_min_salaire
+*ROW_METADATA(ADELIA         20070308)      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070914)         si ww_code_sexe = 'T'
+*ROW_METADATA(FMT_PYM        20070914)            lire_sql personnel *col(somme(pe_mtt_salaire) :ww_total_mensuel, -
+*ROW_METADATA(FMT_PYM        20070914)            moyenne(pe_mtt_salaire) :ww_moy_salaire, max(pe_mtt_salaire) :ww_max_salaire, -
+*ROW_METADATA(FMT_PYM        20070914)            min(pe_mtt_salaire) :ww_min_salaire)
+*ROW_METADATA(FMT_PYM        20070914)         sinon
+*ROW_METADATA(FMT_PYM        20070914)            lire_sql personnel *col(somme(pe_mtt_salaire) :ww_total_mensuel, -
+*ROW_METADATA(FMT_PYM        20070914)            moyenne(pe_mtt_salaire) :ww_moy_salaire, max(pe_mtt_salaire) :ww_max_salaire, -
+*ROW_METADATA(FMT_PYM        20070914)            min(pe_mtt_salaire) :ww_min_salaire) *cond(PE_COD_SEXE_PER = :ww_code_sexe)
+*ROW_METADATA(FMT_PYM        20070914)         fin
+*ROW_METADATA(ADELIA                 )      FIN_SRV
+*ROW_METADATA(ADELIA         20070308)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA         20070308)   DEBUT_PROCEDURE ANCIEN_MOYENNE *PUBLIC
+*ROW_METADATA(ADELIA         20070308)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070914)         date ww_datecourante
+*ROW_METADATA(FMT_PYM        20070914)         date ww_date_embauche
+*ROW_METADATA(FMT_PYM        20070914)         num_p(9,0)  ww_anciennete
+*ROW_METADATA(FMT_PYM        20070914)         num_p(9,0) ww_anciennete_temp
+*ROW_METADATA(FMT_PYM        20070914)         num_p(9,0) ww_interval
+*ROW_METADATA(FMT_PYM        20070914)         num_bin_4 ww_nb_employe
+*ROW_METADATA(FMT_PYM        20070914)         alpha(1) ww_code_sexe
+*ROW_METADATA(FMT_PYM        20070914)         *
+*ROW_METADATA(FMT_PYM        20070914)         curseur curs_anciennete_a personnel *col(pe_dat_entree)
+*ROW_METADATA(FMT_PYM        20070914)         curseur curs_anciennete_b personnel *col(pe_dat_entree)-
+*ROW_METADATA(FMT_PYM        20070914)         *cond( pe_cod_sexe_per = :ww_code_sexe)
+*ROW_METADATA(FMT_PYM        20070914)         *
+*ROW_METADATA(FMT_PYM        20070914)         param ww_code_sexe ww_anciennete ww_nb_employe
+*ROW_METADATA(ADELIA         20070308)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070914)      ww_anciennete = 0
+*ROW_METADATA(FMT_PYM        20070914)      ww_nb_employe = 0
+*ROW_METADATA(FMT_PYM        20070914)      heure ww_datecourante
+*ROW_METADATA(FMT_PYM        20070914)      *
+*ROW_METADATA(ADELIA                 )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070914)         si ww_code_sexe = 'T'
+*ROW_METADATA(FMT_PYM        20070914)            ouvrir_sql_c curs_anciennete_a
+*ROW_METADATA(FMT_PYM        20070914)            lire_av_sql_c curs_anciennete_a
+*ROW_METADATA(FMT_PYM        20070914)         sinon
+*ROW_METADATA(FMT_PYM        20070914)            ouvrir_sql_c curs_anciennete_b
+*ROW_METADATA(FMT_PYM        20070914)            lire_av_sql_c curs_anciennete_b
+*ROW_METADATA(FMT_PYM        20070914)         fin
+*ROW_METADATA(ADELIA         20070308)         tant_que *sqlcode = *normal
+*ROW_METADATA(FMT_PYM        20070914)            ww_nb_employe = ww_nb_employe + 1
+*ROW_METADATA(FMT_PYM        20070914)            ww_date_embauche = &num_date(pe_dat_entree)
+*ROW_METADATA(FMT_PYM        20070914)            ww_interval = &ecart_dates(ww_date_embauche;ww_datecourante)
+*ROW_METADATA(ADELIA         20070308)            ww_anciennete = ww_anciennete + (ww_interval / 365)
+*ROW_METADATA(FMT_PYM        20070914)            si ww_code_sexe = 'T'
+*ROW_METADATA(FMT_PYM        20070914)               lire_av_sql_c curs_anciennete_a
+*ROW_METADATA(FMT_PYM        20070914)            sinon
+*ROW_METADATA(FMT_PYM        20070914)               lire_av_sql_c curs_anciennete_b  
+*ROW_METADATA(FMT_PYM        20070914)            fin
+*ROW_METADATA(FMT_PYM        20070914)         refaire
+*ROW_METADATA(FMT_PYM        20070914)         si ww_code_sexe = 'T'
+*ROW_METADATA(FMT_PYM        20070914)            fermer_sql_c curs_anciennete_a
+*ROW_METADATA(FMT_PYM        20070914)         sinon
+*ROW_METADATA(FMT_PYM        20070914)            fermer_sql_c curs_anciennete_b 
+*ROW_METADATA(FMT_PYM        20070914)         fin
+*ROW_METADATA(ADELIA                 )      FIN_SRV
+*ROW_METADATA(ADELIA         20070308)      *
+*ROW_METADATA(ADELIA         20070308)      ww_anciennete_temp = ww_anciennete
+*ROW_METADATA(ADELIA         20070308)      ww_anciennete = ww_anciennete_temp / ww_nb_employe
+*ROW_METADATA(ADELIA         20070308)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM        20070913)   DEBUT_PROCEDURE NB_EMPLOYE_SOCIETE *PUBLIC
+*ROW_METADATA(FMT_PYM        20070913)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070913)         alpha(300) wrequete
+*ROW_METADATA(FMT_PYM        20070913)         alpha(30) wnom_societe
+*ROW_METADATA(FMT_PYM        20070914)         num_bin_4 wnb_employe
+*ROW_METADATA(FMT_PYM        20070914)         alpha(1) ww_code_sexe
+*ROW_METADATA(FMT_PYM        20070913)         liste lsm_nb_empl_societe wnom_societe wnb_employe
+*ROW_METADATA(FMT_PYM        20070914)         curseur cur_nb_emp_societe :wrequete
+*ROW_METADATA(FMT_PYM        20070914)         *
+*ROW_METADATA(FMT_PYM        20070914)         param ww_code_sexe lsm_nb_empl_societe
+*ROW_METADATA(FMT_PYM        20070913)      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070914)         wrequete = *blank
+*ROW_METADATA(FMT_PYM        20070914)         si ww_code_sexe = 'T'
+*ROW_METADATA(FMT_PYM        20110201)            wrequete = 'select SOLSOC, count(PEPMAT) from personp, societe where PECSTE=SOCSTE group by SOLSOC'
+*ROW_METADATA(FMT_PYM        20070914)         sinon
+*ROW_METADATA(FMT_PYM        20110201)            wrequete = 'select SOLSOC, count(PEPMAT) from personp, societe where PECSTE=SOCSTE and' /// -
+*ROW_METADATA(FMT_PYM        20070914)            ' PEPSEX = ''' /// ww_code_sexe /// '''' ///  ' group by SOLSOC'
+*ROW_METADATA(FMT_PYM        20070914)         fin
+*ROW_METADATA(FMT_PYM        20070914)         ouvrir_sql_c cur_nb_emp_societe
+*ROW_METADATA(FMT_PYM        20070913)         lire_av_sql_c cur_nb_emp_societe :wnom_societe, :wnb_employe
+*ROW_METADATA(FMT_PYM        20070913)         tant_que *sqlcode = *normal
+*ROW_METADATA(FMT_PYM        20070913)            inserer_elt lsm_nb_empl_societe
+*ROW_METADATA(FMT_PYM        20070913)            lire_av_sql_c cur_nb_emp_societe :wnom_societe, :wnb_employe
+*ROW_METADATA(FMT_PYM        20070913)         refaire
+*ROW_METADATA(FMT_PYM        20070913)         fermer_sql_c cur_nb_emp_societe
+*ROW_METADATA(ADELIA                 )      FIN_SRV
+*ROW_METADATA(FMT_PYM        20070913)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

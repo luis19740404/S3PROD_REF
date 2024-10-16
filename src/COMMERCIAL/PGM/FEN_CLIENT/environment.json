@@ -1,0 +1,51 @@
+{
+  "views" : [ {
+    "id" : {
+      "code" : "*1"
+    },
+    "guideWord" : "CLIENT_S1",
+    "fileName" : "CLIENTL",
+    "access" : "SEQUENTIAL_KEY",
+    "update" : "NO_UPDATE",
+    "nbKeys" : 1,
+    "generation" : "KINEMATIC",
+    "accesses" : [ {
+      "id" : {
+        "code" : "*1",
+        "ordinal" : 1
+      },
+      "guideWord" : "CCOD_CLIENT",
+      "type" : "DEFAULT"
+    } ]
+  } ],
+  "variables" : [ {
+    "id" : {
+      "guideWord" : "P_COD_RETOUR",
+      "fileName" : ""
+    },
+    "shortName" : "PCRET",
+    "length" : 2,
+    "type" : "ALPHANUMERIC",
+    "generation" : "LEVEL2"
+  }, {
+    "id" : {
+      "guideWord" : "PCODCLIENT",
+      "fileName" : ""
+    },
+    "shortName" : "PCODCLIENT",
+    "length" : 6,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE",
+    "reference" : "CCCLI"
+  }, {
+    "id" : {
+      "guideWord" : "WRAN01",
+      "fileName" : ""
+    },
+    "shortName" : "WRAN01",
+    "length" : 4,
+    "type" : "NUMERIC",
+    "generation" : "NONE",
+    "reference" : "*NODEF"
+  } ]
+}

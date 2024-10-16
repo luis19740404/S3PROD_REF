@@ -1,0 +1,67 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070927)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070927)      
+*ROW_METADATA(FMT_PYM        20070927)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070927)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070927)      
+*ROW_METADATA(FMT_PYM        20070927)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20070927)   DEBUT_PROCEDURE LECTURE_SEULE *PUBLIC
+*ROW_METADATA(FMT_PYM        20070927)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070927)         alpha(128) wnom_objet
+*ROW_METADATA(FMT_PYM        20070927)         alpha(15) wtype_objet
+*ROW_METADATA(FMT_PYM        20070927)         liste lst_objet wnom_objet wtype_objet
+*ROW_METADATA(FMT_PYM        20070927)         objet_graphique(CHAMP_DE_SAISIE) wptr_chs
+*ROW_METADATA(FMT_PYM        20070927)         alpha(10) wnom_pgm
+*ROW_METADATA(FMT_PYM        20070927)         alpha(128) wnom_fenetre
+*ROW_METADATA(FMT_PYM        20070927)         alpha(150) wnom_qualifie
+*ROW_METADATA(FMT_PYM        20070927)         
+*ROW_METADATA(FMT_PYM        20070927)         *
+*ROW_METADATA(FMT_PYM        20070927)         param wnom_pgm wnom_fenetre lst_objet 
+*ROW_METADATA(FMT_PYM        20070927)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070927)      lecture_lst lst_objet
+*ROW_METADATA(FMT_PYM        20070927)         wnom_qualifie = wnom_pgm /// '.' /// wnom_fenetre /// '.' /// wnom_objet 
+*ROW_METADATA(FMT_PYM        20070927)         si wtype_objet = 'CHAMP_DE_SAISIE'
+*ROW_METADATA(FMT_PYM        20070927)            wptr_chs = &recuperer_objet(wnom_qualifie)
+*ROW_METADATA(FMT_PYM        20070927)            si wptr_chs:lecture_seule = *vrai
+*ROW_METADATA(FMT_PYM        20070927)               wptr_chs:lecture_seule = *faux
+*ROW_METADATA(FMT_PYM        20070927)            sinon
+*ROW_METADATA(FMT_PYM        20070927)               wptr_chs:lecture_seule = *vrai
+*ROW_METADATA(FMT_PYM        20070927)            fin
+*ROW_METADATA(FMT_PYM        20070927)         fin
+*ROW_METADATA(FMT_PYM        20070927)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070927)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM        20070927)   DEBUT_PROCEDURE POLICE *PUBLIC
+*ROW_METADATA(FMT_PYM        20070927)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070927)         alpha(128) wnom_objet
+*ROW_METADATA(FMT_PYM        20070927)         alpha(15) wtype_objet
+*ROW_METADATA(FMT_PYM        20070927)         liste lst_objet wnom_objet wtype_objet
+*ROW_METADATA(FMT_PYM        20070927)         objet_graphique(CHAMP_DE_SAISIE) wptr_chs
+*ROW_METADATA(FMT_PYM        20070927)         objet_graphique(LISTE_VALEUR) wptr_lsv
+*ROW_METADATA(FMT_PYM        20070927)         alpha(10) wnom_pgm
+*ROW_METADATA(FMT_PYM        20070927)         alpha(128) wnom_fenetre
+*ROW_METADATA(FMT_PYM        20070927)         alpha(150) wnom_qualifie
+*ROW_METADATA(FMT_PYM        20070927)         
+*ROW_METADATA(FMT_PYM        20070927)         *
+*ROW_METADATA(FMT_PYM        20070927)         param wnom_pgm wnom_fenetre lst_objet 
+*ROW_METADATA(FMT_PYM        20070927)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070927)      lecture_lst lst_objet
+*ROW_METADATA(FMT_PYM        20070927)         wnom_qualifie = wnom_pgm /// '.' /// wnom_fenetre /// '.' /// wnom_objet 
+*ROW_METADATA(FMT_PYM        20070927)         si wtype_objet = 'CHAMP_DE_SAISIE'
+*ROW_METADATA(FMT_PYM        20070927)            wptr_chs = &recuperer_objet(wnom_qualifie)
+*ROW_METADATA(FMT_PYM        20070927)            si wptr_chs:police = 'MS Sans Serif;8;1;0'
+*ROW_METADATA(FMT_PYM        20070927)               wptr_chs:police = 'Courier New;8;256;0'
+*ROW_METADATA(FMT_PYM        20070927)            sinon
+*ROW_METADATA(FMT_PYM        20070927)               wptr_chs:police = 'MS Sans Serif;8;1;0'
+*ROW_METADATA(FMT_PYM        20070927)            fin
+*ROW_METADATA(FMT_PYM        20070927)         fin
+*ROW_METADATA(FMT_PYM        20070927)         si wtype_objet = 'LISTE_VALEUR'
+*ROW_METADATA(FMT_PYM        20071003)            wptr_lsv = &recuperer_objet(wnom_qualifie)
+*ROW_METADATA(FMT_PYM        20070927)            si wptr_lsv:police = 'MS Sans Serif;8;1;0'
+*ROW_METADATA(FMT_PYM        20070927)               wptr_lsv:police = 'Courier New;8;256;0'
+*ROW_METADATA(FMT_PYM        20070927)            sinon
+*ROW_METADATA(FMT_PYM        20070927)               wptr_lsv:police = 'MS Sans Serif;8;1;0'
+*ROW_METADATA(FMT_PYM        20070927)            fin
+*ROW_METADATA(FMT_PYM        20070927)         fin
+*ROW_METADATA(FMT_PYM        20070927)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070927)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

@@ -1,0 +1,6 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   PREPARER_MSG 0001 $$ZONE
+*ROW_METADATA(ADELIA                 )   SI $$ZONE = *BLANK
+*ROW_METADATA(ADELIA                 )     ANOMALIE
+*ROW_METADATA(ADELIA                 )   FIN
+*ROW_METADATA(ADELIA                 )FIN_RGG

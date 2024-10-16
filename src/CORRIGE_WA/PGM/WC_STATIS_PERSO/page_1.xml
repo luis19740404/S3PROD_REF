@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_STATISTIC_PERSO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_ANCIENNETE_MOYENNE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="14"/>
+                <property id="-9" stringValue="4 9 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_TOTAL_SALAIRE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 13 2"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_MOY_SALAIRE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 13 2"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_MIN_SALAIRE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 13 2"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_MAX_SALAIRE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="4 13 2"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_CALCUL_STAT_GEN">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="13"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_ANCIENNETE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="13"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="6" guide="0" kinematic="0" logicalProperty="PERSONNEL.COD_SEXE_PERS" name="CHO_SEXE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="5" stringValue="T"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="10" guide="0" kinematic="0" name="TBL_EMPL_SOC">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="1" stringValue="ZZ_NOM_SOCIETE -6 2 30 -1 # CHO_NB_EMPL_SOC -6 6 15 0"/>
+                <property id="4" intValue="5"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_CALC_NB_EMPL">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="13"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_NB_TOT_EMPL">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="6 15 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_NB_EMPL_SOC">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="6 15 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_1">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-61" stringValue="TBL_EMPL_SOC"/>
+                <property id="-60" intValue="3"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_2">
+            <properties>
+                <property id="-100" stringValue="WC_STATIS_PERSO_1_FORM_1"/>
+                <property id="-61" stringValue="TBL_EMPL_SOC"/>
+                <property id="-60" intValue="4"/>
+            </properties>
+        </control>
+    </controls>
+</page>

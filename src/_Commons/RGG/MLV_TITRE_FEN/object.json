@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "MLV_TITRE_FEN",
+  "description" : "RGG de formation MLIVAIN",
+  "creationDate" : "2024-05-31 13:26:20",
+  "updateDate" : "2024-05-31 13:30:53",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

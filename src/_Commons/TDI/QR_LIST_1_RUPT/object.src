@@ -1,0 +1,106 @@
+%QUESTION *EN ENTITE_GEREE
+%%  Donnez le nom de l'entité "principale" gérée dans le programme.
+%CREER_ETAT ETAT_1_RUPT
+%AFFECTER $ENTITE_GEREE $ENTITE_GEREE
+%QUESTION *ON 01
+%%  Y-a-t-il une entité annexe pour éditer une information sur l'entête
+%%  ne provenant pas de l'entité principale (un libellé par exemple) ?
+%SI 01
+%QUESTION *EN ENTITE_ANNEXE1
+%%  Indiquez le nom de cette entité
+%AFFECTER $ENTITE_ANNEXE1 $ENTITE_ANNEXE1
+%FIN
+%QUESTION *ON 02
+%%  Y-a-t-il une autre entité annexe pour éditer une information du format
+%%  détail ne provenant pas de l'entité principale ?
+%SI 02
+%QUESTION *EN ENTITE_ANNEXE2
+%%  Indiquez le nom de cette entité
+%AFFECTER $ENTITE_ANNEXE2 $ENTITE_ANNEXE2
+%FIN
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez éditer sur la liste.
+%%  N'oubliez pas de préciser l'utilisation et l'ordre des informations
+%%  ainsi que l'accès prévu sur les fichiers.
+%%  Pour cela, choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_ETAT
+%QUESTION **
+%%  Vous pouvez maintenant visualiser et éventuellement modifier le
+%%  dessin généré.
+%%  N'oubliez pas de créer la variable de totalisation et de lui donner un
+%%  nom significatif.
+%%  Pour cela, choisissez  Maquetteur.
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  Contrôlez qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%  Contrôlez les clés des vues.
+%%  Pour cela, choisissez  Cinématique.
+%QUESTION **
+%%  Vous allez maintenant créer la rupture : il faut préciser quelle est la
+%%  zone qui déclenche la rupture.
+%%  Pour cela, choisissez  Ruptures.
+%QUESTION *RP RUPTURE
+%%  Donnez le nom de votre rupture.
+%QUESTION *VA TOTAL_LIGNE
+%%  Donnez le nom de la variable maquette de totalisation.
+%QUESTION *VA ZONE_A_TOT
+%%  Donnez le nom de la variable fichier à cumuler.
+
+*--------------------------* CYCLE DE LECTURE DU FICHIER GUIDE
+LIRE_AVANT $ENTITE_GEREE
+TANT_QUE $ENTITE_GEREE EXISTE
+  PRESENTER $ENTITE_GEREE	
+  TRAITER_CHG $RUPTURE
+  TRAITER_PROC DETAIL
+  LIRE_AVANT  $ENTITE_GEREE
+  TRAITER_TOTAL $RUPTURE
+REFAIRE
+*___________________________________________________
+*--------------------------* Rupture entete
+TRT_CHANGEMENT $RUPTURE
+* Lecture d'un fichier pour obtenir des renseignements type libellé
+* pour la rupture d'entete
+%SI 01
+LIRE $ENTITE_ANNEXE1
+%FIN
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*--------------------------* Rupture total
+TRT_TOTAL $RUPTURE
+EDITER TOTAL
+$TOTAL_LIGNE = 0
+FIN_TRAITEMENT
+*--------------------------* Routine changement page
+CHANGEMENT_PAGE
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*--------------------------* Procédure impression ligne detail
+DEBUT_PROCEDURE DETAIL
+* Lecture d'un fichier pour obtenir des renseignements type libellé
+* pour la ligne détail
+%SI 02
+LIRE $ENTITE_ANNEXE2
+%FIN
+IMPRIMER   DETAIL
+$TOTAL_LIGNE = $TOTAL_LIGNE + $ZONE_A_TOT
+FIN_PROCEDURE
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

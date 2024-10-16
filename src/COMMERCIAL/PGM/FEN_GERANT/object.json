@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "FEN_GERANT",
+  "description" : "Fenêtre des gérants",
+  "creationDate" : "1996-05-31 14:30:25",
+  "updateDate" : "2000-08-11 13:02:54",
+  "visibility" : "PRIVATE",
+  "ibmName" : "FENGER",
+  "programType" : "I",
+  "sourceType" : "ADELIA",
+  "layoutCode" : "FENGER",
+  "programTemplateName" : "QR_CONSTIT_FEN",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "NATIVE"
+}

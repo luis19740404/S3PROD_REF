@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "GUI_FAMILLE",
+  "description" : "Guide de saisie familles",
+  "creationDate" : "1996-06-24 16:01:41",
+  "updateDate" : "2022-11-21 15:00:06",
+  "visibility" : "PUBLIC",
+  "mrClass" : "GS",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL" ]
+}

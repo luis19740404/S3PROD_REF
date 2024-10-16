@@ -1,0 +1,7 @@
+Cette règle de gestion permet de contrôler la validité d'une date sur
+8 positions (JJ/MM/SSAA). Elle est utilisée par le type de données
+DATE_JJMMSSAA.
+
+Attention ! Le contrôle est effectué par appel du programme externe
+HP£CDT8 qui doit être transféré de la bibliothèque BDCADELIA dans une
+bibliothèque d'exploitation.

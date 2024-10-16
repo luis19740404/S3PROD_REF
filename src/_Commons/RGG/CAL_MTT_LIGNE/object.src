@@ -1,0 +1,6 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   * Calcul montant ligne : Quantité * P.U
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   $$MTT_LIGNE = $QTE_COMM * $PRX_UNIT
+*ROW_METADATA(ADELIA                 )FIN_RGG

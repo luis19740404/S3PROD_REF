@@ -1,0 +1,3 @@
+Cette règle de gestion est un modèle de contrôle avec affichage d'information
+(libellé) provenant du fichier utilisé pour le contrôle. La zone écran est
+chargée si l'enregistrement est trouvé sinon elle est mise à blanc.

@@ -1,0 +1,72 @@
+*******************************************************
+*
+* CREER L'ETAT  (TYPE D'ETAT = LISTE_1_RUPT)
+*
+* QUESTION : Selection des entités puis des propriétés à placer
+*            sur l'état.
+*
+* GENERER L'ETAT
+*
+* QUESTION : Modification de l'état et création de la zone
+*            de totalisation des enregistrements.
+*
+* MESSAGE  : Génération de la cinématique en cours ...
+* GENERER LA CINEMATIQUE
+*
+* QUESTION : Visualisation de la cinématique
+*
+* QUESTION   -->  TOTAL_ENREG
+*  Nom de la zone maquette qui représente le nombre total
+*  d'enregistrements imprimés (bouton DONNEES).
+*
+* QUESTION   -->  VUE_PRINCIPALE
+*  Nom de la vue représentant le fichier principal de traitement.
+*
+* QUESTION   -->  VUE_RUPTURE
+*  Nom de la vue nécessaire à l'édition de l'entête.
+*
+* QUESTION
+*  Création de la rupture (bouton RUPTURES).
+*
+* QUESTION  -->  RUPTURE
+*  Nom de la rupture créée.
+*
+* MESSAGE : Constitution du programme en cours ...
+*
+*--------------------------* CYCLE DE LECTURE DU FICHIER GUIDE
+LIRE_AVANT $VUE_PRINCIPALE
+TANT_QUE $VUE_PRINCIPALE EXISTE
+  PRESENTER $VUE_PRINCIPALE
+  TRAITER_CHG $RUPTURE
+  TRAITER_PROC SBRDET
+  LIRE_AVANT $VUE_PRINCIPALE
+  TRAITER_TOTAL $RUPTURE
+REFAIRE
+*___________________________________________________
+*--------------------------* Rupture entete
+TRT_CHANGEMENT $RUPTURE
+LIRE $VUE_RUPTURE
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*___________________________________________________
+*--------------------------* Rupture total
+TRT_TOTAL $RUPTURE
+EDITER TOTAL
+$TOTAL_ENREG = 0
+FIN_TRAITEMENT
+*___________________________________________________
+*--------------------------* Routine changement page
+CHANGEMENT_PAGE
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*___________________________________________________
+*--------------------------* Procédure impression ligne detail
+DEBUT_PROCEDURE SBRDET
+IMPRIMER   DETAIL
+$TOTAL_ENREG = $TOTAL_ENREG + 1
+FIN_PROCEDURE
+*___________________________________________________
+***************************************************
+*
+* GENERER LE NIVEAU 2
+* COMPILER

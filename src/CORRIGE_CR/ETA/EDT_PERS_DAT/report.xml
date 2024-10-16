@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDPEDT" formatCode="  " guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" scale="2" type="NUMBER"/>
+    </fields>
+</report>

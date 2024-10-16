@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV002",
+  "description" : "Programme de modification client Mlivain",
+  "creationDate" : "2024-05-27 11:47:57",
+  "updateDate" : "2024-05-28 12:03:14",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV002",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV002",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : "N"
+}

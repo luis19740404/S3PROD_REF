@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO10",
+  "description" : "EuroLand",
+  "creationDate" : "1999-01-18 13:23:26",
+  "updateDate" : "2000-07-07 15:11:49",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAEURO",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEURO",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "NATIVE"
+}

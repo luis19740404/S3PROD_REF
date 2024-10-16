@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CALCUL_TAUX",
+  "description" : "Calcul des taux",
+  "creationDate" : "2005-07-13 14:00:29",
+  "updateDate" : "2011-02-11 08:06:01",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL", "WADELIA" ]
+}

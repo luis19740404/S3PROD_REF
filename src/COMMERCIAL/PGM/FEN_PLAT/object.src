@@ -1,0 +1,52 @@
+*ROW_METADATA(ADELIA                0)RECEVOIR    PW_COD_PLAT
+*ROW_METADATA(ADELIA                0)INITIALISER 01
+*ROW_METADATA(ADELIA                0)TRAITER     01
+*ROW_METADATA(ADELIA                0)**************
+*ROW_METADATA(ADELIA                0)TRANSACTION 01
+*ROW_METADATA(ADELIA                0)**************
+*ROW_METADATA(ADELIA         20070307)SI *F03  OU *F12
+*ROW_METADATA(ADELIA         20070307)  TERMINER
+*ROW_METADATA(ADELIA                0)FIN
+*ROW_METADATA(ADELIA                0)SI *PAGAV
+*ROW_METADATA(ADELIA                0)  PAGINER_AVANT
+*ROW_METADATA(ADELIA                0)FIN
+*ROW_METADATA(ADELIA                0)VERIFIER 01
+*ROW_METADATA(ADELIA                0)SI ZW_COD_OPTION = '1'
+*ROW_METADATA(ADELIA                0)  TERMINER
+*ROW_METADATA(ADELIA                0)FIN
+*ROW_METADATA(ADELIA                0)********************
+*ROW_METADATA(ADELIA                0)VERIFICATION 01
+*ROW_METADATA(ADELIA                0)********************
+*ROW_METADATA(ADELIA                0)DEBUT_STD 
+*ROW_METADATA(ADELIA                0)FIN_STD 
+*ROW_METADATA(ADELIA                0)*
+*ROW_METADATA(ADELIA                0)GESTION_SFL   1
+*ROW_METADATA(ADELIA                0)DEBUT_STD 
+*ROW_METADATA(ADELIA                0)FIN_STD 
+*ROW_METADATA(ADELIA                0)*
+*ROW_METADATA(ADELIA                0)SI ZW_COD_OPTION <> *BLANK
+*ROW_METADATA(ADELIA                0)  SI ZW_COD_OPTION = '1'
+*ROW_METADATA(ADELIA                0)    PW_COD_PLAT = ZPCOD_PLAT
+*ROW_METADATA(ADELIA                0)    QUITTER_SFL
+*ROW_METADATA(ADELIA                0)  SINON
+*ROW_METADATA(ADELIA                0)    PREPARER_MSG  0006 ZW_COD_OPTION
+*ROW_METADATA(ADELIA                0)    INIT_MSG ZW_COD_OPTION
+*ROW_METADATA(ADELIA                0)    ERREUR
+*ROW_METADATA(ADELIA                0)  FIN
+*ROW_METADATA(ADELIA                0)FIN
+*ROW_METADATA(ADELIA                0)FIN_GESTION_SFL
+*ROW_METADATA(ADELIA                0)*
+*ROW_METADATA(ADELIA                0)***************************************************
+*ROW_METADATA(ADELIA                0)INITIALISATION 01
+*ROW_METADATA(ADELIA                0)***************************************************
+*ROW_METADATA(ADELIA                0)DEBUT_STD 
+*ROW_METADATA(ADELIA                0)FIN_STD 
+*ROW_METADATA(ADELIA                0)EFFACER 1
+*ROW_METADATA(ADELIA                0)GESTION_SFL 1
+*ROW_METADATA(ADELIA                0)DEBUT_STD 
+*ROW_METADATA(ADELIA                0)PRESENTER PLAT
+*ROW_METADATA(ADELIA                0)ZW_COD_OPTION = *BLANK
+*ROW_METADATA(ADELIA                0)FIN_STD 
+*ROW_METADATA(ADELIA                0)MAJ_SFL 
+*ROW_METADATA(ADELIA                0)FIN_GESTION_SFL 
+*ROW_METADATA(ADELIA                0)

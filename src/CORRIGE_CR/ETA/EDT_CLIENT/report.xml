@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="CLIENT"/>
+        <entity name="ENTCDE"/>
+    </entities>
+    <fields>
+        <field description="EDTCLI" guideWord="ZCBUR_DIS_CLI" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.BUR_DIS_CLI" scale="-1" type="STRING"/>
+        <field description="EDTCLI" guideWord="ZCCOD_CLIENT" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="CLIENT.COD_CLIENT" scale="-1" type="STRING"/>
+        <field description="EDTCLI" guideWord="ZCCOD_REGLEMT" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="CLIENT.COD_REGLEMT" scale="-1" type="STRING"/>
+        <field description="EDTCLI" editCode="CODE_J" guideWord="ZCMHT_CAF_CLI" kind="VARIABLE" layoutCode="_data" length="11" logicalProperty="CLIENT.MHT_CAF_CLI" scale="2" type="NUMBER"/>
+        <field description="EDTCLI" guideWord="ZCNOM_CLIENT" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="CLIENT.NOM_CLIENT" scale="-1" type="STRING"/>
+        <field description="EDTCLI" guideWord="WLIBELLE" kind="VARIABLE" layoutCode="_data" length="21" type="STRING"/>
+        <field description="Commandes" guideWord="ZECOD_CLIENT" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="ENTCDE.COD_CLIENT" scale="-1" type="STRING"/>
+        <field description="Commandes" guideWord="ZELIB_OBJ_CDE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="ENTCDE.LIB_OBJ_CDE" scale="-1" type="STRING"/>
+        <field description="Commandes" editCode="CODE_Z" guideWord="ZENUM_COMMANDE" kind="VARIABLE" layoutCode="_data" length="5" logicalProperty="ENTCDE.NUM_COMMANDE" type="INT"/>
+        <field description="EDTCLI" kind="CONSTANT" length="1" scale="1">
+            <text text="Liste des clients "/>
+        </field>
+        <field description="EDTCLI" kind="CONSTANT" length="4" scale="2">
+            <text text="Code"/>
+        </field>
+        <field description="EDTCLI" kind="CONSTANT" length="5" scale="2">
+            <text text="Nom"/>
+        </field>
+        <field description="EDTCLI" kind="CONSTANT" length="6" scale="2">
+            <text text="C.A."/>
+        </field>
+        <field description="EDTCLI" kind="CONSTANT" length="7" scale="2">
+            <text text="Ville"/>
+        </field>
+        <field description="EDTCLI" kind="CONSTANT" length="20" scale="7">
+            <text text="Report C.A. :"/>
+        </field>
+        <field description="Commandes" kind="CONSTANT" length="2" scale="1">
+            <text text="ZELIB_OBJ_CDE.ENTCDE"/>
+        </field>
+        <field description="Commandes" kind="CONSTANT" length="3" scale="1">
+            <text text="ZECOD_CLIENT.ENTCDE"/>
+        </field>
+        <field description="Commandes" kind="CONSTANT" length="4" scale="1">
+            <text text="ZENUM_COMMANDE.ENTCDE"/>
+        </field>
+    </fields>
+</report>

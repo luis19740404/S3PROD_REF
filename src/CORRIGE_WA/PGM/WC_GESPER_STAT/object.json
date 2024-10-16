@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_GESPER_STAT",
+  "description" : "Liste du personnel statique",
+  "creationDate" : "2004-07-30 13:20:15",
+  "updateDate" : "2007-09-06 09:35:56",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcgesperstat",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCGPST",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

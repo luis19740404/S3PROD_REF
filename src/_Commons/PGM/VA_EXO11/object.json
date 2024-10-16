@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO11",
+  "description" : "Rupture + Treeview",
+  "creationDate" : "2000-04-04 13:44:53",
+  "updateDate" : "2000-07-07 15:11:59",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VAEX11",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEX11",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

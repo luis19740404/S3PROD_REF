@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERSON2",
+  "description" : "Edition personnel simple",
+  "creationDate" : "2000-05-22 15:24:44",
+  "updateDate" : "2000-07-07 15:35:54",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPER2",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPER2",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

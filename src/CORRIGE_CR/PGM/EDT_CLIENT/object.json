@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_CLIENT",
+  "description" : "edt_client",
+  "creationDate" : "2007-08-09 09:59:19",
+  "updateDate" : "2007-08-14 14:52:34",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDTCLI",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDTCLI",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

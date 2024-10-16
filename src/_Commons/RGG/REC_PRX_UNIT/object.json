@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "REC_PRX_UNIT",
+  "description" : "Recherche du prix unitaire",
+  "creationDate" : "1999-01-18 13:04:32",
+  "updateDate" : "1999-01-18 13:04:32",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

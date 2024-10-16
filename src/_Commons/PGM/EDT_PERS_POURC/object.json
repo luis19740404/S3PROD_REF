@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_POURC",
+  "description" : "Edition personnel avec pourcentage",
+  "creationDate" : "2000-03-03 09:13:16",
+  "updateDate" : "2000-03-03 09:13:16",
+  "visibility" : "PUBLIC",
+  "ibmName" : "EDPEPC",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPEPC",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

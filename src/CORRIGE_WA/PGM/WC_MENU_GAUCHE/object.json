@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "WC_MENU_GAUCHE",
+  "description" : "Menu de gauche de canevas",
+  "creationDate" : "2004-07-29 15:28:29",
+  "updateDate" : "2007-03-06 12:43:30",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WCMNGC",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCMNGC",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

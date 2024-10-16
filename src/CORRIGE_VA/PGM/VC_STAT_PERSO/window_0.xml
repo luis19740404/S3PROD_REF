@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Statistiques sur les employés" help="" id="0" name="FEN_STAT_PERSO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="600"/>
+        <property id="-3" intValue="800"/>
+        <property id="-2" intValue="106"/>
+        <property id="-1" intValue="24"/>
+        <property id="3" stringValue="Statistiques sur les employés"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="792"/>
+        <property id="23" intValue="566"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_MASSE_SAL">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Masse salariale globale"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="160"/>
+                <property id="-2" intValue="114"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_MASSE_SALARIALE_MENSUELLE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="3 13 2"/>
+                <property id="-4" intValue="21"/>
+                <property id="-3" intValue="145"/>
+                <property id="-2" intValue="114"/>
+                <property id="-1" intValue="201"/>
+                <property id="3" intValue="1"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_ANC_MOYENNE">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Ancienneté moyenne"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="133"/>
+                <property id="-2" intValue="370"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_ANC_MOYENNE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="14"/>
+                <property id="-9" stringValue="3 9 0"/>
+                <property id="-4" intValue="18"/>
+                <property id="-3" intValue="90"/>
+                <property id="-2" intValue="368"/>
+                <property id="-1" intValue="201"/>
+                <property id="3" intValue="1"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_NB_EMPL_SOC">
+            <properties>
+                <property id="-4" intValue="218"/>
+                <property id="-3" intValue="319"/>
+                <property id="-2" intValue="89"/>
+                <property id="-1" intValue="424"/>
+                <property id="6" stringValue="ZZ_NOM_SOCIETE -6 2 30 -1 # COL_NB_EMPL_SOCIETE -6 6 -1 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_NOM_SOCIETE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom société"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="11" stringValue="ZZ_NOM_SOCIETE 9 2 30 -1"/>
+                        <property id="20" stringValue="MS Sans Serif;8;1;0"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="COL_NB_EMPL_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-9" stringValue="6 -1 -1"/>
+                        <property id="-8" stringValue="Nb employés"/>
+                        <property id="-3" intValue="75"/>
+                        <property id="8" intValue="1"/>
+                        <property id="11" stringValue="COL_NB_EMPL_SOCIETE 9 6 -1 -1"/>
+                        <property id="20" stringValue="MS Sans Serif;8;1;0"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_FERMER">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="Fermer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="526"/>
+                <property id="-1" intValue="651"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CALC_MENSUEL">
+            <properties>
+                <property id="-8" stringValue="Calcul"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="311"/>
+                <property id="-1" intValue="283"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CALC_ANCIEN">
+            <properties>
+                <property id="-8" stringValue="Calcul"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="423"/>
+                <property id="-1" intValue="283"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CALC_NB_EMP">
+            <properties>
+                <property id="-8" stringValue="Calcul"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="311"/>
+                <property id="-1" intValue="658"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="LBR_SEXE">
+            <properties>
+                <property id="-23" stringValue="MS Sans Serif;8;1"/>
+                <property id="-22" stringValue="¤¤¤"/>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="-8"/>
+                <property id="-6" stringValue="T"/>
+                <property id="-4" intValue="39"/>
+                <property id="-3" intValue="223"/>
+                <property id="-2" intValue="28"/>
+                <property id="-1" intValue="284"/>
+                <property id="8" intValue="3"/>
+                <property id="9" intValue="3"/>
+                <property id="14" stringValue="Femme¤Homme¤Tous¤"/>
+                <property id="15" stringValue="F¤H¤T¤"/>
+                <property id="16" intValue="3"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_MOY_SALARIALE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="3 13 2"/>
+                <property id="-4" intValue="21"/>
+                <property id="-3" intValue="145"/>
+                <property id="-2" intValue="145"/>
+                <property id="-1" intValue="201"/>
+                <property id="3" intValue="1"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_MAX_SALAIRE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="3 13 2"/>
+                <property id="-4" intValue="21"/>
+                <property id="-3" intValue="145"/>
+                <property id="-2" intValue="176"/>
+                <property id="-1" intValue="201"/>
+                <property id="3" intValue="1"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_MIN_SALAIRE">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-11" intValue="16"/>
+                <property id="-9" stringValue="3 13 2"/>
+                <property id="-4" intValue="21"/>
+                <property id="-3" intValue="145"/>
+                <property id="-2" intValue="207"/>
+                <property id="-1" intValue="201"/>
+                <property id="3" intValue="1"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Salaire moyen"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="160"/>
+                <property id="-2" intValue="149"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_0">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Salaire maximal"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="160"/>
+                <property id="-2" intValue="180"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_1">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Salaire minimal"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="160"/>
+                <property id="-2" intValue="211"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Statistiques salariales"/>
+                <property id="-4" intValue="268"/>
+                <property id="-3" intValue="376"/>
+                <property id="-2" intValue="71"/>
+                <property id="-1" intValue="24"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_0">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Nombre d'employés par société"/>
+                <property id="-4" intValue="268"/>
+                <property id="-3" intValue="352"/>
+                <property id="-2" intValue="71"/>
+                <property id="-1" intValue="413"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_1">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Ancienneté"/>
+                <property id="-4" intValue="107"/>
+                <property id="-3" intValue="376"/>
+                <property id="-2" intValue="347"/>
+                <property id="-1" intValue="24"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="CAD_2">
+            <properties>
+                <property id="-8"/>
+                <property id="-4" intValue="448"/>
+                <property id="-3" intValue="763"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="11"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_EN_SORTIE" dll="LABELOUT" help="" kinematic="0" name="CHO_NB_EMPLOYES">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="6 -1 -1"/>
+                <property id="-4" intValue="18"/>
+                <property id="-3" intValue="90"/>
+                <property id="-2" intValue="396"/>
+                <property id="-1" intValue="201"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_2">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-8" stringValue="Nombre total d'employés"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="150"/>
+                <property id="-2" intValue="398"/>
+                <property id="-1" intValue="32"/>
+            </properties>
+        </control>
+    </controls>
+</window>

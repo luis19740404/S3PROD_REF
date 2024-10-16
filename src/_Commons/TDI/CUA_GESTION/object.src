@@ -1,0 +1,1249 @@
+DECLARER WFINI;W_FLG_INIT 1
+DECLARER WFOPO;W_FLG_OPT_OK 1
+DECLARER WFERR;W_FLG_ERREUR 1
+DECLARER WFTRO;W_FLG_TRT_OPT 1
+DECLARER WWNPGO;WW_NOM_PGM_OPT 10
+DECLARER WWCOPT;WW_COD_OPTION 2
+DECLARER I 3;0
+DECLARER IO;IND_OPT 1;0
+DECLARER IM;IND_OPT_MAX 1;0
+DECLARER WLGTOO;W_LONG_TOT_OPT 3;0
+DECLARER WLGOPT;W_LONG_OPT 3;0
+DECLARER_TAB TP;TOP 75 8
+DECLARER WNOMPG;W_NOM_PGM 10
+DECLARER WWCONC;WW_COD_OPT_NC 2
+DECLARER_TAB TAU;TAB_AUT 1 99
+DECLARER WWNOPT;WW_NUM_OPTION 2;0
+DECLARER WWNPGM;WW_NOM_PGM 10
+DECLARER WWLOPT;WW_LIB_OPTION 75
+DECLARER WOPTCG;W_OPT_CAD_GAU 2
+DECLARER WOPTCD;W_OPT_CAD_DRO 2
+DECLARER WBLAN1;W_BLANC_1 1
+%QUESTION *LI TITRE_TRS_01
+%%  Indiquez le titre de l'écran de gestion
+%QUESTION *EN ENTITE_GEREE
+%%  Indiquez le nom de l'entité à gérer.
+%QUESTION *ON 10
+%%  Cette entité gérée dépend-elle d'une entité "maître" et ce
+%%  programme de gestion est-il appelé à partir du programme de
+%%  gestion de cette entité maître ?
+%%  Exemple : gestion des lignes d'une commande appelée à partir
+%%  de la gestion des commandes.
+%SI 10
+%QUESTION *EN ENTITE_MAITRE
+%%  Indiquez le nom de l'entité maître.
+%FIN
+%QUESTION *ON 03
+%%  En plus des fonctions "Créer" et "Modifier",
+%%  voulez-vous la fonction "Copier" ?
+%QUESTION *ON 04
+%%  Voulez-vous la fonction "Supprimer" ?
+%QUESTION *ON 05
+%%  Voulez-vous la fonction "Visualiser" ?
+%QUESTION *ON 06
+%%  Voulez-vous la fonction "Imprimer" ?
+%QUESTION *ON 21
+%%  Voulez-vous la fonction "Imprimer liste" ?
+%SI N10
+%QUESTION *ON 09
+%%  Voulez-vous définir un "Afficher à partir de" ?
+%FIN
+%SI N09
+%SI N21
+%CREER_TRS 01 $TITRE_TRS_01 GESTION
+%FIN
+%SI 21
+%CREER_TRS 01 $TITRE_TRS_01 GESTION_IMP_LIS
+%FIN
+%FIN
+%SI 09
+%QUESTION *ON 52
+%%  Voulez-vous définir un second critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 52
+%QUESTION *ON 53
+%%  Voulez-vous définir un troisième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 53
+%QUESTION *ON 54
+%%  Voulez-vous définir un quatrième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 54
+%QUESTION *ON 55
+%%  Voulez-vous définir un cinquième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 55
+%QUESTION *ON 56
+%%  Voulez-vous définir un sixième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 56
+%QUESTION *ON 57
+%%  Voulez-vous définir un septième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 57
+%QUESTION *ON 58
+%%  Voulez-vous définir un huitième critère supplémentaire
+%%  de positionnement et de tri ?
+%SI 58
+%QUESTION *ON 59
+%%  Voulez-vous définir un neuvième critère supplémentaire
+%%  de positionnement et de tri ?
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%SI N21
+%CREER_TRS 01 $TITRE_TRS_01 GES_POS
+%FIN
+%SI 21
+%CREER_TRS 01 $TITRE_TRS_01 GES_POS_IMP_LIS
+%FIN
+%FIN
+%AFFECTER 01 $ENTITE_GEREE $ENTITE_GEREE
+%SI 10
+%AFFECTER 01 $ENTITE_MAITRE $ENTITE_MAITRE
+%FIN
+%TRS 01
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez visualiser sur
+%%  l'écran de gestion. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 01
+%SI N09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré et notamment
+%%  les options disponibles.
+%%  Si vous générez sur AS/400, saisissez les références d'aide UIM :
+%%  nom aide = XXXXXX01 nom panel groupe = XXXXXX où XXXXXX
+%%  représente le code maquette.
+%%  Sur AS/400, utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%FIN
+%SI 09
+%SI N52
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin et notamment les options
+%%  disponibles : définissez la zone de positionnement en E/S et donnez lui
+%%  un nom significatif (sur IWS enlever son origine logique le cas échéant).
+%%  Si vous générez sur AS/400, définissez également les références d'aide
+%%  UIM : nom aide = XXXXXX01 ; Nom panel groupe = XXXXXX où XXXXXX représente
+%%  le code maquette.
+%%  Sur AS/400, utilisez le menu de service pour définir l'aide générale.
+%FIN
+%SI 52
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin et notamment les options
+%%  disponibles : définissez les zones de positionnement en E/S et donnez leur
+%%  des nom significatifs (sur IWS enlever leur origine logique le cas échéant).
+%%  Si vous générez sur AS/400, définissez également les références d'aide
+%%  UIM : nom aide = XXXXXX01 ; Nom panel groupe = XXXXXX où XXXXXX représente
+%%  le code maquette.
+%%  Sur AS/400, utilisez le menu de service pour définir l'aide générale.
+%FIN
+%FIN
+%SI 04
+%QUESTION *LI TITRE_TRS_02
+%%  Indiquez le titre de l'écran de confirmation de suppression
+%CREER_TRS 02 $TITRE_TRS_02 CONFIR_SUPPRESS
+%AFFECTER 02 $ENTITE_GEREE
+%TRS 02
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez visualiser sur
+%%  l'écran de confirmation de suppression.
+%%  Pour cela choisissez  Entités.
+%%  Indiquez le format mais ne spécifiez aucun accès pour le chargement
+%%  du sous-fichier,
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 02
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aide UIM : nom aide = XXXXXX01 ;
+%%  nom panel groupe = XXXXXX où XXXXXX représente le code maquette.
+%%  Sur AS/400, utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%FIN
+%QUESTION *ON 95
+%%  L'accès à l'entité défini au moment de la sélection des informations
+%%  se fait-il sur une zone alphabétique ?
+%QUESTION *FI FICHIER_R
+%%  Donnez le nom exact du fichier (physique ou logique) dont la clé
+%%  représente l'identifiant de l'entité gérée
+%QUESTION *ON 41
+%%  La clé du fichier est elle composée d'une seule zone ?
+%SI N41
+%QUESTION *ON 42
+%%  La clé du fichier est elle composée de deux zones ?
+%SI N42
+%QUESTION *ON 43
+%%  La clé du fichier est elle composée de trois zones ?
+%SI N43
+%QUESTION *ON 44
+%%  La clé du fichier est elle composée de quatre zones ?
+%SI N44
+%QUESTION *ON 45
+%%  La clé du fichier est elle composée de cinq zones ?
+%SI N45
+%QUESTION *ON 46
+%%  La clé du fichier est elle composée de six zones ?
+%SI N46
+%QUESTION *ON 47
+%%  La clé du fichier est elle composée de sept zones ?
+%SI N47
+%QUESTION *ON 48
+%%  La clé du fichier est elle composée de huit zones ?
+%SI N48
+%QUESTION *ON 49
+%%  La clé du fichier est elle composée de neuf zones ?
+%SI N49
+%QUESTION **
+%%  Créez une vue portant sur ce fichier.
+%%  Le nom de la vue doit être VUE_RAFRAICH.
+%%  Les zones clés doivent être des zones figurant sur l'écran ou
+%%  des zones de travail.
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%QUESTION *ON 94
+%%  La dernière zone de cette clé est-elle alphabétique ?
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement :
+%%  accédez à la définition de la cinématique et controlez
+%%  qu'à chaque zone maquette comportant un code vue,
+%%  correspondent une zone et un fichier de provenance.
+%%
+%%           Faire ENTREE pour continuer.
+%RECUPERER_ID *LIMDA $ENTITE_GEREE LIST_PARAM
+%RECUPERER_ID *VAMDA $ENTITE_GEREE ** ZONE_GEREE
+%SI 10
+%RECUPERER_VUE *LI $ENTITE_MAITRE LIST_PARAM_REC
+RECEVOIR P_COD_RETOUR P_COD_ACTION $LIST_PARAM_REC
+%FIN
+%SI 41
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1
+%FIN
+%SI 42
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2
+%FIN
+%SI 43
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3
+%FIN
+%SI 44
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4
+%FIN
+%SI 45
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 5 ZONE_CLE_5
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4 ;$ZONE_CLE_5
+%FIN
+%SI 46
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 5 ZONE_CLE_5
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 6 ZONE_CLE_6
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4 ;$ZONE_CLE_5 ;$ZONE_CLE_6
+%FIN
+%SI 47
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 5 ZONE_CLE_5
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 6 ZONE_CLE_6
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 7 ZONE_CLE_7
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4 ;$ZONE_CLE_5 ;$ZONE_CLE_6 ;$ZONE_CLE_7
+%FIN
+%SI 48
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 5 ZONE_CLE_5
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 6 ZONE_CLE_6
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 7 ZONE_CLE_7
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 8 ZONE_CLE_8
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4 ;$ZONE_CLE_5 ;$ZONE_CLE_6 ;$ZONE_CLE_7 ;$ZONE_CLE_8
+%FIN
+%SI 49
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 1 ZONE_CLE_1
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 2 ZONE_CLE_2
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 3 ZONE_CLE_3
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 4 ZONE_CLE_4
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 5 ZONE_CLE_5
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 6 ZONE_CLE_6
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 7 ZONE_CLE_7
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 8 ZONE_CLE_8
+%RECUPERER_ID *VAMDA $ENTITE_GEREE 9 ZONE_CLE_9
+IDENTIFIER VUE_RAFRAICH $FICHIER_R CLE ;$ZONE_CLE_1 ;$ZONE_CLE_2 ;$ZONE_CLE_3 ;$ZONE_CLE_4 ;$ZONE_CLE_5 ;$ZONE_CLE_6 ;$ZONE_CLE_7 ;$ZONE_CLE_8 ;$ZONE_CLE_9
+%FIN
+%RECUPERER_VUE *VA $ENTITE_GEREE ** CLE_VUE
+%TRS 01
+%SI 09
+%QUESTION *VA ZONE_POSITION
+%%  Donnez le nom de la zone "A partir de" qui correspond à l'accès
+%%  défini sur l'entité.
+%FIN
+*
+*
+INITIALISER 01
+TRAITER     01
+******************
+TRANSACTION 01
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+*
+SI *F12
+  P_COD_ACTION = 'PR'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+DECLARER PCRET;P_COD_RETOUR 1
+DECLARER PCACT;P_COD_ACTION 2
+%CREER_PGM MD_PGM_MAINT CUA_MISE_A_JOUR *PARAMETRES P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+%%  Vous devez maintenant définir le programme de maintenance.
+%%  Avec Adelia/400 controlez sur le second écran la position et
+%%  la taille des paramètres :
+%%  le code retour ; Num 01   Taille 1
+%%  le code action ; Num 02   Taille 2
+%%  la zone clé 1  ; Num 03   Taille nn/n
+%%  le zone clé n  ; Num nn   Taille nn
+%*
+%MAJ_CONTEXTE $MD_PGM_MAINT ENTITE_GEREE
+SI *F06
+  *
+    *
+    * Mise à blanc de la zone clé
+    *
+    %SI 94
+    $ZONE_GEREE = *BLANK
+    %FIN
+    %SI N94
+    $ZONE_GEREE = 0
+    %FIN
+    *
+    P_COD_ACTION = 'CR'
+    P_COD_RETOUR = *BLANK
+    APPELER $MD_PGM_MAINT P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+    SI *IN90 = '1'
+      *
+      * Erreur dans l'appel du programme
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+    SI W_FLG_ERREUR = '1'
+      ENVOYER_MSG SYS0010
+      TRAITER 01
+    FIN
+    SI P_COD_ACTION = 'EX'
+      *
+      * Retour du programme de création par F3 : Arret du programme de
+      * gestion
+      *
+      P_COD_RETOUR = *BLANK
+      TERMINER
+    FIN
+    INITIALISER 01
+    TRAITER 01
+FIN
+%SI 21
+%SI N10
+%CREER_PGM MD_PGM_LIST CUA_EDT_LIST
+%%  Vous devez maintenant définir les informations générales du
+%%  programme d'édition de la liste des éléments.
+%%  Avec Adelia/400 ne rien spécifiez sur le second écran
+%%
+%*
+%MAJ_CONTEXTE $MD_PGM_LIST ENTITE_GEREE
+%FIN
+%SI 10
+%CREER_PGM MD_PGM_LIST CUA_EDT_LIST_P *PARAMETRES $LIST_PARAM_REC
+%%  Vous devez maintenant définir les informations générales du
+%%  programme d'édition de la liste des éléments.
+%%
+%%  Avec Adelia/400 controlez sur le second écran la position et la
+%%  taille des paramètres : (Identifiant de l'entité maître, etc...).
+%%               la zone clé 1  ; Num 03   Taille nn/n
+%%               le zone clé 2  ; Num nn   Taille nn
+%%
+%*
+%MAJ_CONTEXTE $MD_PGM_LIST ENTITE_MAITRE ENTITE_GEREE
+%FIN
+%*
+SI *F21
+  ENVOYER_MSG *EFF_TOUT
+  *
+    %SI 10
+    APPELER $MD_PGM_LIST $LIST_PARAM_REC
+    %FIN
+    %SI N10
+    APPELER $MD_PGM_LIST
+    %FIN
+    ENVOYER_MSG SYS9901
+    TRAITER 01
+FIN
+%FIN
+SI *PAGAV
+%SI 52
+  SI WW_COD_POS = '1'
+    TRAITER_PROC REMPL1
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 53
+  SI WW_COD_POS = '2'
+    TRAITER_PROC REMPL2
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 54
+  SI WW_COD_POS = '3'
+    TRAITER_PROC REMPL3
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 55
+  SI WW_COD_POS = '4'
+    TRAITER_PROC REMPL4
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 56
+  SI WW_COD_POS = '5'
+    TRAITER_PROC REMPL5
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 57
+  SI WW_COD_POS = '6'
+    TRAITER_PROC REMPL6
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 58
+  SI WW_COD_POS = '7'
+    TRAITER_PROC REMPL7
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%SI 59
+  SI WW_COD_POS = '8'
+    TRAITER_PROC REMPL8
+    *RANPA1 = 0
+    TRAITER 01
+  FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+  SI WW_COD_POS = *BLANK
+%FIN
+    PAGINER_AVANT
+%SI 52
+  FIN
+%FIN
+FIN
+VERIFIER 01
+SI P_COD_ACTION = 'EX'
+  *
+  * Le traitement d'une option s'est terminé par F3=Exit
+  *
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+%SI 04
+SI *DEL04 > 0
+  *
+  * Des éléments ont été placés dans le sous-fichier de confirmation
+  * de suppression ; positionnement en début de liste et envoi de
+  * l'écran
+  *
+  *IN84 = '1'
+  WRAN04 = 1
+  TRAITER 02
+FIN
+%FIN
+SI W_FLG_INIT = '1'
+  *
+  * Réinitialisation à effectuer à la suite d'une copie
+  *
+  INITIALISER 01
+FIN
+%SI 09
+*
+* Positionnement dans la liste
+*
+%SI 95
+SI $ZONE_POSITION <> *BLANK
+%FIN
+%SI N95
+SI $ZONE_POSITION <> 0
+%FIN
+%SI 52
+  WW_COD_POS = *BLANK
+%FIN
+  INITIALISER 01
+FIN
+%SI 52
+%QUESTION *VA ZONE_POS_1
+%%  Donnez le nom de la zone position pour le second critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_1 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_1 <> 0
+%FIN
+%QUESTION *FI VUE_POS_1
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_1 $VUE_POS_1 CLE ;$ZONE_POS_1
+  WW_COD_POS = '1'
+  INITIALISER 01
+FIN
+%SI 53
+%QUESTION *VA ZONE_POS_2
+%%  Donnez le nom de la zone position pour le troisième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_2 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_2 <> 0
+%FIN
+%QUESTION *FI VUE_POS_2
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_2 $VUE_POS_2 CLE ;$ZONE_POS_2
+  WW_COD_POS = '2'
+  INITIALISER 01
+FIN
+%SI 54
+%QUESTION *VA ZONE_POS_3
+%%  Donnez le nom de la zone position pour le quatrième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_3 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_3 <> 0
+%FIN
+%QUESTION *FI VUE_POS_3
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_3 $VUE_POS_3 CLE ;$ZONE_POS_3
+  WW_COD_POS = '3'
+  INITIALISER 01
+FIN
+%SI 55
+%QUESTION *VA ZONE_POS_4
+%%  Donnez le nom de la zone position pour le cinquième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_4 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_4 <> 0
+%FIN
+%QUESTION *FI VUE_POS_4
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_4 $VUE_POS_4 CLE ;$ZONE_POS_4
+  WW_COD_POS = '4'
+  INITIALISER 01
+FIN
+%SI 56
+%QUESTION *VA ZONE_POS_5
+%%  Donnez le nom de la zone position pour le sixième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_5 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_5 <> 0
+%FIN
+%QUESTION *FI VUE_POS_5
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_5 $VUE_POS_5 CLE ;$ZONE_POS_5
+  WW_COD_POS = '5'
+  INITIALISER 01
+FIN
+%SI 57
+%QUESTION *VA ZONE_POS_6
+%%  Donnez le nom de la zone position pour le septième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_6 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_6 <> 0
+%FIN
+%QUESTION *FI VUE_POS_6
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_6 $VUE_POS_6 CLE ;$ZONE_POS_6
+  WW_COD_POS = '6'
+  INITIALISER 01
+FIN
+%SI 58
+%QUESTION *VA ZONE_POS_7
+%%  Donnez le nom de la zone position pour le huitième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_7 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_7 <> 0
+%FIN
+%QUESTION *FI VUE_POS_7
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_7 $VUE_POS_7 CLE ;$ZONE_POS_7
+  WW_COD_POS = '7'
+  INITIALISER 01
+FIN
+%SI 59
+%QUESTION *VA ZONE_POS_8
+%%  Donnez le nom de la zone position pour le neuvième critère de
+%%  positionnement.
+%QUESTION *ON 51
+%%  Cette zone est-elle alphabétique ?
+%SI 51
+SI $ZONE_POS_8 <> *BLANK
+%FIN
+%SI N51
+SI $ZONE_POS_8 <> 0
+%FIN
+%QUESTION *FI VUE_POS_8
+%%  Donnez le nom du fichier à utiliser pour le positionnement
+%%  et le tri.
+IDENTIFIER $VUE_POS_8 $VUE_POS_8 CLE ;$ZONE_POS_8
+  WW_COD_POS = '8'
+  INITIALISER 01
+FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+TRAITER 01
+%SI 04
+******************
+TRANSACTION 02
+******************
+SI *F12
+  *
+  * Demande de suppression non confirmée
+  *
+  P_COD_ACTION = *BLANK
+  ENVOYER_MSG *EFF_ANCIEN
+  TRAITER 01
+FIN
+VALIDER 01
+SI W_FLG_ERREUR = '0'
+  *
+  * Pas d'erreur pendant la suppression
+  *
+  INITIALISER 01
+FIN
+TRAITER     01
+%FIN
+******************
+INITIALISATION  01
+******************
+P_COD_ACTION = *BLANK
+EFFACER 1
+%SI 09
+*
+* La zone clé de la vue de chargement du sous-fichier est
+* remplie avec la valeur de la zone de positionnement
+*
+%SI 52
+  SI WW_COD_POS = '1'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_1
+  LIRE_AVANT $VUE_POS_1
+    TRAITER_PROC REMPL1
+    WRAN01 = 1
+  FIN
+%SI 53
+  SI WW_COD_POS = '2'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_2
+  LIRE_AVANT $VUE_POS_2
+    TRAITER_PROC REMPL2
+    WRAN01 = 1
+  FIN
+%SI 54
+  SI WW_COD_POS = '3'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_3
+  LIRE_AVANT $VUE_POS_3
+    TRAITER_PROC REMPL3
+    WRAN01 = 1
+  FIN
+%SI 55
+  SI WW_COD_POS = '4'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_4
+  LIRE_AVANT $VUE_POS_4
+    TRAITER_PROC REMPL4
+    WRAN01 = 1
+  FIN
+%SI 56
+  SI WW_COD_POS = '5'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_5
+  LIRE_AVANT $VUE_POS_5
+    TRAITER_PROC REMPL5
+    WRAN01 = 1
+  FIN
+%SI 57
+  SI WW_COD_POS = '6'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_6
+  LIRE_AVANT $VUE_POS_6
+    TRAITER_PROC REMPL6
+    WRAN01 = 1
+  FIN
+%SI 58
+  SI WW_COD_POS = '7'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_7
+  LIRE_AVANT $VUE_POS_7
+    TRAITER_PROC REMPL7
+    WRAN01 = 1
+  FIN
+%SI 59
+  SI WW_COD_POS = '8'
+  *IN08 = '0'
+  POSITIONNER_AV $VUE_POS_8
+  LIRE_AVANT $VUE_POS_8
+    TRAITER_PROC REMPL8
+    WRAN01 = 1
+  FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%SI 52
+SI WW_COD_POS = *BLANK
+%FIN
+$CLE_VUE = $ZONE_POSITION
+%SI 52
+FIN
+%FIN
+%FIN
+INSERER_STD
+%SI 52
+SI WW_COD_POS = *BLANK
+%FIN
+GESTION_SFL     1
+INSERER_STD
+*
+* Pour le cas où la dernière ligne de la page précedente
+* était en erreur
+*
+INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+MAJ_SFL
+FIN_GESTION_SFL
+%SI 52
+FIN
+%FIN
+**********************
+VERIFICATION    01
+**********************
+%SI 04
+EFFACER 4
+%FIN
+ENVOYER_MSG *EFF_ANCIEN
+W_FLG_ERREUR = '0'
+W_FLG_INIT = '0'
+*EFF_SFLMSG = '0'
+P_COD_ACTION = *BLANK
+INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+GESTION_SFL     1
+INSERER_STD
+W_FLG_OPT_OK = *BLANK
+*
+* Traitement des options standards
+*
+SI ZZ_COD_OPTION = ' 2';'2 '
+    W_FLG_OPT_OK = '1'
+    P_COD_RETOUR = *BLANK
+    P_COD_ACTION = 'MO'
+    APPELER $MD_PGM_MAINT P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+    *
+    * Rafraichissement de la ligne modifiée
+    *
+    SI P_COD_ACTION <> 'EX';'PR' ET W_FLG_ERREUR = '0' ET P_COD_RETOUR = *BLANK
+      P_COD_ACTION = *BLANK
+      PLACER_A_GAUCHE $CLE_VUE W_SV_CLE
+      LIRE VUE_RAFRAICH
+      PRESENTER $ENTITE_GEREE
+      PLACER_A_GAUCHE W_SV_CLE $CLE_VUE
+      POSITIONNER_AP $ENTITE_GEREE
+    FIN
+FIN
+%SI 03
+*
+SI ZZ_COD_OPTION = ' 3';'3 '
+    W_FLG_OPT_OK = '1'
+    P_COD_RETOUR = *BLANK
+    P_COD_ACTION = 'CO'
+    W_SV_CLE = $ZONE_GEREE
+    APPELER $MD_PGM_MAINT P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+    $ZONE_GEREE = W_SV_CLE
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+    *
+    SI P_COD_ACTION <> 'EX';'PR'
+      W_FLG_INIT = '1'
+    FIN
+FIN
+%FIN
+%SI 04
+*
+SI ZZ_COD_OPTION = '4 ';' 4'
+    *
+    * Chargement du sous-fichier de confirmation
+    *
+    P_COD_RETOUR = *BLANK
+    W_FLG_OPT_OK = '1'
+&CREER_LIGNE_SOUS_FICHIER (4)
+FIN
+%FIN
+%SI 05
+%CREER_PGM MD_PGM_VISU CUA_VISU *PARAMETRES P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+%%  Vous devez maintenant définir les informations générales du
+%%  programme de visualisation.
+%%  Avec Adelia/400 controlez sur le second écran la position et la
+%%  taille des paramètres :
+%%  le code retour ; Num 01   Taille 1
+%%  le code action ; Num 02   Taille 2
+%%  la zone clé 1  ; Num 03   Taille nn/n
+%%  le zone clé 2  ; Num nn   Taille nn
+%*
+%MAJ_CONTEXTE $MD_PGM_VISU ENTITE_GEREE
+SI ZZ_COD_OPTION = ' 5';'5 '
+    W_FLG_OPT_OK = '1'
+    P_COD_RETOUR = *BLANK
+    P_COD_ACTION = 'VI'
+    APPELER $MD_PGM_VISU P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+FIN
+%FIN
+%SI 06
+%CREER_PGM MD_PGM_IMPR CUA_EDT_FICHE *PARAMETRES P_COD_RETOUR $LIST_PARAM
+%%  Vous devez maintenant définir les informations générales du
+%%  programme d'impression d'un élément.
+%%  Avec Adelia/400 controlez sur le second écran la position et la
+%%  taille des paramètres :
+%%  le code retour ; Num 01   Taille 1
+%%  la zone clé 1  ; Num 02   Taille nn/n
+%%  le zone clé 2  ; Num nn   Taille nn
+%*
+%MAJ_CONTEXTE $MD_PGM_IMPR ENTITE_GEREE
+SI ZZ_COD_OPTION = '6 ';' 6'
+    W_FLG_OPT_OK = '1'
+    P_COD_RETOUR = *BLANK
+    APPELER $MD_PGM_IMPR P_COD_RETOUR $LIST_PARAM
+    SI *IN90 = '1'
+      *
+      * Appel du programme terminé en erreur
+      *
+      W_FLG_ERREUR = '1'
+    FIN
+FIN
+%FIN
+*
+* Traitement des options non standards
+*
+W_FLG_TRT_OPT = '1'
+*
+* Traitement des erreurs
+*
+%QUESTION **
+%%  Vous allez devoir maintenant spécifier des numéros de messages.
+%%  Auparavant accédez au glossaire pour retrouver ou définir ces
+%%  messages. Ces messages sont prévus pour passer en paramètre
+%%  l'ensemble des zones constituant l'identifiant . Il faut donc
+%%  définir ces paramètres dans le message dans l'ordre des clés.
+%%           Faire ENTREE pour continuer.
+%QUESTION *MG MSG_VERR
+%%  Donnez l'identifiant du message "Enregistrement verrouillé"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%%  Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+%QUESTION *MG MSG_NTRV
+%%  Donnez l'identifiant du message "Enregistrement non trouvé"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%%  Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+%SI 06
+%QUESTION *MG MSG_IMPR
+%%  Donnez l'identifiant du message "Enregistrement imprimé"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%%  Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+%FIN
+SI ZZ_COD_OPTION <> *BLANK ET W_FLG_OPT_OK = '1'
+  *
+  * Erreur lors du traitement de l'option
+  *
+  REGLE_GESTION SYS0010 ZZ_COD_OPTION
+  SI W_FLG_ERREUR = '1'
+    ENVOYER_MSG *EFF_TOUT
+    ANOMALIE
+  FIN
+  *
+  REGLE_GESTION $MSG_VERR ZZ_COD_OPTION
+  *
+  * Elément verrouillé lors de l'appel de l'option
+  *
+  SI P_COD_RETOUR = '2'
+    INIT_MSG $LIST_PARAM
+    ANOMALIE
+  FIN
+  *
+  REGLE_GESTION $MSG_NTRV ZZ_COD_OPTION
+  *
+  * Elément non trouvé lors de l'appel de l'option
+  *
+  SI P_COD_RETOUR = '1'
+    INIT_MSG $LIST_PARAM
+    ANOMALIE
+  FIN
+  *
+  SI P_COD_ACTION = 'PR' OU P_COD_ACTION = 'EX'
+    *
+    * L'option a été terminée par F3=Exit ou F12=Précédent
+    *
+    QUITTER_SFL
+  FIN
+  SI W_FLG_ERREUR = '0' ET P_COD_RETOUR = *BLANK ET ZZ_COD_OPTION <> '4 ';' 4'
+    %SI 06
+    *
+    * Envoi du message "élément imprimé"
+    *
+    SI ZZ_COD_OPTION = ' 6';'6 '
+      ENVOYER_MSG $MSG_IMPR $LIST_PARAM
+    FIN
+    %FIN
+    ZZ_COD_OPTION = *BLANK
+    *
+    * Pour le cas où la ligne précédemment traitée
+    * était en erreur
+    *
+    INVERSER_IMAGE *FAUX ZZ_COD_OPTION
+  FIN
+FIN
+*
+REGLE_GESTION SYS0006 ZZ_COD_OPTION
+SI ZZ_COD_OPTION <> *BLANK ET W_FLG_OPT_OK = *BLANK
+  *
+  * Option saisie incorrecte
+  *
+  INIT_MSG ZZ_COD_OPTION
+  ERREUR
+FIN
+FIN_GESTION_SFL
+%SI 04
+**********************
+VALIDATION      01
+**********************
+W_FLG_ERREUR = '0'
+GESTION_SFL     1
+INSERER_STD
+SI ZZ_COD_OPTION = '4 ';' 4'
+  *
+  * Appel du programme de maintenance avec code action SU
+  *
+  P_COD_ACTION = 'SU'
+  P_COD_RETOUR = *BLANK
+  APPELER $MD_PGM_MAINT P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+  SI *IN90 = '1'
+    *
+    * Erreur lors du traitement de suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG SYS0010
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  SI P_COD_RETOUR = '2'
+    *
+    * Elément verrouillé lors de la suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG $MSG_VERR $LIST_PARAM
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  *
+  SI P_COD_RETOUR = '1'
+    *
+    * Elément non trouvé lors de la suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG $MSG_NTRV $LIST_PARAM
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+  *
+%QUESTION *ON 20
+%% Voulez vous définir un message d'erreur pour controle
+%% d'intégrité ?
+%SI 20
+%QUESTION *MG MSG_INTEG
+%%  Donnez l'identifiant du message de contrôle d'intégrité
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999.
+%%  Attention ! Le préfixe (XXX) doit etre saisi en MAJUSCULES !
+  SI P_COD_RETOUR = '3'
+    *
+    * Erreur sur controle d'intégrité lors de la suppression
+    *
+    INVERSER_IMAGE *VRAI ZZ_COD_OPTION
+    ENVOYER_MSG *EFF_TOUT
+    ENVOYER_MSG $MSG_INTEG $LIST_PARAM
+&MISE_A_JOUR_LIGNE_SOUS_FICHIER   (1)
+    W_FLG_ERREUR = '1'
+    QUITTER_SFL
+  FIN
+%FIN
+FIN
+FIN_GESTION_SFL
+%FIN
+*
+*
+%SI 52
+DEBUT_PROCEDURE REMPL1
+*NBL01 = 0
+TANT_QUE $VUE_POS_1 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_1
+REFAIRE
+SI $VUE_POS_1 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 53
+DEBUT_PROCEDURE REMPL2
+*NBL01 = 0
+TANT_QUE $VUE_POS_2 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_2
+REFAIRE
+SI $VUE_POS_2 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 54
+DEBUT_PROCEDURE REMPL3
+*NBL01 = 0
+TANT_QUE $VUE_POS_3 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_3
+REFAIRE
+SI $VUE_POS_3 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 55
+DEBUT_PROCEDURE REMPL4
+*NBL01 = 0
+TANT_QUE $VUE_POS_4 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_4
+REFAIRE
+SI $VUE_POS_4 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 56
+DEBUT_PROCEDURE REMPL5
+*NBL01 = 0
+TANT_QUE $VUE_POS_5 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_5
+REFAIRE
+SI $VUE_POS_5 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 57
+DEBUT_PROCEDURE REMPL6
+*NBL01 = 0
+TANT_QUE $VUE_POS_6 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_6
+REFAIRE
+SI $VUE_POS_6 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 58
+DEBUT_PROCEDURE REMPL7
+*NBL01 = 0
+TANT_QUE $VUE_POS_7 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_7
+REFAIRE
+SI $VUE_POS_7 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 59
+DEBUT_PROCEDURE REMPL8
+*NBL01 = 0
+TANT_QUE $VUE_POS_8 EXISTE ET *NBL01 < *NBLS1
+  PRESENTER       $ENTITE_GEREE 01
+  ZZ_COD_OPTION   = *BLANK
+  INVERSER_IMAGE *FAUX ZZ_COD_OPTION 01
+  *NBL01 = *NBL01 + 1
+&CREER_LIGNE_SOUS_FICHIER (1)
+  LIRE_AVANT $VUE_POS_8
+REFAIRE
+SI $VUE_POS_8 N_EXISTE_PAS
+  *IN07 = '1'
+FIN
+FIN_PROCEDURE
+%FIN
+%SI 94
+DECLARER WSVCL;W_SV_CLE 100
+%FIN
+%SI N94
+DECLARER WSVCL;W_SV_CLE 18;0
+%FIN
+%SI 09
+DECLARER WWRANG;WW_RANG 4;0
+%FIN
+%SI 52
+DECLARER WWCPOS;WW_COD_POS 1
+%FIN
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

@@ -1,0 +1,209 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)         NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(FMT_PYM        20070912)         CHARGEMENT CHRG_PERSONNEL FEN_PERSO.LST_PERSO:LISTE *SQL PERSONNEL -
+*ROW_METADATA(FMT_PYM        20070912)         *COND((PE_NOM_PERSONNE >= :PE_NOM_PERSONNE))  *TRI(PE_NOM_PERSONNE, -
+*ROW_METADATA(FMT_PYM        20070912)         PE_PRN_PERSONNE) 20
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070913)      liste lsm_sitfam zz_cod_matricul zz_cod_sit_fami
+*ROW_METADATA(FMT_PYM        20070913)      *
+*ROW_METADATA(FMT_PYM        20070913)      num_bin_4 wf
+*ROW_METADATA(FMT_PYM        20070913)      num_bin_4 wh
+*ROW_METADATA(FMT_PYM        20070913)      num_e(9,0) wreponse
+*ROW_METADATA(FMT_PYM        20070611)      alpha(2) pcod_action
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)         ALPHA(1) P_COD_RETOUR
+*ROW_METADATA(FMT_PYM        20110103)      FIN_STD
+*ROW_METADATA(FMT_PYM        20110103)      groupe_objets col_lst_perso FEN_PERSO.ZZ_COD_MATRICUL FEN_PERSO.ZZ_COD_SEXE_PER -
+*ROW_METADATA(FMT_PYM        20110103)         FEN_PERSO.ZZ_COD_SIT_FAMI FEN_PERSO.ZZ_DAT_ENTREE FEN_PERSO.ZZ_LIB_AD1_PERS -
+*ROW_METADATA(FMT_PYM        20110103)         FEN_PERSO.ZZ_LIB_VIL_PERS FEN_PERSO.ZZ_MTT_SALAIRE FEN_PERSO.ZZ_NOM_PERSONNE
+*ROW_METADATA(FMT_PYM        20070611)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD_D
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD
+*ROW_METADATA(FMT_PYM        20110103)      INITIALISER FEN_PERSO
+*ROW_METADATA(FMT_PYM        20110103)      * col_lst_perso:ajustement_horizontal =  _COL_AJUST_AUCUN
+*ROW_METADATA(FMT_PYM        20110103)      col_lst_perso:ajustement_horizontal =  _COL_AJUST_ETIRER_LARGEUR
+*ROW_METADATA(FMT_PYM        20070611)      EXECUTER FEN_PERSO
+*ROW_METADATA(FMT_PYM        20070912)      DEBUT_STD_F
+*ROW_METADATA(FMT_PYM        20070912)      FIN_STD
+*ROW_METADATA(FMT_PYM        20110103)      
+*ROW_METADATA(FMT_PYM        20070611)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20070611)   DEBUT_FENETRE FEN_PERSO
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070611)         
+*ROW_METADATA(FMT_PYM        20070611)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)            FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)               VIDER_LST FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(FMT_PYM                )            DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20070912)                  CHARGT_LST CHRG_PERSONNEL
+*ROW_METADATA(FMT_PYM        20070912)                     DEBUT_STD PERSONNEL
+*ROW_METADATA(FMT_PYM        20070912)                        SI *BLOQUE = '1'
+*ROW_METADATA(FMT_PYM        20070912)                           P_COD_RETOUR = '1'
+*ROW_METADATA(FMT_PYM        20070912)                        FIN
+*ROW_METADATA(FMT_PYM        20070912)                        PRESENTER PERSONNEL
+*ROW_METADATA(FMT_PYM        20070912)                     FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)                     DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)                        * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070912)                        * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070912)                        *
+*ROW_METADATA(FMT_PYM        20070912)                        ZZ_DAT_ENTREE = &FORMAT_DATE8(ZZ_DAT_ENTREE;'YMD';'DMY')
+*ROW_METADATA(FMT_PYM        20070912)                     FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)                     INSERER_ELT FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(FMT_PYM        20070912)                  FIN_CHARGT_LST
+*ROW_METADATA(FMT_PYM                )            FIN_SRV
+*ROW_METADATA(FMT_PYM        20070913)            FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070913)            *
+*ROW_METADATA(FMT_PYM        20070913)            traiter_proc insertion_image
+*ROW_METADATA(FMT_PYM        20070611)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070611)      FIN_INIT
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(FMT_PYM        20070611)            DEBUT_EVT LST_PERSO:MNU_MODIFIER
+*ROW_METADATA(FMT_PYM        20070611)               lecture_lst lst_perso:liste *select
+*ROW_METADATA(FMT_PYM        20070611)                  pcod_action = 'MJ'
+*ROW_METADATA(FMT_PYM        20071008)                  appeler VC_MAJ_PERSO zz_cod_matricul pcod_action
+*ROW_METADATA(FMT_PYM        20071008)                  si pcod_action <> 'AN'
+*ROW_METADATA(FMT_PYM                )               DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20071008)                        lire_sql personnel *cond(pe_cod_matricul=:zz_cod_matricul)
+*ROW_METADATA(FMT_PYM        20071008)                        presenter personnel
+*ROW_METADATA(FMT_PYM                )               FIN_SRV
+*ROW_METADATA(FMT_PYM        20071008)                     modifier_elt lst_perso:liste
+*ROW_METADATA(FMT_PYM        20071008)                  fin
+*ROW_METADATA(FMT_PYM        20071008)                  pcod_action = *blank
+*ROW_METADATA(FMT_PYM        20070611)               fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070611)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070611)            DEBUT_EVT LST_PERSO:MNU_CREER
+*ROW_METADATA(FMT_PYM        20070611)               zz_cod_matricul = *blank
+*ROW_METADATA(FMT_PYM        20070611)               pcod_action = 'CR'
+*ROW_METADATA(FMT_PYM        20071008)               appeler VC_MAJ_PERSO zz_cod_matricul pcod_action
+*ROW_METADATA(FMT_PYM        20071008)               pcod_action = *blank
+*ROW_METADATA(FMT_PYM        20070611)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT LST_PERSO:PaginationDynamiqueAvant
+*ROW_METADATA(FMT_PYM        20070912)               DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM                )               DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20070912)                     CHARGER_LST CHRG_PERSONNEL
+*ROW_METADATA(FMT_PYM                )               FIN_SRV
+*ROW_METADATA(FMT_PYM        20070913)               FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070913)               *
+*ROW_METADATA(FMT_PYM        20070913)               traiter_proc insertion_image
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT LST_PERSO:MNU_SUPPRIMER
+*ROW_METADATA(FMT_PYM        20070913)               lecture_lst lst_perso:liste *select
+*ROW_METADATA(FMT_PYM        20070913)                  envoyer_msg gen0001 *boite(*oui_non,wreponse,2)
+*ROW_METADATA(FMT_PYM        20070913)                  si wreponse = *btn_oui
+*ROW_METADATA(FMT_PYM                )               DEBUT_SRV WINDOWS_ISERIES
+*ROW_METADATA(FMT_PYM        20070913)                        supprimer_sql personnel *cond(pe_cod_matricul=:zz_cod_matricul)
+*ROW_METADATA(FMT_PYM                )               FIN_SRV
+*ROW_METADATA(FMT_PYM        20070913)                     si *sqlcode = *normal
+*ROW_METADATA(FMT_PYM        20070913)                        supprimer_elt lst_perso:liste
+*ROW_METADATA(FMT_PYM        20070913)                     fin
+*ROW_METADATA(FMT_PYM        20070913)                  fin
+*ROW_METADATA(FMT_PYM        20070913)               fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070611)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070912)               terminer
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_OBJET BTN_REINIT
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_EVT BTN_REINIT:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070912)               pe_nom_personne = zz_a_partir_de
+*ROW_METADATA(FMT_PYM        20070912)               zz_a_partir_de = *blank
+*ROW_METADATA(FMT_PYM        20070912)               initialiser
+*ROW_METADATA(FMT_PYM        20070912)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070912)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET BTN_SECTEURS
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT BTN_SECTEURS:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               lecture_lst lst_perso:liste
+*ROW_METADATA(FMT_PYM        20070913)                  inserer_elt lsm_sitfam
+*ROW_METADATA(FMT_PYM        20070913)               fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070913)               appeler vc_cam_sit_fam lsm_sitfam
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET ZZ_LIB_VIL_PERS
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT ZZ_LIB_VIL_PERS:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               trier_lst lst_perso:liste zz_lib_vil_pers
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET ZZ_DAT_ENTREE
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT ZZ_DAT_ENTREE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               trier_lst lst_perso:liste zz_dat_entree *desc
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070913)         DEBUT_OBJET ZZ_NOM_PERSONNE
+*ROW_METADATA(FMT_PYM        20070913)            DEBUT_EVT ZZ_NOM_PERSONNE:BoutonGaucheClic
+*ROW_METADATA(FMT_PYM        20070913)               trier_lst lst_perso:liste zz_nom_personne
+*ROW_METADATA(FMT_PYM        20070913)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20070913)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070611)      FIN_GEST_EVT
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_VERIF
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)            FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)               LECTURE_LST FEN_PERSO.LST_PERSO:LISTE *MODIF
+*ROW_METADATA(FMT_PYM        20070912)                  DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)                  FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)                  MODIFIER_ELT FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(FMT_PYM        20070912)               FIN_LECTURE_LST
+*ROW_METADATA(FMT_PYM        20070912)            FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070611)      FIN_VERIF
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_VALID
+*ROW_METADATA(FMT_PYM        20070912)         DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)            FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)         FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(FMT_PYM        20070912)            DEBUT_STD_CIN
+*ROW_METADATA(FMT_PYM        20070912)               LECTURE_LST FEN_PERSO.LST_PERSO:LISTE *MODIF
+*ROW_METADATA(FMT_PYM        20070912)                  DEBUT_STD
+*ROW_METADATA(FMT_PYM        20070912)                     * Conversion du format de la date par appel à une fonction
+*ROW_METADATA(FMT_PYM        20070912)                     * interne ADELIA .
+*ROW_METADATA(FMT_PYM        20070912)                     *
+*ROW_METADATA(FMT_PYM        20070912)                     ZZ_DAT_ENTREE= &FORMAT_DATE8(ZZ_DAT_ENTREE;'DMY';'YMD')
+*ROW_METADATA(FMT_PYM        20070912)                  FIN_STD
+*ROW_METADATA(FMT_PYM        20070912)               FIN_LECTURE_LST
+*ROW_METADATA(FMT_PYM        20070912)            FIN_STD_CIN
+*ROW_METADATA(FMT_PYM        20070611)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20070611)      FIN_VALID
+*ROW_METADATA(FMT_PYM        20070611)      DEBUT_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070611)      FIN_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20070611)   FIN_FENETRE
+*ROW_METADATA(FMT_PYM        20070913)   DEBUT_PROCEDURE INSERTION_IMAGE
+*ROW_METADATA(FMT_PYM        20070913)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070913)         
+*ROW_METADATA(FMT_PYM        20070913)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20070913)      wf = 0
+*ROW_METADATA(FMT_PYM        20070913)      wh = 3
+*ROW_METADATA(FMT_PYM        20070913)      lecture_lst fen_perso.lst_perso:liste
+*ROW_METADATA(FMT_PYM        20070913)         si zz_cod_sexe_per = 'F'
+*ROW_METADATA(FMT_PYM        20070913)            si wf < 3
+*ROW_METADATA(FMT_PYM        20070913)               wf = wf + 1
+*ROW_METADATA(FMT_PYM        20070913)            sinon
+*ROW_METADATA(FMT_PYM        20070913)               wf = 1
+*ROW_METADATA(FMT_PYM        20070913)            fin
+*ROW_METADATA(FMT_PYM        20070913)            fen_perso.col_image:valeur = wf
+*ROW_METADATA(FMT_PYM        20070913)         sinon
+*ROW_METADATA(FMT_PYM        20070913)            si wh < 6
+*ROW_METADATA(FMT_PYM        20070913)               wh = wh + 1
+*ROW_METADATA(FMT_PYM        20070913)            sinon
+*ROW_METADATA(FMT_PYM        20070913)               wh = 4
+*ROW_METADATA(FMT_PYM        20070913)            fin
+*ROW_METADATA(FMT_PYM        20070913)            fen_perso.col_image:valeur = wh 
+*ROW_METADATA(FMT_PYM        20070913)         fin
+*ROW_METADATA(FMT_PYM        20070913)         modifier_elt fen_perso.lst_perso:liste 
+*ROW_METADATA(FMT_PYM        20070913)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070913)   FIN_PROCEDURE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

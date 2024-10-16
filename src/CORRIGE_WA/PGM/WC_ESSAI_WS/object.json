@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_ESSAI_WS",
+  "description" : "Essai Web service simple",
+  "creationDate" : "2011-03-24 15:19:45",
+  "updateDate" : "2011-03-24 15:23:50",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WCESWS",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "WCESWS",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

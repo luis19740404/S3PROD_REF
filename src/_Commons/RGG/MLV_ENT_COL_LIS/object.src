@@ -1,0 +1,5 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_RGG
+*ROW_METADATA(MLIVAIN        20240531)   * Gestion de la couleur des colonnes
+*ROW_METADATA(MLIVAIN        20240531)   %objet:en_tete_coul_fond = _lst_coul_bleu
+*ROW_METADATA(MLIVAIN        20240531)   %objet:en_tete_coul_txt = _lst_coul_blanc
+*ROW_METADATA(MLIVAIN                )FIN_RGG

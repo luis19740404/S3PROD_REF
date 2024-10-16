@@ -1,0 +1,42 @@
+{
+  "views" : [ {
+    "id" : {
+      "code" : "*1"
+    },
+    "guideWord" : "REGLEMT",
+    "fileName" : "REGLEMTL",
+    "access" : "SEQUENTIAL_KEY",
+    "update" : "NO_UPDATE",
+    "nbKeys" : 1,
+    "generation" : "KINEMATIC",
+    "accesses" : [ {
+      "id" : {
+        "code" : "*1",
+        "ordinal" : 1
+      },
+      "guideWord" : "RCOD_REGLEMT",
+      "type" : "DEFAULT"
+    } ]
+  } ],
+  "variables" : [ {
+    "id" : {
+      "guideWord" : "PCOD_REGLEMT",
+      "fileName" : ""
+    },
+    "shortName" : "PCRGT",
+    "length" : 2,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE",
+    "reference" : "RCRGT"
+  }, {
+    "id" : {
+      "guideWord" : "PLIB_REGLEMT",
+      "fileName" : ""
+    },
+    "shortName" : "PLRGT",
+    "length" : 10,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE",
+    "reference" : "RLRGT"
+  } ]
+}

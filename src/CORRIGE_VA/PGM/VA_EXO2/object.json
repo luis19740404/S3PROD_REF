@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO2",
+  "description" : "Programmation d'evenement",
+  "creationDate" : "1999-01-18 13:23:28",
+  "updateDate" : "2000-07-07 15:12:07",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAEXO2",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAEXO2",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

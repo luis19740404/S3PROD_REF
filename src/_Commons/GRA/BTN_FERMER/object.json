@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "BTN_FERMER",
+  "description" : "Bouton fermer",
+  "creationDate" : "2020-10-19 13:31:40",
+  "updateDate" : "2020-10-19 13:31:40",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "BOUTON",
+  "tooltip" : "Bouton fermer",
+  "prefix" : "BTN_",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BOUTON"
+}

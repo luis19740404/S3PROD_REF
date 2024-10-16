@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "DAT_AMJ_JMA",
+  "description" : "Inversion date AAMMJJ en JJMMAA",
+  "creationDate" : "1999-01-18 12:50:19",
+  "updateDate" : "1999-01-18 13:04:29",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IP",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Arborescence des employés par société/ville" help="" id="0" name="FEN_ARB_SOCIETE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="600"/>
+        <property id="-3" intValue="800"/>
+        <property id="-2" intValue="99"/>
+        <property id="-1" intValue="90"/>
+        <property id="3" stringValue="Arborescence des employés par société/ville"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="792"/>
+        <property id="23" intValue="566"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="ARBRE_LISTE" dll="LISTARBO" help="" kinematic="0" name="ARL_SOCIETE_EMPLOYE">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;256;1"/>
+                <property id="-4" intValue="376"/>
+                <property id="-3" intValue="520"/>
+                <property id="-2" intValue="78"/>
+                <property id="-1" intValue="114"/>
+                <property id="5" intValue="1"/>
+                <property id="6" intValue="1"/>
+                <property id="7" intValue="1"/>
+                <property id="9" intValue="1"/>
+                <property id="11" intValue="1"/>
+                <property id="19" stringValue="ZZ_NOM_SOCIETE -6 2 30 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1 # ZZ_NOM_PERSONNE -6 2 30 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_NOM_SOCIETE" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="6" stringValue="#"/>
+                        <property id="8"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="6" stringValue="#"/>
+                        <property id="8"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="6" stringValue="#"/>
+                        <property id="8"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_FERMER">
+            <properties>
+                <property id="-8" stringValue="&amp;Fermer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="496"/>
+                <property id="-1" intValue="562"/>
+            </properties>
+        </control>
+    </controls>
+</window>

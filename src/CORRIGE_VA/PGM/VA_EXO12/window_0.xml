@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Arbre Liste" help="" id="0" name="FEN_ARBRE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="387"/>
+        <property id="-3" intValue="585"/>
+        <property id="-2" intValue="122"/>
+        <property id="-1" intValue="64"/>
+        <property id="3" stringValue="Arbre Liste"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9/DSo9ljWQaqLI9umjUJ/eBAQM17cVq7+EK2hAmxRaD/nNPozSnor/c1JKE3p6CPQERCb06x9yMScnKOvn9Wojs3D31jXOjNFLirPxqh3QNr9w66y21xSWj3gJ21t6CXJmBlRtBJFbByryCfLmBlFbIlAla+h1yZgNXZIVMqYPWAfYmAF7JpAvrsgWyKgL7rtxHkwgIKWW+eXLoAkPd0yPyngBfuXgK/I1A1XoFGsGr0Xx/nAcvm7lfXqc4jAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4Xq2MUQrAMAxCe/+DdcfqyJARE6Vl7IE/5sUxfmIdxrJ2hINIqt8IZ17TjjS5El0MuJEmuy6FsLICN0IJdgQ9oQQ7go5QQku5E+m9D1TQE01IIt1ST1TnBbLqCBIykFVHkLBDDnzIww3Nu+sjMeaOXAAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="ARBRE_LISTE" dll="LISTARBO" help="" kinematic="0" name="ARL_PERSO">
+            <properties>
+                <property id="-4" intValue="328"/>
+                <property id="-3" intValue="495"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="49"/>
+                <property id="5" intValue="1"/>
+                <property id="6" intValue="1"/>
+                <property id="7" intValue="1"/>
+                <property id="8" intValue="1"/>
+                <property id="9" intValue="1"/>
+                <property id="11" intValue="1"/>
+                <property id="12" intValue="1"/>
+                <property id="15" intValue="1"/>
+                <property id="19" stringValue="ZZ_LIB_VIL_PERS -6 2 30 -1 # ZZ_COD_SEXE_PER -6 2 1 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_PRN_PERSONNE -6 2 20 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="8"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SEXE_PER" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SEXE_PERS" name="ZZ_COD_SEXE_PER">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="8"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="8"/>
+                        <property id="9" intValue="1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_PRN_PERSONNE" className="COLONNE_ARBRE" dll="ITEMARBO" help="" kinematic="1" logicalProperty="PERSONNEL.PRN_PERSONNE" name="ZZ_PRN_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 20 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+    </controls>
+</window>

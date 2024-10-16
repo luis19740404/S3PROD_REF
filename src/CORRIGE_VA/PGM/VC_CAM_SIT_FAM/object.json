@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_CAM_SIT_FAM",
+  "description" : "Répartition situation familiale (Camembert)",
+  "creationDate" : "2007-09-12 16:30:46",
+  "updateDate" : "2007-10-05 10:35:50",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCCASF",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCCASF",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

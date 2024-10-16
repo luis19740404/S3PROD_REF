@@ -1,0 +1,31 @@
+{
+  "views" : [ {
+    "id" : {
+      "code" : "*1"
+    },
+    "guideWord" : "PLAT",
+    "fileName" : "PLATL",
+    "access" : "SEQUENTIAL_KEY",
+    "update" : "NO_UPDATE",
+    "nbKeys" : 1,
+    "generation" : "KINEMATIC",
+    "accesses" : [ {
+      "id" : {
+        "code" : "*1",
+        "ordinal" : 1
+      },
+      "guideWord" : "PCOD_PLAT",
+      "type" : "DEFAULT"
+    } ]
+  } ],
+  "variables" : [ {
+    "id" : {
+      "guideWord" : "PW_COD_PLAT",
+      "fileName" : ""
+    },
+    "shortName" : "PWCPLA",
+    "length" : 3,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE"
+  } ]
+}

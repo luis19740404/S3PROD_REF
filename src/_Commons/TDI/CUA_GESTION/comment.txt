@@ -1,0 +1,35 @@
+Squelette de programmes de gestion par liste aux normes CUA.
+Peut être utilisé en tant que type de dialogue au niveau d'une tâche.
+
+
+Caractéristiques principales :
+
+  - Paramétrage des options standards : copie, suppression, visualisation,
+  édition de la liste des éléments, édition d'un élément. Les options de
+  création et modification sont toujours présentes.
+  Les description "ADELIA" des programmes correspondant à ces options sont
+  créées lors de la construction du programme de gestion et leurs contextes
+  sont mis à jour avec le nom de l'entité gérée.
+
+  Les paramètres échangés (en plus de code retour et code action) avec
+  les programme de mise à jour, de visualisation, édition d'une fiches sont
+  les zones écran correspondant à l'identifiant de l'entité gérée ; cela
+  implique que l'entité doit avoir un identifiant (Attention aux fichiers
+  existants remontés dans ADELIA) et que toutes les zones constituant cet
+  identifiant sont présentes dans le sous-fichier de gestion. Toutefois,
+  si l'entité dépend d'une entité "maitre", la partie de l'identifiant
+  correspondant à l'identifiant de l'entité maître peut être positionnée dans
+  le haut de l'écran ; dans ce cas de figure le programme d'édition de liste
+  sera défini avec les identifiants de l'entité "maître" en paramètres.
+
+
+  * Evolution 01/94 : multipositionnement : possibilité de définir des
+  "Afficher à partir de" sur différentes zones : dans ce cas le fichier est
+  trié sur le critère choisi et l'affichage se fait à partir de la valeur
+  saisie. Il peut y avoir jusqu'à 9 critères ; ils ne sont pas complémentaires
+  (on saisit un seul critère). Il doit exister un index pour chaque critère
+  spécifieé.
+
+  * Evolution 01/94 : les messages standards sont prévus pour avoir en
+  paramètre l'ensemble des zones constituant l'identifiant au lieu de la
+  dernière uniquement.

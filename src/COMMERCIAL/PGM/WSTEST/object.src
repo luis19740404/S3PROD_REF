@@ -1,0 +1,155 @@
+*ROW_METADATA(FMT_LTA                )DEBUT_PGM
+*ROW_METADATA(ADELIA         20200820)   DEBUT_DECL
+*ROW_METADATA(ADELIA         20200820)      sw_configurer *SERVICE '@Path' '/clients'
+*ROW_METADATA(ADELIA         20200820)      alpha(200) wmsgtrace
+*ROW_METADATA(ADELIA         20200820)   FIN_DECL
+*ROW_METADATA(ADELIA         20200820)   DEBUT_INIT
+*ROW_METADATA(ADELIA         20200820)      
+*ROW_METADATA(ADELIA         20200820)   FIN_INIT
+*ROW_METADATA(ADELIA         20210706)   DEBUT_PROCEDURE CLIENTS *PUBLIC
+*ROW_METADATA(ADELIA         20200820)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20200820)         sw_configurer *OPERATION '@GET' *BLANK
+*ROW_METADATA(ADELIA         20200820)         sw_configurer *OPERATION '@Produces' '{"application/xml","application/json"}'
+*ROW_METADATA(ADELIA         20200820)         *
+*ROW_METADATA(ADELIA         20200820)         num_bin_4 wcodehttp
+*ROW_METADATA(ADELIA         20210706)         liste lstcli ccod_client cnom_client ccod_pos_cli cnum_tel_cli
+*ROW_METADATA(ADELIA         20210706)         alpha(5) wpos
+*ROW_METADATA(ADELIA         20210706)         num_e(9,0) wnbclient 
+*ROW_METADATA(ADELIA         20200820)         *
+*ROW_METADATA(ADELIA         20210706)         param wpos,i[query:optional],position lstcli,o[content] wcodehttp,o[httpstatus]
+*ROW_METADATA(ADELIA         20200820)      FIN_DECL
+*ROW_METADATA(ADELIA         20200820)      *
+*ROW_METADATA(ADELIA         20200820)      wcodehttp = 200
+*ROW_METADATA(ADELIA         20210706)      wmsgtrace = 'wpos : ' // wpos
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20200820)      *
+*ROW_METADATA(FMT_LTA                )      DEBUT_SRV ADELIA
+*ROW_METADATA(ADELIA         20210706)         si wpos = *blank
+*ROW_METADATA(ADELIA         20210706)            charger_sql_lst lstcli client *tri(cnom_client)
+*ROW_METADATA(ADELIA         20210706)         sinon
+*ROW_METADATA(ADELIA         20210706)            charger_sql_lst lstcli client *cond(cnom_client >= :wpos) *tri(cnom_client)
+*ROW_METADATA(ADELIA         20210706)         fin
+*ROW_METADATA(ADELIA         20210706)         
+*ROW_METADATA(FMT_LTA                )      FIN_SRV
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      si *code_retour > 10000
+*ROW_METADATA(ADELIA         20210706)         wmsgtrace = 'middleware : ' // *code_retour
+*ROW_METADATA(ADELIA         20210706)      fin
+*ROW_METADATA(ADELIA         20210706)      si *sqlcode <> 0 
+*ROW_METADATA(ADELIA         20210706)         wmsgtrace = '*sqlcode : ' // *sqlcode
+*ROW_METADATA(ADELIA         20210706)      fin
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      wnbclient = &nbr_elt(LSTCLI)
+*ROW_METADATA(ADELIA         20210706)      wmsgtrace = 'Nb de client : ' // wnbclient
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20200820)      *
+*ROW_METADATA(ADELIA         20200820)      * Suppression de la connexion middleware Adelia
+*ROW_METADATA(ADELIA         20210706)      APPELER_DLL 'VaToolBx' 'VaToolBxCloseConnection' 'ADELIA'
+*ROW_METADATA(ADELIA         20200820)      *
+*ROW_METADATA(ADELIA         20210706)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA         20210706)   DEBUT_PROCEDURE PRODLSTCLI *PUBLIC
+*ROW_METADATA(ADELIA         20210706)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *operation '@Path' '/lstobj'
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *OPERATION '@GET' *BLANK
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *OPERATION '@Produces' '{"application/xml","application/json"}'
+*ROW_METADATA(ADELIA         20210706)         *
+*ROW_METADATA(ADELIA         20210706)         num_bin_4 wcodehttp
+*ROW_METADATA(ADELIA         20210706)         liste lstcli ccod_client cnom_client ccod_pos_cli cnum_tel_cli
+*ROW_METADATA(ADELIA         20210706)         alpha(5) wpos
+*ROW_METADATA(ADELIA         20210706)         num_e(9,0) wnbclient 
+*ROW_METADATA(ADELIA         20210706)         ref_classe(CLIENT) oclient
+*ROW_METADATA(ADELIA         20210706)         liste lst_cli oclient
+*ROW_METADATA(ADELIA         20210706)         *
+*ROW_METADATA(ADELIA         20210706)         param LST_CLI,o[content] wcodehttp,o[httpstatus]
+*ROW_METADATA(ADELIA         20210706)         
+*ROW_METADATA(ADELIA         20210706)      FIN_DECL
+*ROW_METADATA(ADELIA         20210706)      wcodehttp = 200
+*ROW_METADATA(ADELIA         20210706)      wmsgtrace = 'wpos : ' // wpos
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20210706)      vider_lst LST_CLI
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(FMT_LTA                )      DEBUT_SRV ADELIA
+*ROW_METADATA(ADELIA         20210706)         charger_sql_lst lstcli client *tri(cnom_client)
+*ROW_METADATA(FMT_LTA                )      FIN_SRV
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      si *code_retour > 10000
+*ROW_METADATA(ADELIA         20210706)         wmsgtrace = 'middleware : ' // *code_retour
+*ROW_METADATA(ADELIA         20210706)      fin
+*ROW_METADATA(ADELIA         20210706)      si *sqlcode <> 0 
+*ROW_METADATA(ADELIA         20210706)         wmsgtrace = '*sqlcode : ' // *sqlcode
+*ROW_METADATA(ADELIA         20210706)      fin
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      wnbclient = &nbr_elt(LSTCLI)
+*ROW_METADATA(ADELIA         20210706)      wmsgtrace = 'Nb de client : ' // wnbclient
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      lecture_lst LSTCLI
+*ROW_METADATA(ADELIA         20210706)         oclient = new CLIENT()
+*ROW_METADATA(ADELIA         20210706)         oclient.setnom(cnom_client)
+*ROW_METADATA(ADELIA         20210706)         oclient.setadresse(cadr_01_cli)
+*ROW_METADATA(ADELIA         20210706)         oclient.settelephone(cnum_tel_cli)
+*ROW_METADATA(ADELIA         20210706)         oclient.setcredit(15)
+*ROW_METADATA(ADELIA         20210706)         inserer_elt LST_CLI
+*ROW_METADATA(ADELIA         20210706)      fin_lecture_lst
+*ROW_METADATA(ADELIA         20210706)      
+*ROW_METADATA(ADELIA         20210706)      * Suppression de la connexion middleware Adelia
+*ROW_METADATA(ADELIA         20210706)      APPELER_DLL 'VaToolBx' 'VaToolBxCloseConnection' 'ADELIA'
+*ROW_METADATA(ADELIA         20210706)   FIN_PROCEDURE
+*ROW_METADATA(ADELIA         20210706)   DEBUT_PROCEDURE CONSLSTCLI *PUBLIC
+*ROW_METADATA(ADELIA         20210706)      DEBUT_DECL
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *operation '@Path' '/lstobj'
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *OPERATION '@PUT' *BLANK
+*ROW_METADATA(ADELIA         20210706)         sw_configurer *OPERATION '@Consumes' '{"application/xml","application/json"}'
+*ROW_METADATA(ADELIA         20210706)         *
+*ROW_METADATA(ADELIA         20210707)         num_bin_4 wcodehttp
+*ROW_METADATA(ADELIA         20210706)         
+*ROW_METADATA(ADELIA         20210706)         num_e(9,0) wnbclient 
+*ROW_METADATA(ADELIA         20210706)         
+*ROW_METADATA(ADELIA         20210706)         ref_classe(CLIENT) oclient
+*ROW_METADATA(ADELIA         20210707)         liste lst_cli oclient
+*ROW_METADATA(ADELIA         20210707)         
+*ROW_METADATA(ADELIA         20210706)         alpha(50) wnom
+*ROW_METADATA(ADELIA         20210706)         alpha(50) wadresse
+*ROW_METADATA(ADELIA         20210706)         alpha(11) wtel
+*ROW_METADATA(ADELIA         20210707)         num_e(3,0) wcredit
+*ROW_METADATA(ADELIA         20210707)         *
+*ROW_METADATA(ADELIA         20210707)         alpha(50) wnom2
+*ROW_METADATA(ADELIA         20210707)         alpha(50) wadresse2
+*ROW_METADATA(ADELIA         20210707)         alpha(11) wtel2
+*ROW_METADATA(ADELIA         20210707)         num_e(3,0) wcredit2
+*ROW_METADATA(ADELIA         20210706)         *
+*ROW_METADATA(ADELIA         20210706)         param LST_CLI,i[content] wcodehttp,o[httpstatus]
+*ROW_METADATA(ADELIA         20210706)         
+*ROW_METADATA(ADELIA         20210706)      FIN_DECL
+*ROW_METADATA(ADELIA         20210706)      wcodehttp = 200
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      wnbclient = &nbr_elt(LST_CLI)
+*ROW_METADATA(ADELIA         20210706)      wmsgtrace = 'Nb de client : ' // wnbclient
+*ROW_METADATA(ADELIA         20210706)      ajouter_trace wmsgtrace *info
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210707)      lire_p_elt lst_cli
+*ROW_METADATA(ADELIA         20210707)      tant_que &code_lst(lst_cli) = *normal
+*ROW_METADATA(ADELIA         20210707)         * lecture_lst LST_CLI
+*ROW_METADATA(ADELIA         20210706)         wnom = oclient.getnom()
+*ROW_METADATA(ADELIA         20210706)         wadresse = oclient.getadresse()
+*ROW_METADATA(ADELIA         20210706)         wtel = oclient.gettelephone()
+*ROW_METADATA(ADELIA         20210707)         wcredit = oclient.getcredit()
+*ROW_METADATA(ADELIA         20210707)         wnom2 =wnom
+*ROW_METADATA(ADELIA         20210707)         wadresse2 = wadresse
+*ROW_METADATA(ADELIA         20210707)         wtel2 = wtel
+*ROW_METADATA(ADELIA         20210707)         wcredit2 = wcredit
+*ROW_METADATA(ADELIA         20210706)         *   
+*ROW_METADATA(FMT_LTA                )      DEBUT_SRV ADELIA
+*ROW_METADATA(ADELIA         20210707)            wmsgtrace = wnom2 /// ';' /// wadresse2 /// ';' /// wtel2 /// ';' /// wcredit2
+*ROW_METADATA(ADELIA         20210707)            ajouter_trace wmsgtrace *info
+*ROW_METADATA(FMT_LTA                )      FIN_SRV
+*ROW_METADATA(ADELIA         20210707)         lire_av_elt lst_cli
+*ROW_METADATA(ADELIA         20210707)      refaire
+*ROW_METADATA(ADELIA         20210707)      * fin_lecture_lst
+*ROW_METADATA(ADELIA         20210706)      *
+*ROW_METADATA(ADELIA         20210706)      * Suppression de la connexion middleware Adelia
+*ROW_METADATA(ADELIA         20210706)      APPELER_DLL 'VaToolBx' 'VaToolBxCloseConnection' 'ADELIA'
+*ROW_METADATA(ADELIA         20210706)   FIN_PROCEDURE
+*ROW_METADATA(FMT_LTA                )FIN_PGM

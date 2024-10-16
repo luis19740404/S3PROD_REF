@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV006",
+  "description" : "Programme formation camembert",
+  "creationDate" : "2024-05-30 07:12:17",
+  "updateDate" : "2024-05-30 07:20:41",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV006",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV006",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : "N"
+}

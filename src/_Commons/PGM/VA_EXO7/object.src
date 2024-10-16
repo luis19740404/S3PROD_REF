@@ -1,0 +1,67 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      CHARGEMENT CHRG_PERSONNEL FEN_MAIN.LST_PERSONNEL:LISTE -
+*ROW_METADATA(ADELIA                 )      *SQL PERSONNEL *TRI(PE_LIB_BUD_PERS)
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_MAIN
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_MAIN
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_MAIN
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         VIDER_LST LST_PERSONNEL:LISTE
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )            CHARGT_LST CHRG_PERSONNEL
+*ROW_METADATA(ADELIA                 )              PRESENTER PERSONNEL
+*ROW_METADATA(ADELIA                 )              INSERER_ELT LST_PERSONNEL:LISTE
+*ROW_METADATA(ADELIA                 )            FIN_CHARGT_LST
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_QUIT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_QUIT:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_CALCUL
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_CALCUL:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               VIDER_LST LST_NBCOM:LISTE
+*ROW_METADATA(ADELIA                 )               INIT_RUPTURE CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )               LIRE_P_ELT LST_PERSONNEL:LISTE
+*ROW_METADATA(ADELIA                 )               TANT_QUE &CODE_LST(LST_PERSONNEL:LISTE) = *NORMAL
+*ROW_METADATA(ADELIA                 )                 TRAITER_CHG CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )                 W_NB_PERS=W_NB_PERS+1
+*ROW_METADATA(ADELIA                 )                 LIRE_AV_ELT LST_PERSONNEL:LISTE
+*ROW_METADATA(ADELIA                 )                 TRAITER_TOTAL CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )               REFAIRE
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_RUPTURE CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         RUPTURE ZZ_LIB_BUD_PERS *LISTE(FEN_MAIN.LST_PERSONNEL:LISTE)
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      TRT_CHANGEMENT
+*ROW_METADATA(ADELIA                 )         W_NB_PERS=0
+*ROW_METADATA(ADELIA                 )         W_VIL_PERS=ZZ_LIB_VIL_PERS
+*ROW_METADATA(ADELIA                 )         W_BUD_PERS=ZZ_LIB_BUD_PERS
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_TRAITEMENT
+*ROW_METADATA(ADELIA                 )      TRT_TOTAL
+*ROW_METADATA(ADELIA                 )         INSERER_ELT FEN_MAIN.LST_NBCOM:LISTE
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_TRAITEMENT
+*ROW_METADATA(ADELIA                 )   FIN_RUPTURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

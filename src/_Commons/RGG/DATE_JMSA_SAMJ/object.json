@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "DATE_JMSA_SAMJ",
+  "description" : "Inversion date JJMMSSAA en SSAAMMJJ",
+  "creationDate" : "1999-01-18 12:50:17",
+  "updateDate" : "2005-07-28 06:53:48",
+  "visibility" : "PUBLIC",
+  "mrClass" : "VP",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL" ]
+}

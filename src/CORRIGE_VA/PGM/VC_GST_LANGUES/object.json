@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_GST_LANGUES",
+  "description" : "Pgm Langue Franco-Suisse",
+  "creationDate" : "1999-01-18 13:23:33",
+  "updateDate" : "2007-09-12 14:46:59",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCGSLG",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCGSLG",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

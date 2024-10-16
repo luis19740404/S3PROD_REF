@@ -1,0 +1,11 @@
+{
+  "type" : "MRA",
+  "name" : "LISTE_GUIDE_P",
+  "description" : "Liste guide personnalisé",
+  "creationDate" : "2012-06-28 12:19:38",
+  "updateDate" : "2012-06-28 12:19:38",
+  "visibility" : "PUBLIC",
+  "templateClass" : "PROMPT_LIST",
+  "version" : "IG2",
+  "modelName" : "_LISTE_GUIDE"
+}

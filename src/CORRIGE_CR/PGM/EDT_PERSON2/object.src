@@ -1,0 +1,23 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM                )   DEBUT_DECL
+*ROW_METADATA(FMT_PYM                )      liste lst_personnel *ref_mld(personnel)
+*ROW_METADATA(FMT_PYM                )   FIN_DECL
+*ROW_METADATA(FMT_PYM                )   DEBUT_INIT
+*ROW_METADATA(FMT_PYM                )      ouvrir EDPER2
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LOCAL
+*ROW_METADATA(FMT_PYM                )         charger_sql_lst lst_personnel personnel *tri(PE_COD_MATRICUL)
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      lire_p_elt lst_personnel
+*ROW_METADATA(FMT_PYM                )      tant_que &code_lst(lst_personnel) = *normal
+*ROW_METADATA(FMT_PYM                )         imprimer
+*ROW_METADATA(FMT_PYM                )         lire_av_elt lst_personnel
+*ROW_METADATA(FMT_PYM                )      refaire
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      fermer EDPER2 *prv
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      terminer
+*ROW_METADATA(FMT_PYM                )      
+*ROW_METADATA(FMT_PYM                )   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

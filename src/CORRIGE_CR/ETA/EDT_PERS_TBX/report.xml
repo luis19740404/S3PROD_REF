@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="SOCIETE"/>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="EDPETX" formatCode="  " guideWord="ZZ_COD_SEXE_PER" kind="VARIABLE" length="1" logicalProperty="PERSONNEL.COD_SEXE_PERS" scale="-1" type="STRING"/>
+        <field description="EDPETX" formatCode="  " guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="EDPETX" formatCode="  " guideWord="ZZ_MTT_SALAIRE" kind="VARIABLE" length="11" logicalProperty="PERSONNEL.MTT_SALAIRE" scale="2" type="NUMBER"/>
+        <field description="EDPETX" formatCode="  " guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" length="2" logicalProperty="PERSONNEL.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="EDPETX" formatCode="  " guideWord="ZZ_NOM_SOCIETE" kind="VARIABLE" length="30" logicalProperty="SOCIETE.NOM_SOCIETE" scale="-1" type="STRING"/>
+    </fields>
+</report>

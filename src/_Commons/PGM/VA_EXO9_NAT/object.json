@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO9_NAT",
+  "description" : "Pgm Rupture de comptage des personnes et camembert",
+  "creationDate" : "1999-02-26 15:55:07",
+  "updateDate" : "2000-07-07 15:13:28",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VANAT9",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VANAT9",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "NATIVE"
+}

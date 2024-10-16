@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "ENT_COL_LISTE",
+  "description" : "Entêtes colonnes de liste graphique",
+  "creationDate" : "2020-10-19 11:52:42",
+  "updateDate" : "2020-10-19 12:17:56",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Comptage des personnes par ville" help="" id="0" name="FEN_MAIN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="363"/>
+        <property id="-2" intValue="142"/>
+        <property id="-1" intValue="263"/>
+        <property id="3" stringValue="Comptage des personnes par ville"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9/DSo9ljWQaqLI9umjUJ/eBAQM17cVq7+EK2hAmxRaD/nNPozSnor/c1JKE3p6CPQERCb06x9yMScnKOvn9Wojs3D31jXOjNFLirPxqh3QNr9w66y21xSWj3gJ21t6CXJmBlRtBJFbByryCfLmBlFbIlAla+h1yZgNXZIVMqYPWAfYmAF7JpAvrsgWyKgL7rtxHkwgIKWW+eXLoAkPd0yPyngBfuXgK/I1A1XoFGsGr0Xx/nAcvm7lfXqc4jAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAc0lEQVR4XpWNAQrAMAgD+/9Pbzini5mS9kAq9aJrfVxQRzwhJP7I6ylJwsbs/xhCqgo5wCUTr9tSFom+pVyZsBkHAxTKRX4xhPgJgXkcDFIAcepb/ITAPA4GKLT91gKFeRwMUMi++8MQ4icE5nEwyEsbldybgKJslSdIGwAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_QUIT">
+            <properties>
+                <property id="-8" stringValue="&amp;Quitter"/>
+                <property id="-2" intValue="307"/>
+                <property id="-1" intValue="6"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_PERSONNEL">
+            <properties>
+                <property id="-4" intValue="110"/>
+                <property id="-3" intValue="382"/>
+                <property id="-2" intValue="19"/>
+                <property id="-1" intValue="5"/>
+                <property id="6" stringValue="ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_LIB_BUD_PERS -6 2 24 -1 # ZZ_LIB_VIL_PERS -6 2 30 -1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="131"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_BUD_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_BUD_PERS" name="ZZ_LIB_BUD_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 24 -1"/>
+                        <property id="-8" stringValue="Bureau"/>
+                        <property id="-3" intValue="113"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_LIB_VIL_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_VIL_PERS" name="ZZ_LIB_VIL_PERS">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Ville"/>
+                        <property id="-3" intValue="136"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CALCUL">
+            <properties>
+                <property id="-8"/>
+                <property id="-4" intValue="34"/>
+                <property id="-3" intValue="39"/>
+                <property id="-2" intValue="136"/>
+                <property id="-1" intValue="173"/>
+                <property id="4"/>
+                <property binaryType="dib" id="7" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAuklEQVR4Xs3NWw6DIBRFUcbeODMTp7VrMCAcXt4mUk7uT7Xu5YBjP9479xLg4vDbPtt55f+sd3dDPAPilV/2T7pxN1AaTyTt5buyA6AqaakxBYbGdZppLDbnAjwwtFRbGpwOMDI0Vkxq+psJAF1De/k09DeAtqHJZJrwqz9lAkDD0GqYfhzWfMEEgJqhYT/9LFnvHRMACkPb3TpLAOSGqc4qAIlhqrMQQDBMddYC8IapznLAOVOdHwDrvh6lEr/b8+bSAAAAAElFTkSuQmCC</property>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_NBCOM">
+            <properties>
+                <property id="-4" intValue="116"/>
+                <property id="-3" intValue="336"/>
+                <property id="-2" intValue="183"/>
+                <property id="-1" intValue="29"/>
+                <property id="6" stringValue="COL_BUR -6 2 24 -1 # COL_VILLE -6 2 30 -1 # COL_NB -6 4 6 0"/>
+            </properties>
+            <controls>
+                <control associatedVariable="W_BUD_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.LIB_BUD_PERS" name="COL_BUR">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 24 -1"/>
+                        <property id="-8" stringValue="Bureau"/>
+                        <property id="-3" intValue="80"/>
+                    </properties>
+                </control>
+                <control associatedVariable="W_VIL_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="COL_VILLE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Ville"/>
+                        <property id="-3" intValue="187"/>
+                    </properties>
+                </control>
+                <control associatedVariable="W_NB_PERS" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="COL_NB">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-9" stringValue="4 6 0"/>
+                        <property id="-8" stringValue="Nb"/>
+                        <property id="-3" intValue="67"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+    </controls>
+</window>

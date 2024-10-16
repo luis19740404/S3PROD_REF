@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "SAV_DERN_LIGNE",
+  "description" : "Sauvegarde du dernier numéro de ligne",
+  "creationDate" : "1995-05-04 12:00:41",
+  "updateDate" : "1995-05-04 12:00:41",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IP",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

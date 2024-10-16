@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "PAS_DE_GUIDE",
+  "description" : "Pas de guide sur cette zone",
+  "creationDate" : "1996-06-24 08:32:09",
+  "updateDate" : "1996-10-03 09:38:23",
+  "visibility" : "PUBLIC",
+  "mrClass" : "FG",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

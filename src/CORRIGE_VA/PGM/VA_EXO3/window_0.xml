@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Menu Général" help="" id="0" name="FEN_MENU" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="387"/>
+        <property id="-3" intValue="493"/>
+        <property id="-2" intValue="120"/>
+        <property id="-1" intValue="171"/>
+        <property id="3" stringValue="Menu Général"/>
+        <property id="6"/>
+        <property id="7"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABQklEQVR4Xr1TAY7DIAzr46d72u5Z3BnwgJBQ1nqzlKYh2HHU7Tgu4PHzSMr6LZCsyrvA5RyVKKuPTaSUECkLFNyvoWsHeXiRlRm6NU4xkRUZujWWcMlmgzA8Xn7+956/z10DscgKrT9n9HYMuOT87IbjvY+xP2f0MDxX5wZGMjN7fW73eT7z2Nsx4JL74RFKf+ax1/6GpwZikbPweDTP7fNJYGAgqTJ02/BhmQnDJVWGbr89z742HN+eQQQGfJE7Gbp2+9wxBvLl2pJlf3jpOwZaU5V9AwW9AR5JM3T7b7/6DUxkRV5tD9AAXnkky+NwnhOlfhn4VKy2B+q9LWQxhP2eV+KSgU8AunZQBEuV1NC1gyIYAQ2gawdFIGX6nlfihgEtoGsHRbBUSQ1dOyiCEdAAunZQBFIGgbs1dO2gCLwsjz95NEpXpFGfFQAAAABJRU5ErkJggg==</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjUlEQVR4XpVRgQ3AIAjzeLO3WYpCOhCdTQiEltZsrRXoT5ebmSGT0PoxJygp0gQYM5D30KZjE5/6PF4ZDBEJvNiE9g4nLYHBvHELA12n5MFF8+8LnDx1NgsGWbzqHGYGSVR1O7Zf6wY3xaZmEKEkUnbFL4jwhFOHNh4DSsbEWGpRG3yTqg5tPAbSh9vVC+E08GGisaaIAAAAAElFTkSuQmCC</property>
+        <property id="13"/>
+        <property id="15" intValue="1"/>
+    </properties>
+    <menu>
+        <item key1="0" key2="0" name="MEN_GENERAL" state="4112" text="&amp;Général" type="1">
+            <menu>
+                <item key1="0" key2="0" name="MEN_EXO4" state="4112" text="Gestion des &amp;langues" type="1"/>
+                <item key1="0" key2="0" name="MEN_EXO5" state="4112" text="Gestion du &amp;personnel" type="1"/>
+                <item key1="0" key2="0" name="MNU_SOCIETE" state="4112" text="Gestion des sociétés" type="1"/>
+                <item key1="0" key2="0" name="ID_EVT6" state="4112" text="Séparateur" type="2"/>
+                <item key1="0" key2="0" name="MNU_RUPTURE" state="4112" text="&amp;Rupture" type="1"/>
+                <item key1="0" key2="0" name="MNU_RUPT_QUICK" state="4112" text="Rupture Lent/rapide" type="1"/>
+                <item key1="0" key2="0" name="MNU_CAMEMBERT" state="4112" text="&amp;Camembert" type="1"/>
+                <item key1="0" key2="0" name="ID_EVT18" state="4112" text="Séparateur" type="2"/>
+                <item key1="0" key2="0" name="MNU_EURO" state="4112" text="&amp;Calculatrice" type="1"/>
+                <item key1="0" key2="0" name="MNU_ARBRE" state="4112" text="&amp;Arbre Liste" type="1"/>
+                <item key1="0" key2="0" name="MNU_TREEVIEW" state="4112" text="A&amp;rborescence" type="1"/>
+                <item key1="0" key2="0" name="ID_EVT11" state="4112" text="Séparateur" type="2"/>
+                <item key1="0" key2="0" name="MEN_QUITTER" state="4112" text="&amp;Quitter" type="1"/>
+            </menu>
+        </item>
+        <item key1="0" key2="0" name="MNU_EDITION" state="4112" text="&amp;Edition" type="1">
+            <menu>
+                <item key1="0" key2="0" name="MNU_EDIT_1" state="4112" text="&amp;Edition simple" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_2" state="4112" text="&amp;Edition Gestion Date" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_3" state="4112" text="&amp;Edition Histogramme" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_4" state="4112" text="&amp;Edition Classique" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_5" state="4112" text="&amp;Edition Param en entrée" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_6" state="4112" text="&amp;Edition Pourcentage" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_7" state="4112" text="&amp;Edition Tableau Croisé" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_8" state="4112" text="&amp;Edition Personnel Ville Totaux" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_9" state="4112" text="&amp;Edition sous états non liés" type="1"/>
+                <item key1="0" key2="0" name="MNU_EDIT_10" state="4112" text="&amp;Edition sous états liés" type="1"/>
+            </menu>
+        </item>
+        <item key1="0" key2="0" name="ID_EVT12" state="4112" text="&amp;Natif" type="1">
+            <menu>
+                <item key1="0" key2="0" name="MNU_PERSO_NAT" state="4112" text="Gestion Personnel Natif" type="1"/>
+                <item key1="0" key2="0" name="MNU_CAM2" state="4112" text="Camembert Natif" type="1"/>
+            </menu>
+        </item>
+        <item key1="0" key2="0" name="MNU_DIVERS" state="4112" text="&amp;Divers" type="1">
+            <menu>
+                <item key1="0" key2="0" name="MNU_SQL_D" state="4112" text="Chargement SQL_D" type="1"/>
+                <item key1="0" key2="0" name="MNU_XL" state="4112" text="Client &amp;Excel" type="1"/>
+                <item key1="0" key2="0" name="MNU_WORD" state="4112" text="Client &amp;Word" type="1"/>
+            </menu>
+        </item>
+        <item key1="0" key2="0" name="MEN_APROPOS" state="4112" text="&amp;?" type="1">
+            <menu>
+                <item key1="0" key2="0" name="MEN_VERSION" state="4112" text="&amp;Version" type="1"/>
+            </menu>
+        </item>
+    </menu>
+    <controls>
+        <control associatedVariable="" className="IMAGE" dll="BITMAP" help="{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}{\f1\froman\fcharset2 Symbol;}{\f2\fswiss\fprq2 System;}{\f3\froman Times New Roman;}}&#13;&#10;{\colortbl\red0\green0\blue0;}&#13;&#10;\deflang1036\pard\plain\f3\fs20\b Image&#13;&#10;\par \plain\f3\fs20 Ceci est l'aide sur l'image&#13;&#10;\par }&#13;&#10;" kinematic="0" name="IMG_LOGO">
+            <properties>
+                <property id="-4" intValue="162"/>
+                <property id="-3" intValue="163"/>
+                <property id="-2" intValue="58"/>
+                <property id="-1" intValue="160"/>
+                <property binaryType="dib" id="2" mimeType="image/png">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</property>
+                <property id="3" intValue="2"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ3">
+            <properties>
+                <property id="-8"/>
+                <property id="-4" intValue="174"/>
+                <property id="-3" intValue="175"/>
+                <property id="-2" intValue="49"/>
+                <property id="-1" intValue="154"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_INFO">
+            <properties>
+                <property id="-3" intValue="245"/>
+                <property id="-2" intValue="322"/>
+                <property id="-1" intValue="123"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

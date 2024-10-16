@@ -1,0 +1,11 @@
+{
+  "endProgramCode" : "LR",
+  "dateFormat" : "SYSTEM",
+  "ioErrors" : "YES",
+  "fileOptions" : [ {
+    "id" : {
+      "fileName" : "**EDPES1"
+    },
+    "openClose" : true
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "VNS_ENT_COL_LIS",
+  "description" : "Entête colonnes de liste graphique",
+  "creationDate" : "2021-02-17 10:12:08",
+  "updateDate" : "2021-02-17 10:17:41",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

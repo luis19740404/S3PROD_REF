@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body><form name="WC_GESSOC_1_FORM_1" id="WC_GESSOC_1_FORM_1" method="post">
+  <p align="center"><strong>Liste des soci&eacute;t&eacute;s</strong></p>
+  <p></p>
+<table width="75%" border="1" align="center" cellpadding="1" cellspacing="1" cols="3">
+<tr>
+<td><strong>Code</strong></td>
+<td><strong>D&eacute;signation</strong></td>
+<td width="90">&nbsp;</td>
+</tr>
+<adelia:tablelist name="TBL_SOCIETE" step="10" eveneltcolor="#00CC99" oddeltcolor="#CC6699">
+<tr>
+<td><adelia:outputfield name="ZZ_COD_SOCIETE" type="ALPHA" length="2" lentity="SOCIETE" lproperty="COD_SOCIETE" dataflow="yes" />
+&nbsp;</td>
+<td><adelia:outputfield name="ZZ_NOM_SOCIETE" type="ALPHA" length="30" lentity="SOCIETE" lproperty="NOM_SOCIETE" dataflow="yes" />
+&nbsp;</td>
+<td width="90"><adelia:button>
+<input type="button" name="BTN_EMPLOYES" id="BTN_EMPLOYES" value="Employ&eacute;s" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+</tr>
+</adelia:tablelist>
+</table>
+<table width="200" align="center">
+  <tr>
+    <td><adelia:hlink>
+<a name="HLK_PREC" id="HLK_PREC" href="::ADELIA_ONROLLDOWN(TBL_SOCIETE)">
+Pr&eacute;c&eacute;dent
+</a>
+</adelia:hlink>
+&nbsp;</td>
+    <td><adelia:hlink>
+<a name="HLK_SUIVANT" id="HLK_SUIVANT" href="::ADELIA_ONROLLUP(TBL_SOCIETE)">
+Suivant
+</a>
+</adelia:hlink>
+&nbsp;</td>
+  </tr>
+</table>
+</form>
+
+
+</body>
+</html>

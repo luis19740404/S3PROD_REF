@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_IWS",
+  "description" : "Edition personnel classique",
+  "creationDate" : "2000-03-03 09:13:14",
+  "updateDate" : "2000-03-03 09:13:14",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPECL",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPECL",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

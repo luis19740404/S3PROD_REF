@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body><form name="WC_AFF_EMP_SOC_1_FORM_1" id="WC_AFF_EMP_SOC_1_FORM_1" method="post">
+  <table width="80%" height="80%" align="center">
+    <tr>
+      <td width="55" height="10"><strong>Soci&eacute;t&eacute;</strong> </td>
+      <td width="348" height="10"><div align="left"><adelia:outputfield name="ZZ_NOM_SOCIETE" type="ALPHA" length="30" lentity="SOCIETE" lproperty="NOM_SOCIETE" dataflow="yes" />
+&nbsp;</div></td>
+      <td width="181" height="10"><div align="right"><strong>Nombre d'employ&eacute;s :</strong> </div></td>
+      <td width="138" height="10"><div align="left"><adelia:outputfield name="CHO_NB_EMPLOYES" type="NUME" length="3" decimals="0" />
+&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td colspan="4"><adelia:list name="LST_EMPLOYE" step="1">
+&nbsp;
+<table width="60%" height="200" align="center" bgcolor="#CCCCCC">
+  <tr>
+    <td><strong>Matricule</strong></td>
+    <td><adelia:outputfield name="ZZ_COD_MATRICUL" type="ALPHA" length="6" lentity="PERSONNEL" lproperty="COD_MATRICULE" dataflow="yes" />
+&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>Nom</strong></td>
+    <td><adelia:outputfield name="ZZ_NOM_PERSONNE" type="ALPHA" length="30" lentity="PERSONNEL" lproperty="NOM_PERSONNE" dataflow="yes" />
+&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>Pr&eacute;nom</strong></td>
+    <td><adelia:outputfield name="ZZ_PRN_PERSONNE" type="ALPHA" length="20" lentity="PERSONNEL" lproperty="PRN_PERSONNE" dataflow="yes" />
+&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="100"><strong>Date d'entr&eacute;e </strong></td>
+    <td><adelia:outputfield name="ZZ_DAT_ENTREE" type="NUMP" length="8" decimals="0" lentity="PERSONNEL" lproperty="DAT_ENTREE" dataflow="yes" editword="  /  /    " />
+&nbsp;</td>
+  </tr>
+  <tr>
+    <td><strong>Salaire</strong></td>
+    <td><adelia:outputfield name="ZZ_MTT_SALAIRE" type="NUMP" length="11" decimals="2" lentity="PERSONNEL" lproperty="MTT_SALAIRE" dataflow="yes" editcode="CDE_N" />
+&nbsp;</td>
+  </tr>
+</table>
+</adelia:list>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="20" colspan="2"><table width="50%" align="right">
+          <tr>
+            <td><adelia:button>
+            <input type="button" name="BTN_PREC" id="BTN_PREC2" value="&lt;&lt;" onclick="::ADELIA_ONROLLDOWN(LST_EMPLOYE)"/>
+          </adelia:button></td>
+            <td><adelia:button>
+            <input type="button" name="BTN_SUIVANT" id="BTN_SUIVANT2" value="&gt;&gt;" onclick="::ADELIA_ONROLLUP(LST_EMPLOYE)"/>
+          </adelia:button></td>
+          </tr>
+            </table></td>
+      <td height="20"><adelia:button>
+        <input type="button" name="BTN_RETOUR" id="BTN_RETOUR2" value="Retour" onclick="::ADELIA_EVT"/>
+      </adelia:button></td>
+      <td height="20">&nbsp;</td>
+    </tr>
+  </table>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CAL_MT_LIG_FACT",
+  "description" : "Calcul montant ligne facture",
+  "creationDate" : "2000-08-11 13:39:02",
+  "updateDate" : "2000-08-11 13:43:46",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CA",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL" ]
+}

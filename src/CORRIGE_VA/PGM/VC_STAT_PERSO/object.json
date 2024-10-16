@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_STAT_PERSO",
+  "description" : "Statistiques personnel (multi-niveaux avec VA_B)",
+  "creationDate" : "2007-05-10 09:12:07",
+  "updateDate" : "2007-09-14 14:08:12",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCSTPE",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCSTPE",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

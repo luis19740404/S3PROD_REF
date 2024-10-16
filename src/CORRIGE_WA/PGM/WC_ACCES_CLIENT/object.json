@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "WC_ACCES_CLIENT",
+  "description" : "Gestion accès clients (multi-niveaux)",
+  "creationDate" : "2007-03-08 14:32:04",
+  "updateDate" : "2007-03-08 17:11:28",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WCACCL",
+  "programType" : "B",
+  "sourceType" : "SADELIA",
+  "layoutCode" : "WCACCL",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

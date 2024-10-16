@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERSON2",
+  "description" : "Edition personnel simple",
+  "creationDate" : "2000-05-22 15:25:02",
+  "updateDate" : "2000-05-22 15:25:02",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDPER2",
+  "nature" : "CRYSTAL"
+}

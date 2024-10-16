@@ -1,0 +1,80 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20040730)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20051014)      alpha(2) l_Language
+*ROW_METADATA(FMT_PYM        20051014)      alpha(2) l_Country
+*ROW_METADATA(FMT_PYM        20051014)      bool ReturnCode
+*ROW_METADATA(ADELIA         20070306)      * alpha(10) l_Locale
+*ROW_METADATA(FMT_PYM        20051014)      alpha(1) wlanguage
+*ROW_METADATA(FMT_PYM        20040730)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20040730)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20051014)      * La première fois, la Web page est définie en Français
+*ROW_METADATA(FMT_PYM        20051014)      recuperer_ctx 'language' 'SESSION' wlanguage
+*ROW_METADATA(FMT_PYM        20051014)      si wlanguage = *blank
+*ROW_METADATA(FMT_PYM        20051014)         l_Language = '  ' 
+*ROW_METADATA(FMT_PYM        20051014)         l_Country = '  ' 
+*ROW_METADATA(FMT_PYM        20051014)         appeler_DLL 'VaToolBx' 'VaToolBxAwsSetLocale' l_Language l_Country ReturnCode
+*ROW_METADATA(ADELIA         20070306)         * La langue est français pour la session   
+*ROW_METADATA(FMT_PYM        20051014)         wlanguage = 'F'
+*ROW_METADATA(FMT_PYM        20051014)         sauver_ctx 'language' 'SESSION' wlanguage
+*ROW_METADATA(ADELIA         20070306)      fin
+*ROW_METADATA(ADELIA         20070306)      * Focus sur le profil
+*ROW_METADATA(ADELIA         20070306)      appeler_methode pag_profil.chs_profil mettre_focus 'WC_PROFIL_1_FORM_1'
+*ROW_METADATA(ADELIA         20070306)      *
+*ROW_METADATA(FMT_PYM        20051014)      traiter pag_profil
+*ROW_METADATA(FMT_PYM        20040730)   FIN_INIT
+*ROW_METADATA(FMT_PYM        20040730)   DEBUT_RETOUR
+*ROW_METADATA(FMT_PYM        20040730)      
+*ROW_METADATA(FMT_PYM        20040730)   FIN_RETOUR
+*ROW_METADATA(FMT_PYM        20040730)   DEBUT_PAGE PAG_PROFIL
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20040730)         
+*ROW_METADATA(FMT_PYM        20040730)      FIN_DECL
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20040730)         
+*ROW_METADATA(FMT_PYM        20040730)      FIN_INIT
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_GEST_EVT
+*ROW_METADATA(FMT_PYM        20040730)         DEBUT_OBJET BTN_ENTREE
+*ROW_METADATA(FMT_PYM        20040730)            DEBUT_EVT BTN_ENTREE:ONCLICK
+*ROW_METADATA(FMT_PYM        20040730)               traiter_pgm WC_ACCUEIL
+*ROW_METADATA(FMT_PYM        20040730)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20040730)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20051014)         DEBUT_OBJET IMG_DRAP_FRANCAIS
+*ROW_METADATA(FMT_PYM        20051014)            DEBUT_EVT IMG_DRAP_FRANCAIS:ONCLICK
+*ROW_METADATA(FMT_PYM        20051014)               l_Language = '  ' 
+*ROW_METADATA(FMT_PYM        20051014)               l_Country = '  ' 
+*ROW_METADATA(FMT_PYM        20051014)                
+*ROW_METADATA(FMT_PYM        20051014)               appeler_DLL 'VaToolBx' 'VaToolBxAwsSetLocale' l_Language l_Country ReturnCode
+*ROW_METADATA(FMT_PYM        20051014)               * Language is french for the session
+*ROW_METADATA(FMT_PYM        20051014)               wlanguage = 'F'
+*ROW_METADATA(FMT_PYM        20051014)               sauver_ctx 'language' 'SESSION' wlanguage
+*ROW_METADATA(FMT_PYM        20051014)               traiter pag_profil
+*ROW_METADATA(FMT_PYM        20051014)               *
+*ROW_METADATA(FMT_PYM        20051014)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20051014)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20051014)         DEBUT_OBJET IMG_DRAP_ANGLAIS
+*ROW_METADATA(FMT_PYM        20051014)            DEBUT_EVT IMG_DRAP_ANGLAIS:ONCLICK
+*ROW_METADATA(FMT_PYM        20051014)               l_Language = 'en' 
+*ROW_METADATA(FMT_PYM        20051014)               l_Country = 'GB' 
+*ROW_METADATA(FMT_PYM        20051014)                
+*ROW_METADATA(FMT_PYM        20051014)               appeler_DLL 'VaToolBx' 'VaToolBxAwsSetLocale' l_Language l_Country ReturnCode
+*ROW_METADATA(FMT_PYM        20051014)               * Language is english for the session
+*ROW_METADATA(FMT_PYM        20051014)               wlanguage = 'E'
+*ROW_METADATA(FMT_PYM        20051014)               sauver_ctx 'language' 'SESSION' wlanguage
+*ROW_METADATA(FMT_PYM        20051014)               traiter pag_profil
+*ROW_METADATA(FMT_PYM        20051014)               *
+*ROW_METADATA(FMT_PYM        20051014)            FIN_EVT
+*ROW_METADATA(FMT_PYM        20051014)         FIN_OBJET
+*ROW_METADATA(FMT_PYM        20040730)      FIN_GEST_EVT
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_VERIF
+*ROW_METADATA(FMT_PYM        20040730)         
+*ROW_METADATA(FMT_PYM        20040730)      FIN_VERIF
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_VALID
+*ROW_METADATA(FMT_PYM        20040730)         
+*ROW_METADATA(FMT_PYM        20040730)      FIN_VALID
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20040730)      FIN_TRT_GUIDE
+*ROW_METADATA(FMT_PYM        20040730)      DEBUT_RETOUR
+*ROW_METADATA(FMT_PYM        20040730)         
+*ROW_METADATA(FMT_PYM        20040730)      FIN_RETOUR
+*ROW_METADATA(FMT_PYM        20040730)   FIN_PAGE
+*ROW_METADATA(FMT_PYM                )FIN_PGM

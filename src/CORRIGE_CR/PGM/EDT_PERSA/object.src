@@ -1,0 +1,28 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_DECL
+*ROW_METADATA(FMT_PYM        20070809)      liste lst_perso *ref_mld(personnel)
+*ROW_METADATA(FMT_PYM        20070810)      liste lst_societe *ref_mld(societe)
+*ROW_METADATA(FMT_PYM        20070809)   FIN_DECL
+*ROW_METADATA(FMT_PYM        20070809)   DEBUT_INIT
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LAN
+*ROW_METADATA(FMT_PYM        20070810)         charger_sql_lst lst_perso personnel
+*ROW_METADATA(FMT_PYM        20070810)         charger_sql_lst lst_societe societe
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM        20070810)      *
+*ROW_METADATA(FMT_PYM        20070810)      APPELER_DLL 'VaCrysRt' 'VaPreviewSetEnableExportButton' 0
+*ROW_METADATA(FMT_PYM        20070810)      APPELER_DLL 'VaCrysRt' 'VaPreviewSetEnablePrintButton' 0
+*ROW_METADATA(FMT_PYM        20070810)      ouvrir EDTPEA
+*ROW_METADATA(FMT_PYM        20070809)      *
+*ROW_METADATA(FMT_PYM        20070809)      lecture_lst lst_perso
+*ROW_METADATA(FMT_PYM        20070809)         imprimer
+*ROW_METADATA(FMT_PYM        20070809)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070810)      *
+*ROW_METADATA(FMT_PYM        20070810)      lecture_lst lst_societe
+*ROW_METADATA(FMT_PYM        20070810)         imprimer *sous_etat(Nom_societe)
+*ROW_METADATA(FMT_PYM        20070810)      fin_lecture_lst
+*ROW_METADATA(FMT_PYM        20070809)      
+*ROW_METADATA(FMT_PYM        20070809)      fermer EDTPEA *prv
+*ROW_METADATA(FMT_PYM        20070809)      
+*ROW_METADATA(FMT_PYM        20070809)   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

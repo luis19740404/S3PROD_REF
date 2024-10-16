@@ -1,0 +1,11 @@
+[ {
+  "id" : {
+    "name" : "_WMDSZ_VAB_KIND"
+  },
+  "value" : "SW_REST"
+}, {
+  "id" : {
+    "name" : "SW_STYLE"
+  },
+  "value" : "REST"
+} ]

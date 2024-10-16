@@ -1,0 +1,95 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      ALPHA(6) W_MAT
+*ROW_METADATA(ADELIA                 )      ALPHA(1) W_COD
+*ROW_METADATA(ADELIA                 )      ALPHA(1) W_RES
+*ROW_METADATA(ADELIA                 )      PARAM W_MAT W_COD W_RES
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )        NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(ADELIA                 )      FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )      VUE VUE_PERSONNEL *CLE PERSONNEL PE_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      CHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )      W_RES='0'
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_CREATION
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_CREATION
+*ROW_METADATA(ADELIA                 )      DECHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_CREATION
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCenterWindow' FEN_CREATION
+*ROW_METADATA(ADELIA                 )         SI W_COD='C'
+*ROW_METADATA(ADELIA                 )           FEN_CREATION:TITRE='Création d''une personne'
+*ROW_METADATA(ADELIA                 )           BTN_OK:TEXTE='&Créer'
+*ROW_METADATA(ADELIA                 )         SINON
+*ROW_METADATA(ADELIA                 )           FEN_CREATION:TITRE='Modification d''une personne'
+*ROW_METADATA(ADELIA                 )           BTN_OK:TEXTE='&Modifier'
+*ROW_METADATA(ADELIA                 )           ZZ_COD_MATRICUL:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )           DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )             PE_COD_MATRICUL = W_MAT
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                LIRE VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )             DEBUT_STD PERSONNEL
+*ROW_METADATA(ADELIA                 )               PRESENTER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )             FIN_STD
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )             DEBUT_STD
+*ROW_METADATA(ADELIA                 )             FIN_STD
+*ROW_METADATA(ADELIA                 )           FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_OK
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_OK:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               VERIFIER
+*ROW_METADATA(ADELIA                 )               VALIDER
+*ROW_METADATA(ADELIA                 )               W_RES='1'
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_ANNULER
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_ANNULER:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               W_RES='0'
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                  LIBERER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )           DEBUT_STD
+*ROW_METADATA(ADELIA                 )           FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         SI W_COD='C'
+*ROW_METADATA(ADELIA                 )           PE_COD_MATRICUL = ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )              LIRE VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )           SI VUE_PERSONNEL EXISTE
+*ROW_METADATA(ADELIA                 )             PREPARER_MSG COR0002 ZZ_COD_MATRICUL *BOITE
+*ROW_METADATA(ADELIA                 )             INIT_MSG ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )             ERREUR
+*ROW_METADATA(ADELIA                 )           FIN
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )            RANGER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

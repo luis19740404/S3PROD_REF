@@ -1,0 +1,40 @@
+*ROW_METADATA(FMT_PYM                )DEBUT_PGM
+*ROW_METADATA(FMT_PYM                )   DEBUT_DECL
+*ROW_METADATA(FMT_PYM                )      liste lst_societe *ref_mld(societe)
+*ROW_METADATA(FMT_PYM                )      curseur CURS_perso personnel *cond(PE_COD_SOCIETE=:SO_COD_SOCIETE)
+*ROW_METADATA(FMT_PYM                )      alpha(30) wtoto
+*ROW_METADATA(FMT_PYM                )   FIN_DECL
+*ROW_METADATA(FMT_PYM                )   DEBUT_INIT
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LOCAL
+*ROW_METADATA(FMT_PYM                )         charger_sql_lst lst_societe societe *tri(SO_COD_SOCIETE)
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      ouvrir EDpes3
+*ROW_METADATA(FMT_PYM                )      * lecture societe
+*ROW_METADATA(FMT_PYM                )      lire_p_elt lst_societe
+*ROW_METADATA(FMT_PYM                )      tant_que &code_lst(lst_societe) = *normal
+*ROW_METADATA(FMT_PYM                )         imprimer EDPES3
+*ROW_METADATA(FMT_PYM                )         * lecture personnel
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LOCAL
+*ROW_METADATA(FMT_PYM                )            ouvrir_sql_c curs_perso
+*ROW_METADATA(FMT_PYM                )            lire_av_sql_c curs_perso
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM                )         tant_que *sqlcode = *normal
+*ROW_METADATA(FMT_PYM                )            imprimer *sous_etat(employes_societe)
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LOCAL
+*ROW_METADATA(FMT_PYM                )               lire_av_sql_c curs_perso
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM                )         refaire
+*ROW_METADATA(FMT_PYM                )      DEBUT_SRV LOCAL
+*ROW_METADATA(FMT_PYM                )            fermer_sql_c curs_perso
+*ROW_METADATA(FMT_PYM                )      FIN_SRV
+*ROW_METADATA(FMT_PYM                )         *
+*ROW_METADATA(FMT_PYM                )         lire_av_elt lst_societe
+*ROW_METADATA(FMT_PYM                )      refaire
+*ROW_METADATA(FMT_PYM                )      
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      fermer EDpes3 *prv
+*ROW_METADATA(FMT_PYM                )      *
+*ROW_METADATA(FMT_PYM                )      terminer
+*ROW_METADATA(FMT_PYM                )   FIN_INIT
+*ROW_METADATA(FMT_PYM                )FIN_PGM

@@ -1,0 +1,14 @@
+{
+  "height" : 66,
+  "width" : 132,
+  "nbCharactersPerInch" : 10,
+  "nbLinesPerInch" : 6,
+  "rollUp" : "false",
+  "rollDown" : "false",
+  "printKey" : "false",
+  "helpKey" : "false",
+  "functionKeys" : "                        ",
+  "errorMode" : "N",
+  "zoneHelp" : "false",
+  "overflow" : 60
+}

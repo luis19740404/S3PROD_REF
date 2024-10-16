@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="0" name="FEN_CALENDRIER" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property binaryType="bin" id="-20">AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8A8AAAAAAAAAAAAAAP//////AMzMzMzMzMzMzMAP/////wDMzMzMzMzMzMzAD/////8AAAAAAAAAAAAAAAD////wAA////AAAAAAAAAAAAAAAAAP//8A////////////8ADA////D/////////////AAwP//8A////////////8A8MD//wD/////////////D/DA//8A///8zM///8zP8A/wwP/wD//8zMzM///M/wD/8MD/AA//zMz8zP/8zPAA//AA/wD//8z//M//zM/wD//8APAP/////8z//8z/AP///ADwD////8zM//zP/wD///wP8P///MzM///Mz/AP///8DwD////8zP//zP/wD////A8P/8zP/Mz//Mz/8P////wAD//M/8zP/MzP/wD////8AA//zMzM/8zM//8P////8AD//8zM///8z///D/////AA////////////8A/////wAP////////////D/////8A////////////8A//////AJmZmZmZmQAJmZAP/////wCZmZmZmZmQCZmQ//////8AmQAAAAAAAAmZkP//////AJkAAAAAAAAJmQD//////wmZAAAAAAAAAJkA//////8JmQAAAAAACQCZD///////CZkAkACZmZmZmQ///////wAAAAAAAAAAAAAP//////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</property>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="236"/>
+        <property id="-3" intValue="279"/>
+        <property id="-2" intValue="183"/>
+        <property id="-1" intValue="554"/>
+        <property id="3"/>
+        <property id="6"/>
+        <property id="7"/>
+        <property id="9"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABH0lEQVR4Xs2QjQ7EIAiDef+XvovOH+wAq3OXa0IyC5QvExH5nK4VSV5Q1UIwlKxjAEzpeb2/okcAunCflXgBK1V39T4rwRAMZ6ru1soeKfFCmPJ2fwIw+wMsRAc4qJXMBsAusGLzXgVgMkOAZOmyFPechlKe8SAQAI95fu8bJogCwLfn4T0rE9UA2mNo3oMtL/YXAeYL9iHdG704cwBohiF92DqEM90jAXb/Ao7anp+5BVBlHbP8KFNqUw/gu/v3g5HHQBSAa0CZ5oIOri18W7PX28vM5ghQGjfv8v1CoW9lugClafpJs+NJVh8ztwGeiAZIegNCZ04BkqLeripEAehlKertagkgCeeO1avhpSIBQPo+VfPjSXnijwDOFqMv9lj3leuKqwUAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABH0lEQVR4Xs2QjQ7EIAiDef+XvovOH+wAq3OXa0IyC5QvExH5nK4VSV5Q1UIwlKxjAEzpeb2/okcAunCflXgBK1V39T4rwRAMZ6ru1soeKfFCmPJ2fwIw+wMsRAc4qJXMBsAusGLzXgVgMkOAZOmyFPechlKe8SAQAI95fu8bJogCwLfn4T0rE9UA2mNo3oMtL/YXAeYL9iHdG704cwBohiF92DqEM90jAXb/Ao7anp+5BVBlHbP8KFNqUw/gu/v3g5HHQBSAa0CZ5oIOri18W7PX28vM5ghQGjfv8v1CoW9lugClafpJs+NJVh8ztwGeiAZIegNCZ04BkqLeripEAehlKertagkgCeeO1avhpSIBQPo+VfPjSXnijwDOFqMv9lj3leuKqwUAAAAASUVORK5CYII=</property>
+        <property id="22" intValue="271"/>
+        <property id="23" intValue="202"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="CALENDRIER" dll="CALENDAR" help="" kinematic="0" name="CAL_GENERIQUE">
+            <properties>
+                <property id="-9" stringValue="0 -1 -1"/>
+                <property id="-4" intValue="200"/>
+                <property id="-3" intValue="270"/>
+                <property id="-2" intValue="1"/>
+                <property id="-1"/>
+                <property id="18" intValue="1"/>
+                <property id="22" intValue="1"/>
+                <property id="24" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

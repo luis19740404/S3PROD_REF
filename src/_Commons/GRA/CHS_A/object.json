@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "CHS_A",
+  "description" : "chs A",
+  "creationDate" : "2012-06-25 09:19:17",
+  "updateDate" : "2012-06-25 09:24:06",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "ENTFIELD",
+  "tooltip" : "Champ de saisie",
+  "prefix" : "CHS_",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "CHAMP_DE_SAISIE"
+}

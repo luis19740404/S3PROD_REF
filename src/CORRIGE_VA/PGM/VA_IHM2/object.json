@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_IHM2",
+  "description" : "Conception IHM Pgm Modif",
+  "creationDate" : "2000-04-04 13:33:03",
+  "updateDate" : "2000-07-07 15:13:53",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VAIHM2",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAIHM2",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

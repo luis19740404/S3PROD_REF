@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Liste des clients" help="" id="0" name="FEN_LSTCLI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="311"/>
+        <property id="-3" intValue="403"/>
+        <property id="-2"/>
+        <property id="-1"/>
+        <property id="3" stringValue="Liste des clients"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="387"/>
+        <property id="23" intValue="272"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_FERMER">
+            <properties>
+                <property id="-8" stringValue="Fermer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="243"/>
+                <property id="-1" intValue="299"/>
+                <property id="25" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_CLIENT">
+            <properties>
+                <property id="-4" intValue="223"/>
+                <property id="-3" intValue="364"/>
+                <property id="-2" intValue="14"/>
+                <property id="-1" intValue="11"/>
+                <property id="6" stringValue="ZCCOD_CLIENT -6 2 6 -1 # ZCNOM_CLIENT -6 2 30 -1 # ZCCOD_POS_CLI -6 3 5 0"/>
+                <property id="28" intValue="1"/>
+                <property id="30" intValue="12632256"/>
+                <property id="38" intValue="2"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_MODIF" state="4112" text="Modifier" type="1"/>
+                <item key1="0" key2="0" name="MNU_AJOUTER" state="4112" text="Ajouter" type="1"/>
+                <item key1="0" key2="0" name="MNU_VISUALISER" state="4112" text="Visualiser" type="1"/>
+                <item key1="0" key2="0" name="MNU_EXPORT" state="4112" text="Export" type="1"/>
+                <item key1="0" key2="0" name="MNU_EXP_TXT" state="4112" text="Export txt" type="1"/>
+                <item key1="0" key2="0" name="MNU_EXCEL" state="4112" text="Export excel" type="1"/>
+            </menu>
+            <controls>
+                <control associatedVariable="ZCCOD_CLIENT" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="CLIENT.COD_CLIENT" name="ZCCOD_CLIENT">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-8" stringValue="Client"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="2" intValue="-1"/>
+                        <property id="11" stringValue="ZCCOD_CLIENT 9 2 6 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZCNOM_CLIENT" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="CLIENT.NOM_CLIENT" name="ZCNOM_CLIENT">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom    du     client"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="2" intValue="-1"/>
+                        <property id="11" stringValue="ZCNOM_CLIENT 9 2 30 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZCCOD_POS_CLI" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="CLIENT.COD_POS_CLI" name="ZCCOD_POS_CLI">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-9" stringValue="3 5 0"/>
+                        <property id="-8" stringValue="Code postal"/>
+                        <property id="-3" intValue="82"/>
+                        <property id="2" intValue="-1"/>
+                        <property id="11" stringValue="ZCCOD_POS_CLI 9 3 5 0"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" customClassName="BTN_FERMER_2" dll="BOUTON" help="" kinematic="0" name="BTN_">
+            <properties>
+                <property id="-75"/>
+                <property id="-48" intValue="1"/>
+                <property id="-47" intValue="1"/>
+                <property id="-42"/>
+                <property id="-39" intValue="1"/>
+                <property id="-38" intValue="1"/>
+                <property id="-25" intValue="251658240"/>
+                <property id="-24" intValue="251658240"/>
+                <property id="-23" stringValue="Microsoft Sans Serif;8;1;1"/>
+                <property id="-22" stringValue="Fermeture de la fenêtre"/>
+                <property id="-21" stringValue="Microsoft Sans Serif;8;1;1"/>
+                <property id="-16"/>
+                <property id="-8"/>
+                <property id="-7"/>
+                <property id="-4" intValue="30"/>
+                <property id="-3" intValue="30"/>
+                <property id="-2" intValue="241"/>
+                <property id="-1" intValue="249"/>
+                <property id="4"/>
+                <property binaryType="dib" id="7" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1ElEQVR4Xs3SPw4BQRTH8ZGIkppwCYkD6BQOoFI4gcYBuIELKEUrOhIlEoVOQtSoJC5gfN96m8xObAyVST6b7Jv3fpn9Y4wxB9hAG2utccmS6xoXp/GKEdpoqaHspQVIQwY1DLDT+t5plJ70gDcbHXfgl4DEAKuBO7Iofx2gtYoM60w3OICV1/vYMg4JDYjexxvytT4HePUcFrihGhxgXo8hJylhK8NaDw5IO9GfBIzRRNEfwESt0gL6OOKhA2fMMPUCRPTzJAKcpALq6GnzCXN/wPcEcYW0zCmiOzEAAAAASUVORK5CYII=</property>
+                <property id="23"/>
+                <property id="25" intValue="2"/>
+                <property id="26" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

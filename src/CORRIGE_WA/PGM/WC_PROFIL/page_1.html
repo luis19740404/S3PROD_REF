@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+<link href="../styles/stylegeneral.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<form name="WC_PROFIL_1_FORM_1" id="WC_PROFIL_1_FORM_1" method="post">
+  <table width="300" height="200" align="center" cellspacing="0" bgcolor="#CCCCCC">
+    <tr>
+      <td width="50%"><div align="center"><adelia:image ><img name="IMG_DRAP_FRANCAIS" id="IMG_DRAP_FRANCAIS" alt="Fran&ccedil;ais" src="../images/FLGFRAN.gif" onclick="::ADELIA_EVT_NOVALID" /></adelia:image></div></td>
+      <td width="50%"><div align="center"><adelia:image ><img name="IMG_DRAP_ANGLAIS" id="IMG_DRAP_ANGLAIS" alt="Anglais" src="../images/FLGUK.gif" onclick="::ADELIA_EVT_NOVALID" /></adelia:image></div></td>
+    </tr>
+    <tr>
+      <td colspan="2"><p align="center"><strong>Indiquez votre profil et votre mot de passe,</strong></p>
+      <p align="center"><strong>puis cliquez sur Entr&eacute;e.</strong> </p></td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>Profil</strong></td>
+      <td><adelia:entryfield type="ALPHA" length="10" mandatory="true">
+<input type="text" name="CHS_PROFIL" id="CHS_PROFIL" size="10" maxlength="10"/>
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="40%"><strong>Mot de passe </strong></td>
+      <td><adelia:entryfield type="ALPHA" length="10" mandatory="true">
+<input type="password"  name="CHS_MOTPAS" id="CHS_MOTPAS" size="10" maxlength="10"/>
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="10px" colspan="2" bgcolor="#CCCCCC">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" bgcolor="#CCCCCC"><div align="center"><adelia:button default="true" ><input name="BTN_ENTREE" type="submit" class="BordureBouton" id="BTN_ENTREE" onclick="::ADELIA_EVT" value="Entr&eacute;e" /></adelia:button>
+&nbsp;</div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

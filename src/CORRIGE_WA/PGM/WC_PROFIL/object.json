@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_PROFIL",
+  "description" : "Saisie profil et mot de passe",
+  "creationDate" : "2004-07-30 06:44:38",
+  "updateDate" : "2007-03-30 12:24:14",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcprofil",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCPROF",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_SANS_MEN"
+}

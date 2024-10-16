@@ -1,0 +1,11 @@
+{
+  "endProgramCode" : "LR",
+  "dateFormat" : "SYSTEM",
+  "ioErrors" : "READ",
+  "fileOptions" : [ {
+    "id" : {
+      "fileName" : "**EDTCOM"
+    },
+    "openClose" : true
+  } ]
+}

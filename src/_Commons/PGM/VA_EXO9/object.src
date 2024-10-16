@@ -1,0 +1,137 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      CURSEUR CUR_PERSO PERSONNEL *TRI(PE_LIB_BUD_PERS)
+*ROW_METADATA(ADELIA                 )      NUM_BIN_4 NB_VILLES
+*ROW_METADATA(ADELIA                 )      NUM_E(15,4) TAB_VAL(300)
+*ROW_METADATA(ADELIA                 )      NUM_E(15,4) TAB_PERS_HF(2,300)
+*ROW_METADATA(ADELIA                 )      ALPHA(250)  TAB_VILLES(300)
+*ROW_METADATA(ADELIA                 )      BOOL  TAB_PTS_CLIC(300)
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_MAIN
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_MAIN
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_MAIN
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         TAB_PTS_CLIC=*FAUX
+*ROW_METADATA(ADELIA                 )         VIDER_LST LST_NBCOM:LISTE
+*ROW_METADATA(ADELIA                 )         DEBUT_SRV LAN
+*ROW_METADATA(ADELIA                 )            NB_VILLES=0
+*ROW_METADATA(ADELIA                 )            INIT_RUPTURE CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )            OUVRIR_SQL_C CUR_PERSO
+*ROW_METADATA(ADELIA                 )            LIRE_AV_SQL_C CUR_PERSO
+*ROW_METADATA(ADELIA                 )            TANT_QUE *SQLCODE = *NORMAL
+*ROW_METADATA(ADELIA                 )               TRAITER_CHG CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )               W_NB_PERS=W_NB_PERS+1
+*ROW_METADATA(ADELIA                 )               SI PE_COD_SEXE_PER='H'
+*ROW_METADATA(ADELIA                 )                  TAB_PERS_HF(1,NB_VILLES) = TAB_PERS_HF(1,NB_VILLES) + 1
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  TAB_PERS_HF(2,NB_VILLES) = TAB_PERS_HF(2,NB_VILLES) + 1
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               LIRE_AV_SQL_C CUR_PERSO
+*ROW_METADATA(ADELIA                 )               TRAITER_TOTAL CALCUL_NB_COM
+*ROW_METADATA(ADELIA                 )            REFAIRE
+*ROW_METADATA(ADELIA                 )            FERMER_SQL_C CUR_PERSO
+*ROW_METADATA(ADELIA                 )         FIN_SRV
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE CAM_REPART DESSINER_DONNEES NB_VILLES TAB_VAL TAB_VILLES
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_QUIT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_QUIT:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET FEN_MAIN
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_MAIN:ClicCroix
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_HISTO
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_HISTO:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               INITIALISER FEN_HISTO
+*ROW_METADATA(ADELIA                 )               EXECUTER FEN_HISTO
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAM_REPART
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAM_REPART:HotHit
+*ROW_METADATA(ADELIA                 )               TAB_PTS_CLIC(CAM_REPART:POINT_CLIQUE)=NON TAB_PTS_CLIC(CAM_REPART:POINT_CLIQUE)
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE CAM_REPART DETACHER_PARTS TAB_PTS_CLIC
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_HISTO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 NB_SERIES
+*ROW_METADATA(ADELIA                 )         ALPHA(250)  TAB_LEGENDE(2)
+*ROW_METADATA(ADELIA                 )         ALPHA(250)  TAB_ETIQUETTE(300)
+*ROW_METADATA(ADELIA                 )         NUM_E(15,4)  TAB_ERREUR(300)
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 I
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         NB_SERIES=2
+*ROW_METADATA(ADELIA                 )         TAB_LEGENDE(1)='Homme'
+*ROW_METADATA(ADELIA                 )         TAB_LEGENDE(2)='Femme'
+*ROW_METADATA(ADELIA                 )         APPELER_METHODE HISTO_DATA DEFINIR_GRAPHIQUE NB_SERIES NB_VILLES TAB_VILLES TAB_LEGENDE
+*ROW_METADATA(ADELIA                 )         I=1
+*ROW_METADATA(ADELIA                 )         TANT_QUE I <= 2
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE HISTO_DATA DEFINIR_DONNEES I TAB_PERS_HF(I,1) TAB_ETIQUETTE TAB_ERREUR
+*ROW_METADATA(ADELIA                 )            I=I+1
+*ROW_METADATA(ADELIA                 )         REFAIRE
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LBR_GROUPEMENT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LBR_GROUPEMENT:ChangementValeur
+*ROW_METADATA(ADELIA                 )               SI LBR_GROUPEMENT:VALEUR=1
+*ROW_METADATA(ADELIA                 )                  HISTO_DATA:GROUPEMENT=_HST_GROUP_SIMPLE
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  SI LBR_GROUPEMENT:VALEUR=2
+*ROW_METADATA(ADELIA                 )                     HISTO_DATA:GROUPEMENT=_HST_GROUP_EMPILE
+*ROW_METADATA(ADELIA                 )                  SINON
+*ROW_METADATA(ADELIA                 )                     HISTO_DATA:GROUPEMENT=_HST_GROUP_EMPILE_POURC
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_RUPTURE CALCUL_NB_COM *SERVER(LAN)
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         RUPTURE PE_COD_POS_PERS *SQL
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      TRT_CHANGEMENT
+*ROW_METADATA(ADELIA                 )         W_NB_PERS=0
+*ROW_METADATA(ADELIA                 )         NB_VILLES=NB_VILLES+1
+*ROW_METADATA(ADELIA                 )         TAB_PERS_HF(1,NB_VILLES) = 0
+*ROW_METADATA(ADELIA                 )         TAB_PERS_HF(2,NB_VILLES) = 0
+*ROW_METADATA(ADELIA                 )         W_VIL_PERS=PE_LIB_VIL_PERS
+*ROW_METADATA(ADELIA                 )         W_BUD_PERS=PE_LIB_BUD_PERS
+*ROW_METADATA(ADELIA                 )      FIN_TRAITEMENT
+*ROW_METADATA(ADELIA                 )      TRT_TOTAL
+*ROW_METADATA(ADELIA                 )         TAB_VAL(NB_VILLES)=W_NB_PERS
+*ROW_METADATA(ADELIA                 )         TAB_VILLES(NB_VILLES)=W_VIL_PERS
+*ROW_METADATA(ADELIA                 )         INSERER_ELT FEN_MAIN.LST_NBCOM:LISTE
+*ROW_METADATA(ADELIA                 )      FIN_TRAITEMENT
+*ROW_METADATA(ADELIA                 )   FIN_RUPTURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

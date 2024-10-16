@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="0" name="FEN_ENTCOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-3" intValue="343"/>
+        <property id="-2" intValue="91"/>
+        <property id="-1" intValue="24"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_ENTCOM">
+            <properties>
+                <property id="-4" intValue="203"/>
+                <property id="-3" intValue="275"/>
+                <property id="-2" intValue="26"/>
+                <property id="-1" intValue="23"/>
+                <property id="6" stringValue="ZENUM_COMMANDE -6 3 5 0 # ZELIB_OBJ_CDE -6 2 30 -1"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_CREER" state="4112" text="Création" type="1"/>
+                <item key1="0" key2="0" name="MNU_MODIF" state="4112" text="Modification" type="1"/>
+                <item key1="0" key2="0" name="MNU_SUPPRESSION" state="4112" text="Supprimer" type="1"/>
+            </menu>
+            <controls>
+                <control associatedVariable="ZENUM_COMMANDE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="ENTCDE.NUM_COMMANDE" name="ZENUM_COMMANDE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="3"/>
+                        <property id="-11" intValue="14"/>
+                        <property id="-9" stringValue="3 5 0"/>
+                        <property id="-8" stringValue="N° Cde"/>
+                        <property id="-3" intValue="49"/>
+                        <property id="11" stringValue="ZENUM_COMMANDE 9 3 5 0"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZELIB_OBJ_CDE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="ENTCDE.LIB_OBJ_CDE" name="ZELIB_OBJ_CDE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Objet"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="11" stringValue="ZELIB_OBJ_CDE 9 2 30 -1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_QUITTER">
+            <properties>
+                <property id="-8" stringValue="Quitter"/>
+                <property id="-2" intValue="244"/>
+                <property id="-1" intValue="229"/>
+            </properties>
+        </control>
+    </controls>
+</window>

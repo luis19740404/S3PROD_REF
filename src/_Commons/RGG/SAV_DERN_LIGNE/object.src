@@ -1,0 +1,5 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   *
+*ROW_METADATA(ADELIA                 )   DECLARER DERLIG;DERN_LIGNE 3;0
+*ROW_METADATA(ADELIA                 )   DERN_LIGNE = $$NUM_LIGNE
+*ROW_METADATA(ADELIA                 )FIN_RGG

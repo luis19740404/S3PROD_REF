@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO_SQL_D",
+  "description" : "Requete SQL Dynamique",
+  "creationDate" : "2000-04-04 13:31:57",
+  "updateDate" : "2000-07-07 15:11:35",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VASQLD",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VASQLD",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

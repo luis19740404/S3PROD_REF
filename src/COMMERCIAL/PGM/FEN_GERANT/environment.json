@@ -1,0 +1,32 @@
+{
+  "views" : [ {
+    "id" : {
+      "code" : "*1"
+    },
+    "guideWord" : "GERANT",
+    "fileName" : "GERANTL",
+    "access" : "SEQUENTIAL_KEY",
+    "update" : "NO_UPDATE",
+    "nbKeys" : 1,
+    "generation" : "KINEMATIC",
+    "accesses" : [ {
+      "id" : {
+        "code" : "*1",
+        "ordinal" : 1
+      },
+      "guideWord" : "GCOD_GERANT",
+      "type" : "DEFAULT"
+    } ]
+  } ],
+  "variables" : [ {
+    "id" : {
+      "guideWord" : "PCOD_GERANT",
+      "fileName" : ""
+    },
+    "shortName" : "PCGER",
+    "length" : 6,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE",
+    "reference" : "GCGER"
+  } ]
+}

@@ -1,0 +1,34 @@
+*--------------------------* CYCLE DE LECTURE DU FICHIER GUIDE
+LIRE_AVANT  FICHIER_BOUCLE
+TANT_QUE FICHIER_BOUCLE EXISTE
+  PRESENTER FICHIER_BOUCLE 
+  TRAITER_CHG RUPTURE_1
+  TRAITER_PROC DETAIL
+  LIRE_AVANT  FICHIER_BOUCLE
+  TRAITER_TOTAL RUPTURE_1
+REFAIRE
+*___________________________________________________
+*--------------------------* Rupture entete
+TRT_CHANGEMENT RUPTURE_1
+* Lecture d'un fichier pour obtenir des renseignements type libellé
+* pour la rupture d'entete
+LIRE VUE_RUPTURE
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*--------------------------* Rupture total
+TRT_TOTAL RUPTURE_1
+EDITER TOTAL
+TOTAL_LIGNES = 0
+FIN_TRAITEMENT
+*--------------------------* Routine changement page
+CHANGEMENT_PAGE
+IMPRIMER ENTETE
+FIN_TRAITEMENT
+*--------------------------* Procédure impression ligne detail
+DEBUT_PROCEDURE DETAIL
+* Lecture d'un fichier pour obtenir des renseignements type libellé
+* pour la ligne détail
+LIRE VUE_DETAIL
+IMPRIMER   DETAIL
+TOTAL_LIGNES = TOTAL_LIGNES + zone à totaliser
+FIN_PROCEDURE

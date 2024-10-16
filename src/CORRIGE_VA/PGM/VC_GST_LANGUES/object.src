@@ -1,0 +1,70 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_LANGUE
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_LANGUE
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_LANGUE
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         TRAITER_PROC PROC_LANGUE
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET RDB_PAYS
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT RDB_PAYS:ChangementValeur
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_LANGUE
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET RDB_LANGUE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT RDB_LANGUE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_LANGUE
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_QUITTER
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_QUITTER:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE PROC_LANGUE
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      SI FEN_LANGUE.RDB_PAYS:VALEUR='FR'
+*ROW_METADATA(ADELIA                 )        FEN_LANGUE.RDB_LANGUE:VISIBILITE=*FAUX
+*ROW_METADATA(ADELIA                 )        W_LANGAGE='Français'
+*ROW_METADATA(ADELIA                 )      SINON
+*ROW_METADATA(ADELIA                 )        FEN_LANGUE.RDB_LANGUE:VISIBILITE=*VRAI
+*ROW_METADATA(ADELIA                 )        SI W_LANGUE='F'
+*ROW_METADATA(ADELIA                 )          W_LANGAGE='Français'
+*ROW_METADATA(ADELIA                 )        SINON
+*ROW_METADATA(ADELIA                 )          SI W_LANGUE='I'
+*ROW_METADATA(ADELIA                 )            W_LANGAGE='Italien'
+*ROW_METADATA(ADELIA                 )          SINON
+*ROW_METADATA(ADELIA                 )            SI W_LANGUE='A'
+*ROW_METADATA(ADELIA                 )              W_LANGAGE='Allemand'
+*ROW_METADATA(ADELIA                 )            SINON
+*ROW_METADATA(ADELIA                 )              SI W_LANGUE='R'
+*ROW_METADATA(ADELIA                 )                W_LANGAGE='Romanche'
+*ROW_METADATA(ADELIA                 )              SINON
+*ROW_METADATA(ADELIA                 )              FIN
+*ROW_METADATA(ADELIA                 )            FIN
+*ROW_METADATA(ADELIA                 )          FIN
+*ROW_METADATA(ADELIA                 )        FIN
+*ROW_METADATA(ADELIA                 )      FIN
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

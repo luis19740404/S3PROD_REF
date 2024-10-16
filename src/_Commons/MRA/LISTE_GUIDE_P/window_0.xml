@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Liste guide" help="" id="0" name="RAD1_FENETRE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="403"/>
+        <property id="-3" intValue="408"/>
+        <property id="-2" intValue="108"/>
+        <property id="-1" intValue="228"/>
+        <property id="3" stringValue="Liste guide"/>
+        <property id="7"/>
+        <property id="9"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="392"/>
+        <property id="23" intValue="365"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_APARTIR">
+            <properties>
+                <property id="-8" stringValue="Afficher à partir de :"/>
+                <property id="-4" intValue="13"/>
+                <property id="-3" intValue="128"/>
+                <property id="-2" intValue="13"/>
+                <property id="-1" intValue="22"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="RAD2_CHS_APARTIR">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 1 -1"/>
+                <property id="-4" intValue="20"/>
+                <property id="-3" intValue="134"/>
+                <property id="-2" intValue="10"/>
+                <property id="-1" intValue="166"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="RAD2_BTN_APARTIR">
+            <properties>
+                <property id="-41"/>
+                <property id="-39"/>
+                <property id="-8"/>
+                <property id="-4" intValue="10"/>
+                <property id="-3" intValue="10"/>
+                <property id="-2" intValue="15"/>
+                <property id="-1" intValue="363"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="RAD1_LISTE">
+            <properties>
+                <property id="-4" intValue="284"/>
+                <property id="-3" intValue="370"/>
+                <property id="-2" intValue="38"/>
+                <property id="-1" intValue="9"/>
+                <property id="6"/>
+                <property id="7" intValue="1"/>
+                <property id="16" intValue="3"/>
+                <property id="18" intValue="16711680"/>
+                <property id="28" intValue="1"/>
+                <property id="30" intValue="16776960"/>
+                <property id="37" intValue="1"/>
+                <property id="38" intValue="1"/>
+                <property id="45" intValue="1"/>
+            </properties>
+            <menu>
+                <item key1="0" key2="0" name="MNU_CHOISIR" state="69648" text="Choisir" type="1"/>
+            </menu>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_CHOISIR">
+            <properties>
+                <property id="-8" stringValue="Choisir"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="331"/>
+                <property id="-1" intValue="10"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-8" stringValue="Annuler"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="331"/>
+                <property id="-1" intValue="98"/>
+            </properties>
+        </control>
+    </controls>
+</window>

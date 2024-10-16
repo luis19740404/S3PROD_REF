@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="1" name="FEN_VERSION" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="156"/>
+        <property id="-3" intValue="269"/>
+        <property id="-2" intValue="267"/>
+        <property id="-1" intValue="297"/>
+        <property id="4"/>
+        <property id="6"/>
+        <property id="7"/>
+        <property id="8"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAw0lEQVR4Xu2OCwqDQAwF9+zFmxW8lmWgyvLoplmT0A8OBNS8F6e1iy9kS5gQWwT6zzmN3pyC/npfQxJ6cwr6CEQk9OYUez8iISfn6PtnJbpz89A3xoXeTIG7+qMR2j2wdu+gu9wWl4R2D9hZewt6aQJWZgSdVAEr9wry6QJWViFbImDle8iVCVidHTKlAlYP2JcIeCGbJqDPHsimCOi7fhtBLiygkPXmyaULAHlPh8x/Cnjh7iXwOwJV4xVoBKtG//VxHoEF7ZMzaN2SAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbUlEQVR4Xq2MUQrAMAxCe/9rDXqtjgwZMVFaxh74Y14c4yfWYSxrRziIpPqNcOY17UiTK9HFgBtpsutSCCsrcCOUYEfQE0qwI+gIJbSUO5He+0AFPdGEJNIt9UR1XiCrjiAhA1l1BAk75MCHPNyqX+sXplRO/QAAAABJRU5ErkJggg==</property>
+        <property id="13"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ1">
+            <properties>
+                <property id="-8" stringValue="Programme de formation"/>
+                <property id="-3" intValue="132"/>
+                <property id="-2" intValue="37"/>
+                <property id="-1" intValue="66"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ2">
+            <properties>
+                <property id="-8" stringValue="Version 1.0"/>
+                <property id="-3" intValue="132"/>
+                <property id="-2" intValue="63"/>
+                <property id="-1" intValue="66"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="IMAGE" dll="BITMAP" help="" kinematic="0" name="ID_OBJ3">
+            <properties>
+                <property id="-4" intValue="37"/>
+                <property id="-3" intValue="39"/>
+                <property id="-2" intValue="10"/>
+                <property id="-1" intValue="11"/>
+                <property binaryType="dib" id="2" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAm0lEQVR4Xu2Q0QqAIAxF9+3RnwV+V5FjktvcNcyH8LKHHOd6QkpH+nRIr8bOLwVk5QXDpLEi2rf9mkYZYZg0VkAZYZg0VkAZYZisz366mH8L5Nt7YoQpsHTGxhVUf4TErMwVyJkcmm5Ab8LKEoSVDoFOWLEFjWRGsLDyECCpBGHmCvJBv6Zc6k3YXYKwywIv+kYt8FIEn84ShHMC6qwyDHYkMBwAAAAASUVORK5CYII=</property>
+                <property id="3" intValue="2"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_OK">
+            <properties>
+                <property id="-16" intValue="1"/>
+                <property id="-8" stringValue="&amp;Ok"/>
+                <property id="-2" intValue="103"/>
+                <property id="-1" intValue="94"/>
+            </properties>
+        </control>
+    </controls>
+</window>

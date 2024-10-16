@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV008",
+  "description" : "insertionà partir d’une liste graphique",
+  "creationDate" : "2024-05-30 08:14:18",
+  "updateDate" : "2024-05-31 13:06:09",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV008",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV008",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : "N"
+}

@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "RGG_GUIDE_PERSO",
+  "description" : "Guide de saisie perso",
+  "creationDate" : "1999-01-25 14:06:08",
+  "updateDate" : "1999-01-25 14:06:53",
+  "visibility" : "PRIVATE",
+  "mrClass" : "GS",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

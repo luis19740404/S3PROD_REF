@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "INIT_ANNEE_4_0",
+  "description" : "Initialisation année 4.0",
+  "creationDate" : "1996-05-31 08:59:03",
+  "updateDate" : "1996-06-13 08:04:16",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IP",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

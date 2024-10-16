@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV001",
+  "description" : "Liste client Visual CLOUD Mlivain",
+  "creationDate" : "2024-05-27 08:38:46",
+  "updateDate" : "2024-10-15 16:02:41",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV001",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV001",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : "N"
+}

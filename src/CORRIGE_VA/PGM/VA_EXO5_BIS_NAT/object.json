@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO5_BIS_NAT",
+  "description" : "Programme de création",
+  "creationDate" : "1999-01-18 13:54:53",
+  "updateDate" : "2000-07-07 15:12:43",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VANA5B",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VANA5B",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

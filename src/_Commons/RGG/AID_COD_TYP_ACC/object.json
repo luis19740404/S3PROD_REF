@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "AID_COD_TYP_ACC",
+  "description" : "Aide sur code type accident",
+  "creationDate" : "1999-01-18 13:15:27",
+  "updateDate" : "1999-01-18 13:18:10",
+  "visibility" : "PUBLIC",
+  "mrClass" : "GS",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

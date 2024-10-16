@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "VA_WORD",
+  "description" : "Client Word - exemple B.C.",
+  "creationDate" : "2000-04-04 13:32:59",
+  "updateDate" : "2000-07-07 15:14:27",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VAMSWR",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VAMSWR",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "SQL"
+}

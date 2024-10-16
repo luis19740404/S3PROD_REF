@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "MLV003",
+  "description" : "Calcul taxe C.A.",
+  "creationDate" : "2024-05-28 12:50:29",
+  "updateDate" : "2024-05-28 12:55:49",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "MLV003",
+  "nature" : "ADELIA"
+}

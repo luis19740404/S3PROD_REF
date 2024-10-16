@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="" help="" id="0" name="FEN_INSPER" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-46" intValue="96"/>
+        <property id="-45" intValue="96"/>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="471"/>
+        <property id="-3" intValue="756"/>
+        <property id="-2"/>
+        <property id="-1"/>
+        <property id="3"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="740"/>
+        <property id="23" intValue="432"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_PERSONNEL">
+            <properties>
+                <property id="-4" intValue="390"/>
+                <property id="-3" intValue="713"/>
+                <property id="-2" intValue="12"/>
+                <property id="-1" intValue="16"/>
+                <property id="6" stringValue="ZZ_COD_MATRICUL -6 2 6 -1 # ZZ_NOM_PERSONNE -6 2 30 -1 # ZZ_PRN_PERSONNE -6 2 20 -1 # ZZ_MTT_SALAIRE -6 3 11 2 # ZZ_NBR_HEURE_ME -6 3 5 2 # ZZ_DAT_ENTREE -6 0 -1 -1 # ZZ_COD_SOCIETE -6 2 2 -1 # COL_TYPEACTION -6 2 15 -1"/>
+                <property id="15" intValue="1"/>
+                <property id="28" intValue="1"/>
+                <property id="30" intValue="12632256"/>
+                <property id="38" intValue="1"/>
+            </properties>
+            <controls>
+                <control associatedVariable="ZZ_COD_MATRICUL" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_MATRICULE" name="ZZ_COD_MATRICUL">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 6 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_COD_MATRICUL 9 2 6 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NOM_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.NOM_PERSONNE" name="ZZ_NOM_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 30 -1"/>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="224"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_NOM_PERSONNE 9 2 30 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_PRN_PERSONNE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.PRN_PERSONNE" name="ZZ_PRN_PERSONNE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 20 -1"/>
+                        <property id="-8" stringValue="Prénom"/>
+                        <property id="-3" intValue="154"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_PRN_PERSONNE 9 2 20 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_MTT_SALAIRE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.MTT_SALAIRE" name="ZZ_MTT_SALAIRE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="4"/>
+                        <property id="-9" stringValue="3 11 2"/>
+                        <property id="-8" stringValue="Salaire"/>
+                        <property id="-3" intValue="98"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_MTT_SALAIRE 9 3 11 2"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_NBR_HEURE_ME" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.NBR_HEURE_MENS" name="ZZ_NBR_HEURE_ME">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="4"/>
+                        <property id="-9" stringValue="3 5 2"/>
+                        <property id="-8" stringValue="Horaire"/>
+                        <property id="-3" intValue="56"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_NBR_HEURE_ME 9 3 5 2"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_DAT_ENTREE" className="COLONNE" dll="COLONNE" help="" kinematic="0" logicalProperty="PERSONNEL.DAT_ENTREE" name="ZZ_DAT_ENTREE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="8"/>
+                        <property id="-9" stringValue="0 -1 -1"/>
+                        <property id="-8" stringValue="Date"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_DAT_ENTREE 9 0 -1 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="ZZ_COD_SOCIETE" className="COLONNE" dll="COLONNE" help="" kinematic="1" logicalProperty="PERSONNEL.COD_SOCIETE" name="ZZ_COD_SOCIETE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-12" intValue="1"/>
+                        <property id="-9" stringValue="2 2 -1"/>
+                        <property id="-8" stringValue="Code"/>
+                        <property id="-3" intValue="38"/>
+                        <property id="6"/>
+                        <property id="11" stringValue="ZZ_COD_SOCIETE 9 2 2 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                        <property id="34"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="COL_TYPEACTION">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-8" stringValue="Colonne"/>
+                        <property id="-3" intValue="75"/>
+                        <property id="11" stringValue="COL_TYPEACTION 9 2 15 -1"/>
+                        <property id="20" stringValue="Microsoft Sans Serif;8;1;1"/>
+                    </properties>
+                </control>
+            </controls>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_VALIDER">
+            <properties>
+                <property id="-8" stringValue="Valider"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="406"/>
+                <property id="-1" intValue="587"/>
+                <property id="25" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_FERMER">
+            <properties>
+                <property id="-8" stringValue="Fermer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="406"/>
+                <property id="-1" intValue="664"/>
+                <property id="25" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_NOUVEAU">
+            <properties>
+                <property id="-8" stringValue="Nouveau"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="406"/>
+                <property id="-1" intValue="510"/>
+                <property id="25" intValue="1"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_SUPPRIMER">
+            <properties>
+                <property id="-8" stringValue="Supprimer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="405"/>
+                <property id="-1" intValue="19"/>
+                <property id="25" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

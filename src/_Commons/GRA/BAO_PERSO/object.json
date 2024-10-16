@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "BAO_PERSO",
+  "description" : "Objet de base barre d'outils perso",
+  "creationDate" : "2014-12-02 15:43:32",
+  "updateDate" : "2014-12-02 15:47:38",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "TOOLBAR",
+  "tooltip" : "Barre d'outils",
+  "prefix" : "BAR_",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BARRE_OUTILS"
+}

@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "WC_AFF_EMP_SOC",
+  "description" : "Affichage des employés d'une société",
+  "creationDate" : "2004-07-30 12:01:00",
+  "updateDate" : "2004-07-30 12:55:36",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcaffempsoc",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCAFEM",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true,
+  "canvasName" : "WC_CAN_AVEC_MEN"
+}

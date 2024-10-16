@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "WC_BARRE_BAS",
+  "description" : "barre bas de canevas",
+  "creationDate" : "2004-07-29 16:10:30",
+  "updateDate" : "2004-07-29 16:14:09",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WCBARB",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCBARB",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "keepState" : true
+}

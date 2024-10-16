@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_MENU",
+  "description" : "Menu général",
+  "creationDate" : "2007-09-11 15:27:55",
+  "updateDate" : "2007-09-18 15:16:55",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCMENU",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCMENU",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

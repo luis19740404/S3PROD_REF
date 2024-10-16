@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV004",
+  "description" : "Programme batch serveur (FCTPER)",
+  "creationDate" : "2024-05-28 14:03:07",
+  "updateDate" : "2024-05-30 07:16:21",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV004",
+  "programType" : "B",
+  "sourceType" : "SADELIA",
+  "layoutCode" : "MLV004",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "manageHistoryButtons" : "N"
+}

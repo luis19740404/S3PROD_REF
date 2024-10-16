@@ -1,0 +1,2 @@
+Squelette standard pour programmes d'éditions de listes (Sur AS/400, touche
+F21=Imprimer liste   dans les programmes de gestion par liste CUA).

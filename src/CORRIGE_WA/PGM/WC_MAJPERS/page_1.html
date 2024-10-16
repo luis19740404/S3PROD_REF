@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body><form name="WC_MAJPERS_1_FORM_1" id="WC_MAJPERS_1_FORM_1" method="post">
+  <p align="center"><adelia:cond name="CND_MAJ">
+&nbsp;Modification d'un employ&eacute; 
+</adelia:cond>
+&nbsp;<adelia:cond name="CND_CREAT">
+&nbsp;Cr&eacute;ation d'un employ&eacute; 
+</adelia:cond>
+</p>
+  <table width="50%"  border="1" align="center">
+    <tr>
+      <td>Code matricule&nbsp;</td>
+      <td><adelia:entryfield type="ALPHA" length="6" lentity="PERSONNEL" lproperty="COD_MATRICULE" dataflow="yes">
+<input type="text" name="ZZ_COD_MATRICUL" id="ZZ_COD_MATRICUL" size="6" maxlength="6" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Nom </td>
+      <td><adelia:entryfield type="ALPHA" length="30" lentity="PERSONNEL" lproperty="NOM_PERSONNE" dataflow="yes">
+<input type="text" name="ZZ_NOM_PERSONNE" id="ZZ_NOM_PERSONNE" size="30" maxlength="30" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Pr&eacute;nom</td>
+      <td><adelia:entryfield type="ALPHA" length="20" lentity="PERSONNEL" lproperty="PRN_PERSONNE" dataflow="yes">
+<input type="text" name="ZZ_PRN_PERSONNE" id="ZZ_PRN_PERSONNE" size="20" maxlength="20" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Sexe&nbsp;</td>
+      <td><table width="200">
+        <tr>
+          <td><adelia:radio type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SEXE_PERS" dataflow="yes" ><input type="radio" name="ZZ_COD_SEXE_PER" id="ZZ_COD_SEXE_PER" value="H" />Homme</adelia:radio>
+&nbsp;</td>
+          <td><adelia:radio type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SEXE_PERS" dataflow="yes" ><input type="radio" name="ZZ_COD_SEXE_PER" id="ZZ_COD_SEXE_PER" value="F" />Femme</adelia:radio>
+&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td>Date naissance </td>
+      <td><adelia:entryfield type="NUMP" length="8" decimals="0" lentity="PERSONNEL" lproperty="DAT_NAIS_PERS" dataflow="yes" editword="  /  /    " >
+<input type="text" name="ZZ_DAT_NAIS_PER" id="ZZ_DAT_NAIS_PER" size="10" maxlength="10" />
+</adelia:entryfield>
+&nbsp;<adelia:calendar name="CAL_NAISSANCE" id="CAL_NAISSANCE" type="NUMP" mindate="1753-01-01" maxdate="9999-12-31" weekstartday="MON" daysname="LETTER1" dayscolor="black" monthbgcolor="white" titlecolor="#FF9933" barcolor="#0000AA" horzlinecolor="black" vertlinecolor="black" daysweekcolor="#0000AA" numweekcolor="#0000AA" length="8" decimals="0" dateformat="DMY" popuptype="WIN" popupposition="CENTER" boundctrl="ZZ_DAT_NAIS_PER" /></td>
+    </tr>
+    <tr>
+      <td>Ville</td>
+      <td><adelia:entryfield type="ALPHA" length="30" lentity="PERSONNEL" lproperty="LIB_VIL_PERS" dataflow="yes">
+<input type="text" name="ZZ_LIB_VIL_PERS" id="ZZ_LIB_VIL_PERS" size="30" maxlength="30" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Situation familiale</td>
+      <td>&nbsp;<adelia:combobox type="ALPHA" length="1" lentity="PERSONNEL" lproperty="COD_SIT_FAMIL" dataflow="yes" textisnotvalue="true" ><select name="ZZ_COD_SIT_FAMI" id="ZZ_COD_SIT_FAMI" ></select></adelia:combobox></td>
+    </tr>
+    <tr>
+      <td>Date d'embauche </td>
+      <td><adelia:entryfield type="NUMP" length="8" decimals="0" lentity="PERSONNEL" lproperty="DAT_ENTREE" dataflow="yes" editword="  /  /    " >
+<input type="text" name="ZZ_DAT_ENTREE" id="ZZ_DAT_ENTREE" size="10" maxlength="10" />
+</adelia:entryfield>
+&nbsp;<adelia:calendar name="CAL_EMBAUCHE" id="CAL_EMBAUCHE" type="NUMP" length="8" decimals="0" dateformat="DMY" mindate="1753-01-01" maxdate="9999-12-31" weekstartday="MON" daysname="LETTER1" dayscolor="black" monthbgcolor="white" titlecolor="#FF9933" barcolor="#0000AA" horzlinecolor="black" vertlinecolor="black" daysweekcolor="#0000AA" numweekcolor="#0000AA" boundctrl="ZZ_DAT_ENTREE" popuptype="WIN" popupposition="CENTER"/></td>
+    </tr>
+    <tr>
+      <td>Salaire mensuel </td>
+      <td><adelia:entryfield type="NUMP" length="11" decimals="2" lentity="PERSONNEL" lproperty="MTT_SALAIRE" dataflow="yes" editcode="CDE_N" >
+<input type="text" name="ZZ_MTT_SALAIRE" id="ZZ_MTT_SALAIRE" size="15" maxlength="15" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Code soci&eacute;t&eacute;</td>
+      <td><adelia:entryfield type="ALPHA" length="2" lentity="PERSONNEL" lproperty="COD_SOCIETE" dataflow="yes">
+<input type="text" name="ZZ_COD_SOCIETE" id="ZZ_COD_SOCIETE" size="2" maxlength="2" />
+</adelia:entryfield>
+&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center"></div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <table width="20%" align="center">
+    <tr>
+      <td colspan="2"><div align="center"></div>        <div align="center"><adelia:error name="*STD" color="#FF0000"/>
+&nbsp;</div></td>
+    </tr>
+    <tr>
+      <td><adelia:button>
+<input type="button" name="BTN_VALIDER" id="BTN_VALIDER" value="Valider" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+      <td><adelia:button default="true">
+<input type="submit" name="BTN_ANNULER" id="BTN_ANNULER" value="Annuler" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+    </tr>
+  </table>
+  </form>
+
+
+</body>
+</html>

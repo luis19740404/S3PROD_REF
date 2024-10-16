@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "BOUTON_EXIT",
+  "description" : "Bouton exit",
+  "creationDate" : "2005-07-19 16:00:41",
+  "updateDate" : "2007-10-11 13:02:43",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "BOUTON",
+  "tooltip" : "Bouton exit",
+  "prefix" : "BTN_",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BOUTON"
+}

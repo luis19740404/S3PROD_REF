@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "VA_GES_COM",
+  "description" : "VA Gestion commande",
+  "creationDate" : "2000-02-01 11:12:00",
+  "updateDate" : "2020-08-19 12:26:39",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VGSCOM",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VGSCOM",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : " "
+}

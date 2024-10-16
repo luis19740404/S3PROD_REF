@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO99",
+  "description" : "Pgm Rupture de comptage des personnes et camembert",
+  "creationDate" : "2000-04-04 13:32:53",
+  "updateDate" : "2000-07-07 15:13:35",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VA9999",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VA9999",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL"
+}

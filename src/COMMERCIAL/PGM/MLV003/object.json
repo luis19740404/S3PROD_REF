@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "MLV003",
+  "description" : "Programme batch de formation (CALTAX)",
+  "creationDate" : "2024-05-28 12:42:26",
+  "updateDate" : "2024-05-28 13:59:21",
+  "visibility" : "PRIVATE",
+  "ibmName" : "MLV003",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "MLV003",
+  "level2GenType" : 1,
+  "implicitMR" : true,
+  "level2DatabaseGenMode" : "DEFAULT",
+  "manageHistoryButtons" : "N"
+}

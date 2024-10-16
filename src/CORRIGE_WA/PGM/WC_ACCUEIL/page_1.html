@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+<script language="JavaScript" type="text/javascript">
+function lancerstart()
+{ var w = new ActiveXObject("WScript.Shell");
+w.run ('cmd /c "'+'C:\Adeliaapplications\exiws\client\obj\toto.bat'+'"',1,true); 
+}
+
+</script>
+</head>
+
+<body>
+<form method="post" enctype="multipart/form-data" name="WC_ACCUEIL_1_FORM_1" class="fondpage" id="WC_ACCUEIL_1_FORM_1">
+  <table width="100%" height="100%" align="center">
+    <tr>
+      <td><div align="center">
+        <p><font size="6">World wide company <adelia:button>
+          <input name="BTN_TEST" type="button" id="BTN_TEST" onclick="lancerstart();" value="Test"/>
+        </adelia:button></font></p>
+        </div></td>
+    </tr>
+    <tr>
+      <td height="206"><div align="center"><adelia:image ><img name="IMG_MONDE" id="IMG_MONDE" alt="Monde" src="../images/monde.gif" /></adelia:image></div></td>
+    </tr>
+    <tr>
+      <td><div align="center"><font color="#004080">Partners and subsidiaries all over the world</font> </div></td>
+    </tr>
+    <tr>
+      <td>
+      <table width="600">
+        <tr>
+          <td><strong>T&eacute;l&eacute;chargement de fichiers :</strong></td>
+          <td><adelia:upload type="BLOB" ><input type="file" name="UP_DOCUMENTS" id="UP_DOCUMENTS" size="20" maxlength="260" /></adelia:upload></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Code retour : <adelia:outputfield name="CHO_CODE_RETOUR" type="NB2"/></td>
+          <td><adelia:button>
+            <input type="button" name="BTN_TELECHARGER" id="BTN_TELECHARGER" value="T&eacute;l&eacute;charger" onclick="::ADELIA_EVT_UPL"/>
+          </adelia:button></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

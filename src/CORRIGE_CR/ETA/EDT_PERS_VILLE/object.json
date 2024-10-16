@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERS_VILLE",
+  "description" : "Edition personnel par ville",
+  "creationDate" : "2000-03-03 09:13:17",
+  "updateDate" : "2007-08-30 13:22:43",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDPEVI",
+  "nature" : "CRYSTAL"
+}

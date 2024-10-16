@@ -1,0 +1,61 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240530)      initialiser fen_camembert
+*ROW_METADATA(MLIVAIN        20240530)      executer fen_camembert
+*ROW_METADATA(MLIVAIN        20240530)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_FENETRE FEN_CAMEMBERT
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)         num_e(5,0) nbPersonnel
+*ROW_METADATA(MLIVAIN        20240530)         alpha(2) pcodsoc
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         NUM_BIN_4 NbParts /* Nombre de parts du camembert
+*ROW_METADATA(MLIVAIN        20240530)         NUM_E(15,4) TabValeurs(50)/* Tableau des valeurs
+*ROW_METADATA(MLIVAIN        20240530)         ALPHA(250) TabLegendes(50) /* Tableau de légendes
+*ROW_METADATA(MLIVAIN        20240530)         bool TabDetach(50)
+*ROW_METADATA(MLIVAIN        20240530)         num_e(1,0) detachIndex
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         liste lsm_camembert nbPersonnel pcodsoc
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240530)         vider_lst LSM_CAMEMBERT
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240530)            appeler mlv004.lst_camembert lsm_camembert
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         NbParts = 1
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         lecture_lst LSM_CAMEMBERT
+*ROW_METADATA(MLIVAIN        20240530)            si NbParts<50
+*ROW_METADATA(MLIVAIN        20240530)               NbParts = NbParts + 1 
+*ROW_METADATA(MLIVAIN        20240530)               TabValeurs(NbParts) = nbPersonnel
+*ROW_METADATA(MLIVAIN        20240530)               TabLegendes(NbParts) = pcodsoc
+*ROW_METADATA(MLIVAIN        20240530)            si detachIndex <2
+*ROW_METADATA(MLIVAIN        20240530)               TabDetach(NbParts) = *faux
+*ROW_METADATA(MLIVAIN        20240530)               detachIndex = detachIndex + 1
+*ROW_METADATA(MLIVAIN        20240530)            sinon
+*ROW_METADATA(MLIVAIN        20240530)               TabDetach(NbParts) = *vrai
+*ROW_METADATA(MLIVAIN        20240530)               detachIndex = 1
+*ROW_METADATA(MLIVAIN        20240530)            fin
+*ROW_METADATA(MLIVAIN        20240530)            fin
+*ROW_METADATA(MLIVAIN        20240530)         fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)         appeler_methode cam_pers_soc dessiner_donnees NbParts TabValeurs TabLegendes
+*ROW_METADATA(MLIVAIN        20240530)         APPELER_METHODE cam_pers_soc DETACHER_PARTS TabDetach
+*ROW_METADATA(MLIVAIN        20240530)      FIN_INIT
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240530)      FIN_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_VERIF
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)      FIN_VERIF
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_VALID
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)      FIN_VALID
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240530)      FIN_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240530)   FIN_FENETRE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

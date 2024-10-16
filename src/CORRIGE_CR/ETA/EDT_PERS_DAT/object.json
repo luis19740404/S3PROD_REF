@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERS_DAT",
+  "description" : "Edition personnel avec gestion date",
+  "creationDate" : "2000-03-03 09:13:13",
+  "updateDate" : "2000-03-03 09:13:13",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDPEDT",
+  "nature" : "CRYSTAL"
+}

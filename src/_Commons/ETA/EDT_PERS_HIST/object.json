@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERS_HIST",
+  "description" : "Edition personnel avec histogramme",
+  "creationDate" : "2000-03-03 09:13:14",
+  "updateDate" : "2007-08-30 14:33:59",
+  "visibility" : "PUBLIC",
+  "layoutCode" : "EDPEHI",
+  "nature" : "CRYSTAL"
+}

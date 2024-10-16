@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_PERSO_PROC",
+  "description" : "Traitements particuliers personnels (multi-niveaux",
+  "creationDate" : "2007-03-08 15:02:25",
+  "updateDate" : "2011-02-01 15:32:24",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VCPEPR",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCPEPR",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

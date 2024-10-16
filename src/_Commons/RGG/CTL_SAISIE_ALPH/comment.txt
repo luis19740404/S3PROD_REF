@@ -1,0 +1,3 @@
+Cette règle de gestion permet contrôler qu'une zone alphabétique est
+différente de blanc. Elle est utilisée par le type de donnée
+LIBELLE_OBLI.

@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERSA",
+  "description" : "edition personnel",
+  "creationDate" : "2007-08-09 16:07:26",
+  "updateDate" : "2007-08-10 15:52:08",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDTPEA",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDTPEA",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

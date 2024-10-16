@@ -1,0 +1,74 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)      * Déclaration d'un curseur sur l'entité client
+*ROW_METADATA(MLIVAIN        20240528)      curseur curs_client client *tri(ccod_client)
+*ROW_METADATA(MLIVAIN        20240528)      * Déclaration des variables de travail
+*ROW_METADATA(MLIVAIN        20240528)      num_p(5,2) ptx_tax
+*ROW_METADATA(MLIVAIN        20240528)      num_p(7,2) pmt_tax
+*ROW_METADATA(MLIVAIN        20240528)      num_p(11,2) pmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_4 wsqlcode
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)      bool wPermanent 
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_2 wFormat
+*ROW_METADATA(MLIVAIN        20240528)      bool wCodeRetour
+*ROW_METADATA(MLIVAIN        20240528)      *
+*ROW_METADATA(MLIVAIN        20240528)      liste lsm_client_tax ccod_client cnom_client cmht_caf_cli pmt_tax pmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240528)      * Initialisation du taux de taxe
+*ROW_METADATA(MLIVAIN        20240528)      ptx_tax = 0,02
+*ROW_METADATA(MLIVAIN        20240528)      * Initialisation de la liste mémoire
+*ROW_METADATA(MLIVAIN        20240528)      vider_lst LSM_CLIENT_TAX
+*ROW_METADATA(MLIVAIN        20240528)      * Ouverture du curseur
+*ROW_METADATA(MLIVAIN                )      DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240528)         ouvrir_sql_c curs_client
+*ROW_METADATA(MLIVAIN        20240528)         * Lecture de la première ligne
+*ROW_METADATA(MLIVAIN        20240528)         lire_av_sql_c curs_client
+*ROW_METADATA(MLIVAIN        20240528)         wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)         tant_que wsqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240528)            * calcul des taxes pour chaque client lu
+*ROW_METADATA(MLIVAIN        20240528)            traiter_proc calc_tax cmht_caf_cli ptx_tax pmt_tax pmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)            * Insertion info client et résultats du calcul dans une liste mémoire
+*ROW_METADATA(MLIVAIN        20240528)            inserer_elt LSM_CLIENT_TAX
+*ROW_METADATA(MLIVAIN        20240528)            lire_av_sql_c curs_client
+*ROW_METADATA(MLIVAIN        20240528)            wsqlcode = *sqlcode
+*ROW_METADATA(MLIVAIN        20240528)         refaire
+*ROW_METADATA(MLIVAIN        20240528)         * Fermeture du curseur
+*ROW_METADATA(MLIVAIN        20240528)         fermer_sql_c curs_client
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN                )      FIN_SRV
+*ROW_METADATA(MLIVAIN        20240528)      *Edition du format d'entête
+*ROW_METADATA(MLIVAIN        20240528)      EDITER ENTETE
+*ROW_METADATA(MLIVAIN        20240528)      * Relecture de la liste mémoire
+*ROW_METADATA(MLIVAIN        20240528)      lecture_lst LSM_CLIENT_TAX
+*ROW_METADATA(MLIVAIN        20240528)         zccod_client = ccod_client
+*ROW_METADATA(MLIVAIN        20240528)         zcnom_client = cnom_client
+*ROW_METADATA(MLIVAIN        20240528)         zcmht_caf_cli = cmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240528)         zmt_tax = pmt_tax
+*ROW_METADATA(MLIVAIN        20240528)         zmt_ttc = pmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)         * Edition du format détail
+*ROW_METADATA(MLIVAIN        20240528)         editer DETAIL
+*ROW_METADATA(MLIVAIN        20240528)         * Calcul du total des taxes collectées
+*ROW_METADATA(MLIVAIN        20240528)         zmt_tot_tax = zmt_tot_tax + pmt_tax
+*ROW_METADATA(MLIVAIN        20240528)      fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240528)      editer BAS_PAGE
+*ROW_METADATA(MLIVAIN        20240528)      wPermanent= *faux
+*ROW_METADATA(MLIVAIN        20240528)      wFormat = 2
+*ROW_METADATA(MLIVAIN        20240528)      APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCloudSetAdeliaPrinterPreviewSpoolFormat' -
+*ROW_METADATA(MLIVAIN        20240528)         1 wPermanent wFormat wCodeRetour
+*ROW_METADATA(MLIVAIN        20240528)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240528)   DEBUT_PROCEDURE CALC_TAX *SERVER(ADELIA)
+*ROW_METADATA(MLIVAIN        20240528)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de variables locales à la procédure
+*ROW_METADATA(MLIVAIN        20240528)         num_p(5,2) wtx_tax
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wmht_caf
+*ROW_METADATA(MLIVAIN        20240528)         num_p(7,2) wmt_tax
+*ROW_METADATA(MLIVAIN        20240528)         num_p(11,2) wmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)         * Paramètre de la procédure
+*ROW_METADATA(MLIVAIN        20240528)         param wmht_caf  wtx_tax wmt_tax wmt_ttc
+*ROW_METADATA(MLIVAIN        20240528)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240528)      wmt_tax = wmht_caf * wtx_tax
+*ROW_METADATA(MLIVAIN        20240528)      wmt_ttc = wmht_caf + wmt_tax
+*ROW_METADATA(MLIVAIN        20240528)   FIN_PROCEDURE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

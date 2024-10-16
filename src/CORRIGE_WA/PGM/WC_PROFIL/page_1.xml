@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_PROFIL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="0" kinematic="0" name="CHS_MOTPAS">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="2 10 -1"/>
+                <property id="8" intValue="1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_ENTREE">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="5" guide="0" kinematic="0" name="IMG_DRAP_FRANCAIS">
+            <properties>
+                <property id="-9" stringValue="10 0 0"/>
+                <property id="20"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="5" guide="0" kinematic="0" name="IMG_DRAP_ANGLAIS">
+            <properties>
+                <property id="-9" stringValue="10 0 0"/>
+                <property id="20"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="1" kinematic="0" name="CHS_PROFIL">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-9" stringValue="2 10 -1"/>
+                <property id="8" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</page>

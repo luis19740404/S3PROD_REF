@@ -1,0 +1,278 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )        NUM_E(15,0) CODE_RET_SQL
+*ROW_METADATA(ADELIA                 )        CHARGEMENT CHRG_PERSONNEL FEN_PERSO.LST_PERSO:LISTE *SEQ_CLE PERSONNEL -
+*ROW_METADATA(ADELIA                 )        W_APARTIR 30
+*ROW_METADATA(ADELIA                 )        VUE VUE_PERSONNEL *CLE PERSONNEL PE_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )      FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      W_APARTIR = *BLANK 
+*ROW_METADATA(ADELIA                 )      CHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )      INITIALISER FEN_PERSO
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_PERSO
+*ROW_METADATA(ADELIA                 )      DECHARGER_DLL 'VATOOLBX.DLL'
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_PERSO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         * Variables pour le programmes
+*ROW_METADATA(ADELIA                 )         NUM_E(4,0) REP
+*ROW_METADATA(ADELIA                 )         ALPHA(6) W_MAT
+*ROW_METADATA(ADELIA                 )         ALPHA(1) W_COD
+*ROW_METADATA(ADELIA                 )         ALPHA(1) W_RES
+*ROW_METADATA(ADELIA                 )         BOOL FLAG
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * Variable pour l'ecriture dans un fichier texte
+*ROW_METADATA(ADELIA                 )         ALPHA(10) Alias
+*ROW_METADATA(ADELIA                 )         ALPHA(250) FileName
+*ROW_METADATA(ADELIA                 )         ALPHA(1) Mode
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 Rc
+*ROW_METADATA(ADELIA                 )         NUM_BIN_4 Lg
+*ROW_METADATA(ADELIA                 )         ALPHA(250) DATA
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * variable pour l'appel de la boite enregistrer sous
+*ROW_METADATA(ADELIA                 )         ALPHA(250) CURDIR
+*ROW_METADATA(ADELIA                 )         ALPHA(250) DIR
+*ROW_METADATA(ADELIA                 )         ALPHA(50) TITRE
+*ROW_METADATA(ADELIA                 )         ALPHA(50) FILTRE
+*ROW_METADATA(ADELIA                 )         ALPHA(50) EXT
+*ROW_METADATA(ADELIA                 )         BOOL OK
+*ROW_METADATA(ADELIA                 )         NUM_E(8,0) LGDIR
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         * Variable pour l'EXCUTER COMMANDE
+*ROW_METADATA(ADELIA                 )         ALPHA(250) LgnCmd
+*ROW_METADATA(ADELIA                 )         ALPHA(1) Sep
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCenterWindow' FEN_PERSO
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(ADELIA                 )            FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )              VIDER_LST FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )            DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                 CHARGT_LST CHRG_PERSONNEL
+*ROW_METADATA(ADELIA                 )                   DEBUT_STD PERSONNEL
+*ROW_METADATA(ADELIA                 )                     PRESENTER PERSONNEL
+*ROW_METADATA(ADELIA                 )                   FIN_STD
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                   DEBUT_STD
+*ROW_METADATA(ADELIA                 )                   FIN_STD
+*ROW_METADATA(ADELIA                 )                   INSERER_ELT FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )                 FIN_CHARGT_LST
+*ROW_METADATA(ADELIA                 )            FIN_SRV
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )            FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )            APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET FEN_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_PERSO:MEN_QUITTER
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_PERSO:MEN_AUTO
+*ROW_METADATA(ADELIA                 )               TRAITER_PROC PROC_AUTO
+*ROW_METADATA(ADELIA                 )               INITIALISER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_PERSO:MNU_EXPORT
+*ROW_METADATA(ADELIA                 )               TITRE = 'Enregistrer sous'
+*ROW_METADATA(ADELIA                 )               FILTRE = 'Fichiers textes (*.tab)'
+*ROW_METADATA(ADELIA                 )               EXT = '*.tab'
+*ROW_METADATA(ADELIA                 )               LGDIR=250
+*ROW_METADATA(ADELIA                 )               DIR=CURDIR
+*ROW_METADATA(ADELIA                 )               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxSaveFileSelection' FEN_PERSO TITRE FILTRE EXT DIR LGDIR OK
+*ROW_METADATA(ADELIA                 )               SI OK
+*ROW_METADATA(ADELIA                 )                 ALIAS = 'FicExport'
+*ROW_METADATA(ADELIA                 )                 FILENAME = DIR 
+*ROW_METADATA(ADELIA                 )                 Mode='w'
+*ROW_METADATA(ADELIA                 )                 Lg=250
+*ROW_METADATA(ADELIA                 )                 APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFile' Alias FileName Mode Rc
+*ROW_METADATA(ADELIA                 )                 Sep=&CONVERSION_CAR('09')
+*ROW_METADATA(ADELIA                 )                 DATA = 'ZZ_COD_MATRICUL' /// Sep // 'ZZ_NOM_PERSONNE' /// Sep // 'ZZ_PRN_PERSONNE'
+*ROW_METADATA(ADELIA                 )                 APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxWriteString' Alias DATA  Rc
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                 LECTURE_LST LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )                   DATA = ZZ_COD_MATRICUL /// Sep // ZZ_NOM_PERSONNE /// Sep // ZZ_PRN_PERSONNE
+*ROW_METADATA(ADELIA                 )                   APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxWriteString' Alias DATA  Rc
+*ROW_METADATA(ADELIA                 )                 FIN_LECTURE_LST 
+*ROW_METADATA(ADELIA                 )                 APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCloseFile' Alias Rc
+*ROW_METADATA(ADELIA                 )                 LgnCmd= 'C:\PROGRA~1\Microsoft Office\Office\EXCEL.EXE ' // DIR  
+*ROW_METADATA(ADELIA                 )                 EXECUTER_CMD LgnCmd
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_PERSO:PaginationDynamiqueAvant
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                  CHARGER_LST CHRG_PERSONNEL
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_PERSO:MEN_MODIFIER
+*ROW_METADATA(ADELIA                 )               LECTURE_LST LST_PERSO:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )                 W_MAT =ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )                 W_COD='M'
+*ROW_METADATA(ADELIA                 )                 APPELER VA_EXO5_BIS_NAT W_MAT W_COD W_RES
+*ROW_METADATA(ADELIA                 )                 SI W_RES='1'
+*ROW_METADATA(ADELIA                 )                   PE_COD_MATRICUL=W_MAT
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                      LIRE  VUE_PERSONNEL *UNLCK
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                   SI VUE_PERSONNEL EXISTE
+*ROW_METADATA(ADELIA                 )                     PRESENTER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )                     MODIFIER_ELT LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )                   FIN
+*ROW_METADATA(ADELIA                 )                 FIN
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_PERSO:MEN_SUPPRIMER
+*ROW_METADATA(ADELIA                 )               LECTURE_LST LST_PERSO:LISTE *SELECT
+*ROW_METADATA(ADELIA                 )                 ENVOYER_MSG COR0001 ZZ_NOM_PERSONNE ZZ_COD_MATRICUL *BOITE(*OUI_NON,REP,2)
+*ROW_METADATA(ADELIA                 )                 SI REP = *BTN_OUI
+*ROW_METADATA(ADELIA                 )                   PE_COD_MATRICUL=ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                      SUPPRIMER  VUE_PERSONNEL 
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                   SUPPRIMER_ELT LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )                   QUITTER_BOUCLE
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )                 FIN
+*ROW_METADATA(ADELIA                 )               FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LST_PERSO:MEN_CREER
+*ROW_METADATA(ADELIA                 )               W_MAT=*BLANK
+*ROW_METADATA(ADELIA                 )               W_COD='C'
+*ROW_METADATA(ADELIA                 )               APPELER VA_EXO5_BIS_NAT W_MAT W_COD W_RES
+*ROW_METADATA(ADELIA                 )               SI W_RES='1'
+*ROW_METADATA(ADELIA                 )                 PE_COD_MATRICUL=W_MAT
+*ROW_METADATA(ADELIA                 )               DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )                    LIRE VUE_PERSONNEL *UNLCK
+*ROW_METADATA(ADELIA                 )               FIN_SRV
+*ROW_METADATA(ADELIA                 )                 SI VUE_PERSONNEL EXISTE
+*ROW_METADATA(ADELIA                 )                   PRESENTER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )                   INSERER_ELT LST_PERSO:LISTE *TRI(ZZ_COD_MATRICUL)
+*ROW_METADATA(ADELIA                 )                 FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_RECHERCHER
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_RECHERCHER:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               INITIALISER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_COD_MATRICUL
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_COD_MATRICUL:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_COD_MATRICUL *ASC
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_COD_MATRICUL:BoutonDroitClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_COD_MATRICUL *DESC 
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG     
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_NOM_PERSONNE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_NOM_PERSONNE:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_NOM_PERSONNE *ASC
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_NOM_PERSONNE:BoutonDroitClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_NOM_PERSONNE *DESC
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ZZ_PRN_PERSONNE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_PRN_PERSONNE:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_PRN_PERSONNE *ASC
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ZZ_PRN_PERSONNE:BoutonDroitClic
+*ROW_METADATA(ADELIA                 )               FLAG=*FAUX
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )               TRIER_LST LST_PERSO:LISTE ZZ_PRN_PERSONNE *DESC
+*ROW_METADATA(ADELIA                 )               FLAG=*VRAI
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE LST_PERSO RAFRAICHIR_LISTE FLAG
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )           DEBUT_STD
+*ROW_METADATA(ADELIA                 )           FIN_STD
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )              LECTURE_LST FEN_PERSO.LST_PERSO:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                DEBUT_STD
+*ROW_METADATA(ADELIA                 )                FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                MODIFIER_ELT FEN_PERSO.LST_PERSO:LISTE
+*ROW_METADATA(ADELIA                 )              FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )           DEBUT_STD
+*ROW_METADATA(ADELIA                 )           FIN_STD
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LST_PERSO
+*ROW_METADATA(ADELIA                 )            DEBUT_STD_CIN
+*ROW_METADATA(ADELIA                 )              LECTURE_LST FEN_PERSO.LST_PERSO:LISTE *MODIF
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )                DEBUT_STD
+*ROW_METADATA(ADELIA                 )                FIN_STD
+*ROW_METADATA(ADELIA                 )            
+*ROW_METADATA(ADELIA                 )              FIN_LECTURE_LST
+*ROW_METADATA(ADELIA                 )            FIN_STD_CIN
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )   DEBUT_PROCEDURE PROC_AUTO
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         NUM_E(6,0) I
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_SRV NATIF
+*ROW_METADATA(ADELIA                 )         I=0
+*ROW_METADATA(ADELIA                 )         TANT_QUE i < 1000
+*ROW_METADATA(ADELIA                 )           PE_COD_MATRICUL=I
+*ROW_METADATA(ADELIA                 )           PE_DAT_NAIS_PER=01011900+I
+*ROW_METADATA(ADELIA                 )           PE_PRN_PERSONNE='JACQUES' // I
+*ROW_METADATA(ADELIA                 )           PE_NOM_PERSONNE='DUPONT' // I
+*ROW_METADATA(ADELIA                 )           PE_COD_ETABLIST='01'
+*ROW_METADATA(ADELIA                 )           CREER VUE_PERSONNEL
+*ROW_METADATA(ADELIA                 )           I=I+1
+*ROW_METADATA(ADELIA                 )         REFAIRE
+*ROW_METADATA(ADELIA                 )      FIN_SRV
+*ROW_METADATA(ADELIA                 )   FIN_PROCEDURE
+*ROW_METADATA(ADELIA                 )FIN_PGM

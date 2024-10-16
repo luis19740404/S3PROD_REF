@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <formats>
+        <format blankLinesBefore="1" code="EN" guideWord="ENTETE" jumpLinesBefore="1" nbLines="4" overlay="false" shortName="SOREN"/>
+        <format blankLinesBefore="1" code="DT" guideWord="DETAIL" nbLines="1" overlay="false" shortName="SORDT"/>
+        <format blankLinesBefore="1" code="BP" guideWord="BAS_PAGE" nbLines="5" overlay="false" shortName="SORBP"/>
+    </formats>
+    <entities>
+        <entity format="DT" name="CLIENT"/>
+    </entities>
+    <fields>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="32" x="45" y="1">
+            <text text="Liste des clients avec les taxes"/>
+        </field>
+        <field description="Code client" formatCode="DT" guideWord="ZCCOD_CLIENT" kind="VARIABLE" layoutCode="ZCCCLI" length="6" logicalProperty="CLIENT.COD_CLIENT" mode="OUTPUT" type="STRING" x="2" y="5">
+            <parameters>
+                <parameter key="EXP" value="000001"/>
+            </parameters>
+        </field>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="6" x="2" y="4">
+            <text text="Client"/>
+        </field>
+        <field description="Nom client" formatCode="DT" guideWord="ZCNOM_CLIENT" kind="VARIABLE" layoutCode="ZCLCLI" length="30" logicalProperty="CLIENT.NOM_CLIENT" mode="OUTPUT" type="STRING" x="9" y="5">
+            <parameters>
+                <parameter key="EXP" value="HARDIS Progiciel"/>
+            </parameters>
+        </field>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="20" x="9" y="4">
+            <text text="Nom    du     client"/>
+        </field>
+        <field description="Chiffre d'affaires" editCode="CODE_J" formatCode="DT" guideWord="ZCMHT_CAF_CLI" kind="VARIABLE" layoutCode="ZCTACL" length="11" logicalProperty="CLIENT.MHT_CAF_CLI" mode="OUTPUT" scale="2" type="NUMBER" x="41" y="5">
+            <parameters>
+                <parameter key="EXP" value="250.000,00"/>
+            </parameters>
+        </field>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="10" x="46" y="4">
+            <text text="Montant HT"/>
+        </field>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="4" x="61" y="4">
+            <text text="Taxe"/>
+        </field>
+        <field formatCode="EN" kind="CONSTANT" layoutCode="*" length="11" x="72" y="4">
+            <text text="Montant TTC"/>
+        </field>
+        <field description="Montant TTC" editCode="CODE_J" formatCode="DT" guideWord="ZMT_TTC" kind="USER_VARIABLE" layoutCode="ZMT_TTC" length="11" mode="OUTPUT" scale="2" type="NUMBER" x="71" y="5">
+            <parameters>
+                <parameter key="EXP" value="250.000,00"/>
+            </parameters>
+        </field>
+        <field formatCode="BP" kind="CONSTANT" layoutCode="*" length="29" x="37" y="10">
+            <text text="Total des taxes collectées : "/>
+        </field>
+        <field description="Montant total des taxes" editCode="CODE_J" formatCode="BP" guideWord="ZMT_TOT_TAX" kind="USER_VARIABLE" layoutCode="ZMT_TOT_TA" length="11" mode="OUTPUT" scale="2" type="NUMBER" x="66" y="10">
+            <parameters>
+                <parameter key="EXP" value="250.000,00"/>
+            </parameters>
+        </field>
+        <field description="ZMT_TAX" editCode="CODE_3" formatCode="DT" guideWord="ZMT_TAX" kind="USER_VARIABLE" layoutCode="ZMT_TAX" length="7" mode="OUTPUT" scale="2" type="NUMBER" x="58" y="5"/>
+    </fields>
+</report>

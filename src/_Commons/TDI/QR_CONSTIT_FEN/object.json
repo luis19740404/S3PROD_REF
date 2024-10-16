@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "QR_CONSTIT_FEN",
+  "description" : "Q/R : Fenêtre (0 à 2 paramètres/ IBM ou Adélia) ",
+  "creationDate" : "1996-05-31 11:26:08",
+  "updateDate" : "2000-10-25 15:37:23",
+  "visibility" : "PUBLIC",
+  "templateType" : "I"
+}

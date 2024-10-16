@@ -1,0 +1,16 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA                 )   DECLARER AOPT 1                              
+*ROW_METADATA(ADELIA                 )   DECLARER AFMSG 10                            
+*ROW_METADATA(ADELIA                 )   DECLARER AMSGID 7                            
+*ROW_METADATA(ADELIA                 )   DECLARER_TAB AAT 1 99                        
+*ROW_METADATA(ADELIA                 )   DECLARER WNOMPG;W_NOM_PGM 10  
+*ROW_METADATA(ADELIA                 )   *               
+*ROW_METADATA(ADELIA                 )   W_NOM_PGM = *BLANK                           
+*ROW_METADATA(ADELIA                 )   W_NOM_PGM = 'HA£SFMCL'                         
+*ROW_METADATA(ADELIA                 )   AMSGID = ':01'                                 
+*ROW_METADATA(ADELIA                 )   AFMSG = ':02'                                  
+*ROW_METADATA(ADELIA                 )   AOPT = 'M'                                     
+*ROW_METADATA(ADELIA                 )   APPELER &W_NOM_PGM AOPT AFMSG AMSGID AAT       
+*ROW_METADATA(ADELIA                 )   AAT = *BLANK                                   
+*ROW_METADATA(ADELIA                 )   *                                               
+*ROW_METADATA(ADELIA                 )FIN_RGG

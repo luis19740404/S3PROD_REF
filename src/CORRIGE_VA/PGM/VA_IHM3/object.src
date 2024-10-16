@@ -1,0 +1,192 @@
+*ROW_METADATA(ADELIA                 )DEBUT_PGM
+*ROW_METADATA(ADELIA                 )   DEBUT_DECL
+*ROW_METADATA(ADELIA                 )      
+*ROW_METADATA(ADELIA                 )   FIN_DECL
+*ROW_METADATA(ADELIA                 )   DEBUT_INIT
+*ROW_METADATA(ADELIA                 )      initialiser FEN_FICFAM
+*ROW_METADATA(ADELIA                 )      EXECUTER FEN_FICFAM
+*ROW_METADATA(ADELIA                 )   FIN_INIT
+*ROW_METADATA(ADELIA                 )   DEBUT_FENETRE FEN_FICFAM
+*ROW_METADATA(ADELIA                 )      DEBUT_DECL
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_DECL
+*ROW_METADATA(ADELIA                 )      DEBUT_INIT
+*ROW_METADATA(ADELIA                 )         SI *CODE_RETOUR = 1
+*ROW_METADATA(ADELIA                 )         FIN
+*ROW_METADATA(ADELIA                 )      FIN_INIT
+*ROW_METADATA(ADELIA                 )      DEBUT_GEST_EVT
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_SUIV
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_SUIV:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FEN_FICFAM:PAGE_COURANTE=FEN_FICFAM:PAGE_COURANTE+1
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_SUIV0
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_SUIV0:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FEN_FICFAM:PAGE_COURANTE=FEN_FICFAM:PAGE_COURANTE+1
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_SUIV1
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_SUIV1:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               FEN_FICFAM:PAGE_COURANTE=FEN_FICFAM:PAGE_COURANTE+1
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET LBR_ETAT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT LBR_ETAT:ChangementValeur
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )               SI LBR_ETAT:VALEUR='D'
+*ROW_METADATA(ADELIA                 )                  TXT_LIEU:TEXTE='Lieu de divorce'
+*ROW_METADATA(ADELIA                 )                  TXT_MARIAGE:TEXTE='Date de divorce'
+*ROW_METADATA(ADELIA                 )                  CHS_DATE:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )                  CHS_LIEU:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  SI LBR_ETAT:VALEUR='D'
+*ROW_METADATA(ADELIA                 )                     TXT_LIEU:TEXTE='Lieu de mariage'
+*ROW_METADATA(ADELIA                 )                     TXT_MARIAGE:TEXTE='Date de mariage'
+*ROW_METADATA(ADELIA                 )                  SINON
+*ROW_METADATA(ADELIA                 )                     TXT_LIEU:TEXTE='Lieu de mariage'
+*ROW_METADATA(ADELIA                 )                     TXT_MARIAGE:TEXTE='Date de mariage'
+*ROW_METADATA(ADELIA                 )                     CHS_DATE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )                     CHS_LIEU:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_ACTE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_ACTE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_ACTE:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAMILLE:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_NAISSANCE:ACTIVITE=*VRAI 
+*ROW_METADATA(ADELIA                 )               CAC_MARIAGE:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               SI CAC_NAISSANCE:VALEUR=CAC_MARIAGE:VALEUR
+*ROW_METADATA(ADELIA                 )                  CAC_NAISSANCE:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )                  CHS_NAISSANCE:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )                  CHS_MARIAGE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  CHS_NAISSANCE:ACTIVITE=NON CHS_MARIAGE:ACTIVITE
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_FAMILLE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_FAMILLE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_FAMILLE:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_ACTE:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_NAISSANCE:ACTIVITE=*FAUX 
+*ROW_METADATA(ADELIA                 )               CAC_NAISSANCE:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CHS_NAISSANCE:ACTIVITE=*FAUX 
+*ROW_METADATA(ADELIA                 )               CAC_MARIAGE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               CHS_MARIAGE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_MARIAGE:VALEUR=*FAUX 
+*ROW_METADATA(ADELIA                 )               SI CAC_FAM1:VALEUR=CAC_FAM2:VALEUR ET CAC_FAM1:VALEUR=CAC_FAM3:VALEUR ET CAC_FAM2:VALEUR=CAC_FAM3:VALEUR
+*ROW_METADATA(ADELIA                 )                  CAC_FAM1:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_NAISSANCE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_NAISSANCE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_NAISSANCE:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CHS_NAISSANCE:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_MARIAGE:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CHS_MARIAGE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_MARIAGE
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_MARIAGE:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_MARIAGE:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CHS_MARIAGE:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_NAISSANCE:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CHS_NAISSANCE:ACTIVITE=*FAUX
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_FAM1
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_FAM1:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_FAM2
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_FAM2:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET CAC_FAM3
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT CAC_FAM3:ChangementValeur
+*ROW_METADATA(ADELIA                 )               CAC_FAM1:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM2:VALEUR=*FAUX
+*ROW_METADATA(ADELIA                 )               CAC_FAM3:VALEUR=*VRAI
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_PRINT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_PRINT:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               BTN_OK:ACTIVITE=*VRAI
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET ID_OBJ54
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ID_OBJ54:PerteFocus
+*ROW_METADATA(ADELIA                 )               INSERER_ELT LST_ENFANT:LISTE
+*ROW_METADATA(ADELIA                 )               A=*BLANK
+*ROW_METADATA(ADELIA                 )               B=*BLANK
+*ROW_METADATA(ADELIA                 )               C=*BLANK
+*ROW_METADATA(ADELIA                 )               D=*BLANK
+*ROW_METADATA(ADELIA                 )               APPELER_METHODE CHS_NOM_3 METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT ID_OBJ54:ChangementValeur
+*ROW_METADATA(ADELIA                 )               
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET BTN_OK
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT BTN_OK:BoutonGaucheClic
+*ROW_METADATA(ADELIA                 )               TERMINER
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )         DEBUT_OBJET FEN_FICFAM
+*ROW_METADATA(ADELIA                 )            DEBUT_EVT FEN_FICFAM:ChangementPage
+*ROW_METADATA(ADELIA                 )               SI FEN_FICFAM:PAGE_COURANTE=1
+*ROW_METADATA(ADELIA                 )                  APPELER_METHODE CHS_NOM_1 METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )               SINON
+*ROW_METADATA(ADELIA                 )                  SI FEN_FICFAM:PAGE_COURANTE=2
+*ROW_METADATA(ADELIA                 )                     APPELER_METHODE CHS_NOM_2 METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )                  SINON
+*ROW_METADATA(ADELIA                 )                     SI FEN_FICFAM:PAGE_COURANTE=3
+*ROW_METADATA(ADELIA                 )                        APPELER_METHODE CHS_NOM_3 METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )                     SINON
+*ROW_METADATA(ADELIA                 )                        APPELER_METHODE CHS_NAISSANCE METTRE_FOCUS
+*ROW_METADATA(ADELIA                 )                     FIN
+*ROW_METADATA(ADELIA                 )                  FIN
+*ROW_METADATA(ADELIA                 )               FIN
+*ROW_METADATA(ADELIA                 )            FIN_EVT
+*ROW_METADATA(ADELIA                 )         FIN_OBJET
+*ROW_METADATA(ADELIA                 )      FIN_GEST_EVT
+*ROW_METADATA(ADELIA                 )      DEBUT_VERIF
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VERIF
+*ROW_METADATA(ADELIA                 )      DEBUT_VALID
+*ROW_METADATA(ADELIA                 )         
+*ROW_METADATA(ADELIA                 )      FIN_VALID
+*ROW_METADATA(ADELIA                 )      DEBUT_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )      FIN_TRT_GUIDE
+*ROW_METADATA(ADELIA                 )   FIN_FENETRE
+*ROW_METADATA(ADELIA                 )FIN_PGM

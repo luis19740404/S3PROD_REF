@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_CALCULETTE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_PLUS">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_MOINS">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_MULT">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_DIV">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_RESULTAT">
+            <properties>
+                <property id="-13" intValue="1"/>
+                <property id="-9" stringValue="3 15 3"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="1" kinematic="0" name="CHS_OPERANDE1">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="4"/>
+                <property id="-9" stringValue="3 15 3"/>
+                <property id="8"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="0" guide="1" kinematic="0" name="CHS_OPERANDE2">
+            <properties>
+                <property id="-13" intValue="2"/>
+                <property id="-12" intValue="4"/>
+                <property id="-9" stringValue="3 15 3"/>
+                <property id="8"/>
+            </properties>
+        </control>
+    </controls>
+</page>

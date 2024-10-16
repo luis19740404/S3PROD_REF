@@ -1,0 +1,10 @@
+[ {
+  "id" : {
+    "property" : 0
+  },
+  "intValue" : 2
+}, {
+  "id" : {
+    "property" : 1
+  }
+} ]

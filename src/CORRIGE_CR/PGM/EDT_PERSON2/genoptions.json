@@ -1,0 +1,11 @@
+{
+  "endProgramCode" : "LR",
+  "dateFormat" : "SYSTEM",
+  "ioErrors" : "YES",
+  "fileOptions" : [ {
+    "id" : {
+      "fileName" : "**EDPER2"
+    },
+    "openClose" : true
+  } ]
+}

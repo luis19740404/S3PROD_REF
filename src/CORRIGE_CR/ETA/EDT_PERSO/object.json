@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "EDT_PERSO",
+  "description" : "Edition personnel classique",
+  "creationDate" : "2000-03-03 09:13:14",
+  "updateDate" : "2000-03-03 09:13:14",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "EDPECL",
+  "nature" : "ADELIA"
+}

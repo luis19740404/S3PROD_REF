@@ -1,0 +1,167 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240527)      * Déclaration d'un chargement pour remplir une liste graphique en mode SQL depuis l'entité client
+*ROW_METADATA(MLIVAIN        20240527)      chargement charg_client fen_lstcli.lst_client:liste *sql client -
+*ROW_METADATA(MLIVAIN        20240527)         *cond(ccod_client>=:ccod_client) *tri(ccod_client)
+*ROW_METADATA(MLIVAIN        20240527)      
+*ROW_METADATA(MLIVAIN        20240527)      alpha(2) pcod_retour
+*ROW_METADATA(MLIVAIN        20240527)      alpha(6) pcod_client
+*ROW_METADATA(MLIVAIN        20240528)      *Déclaration de variables pour l'export depuis une liste graphique
+*ROW_METADATA(MLIVAIN        20240528)      alpha(250) wNomFichier
+*ROW_METADATA(MLIVAIN        20240528)      alpha(250) wSeparateur
+*ROW_METADATA(MLIVAIN        20240528)      bool wCodeRetourbool
+*ROW_METADATA(MLIVAIN        20240528)      alpha(5) modeExport
+*ROW_METADATA(MLIVAIN        20240528)      alpha(25) alias
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_4 pCodeRetourBin
+*ROW_METADATA(ADELIA         20241015)      alpha(500) buffer
+*ROW_METADATA(ADELIA         20241015)      
+*ROW_METADATA(ADELIA         20241015)      
+*ROW_METADATA(MLIVAIN        20240527)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240527)      initialiser fen_lstcli
+*ROW_METADATA(MLIVAIN        20240527)      executer fen_lstcli
+*ROW_METADATA(MLIVAIN        20240527)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_FENETRE FEN_LSTCLI
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         * Déclaration de variables pour l'export depuis une liste graphique
+*ROW_METADATA(MLIVAIN        20240528)         alpha(250) wNomFichier
+*ROW_METADATA(MLIVAIN        20240528)         alpha(250) wSeparateur
+*ROW_METADATA(MLIVAIN        20240528)         bool wCodeRetourBool
+*ROW_METADATA(MLIVAIN        20240528)         liste lsm_client *ref_l(fen_lstcli.lst_client:liste)
+*ROW_METADATA(MLIVAIN        20240527)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240527)         * Vidage de la liste
+*ROW_METADATA(MLIVAIN        20240527)         vider_lst lst_client:liste
+*ROW_METADATA(MLIVAIN        20240527)         * Itération de lecture de la table client (chargt_lst/fin_chargt_lst)
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)            chargt_lst charg_client
+*ROW_METADATA(MLIVAIN        20240527)               * Transfert des valeurs des zones de la table client dans les zones de la liste graphique
+*ROW_METADATA(MLIVAIN        20240527)               presenter client
+*ROW_METADATA(MLIVAIN        20240527)               * Insertion d'une nouvelle ligne dans la liste graphique
+*ROW_METADATA(MLIVAIN        20240527)               inserer_elt lst_client:liste
+*ROW_METADATA(MLIVAIN        20240527)               zcnom_client:info_note = 'www.'// &espace_mot(cnom_client; 0) ///'.com'
+*ROW_METADATA(MLIVAIN        20240527)            fin_chargt_lst
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240531)         DEBUT_OBJET LST_CLIENT
+*ROW_METADATA(MLIVAIN        20240531)            * Insertion RGG couleur des entête de colonnes
+*ROW_METADATA(MLIVAIN        20240531)            inserer_rg mlv_ent_col_lis
+*ROW_METADATA(MLIVAIN        20240531)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240531)         
+*ROW_METADATA(MLIVAIN        20240527)      FIN_INIT
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240527)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240527)               terminer
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240527)         DEBUT_OBJET LST_CLIENT
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT LST_CLIENT:MNU_MODIF
+*ROW_METADATA(MLIVAIN        20240531)               * Insertion des règles de gestion
+*ROW_METADATA(MLIVAIN        20240531)               INSERER_RG mlv_titre_fen(fen_lstcli)
+*ROW_METADATA(MLIVAIN        20240531)                
+*ROW_METADATA(MLIVAIN        20240531)               lecture_lst lst_client:liste *select
+*ROW_METADATA(MLIVAIN        20240527)                  pcod_client = zccod_client
+*ROW_METADATA(MLIVAIN        20240527)                  appeler mlv002 pcod_retour _MO zccod_client
+*ROW_METADATA(MLIVAIN        20240527)                  si pcod_retour = 'AN'
+*ROW_METADATA(MLIVAIN        20240527)                     quitter_boucle
+*ROW_METADATA(MLIVAIN        20240527)                  sinon
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)                        lire_sql client *cond(ccod_client = :pcod_client)
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)                     presenter client
+*ROW_METADATA(MLIVAIN        20240527)                     modifier_elt lst_client:liste *deselect
+*ROW_METADATA(MLIVAIN        20240527)                  fin   
+*ROW_METADATA(MLIVAIN        20240527)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT LST_CLIENT:MNU_AJOUTER
+*ROW_METADATA(MLIVAIN        20240527)               zccod_client = *blank
+*ROW_METADATA(MLIVAIN        20240527)               appeler mlv002 pcod_retour _CR zccod_client
+*ROW_METADATA(MLIVAIN        20240527)               CCOD_CLIENT = zccod_client
+*ROW_METADATA(MLIVAIN        20240527)               vider_lst lst_client:liste
+*ROW_METADATA(MLIVAIN        20240527)               initialiser fen_lstcli
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT LST_CLIENT:MNU_VISUALISER
+*ROW_METADATA(MLIVAIN        20240527)               lecture_lst lst_client:liste *select
+*ROW_METADATA(MLIVAIN        20240527)                  pcod_client = zccod_client
+*ROW_METADATA(MLIVAIN        20240527)                  appeler mlv002 pcod_retour _VI zccod_client
+*ROW_METADATA(MLIVAIN        20240527)                  si pcod_retour = 'AN'
+*ROW_METADATA(MLIVAIN        20240527)                     quitter_boucle
+*ROW_METADATA(MLIVAIN        20240527)                  fin   
+*ROW_METADATA(MLIVAIN        20240527)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT LST_CLIENT:MNU_EXPORT
+*ROW_METADATA(MLIVAIN        20240528)               wSeparateur = *blank
+*ROW_METADATA(MLIVAIN        20240528)               wNomFichier = 'TEMP:\lst_client.csv'
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_METHODE lst_client EXPORTER_LISTE wNomFichier _LST_EXP_FORMAt_CSV wSeparateur wCodeRetourBool
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT LST_CLIENT:MNU_EXP_TXT
+*ROW_METADATA(MLIVAIN        20240528)               CHARGER_DLL 'VaToolBx.dll'
+*ROW_METADATA(MLIVAIN        20240528)               alias = 'FichierTexte'
+*ROW_METADATA(MLIVAIN        20240528)               wNomFichier = 'TEMP:\lst_client.txt'
+*ROW_METADATA(MLIVAIN        20240528)               * Mode écriture pour vider le fichier
+*ROW_METADATA(MLIVAIN        20240528)               modeExport = 'w'
+*ROW_METADATA(MLIVAIN        20240528)               * Ouverture du fichier
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFile' alias wNomFichier modeExport pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)               si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                  envoyer_msg 0046 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)               buffer = ZCCOD_CLIENT:INFO_ENTETE_TEXTE ///'   '// zcnom_client:INFO_ENTETE_TEXTE ///'    '// zccod_pos_cli:INFO_ENTETE_TEXTE
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxWriteString' alias Buffer pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)               si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                  envoyer_msg 0047 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)               * Fermeture pour réouverture en mode ajout
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCloseFile' Alias pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)               si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                  envoyer_msg 0048 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)               * Ouverture du fichier en mode ajout
+*ROW_METADATA(MLIVAIN        20240528)               modeExport = 'a'
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFile' alias wNomFichier modeExport pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)               si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                  envoyer_msg 0046 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)               lecture_lst lst_client:liste *select
+*ROW_METADATA(MLIVAIN        20240528)                  buffer = ZCCOD_CLIENT //'   '// zcnom_client //'   '// zccod_pos_cli
+*ROW_METADATA(MLIVAIN        20240528)                  APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxWriteString' alias Buffer pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)                  si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                     envoyer_msg 0047 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)                  fin
+*ROW_METADATA(MLIVAIN        20240528)                  inserer_elt LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240528)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240528)               * Fermeture du fichier
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCloseFile' Alias pCodeRetourBin
+*ROW_METADATA(MLIVAIN        20240528)               si pCodeRetourBin <> 0
+*ROW_METADATA(MLIVAIN        20240528)                  envoyer_msg 0048 pCodeRetourBin *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)               DECHARGER_DLL 'VaToolBx.dll'
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240530)            DEBUT_EVT LST_CLIENT:MNU_EXCEL
+*ROW_METADATA(MLIVAIN        20240530)               * Initialisation liste mémoire
+*ROW_METADATA(MLIVAIN        20240530)               vider_lst LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)               * Copie des lignes délectionnées de la liste graphique
+*ROW_METADATA(MLIVAIN        20240530)               lecture_lst lst_client:liste *select
+*ROW_METADATA(MLIVAIN        20240530)                  inserer_elt LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)               
+*ROW_METADATA(MLIVAIN        20240530)               * Appel du programme d'export excel
+*ROW_METADATA(MLIVAIN        20240530)               appeler mlv007 LSM_CLIENT
+*ROW_METADATA(MLIVAIN        20240530)               envoyer_msg 0045 *boite(*OK)
+*ROW_METADATA(MLIVAIN        20240530)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240531)         DEBUT_OBJET BTN_
+*ROW_METADATA(MLIVAIN        20240531)            DEBUT_EVT BTN_:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240531)               terminer
+*ROW_METADATA(MLIVAIN        20240531)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240531)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240527)      FIN_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_VERIF
+*ROW_METADATA(MLIVAIN        20240527)         
+*ROW_METADATA(MLIVAIN        20240527)      FIN_VERIF
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_VALID
+*ROW_METADATA(MLIVAIN        20240527)         
+*ROW_METADATA(MLIVAIN        20240527)      FIN_VALID
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240527)      FIN_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240527)   FIN_FENETRE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

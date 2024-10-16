@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml report.xsd">
+    <entities>
+        <entity name="PERSONNEL"/>
+    </entities>
+    <fields>
+        <field description="WCEDPE" guideWord="ZZ_COD_MATRICUL" kind="VARIABLE" layoutCode="_data" length="6" logicalProperty="PERSONNEL.COD_MATRICULE" scale="-1" type="STRING"/>
+        <field description="WCEDPE" guideWord="ZZ_COD_SIT_FAMI" kind="VARIABLE" layoutCode="_data" length="1" logicalProperty="PERSONNEL.COD_SIT_FAMIL" scale="-1" type="STRING"/>
+        <field description="WCEDPE" guideWord="ZZ_COD_SOCIETE" kind="VARIABLE" layoutCode="_data" length="2" logicalProperty="PERSONNEL.COD_SOCIETE" scale="-1" type="STRING"/>
+        <field description="WCEDPE" guideWord="ZZ_LIB_VIL_PERS" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.LIB_VIL_PERS" scale="-1" type="STRING"/>
+        <field description="WCEDPE" guideWord="ZZ_NOM_PERSONNE" kind="VARIABLE" layoutCode="_data" length="30" logicalProperty="PERSONNEL.NOM_PERSONNE" scale="-1" type="STRING"/>
+        <field description="WCEDPE" kind="CONSTANT" length="1" scale="2">
+            <text text="Liste des employés"/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="3" scale="2">
+            <text text="Matricule"/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="4" scale="2">
+            <text text="Nom"/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="5" scale="2">
+            <text text="Ville"/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="6" scale="2">
+            <text text="Sit. fam."/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="7" scale="2">
+            <text text="Société"/>
+        </field>
+        <field description="WCEDPE" kind="CONSTANT" length="14" scale="8">
+            <text text="Nombre total d'employés :"/>
+        </field>
+    </fields>
+</report>

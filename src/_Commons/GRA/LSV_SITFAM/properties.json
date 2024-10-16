@@ -1,0 +1,179 @@
+[ {
+  "id" : {
+    "property" : -74
+  },
+  "modifiability" : -3,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -48
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -47
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -41
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -39
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -38
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -21
+  },
+  "modifiability" : -3,
+  "stringValue" : "Microsoft Sans Serif;8;1;1",
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -13
+  },
+  "modifiability" : -2,
+  "intValue" : 2,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -12
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -11
+  },
+  "modifiability" : -3,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -10
+  },
+  "modifiability" : -3,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -9
+  },
+  "modifiability" : -3,
+  "stringValue" : "2 1 -1",
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -5
+  },
+  "modifiability" : -2,
+  "stringValue" : "LSV_SITFAM",
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -4
+  },
+  "modifiability" : -3,
+  "intValue" : 21,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -3
+  },
+  "modifiability" : -3,
+  "intValue" : 72,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -2
+  },
+  "modifiability" : -1,
+  "intValue" : 259,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : -1
+  },
+  "modifiability" : -1,
+  "intValue" : 273,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 6
+  },
+  "modifiability" : -3,
+  "intValue" : 2,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 7
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 8
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 9
+  },
+  "modifiability" : -3,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 11
+  },
+  "modifiability" : -3,
+  "intValue" : 50,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 14
+  },
+  "modifiability" : -2,
+  "stringValue" : "LSV_SITFAM 12 2 1 -1",
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 15
+  },
+  "modifiability" : -3,
+  "intValue" : 1,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 18
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1564124
+}, {
+  "id" : {
+    "property" : 19
+  },
+  "modifiability" : -3,
+  "intValue" : 251658240,
+  "longValue" : 1564124
+} ]

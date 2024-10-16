@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "BTN_CLOCK",
+  "description" : "Bouton horloge",
+  "creationDate" : "2011-04-18 08:45:25",
+  "updateDate" : "2011-04-18 08:45:25",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "BOUTON",
+  "tooltip" : "Bouton poussoir",
+  "prefix" : "BTN_CLOCK",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BOUTON"
+}

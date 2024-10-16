@@ -1,0 +1,159 @@
+%QUESTION **
+%%    Ce dialogue vous permet de créer un programme affichant
+%%    une liste en FENETRE, et transmettant 0, 1 OU 2 paramètres
+%%    qu'il faudra créer !!!
+%%
+%%    Cliquez sur ENTREE pour continuer.
+%QUESTION *ON 01
+%%	  Voulez-vous dessiner une fenêtre Adélia (fenêtre statique) ?
+%%
+%%	  Répondez O (pour OUI) pour une fenêtre Adélia,
+%%
+%%          ou N pour une fenêtre IBM (dynamique).    
+%%
+%QUESTION *LI TITRE_TRS_01
+%%    Saisir le titre de l'écran.
+%%
+%%    ENTREE pour continuer.
+%SI 01
+%CREER_TRS  01 $TITRE_TRS_01  FEN_ADELIA
+%FIN
+%SI N01
+%CREER_TRS  01 $TITRE_TRS_01  FEN_IBM_DYN
+%FIN
+%%
+%QUESTION    *EN  ENTITE
+%%    Saisir le nom de l'entité affichée par la fenêtre (Sélection possible).
+%%
+%%    Puis, ENTREE pour continuer.
+%AFFECTER    01  $ENTITE  $ENTITE
+%TRS         01
+%QUESTION    **
+%%    Vous allez procéder au maquettage :
+%%
+%%    Indiquer les informations à afficher dans la fenêtre par (ENTITES),
+%%    Puis (ACCES) et (PROPRIETES).
+%%
+%%    Puis, ENTREE pour générer le dessin.
+%MESSAGE
+%%    Création de la maquette : Génération de l'image en cours...
+%GENERER_TRS 01
+%QUESTION    **
+%%    Tracer le cadre de la fenêtre (MAQUETTEUR).
+%%
+%%    Puis, ENTREE pour continuer.
+%MESSAGE
+%%    Génération de la cinématique en cours ...
+%GENERER_CIN
+%QUESTION  *ON 01
+%%    La fenêtre transmet-elle des paramètres ?
+%%
+%%    Si OUI taper 'O' sinon 'N'.
+%%
+%%    Puis, ENTREE pour continuer.
+%SI N01
+%ALLER_A PASPARM
+%FIN
+%QUESTION    *VA  INFOR01
+%%    Définition du 1er paramètre :
+%%
+%%    Sélectionner la zone de l'écran, (ZxCOD_xxxxxxx), qui correspond	
+%%    au 1er paramètre transmis par la fenêtre.
+%%
+%%    Puis, ENTREE pour continuer.
+%QUESTION    *VA  PARAM01
+%%    Créer par (DONNEES) une zone de travail de même structure
+%%    que le 1er paramètre, puis sélectionner cette zone.
+%%
+%%    Puis, ENTREE pour continuer.
+%QUESTION  *ON 02
+%%    La fenêtre transmet-elle un autre paramètre ?
+%%
+%%    Si OUI taper 'O' sinon 'N'
+%%
+%%    Puis, ENTREE pour continuer.
+%SI N02
+%ALLER_A PASPAR2
+%FIN
+%QUESTION    *VA  INFOR02
+%%    Définition du 2ème paramètre :
+%%
+%%    Sélectionner la zone de l'écran, (ZxLIB_xxxxxx), qui correspond	
+%%    au 2ème paramètre transmis par la fenêtre.
+%%
+%%    Puis, ENTREE pour continuer.
+%QUESTION    *VA  PARAM02
+%%    Créer par (DONNEES) une zone de travail de même structure
+%%    que le 2ème paramètre, puis sélectionner cette zone.
+%%
+%%    Puis, ENTREE pour continuer.
+RECEVOIR    $PARAM01 $PARAM02
+%ALLER_A PASPARM
+%ETIQUETTE PASPAR2
+********************
+RECEVOIR    $PARAM01
+%ETIQUETTE PASPARM
+INITIALISER 01
+TRAITER     01
+**************
+TRANSACTION 01
+**************
+SI *F03  OU *F12
+  TERMINER
+FIN
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%SI 01
+VERIFIER 01
+SI ZW_COD_OPTION = '1'
+  TERMINER
+FIN
+********************
+VERIFICATION 01
+********************
+DEBUT_STD
+FIN_STD
+*
+GESTION_SFL   1
+DEBUT_STD
+FIN_STD
+*
+SI ZW_COD_OPTION <> *BLANK
+  SI ZW_COD_OPTION = '1'
+    $PARAM01 = $INFOR01
+    %SI 02
+    $PARAM02 = $INFOR02
+    %FIN
+    QUITTER_SFL
+  SINON
+    PREPARER_MSG  0006 ZW_COD_OPTION
+    ERREUR
+  FIN
+FIN
+FIN_GESTION_SFL
+%FIN
+*
+%MESSAGE
+%%    Génération du programme en cours, Veuillez patienter...
+%%
+%GENERER_N2
+%QUESTION  *ON 03
+%%    Voulez-vous compléter ou modifier le source généré ?
+%%
+%%    Si OUI taper 'O' sinon 'N'
+%%
+%%    Puis, ENTREE pour continuer.
+%SI 03
+%QUESTION  **
+%%    Utiliser (EDITEUR L4G) pour Reviser le source.
+%%
+%%    Puis, ENTREE pour continuer.
+%FIN
+%QUESTION  **
+%%    FIN de la construction du programme : 
+%%   
+%%    Pour compiler le programme   : ENTREE.
+%%
+%%    Sinon, arrêt sans compilation : QUITTER.
+%COMPILATION

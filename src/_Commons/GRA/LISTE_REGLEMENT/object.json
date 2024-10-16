@@ -1,0 +1,14 @@
+{
+  "type" : "GRA",
+  "name" : "LISTE_REGLEMENT",
+  "description" : "Liste des règlements",
+  "creationDate" : "2007-06-22 08:30:07",
+  "updateDate" : "2007-06-22 08:35:48",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "COMBOBOX",
+  "tooltip" : "Liste de valeurs",
+  "prefix" : "LSV_REGLMN",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "LISTE_VALEUR"
+}

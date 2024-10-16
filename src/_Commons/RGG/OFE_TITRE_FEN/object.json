@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "OFE_TITRE_FEN",
+  "description" : "Titre fenêtre",
+  "creationDate" : "2021-02-17 10:14:06",
+  "updateDate" : "2021-02-17 10:30:13",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

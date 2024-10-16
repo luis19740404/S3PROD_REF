@@ -1,0 +1,37 @@
+DECLARER PCRET;P_COD_RETOUR 1                     
+DECLARER PCACT;P_COD_ACTION 2  
+*                                                 
+INITIALISER 01                                                        
+TRAITER 01                                                            
+*-------------                                           
+TRANSACTION 01 
+*-------------                                                       
+SI *F03                                                 
+  TERMINER                                                            
+FIN                                                                   
+VERIFIER 01    
+*                                                       
+INSERER_STD_D 
+*                                                        
+INITIALISER 02                                                        
+SI P_COD_RETOUR = '1'                                                 
+  ENVOYER_MSG SYS9910                                                 
+  TRAITER 01                                                          
+FIN                                                                   
+TRAITER 02                                        
+*-------------                     
+TRANSACTION 02     
+*------------- 
+SI *F03                                          
+  TERMINER                                     
+FIN                           
+SI *F12                                           
+  TRAITER 01                                      
+FIN                                               
+VERIFIER 02                                       
+*
+INSERER_STD_D  
+*                                   
+VALIDER 02                                        
+INITIALISER 01                                    
+TRAITER 01                                        

@@ -1,0 +1,6 @@
+Squelette standard pour programmes d'éditions de fiches (Sur AS/400,
+option 6=Imprimer dans les programmes de gestion par liste CUA):
+
+  - Edition d'un format.
+  - Possibilité de chainage dans des fichiers annexes pour retouver des
+  informations à éditer.

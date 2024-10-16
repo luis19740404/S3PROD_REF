@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VA_EXO8_NAT",
+  "description" : "Pgm de création d'enregistrement pour Personnel",
+  "creationDate" : "1999-01-18 13:23:42",
+  "updateDate" : "2000-07-07 15:13:12",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VANAT8",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VANAT8",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "NATIVE"
+}

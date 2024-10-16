@@ -1,0 +1,10 @@
+{
+  "type" : "ETA",
+  "name" : "WC_EDIT_PERSO",
+  "description" : "Edition extraction employés",
+  "creationDate" : "2005-10-14 08:53:50",
+  "updateDate" : "2007-08-22 14:49:19",
+  "visibility" : "PRIVATE",
+  "layoutCode" : "WCEDPE",
+  "nature" : "CRYSTAL"
+}

@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_VILLE",
+  "description" : "Edit. personnel par ville (totaux)",
+  "creationDate" : "2000-03-03 09:13:17",
+  "updateDate" : "2000-03-03 09:13:17",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPEVI",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPEVI",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

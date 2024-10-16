@@ -1,0 +1,1081 @@
+DECLARER PCRET;P_COD_RETOUR 1
+DECLARER PCACT;P_COD_ACTION 2
+DECLARER WSVCL;W_SV_CLE 100
+DECLARER WSVCD;W_SV_CLE_DEP 100
+DECLARER WNVUE;W_NOM_VUE 16
+%QUESTION *ON 99
+%%  Ce programme a-t-il été préalablement défini dans un programme
+%%  de gestion ?
+%SI N99
+%QUESTION *EN ENTITE_GEREE
+%%  Donnez le nom de l'entité en mise à jour.
+%FIN
+%QUESTION *LI TITRE_TRS_01
+%%  Indiquez le titre du premier écran
+%QUESTION *ON 10
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier?
+%SI 10
+%CREER_TRS 01 $TITRE_TRS_01 SFL_SAISIE
+%FIN
+%SI N10
+%QUESTION *ON 13
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 13
+%CREER_TRS 01 $TITRE_TRS_01 FORMAT_LIGNE
+%FIN
+%SI N13
+%CREER_TRS 01 $TITRE_TRS_01 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 01 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 01
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%%  Vérifiez aussi que la régle de gestion CONTROLE_FICH est bien
+%%  affectée à chaque entité sélectionnée.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 01
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 02
+%%  Y a t'il un deuxième écran ?
+%SI 02
+%QUESTION *LI TITRE_TRS_02
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 20
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier ?
+%SI 20
+%CREER_TRS 02 $TITRE_TRS_02 SFL_SAISIE
+%FIN
+%SI N20
+%QUESTION *ON 23
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 23
+%CREER_TRS 02 $TITRE_TRS_02 FORMAT_LIGNE
+%FIN
+%SI N23
+%CREER_TRS 02 $TITRE_TRS_02 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 02 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 02
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 02
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 03
+%%  Y a t'il un troisième écran ?
+%SI 03
+%QUESTION *LI TITRE_TRS_03
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 30
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier ?
+%SI 30
+%CREER_TRS 03 $TITRE_TRS_03 SFL_SAISIE
+%FIN
+%SI N30
+%QUESTION *ON 33
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 33
+%CREER_TRS 03 $TITRE_TRS_03 FORMAT_LIGNE
+%FIN
+%SI N33
+%CREER_TRS 03 $TITRE_TRS_03 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 03 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 03
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 03
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 04
+%%  Y a t'il un quatrième écran ?
+%SI 04
+%QUESTION *LI TITRE_TRS_04
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 40
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier ?
+%SI 40
+%CREER_TRS 04 $TITRE_TRS_04 SFL_SAISIE
+%FIN
+%SI N40
+%QUESTION *ON 43
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 43
+%CREER_TRS 04 $TITRE_TRS_04 FORMAT_LIGNE
+%FIN
+%SI N43
+%CREER_TRS 04 $TITRE_TRS_04 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 04 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 04
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 04
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 05
+%%  Y a t'il un cinquième écran ?
+%SI 05
+%QUESTION *LI TITRE_TRS_05
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 50
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier ?
+%SI 50
+%CREER_TRS 05 $TITRE_TRS_05 SFL_SAISIE
+%FIN
+%SI N50
+%QUESTION *ON 53
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 53
+%CREER_TRS 05 $TITRE_TRS_05 FORMAT_LIGNE
+%FIN
+%SI N53
+%CREER_TRS 05 $TITRE_TRS_05 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 05 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 05
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 05
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 06
+%%  Y a t'il un sixième écran ?
+%SI 06
+%QUESTION *LI TITRE_TRS_06
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 60
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier?
+%SI 60
+%CREER_TRS 06 $TITRE_TRS_06 SFL_SAISIE
+%FIN
+%SI N60
+%QUESTION *ON 63
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 63
+%CREER_TRS 06 $TITRE_TRS_06 FORMAT_LIGNE
+%FIN
+%SI N63
+%CREER_TRS 06 $TITRE_TRS_06 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 06 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 06
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 06
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 07
+%%  Y a t'il un septième écran ?
+%SI 07
+%QUESTION *LI TITRE_TRS_07
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 70
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier?
+%SI 70
+%CREER_TRS 07 $TITRE_TRS_07 SFL_SAISIE
+%FIN
+%SI N70
+%QUESTION *ON 73
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 73
+%CREER_TRS 07 $TITRE_TRS_07 FORMAT_LIGNE
+%FIN
+%SI N73
+%CREER_TRS 07 $TITRE_TRS_07 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 07 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 07
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 07
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 08
+%%  Y a t'il un huitième écran ?
+%SI 08
+%QUESTION *LI TITRE_TRS_08
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 80
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier?
+%SI 80
+%CREER_TRS 08 $TITRE_TRS_08 SFL_SAISIE
+%FIN
+%SI N80
+%QUESTION *ON 83
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 83
+%CREER_TRS 08 $TITRE_TRS_08 FORMAT_LIGNE
+%FIN
+%SI N83
+%CREER_TRS 08 $TITRE_TRS_08 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 08 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 08
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 08
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%QUESTION *ON 09
+%%  Y a t'il un neuvième écran ?
+%SI 09
+%QUESTION *LI TITRE_TRS_09
+%%  Indiquez le titre de l'écran
+%QUESTION *ON 90
+%%  L'écran permet-il de faire de la mise à jour en sous-fichier?
+%SI 90
+%CREER_TRS 09 $TITRE_TRS_09 SFL_SAISIE
+%FIN
+%SI N90
+%QUESTION *ON 93
+%%  Voulez-vous placer une seule information par ligne ?
+%% Si vous répondez non, l'écran sera généré en plaçant le
+%% "maximum" d'informations par ligne.
+%SI 93
+%CREER_TRS 09 $TITRE_TRS_09 FORMAT_LIGNE
+%FIN
+%SI N93
+%CREER_TRS 09 $TITRE_TRS_09 FORMAT_MIXTE
+%FIN
+%FIN
+%AFFECTER 09 $ENTITE_GEREE $ENTITE_GEREE
+%TRS 09
+%QUESTION **
+%%  Indiquez les informations que vous souhaitez mettre à jour sur
+%%  l'écran. Pour cela choisissez  Entités.
+%MESSAGE
+%%  Génération du dessin en cours, veuillez patienter.
+%GENERER_TRS 09
+%QUESTION **
+%%  Utilisez le maquetteur pour modifier le dessin généré ; si vous générez
+%%  sur AS/400, saisissez les références d'aideUIM : nom aide =XXXXXX01 ;
+%%  nom panel groupe = XXXXXX oùXXXXXX représente le code maquette.
+%% Utilisez le menu de service pour définir l'aide générale.
+%%
+%%
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%MESSAGE
+%%  Génération de la cinématique en cours, veuillez patienter.
+%GENERER_CIN
+%QUESTION **
+%%  Vérifiez que la cinématique a été générée correctement : accédez à
+%%  la définition de la cinématique et controlez qu'à chaque zone
+%%  maquette comportant un code vue, correspondent une zone et
+%%  un fichier de provenance. Si des zonesnon clé figurent en E/S
+%%  sur un écran puis ensortie sur d'autres écrans, otez la provenance
+%%  pour les zones ensortie. Faire ENTREE pour continuer.
+%RECUPERER_VUE *LI $ENTITE_GEREE LIST_PARAM
+%RECUPERER_ID *VAMDA $ENTITE_GEREE ** ZONE_ECRAN_CLE
+%RECUPERER_ID *VAMD $ENTITE_GEREE ** ZONE_FIC_CLE
+%RECUPERER_ID *LIMDA $ENTITE_GEREE LIST_ERREUR
+RECEVOIR P_COD_RETOUR P_COD_ACTION $LIST_PARAM
+*
+*
+* Traitement de la suppression
+*
+SI P_COD_ACTION = 'SU'
+  INITIALISER 01
+  SI P_COD_RETOUR = *BLANK
+  *
+  * Pas d'erreur durant l'initialisation
+  *
+     VALIDER 01
+  FIN
+  TERMINER
+FIN
+INITIALISER 01
+%SI N10
+SI P_COD_RETOUR <> *BLANK ET P_COD_ACTION <> 'CR' ET W_NOM_VUE = '$ENTITE_GEREE '
+  *
+  * Erreur irrémédiable durant l'initialisation
+  *
+  TERMINER
+FIN
+%FIN
+TRAITER 01
+******************
+TRANSACTION 01
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  P_COD_ACTION = 'PR'
+  *
+  * Restauration de la valeur initiale de la clé en cas de copie
+  *
+  SI P_COD_ACTION = 'CO'
+    $ZONE_ECRAN_CLE = W_SV_CLE_DEP
+  FIN
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+VERIFIER 01
+%SI 10
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N02
+VALIDER 01
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 02
+SI P_COD_ACTION = 'MO'
+  VALIDER 01
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N20
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 02
+  %SI N20
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 02
+******************
+TRANSACTION 02
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 01
+  FIN
+  TRAITER 01
+FIN
+VERIFIER 02
+%SI 20
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N03
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+FIN
+VALIDER 02
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 03
+SI P_COD_ACTION = 'MO'
+  VALIDER 02
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N30
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 03
+  %SI N30
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 03
+******************
+TRANSACTION 03
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 02
+  FIN
+  TRAITER 02
+FIN
+VERIFIER 03
+%SI 30
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N04
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+FIN
+VALIDER 03
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 04
+SI P_COD_ACTION = 'MO'
+  VALIDER 03
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N40
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 04
+  %SI N40
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 04
+******************
+TRANSACTION 04
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 03
+  FIN
+  TRAITER 03
+FIN
+VERIFIER 04
+%SI 40
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N05
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+FIN
+VALIDER 04
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 05
+SI P_COD_ACTION = 'MO'
+  VALIDER 04
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N50
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 05
+  %SI N50
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 05
+******************
+TRANSACTION 05
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 04
+  FIN
+  TRAITER 04
+FIN
+VERIFIER 05
+%SI 50
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N06
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+  VALIDER 04
+FIN
+VALIDER 05
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 06
+SI P_COD_ACTION = 'MO'
+  VALIDER 05
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N60
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 06
+  %SI N60
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 06
+******************
+TRANSACTION 06
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 05
+  FIN
+  TRAITER 05
+FIN
+VERIFIER 06
+%SI 60
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N07
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+  VALIDER 04
+  VALIDER 05
+FIN
+VALIDER 06
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 07
+SI P_COD_ACTION = 'MO'
+  VALIDER 06
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N70
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 07
+  %SI N70
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 07
+******************
+TRANSACTION 07
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 06
+  FIN
+  TRAITER 06
+FIN
+VERIFIER 07
+%SI 70
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N08
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+  VALIDER 04
+  VALIDER 05
+  VALIDER 06
+FIN
+VALIDER 07
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 08
+SI P_COD_ACTION = 'MO'
+  VALIDER 07
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N80
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 08
+  %SI N80
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 08
+******************
+TRANSACTION 08
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 07
+  FIN
+  TRAITER 07
+FIN
+VERIFIER 08
+%SI 80
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+%SI N09
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+  VALIDER 04
+  VALIDER 05
+  VALIDER 06
+  VALIDER 07
+FIN
+VALIDER 08
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%SI 09
+SI P_COD_ACTION = 'MO'
+  VALIDER 08
+FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : sauvegarde de la valeur de la clé saisie et restauration
+  * de la clé d'origine pour accéder à l'enregistrement à copier
+  *
+  PLACER_A_GAUCHE $ZONE_ECRAN_CLE W_SV_CLE
+  $ZONE_ECRAN_CLE = $ZONE_FIC_CLE
+FIN
+%SI N90
+SI P_COD_ACTION <> 'CR'
+  %FIN
+  INITIALISER 09
+  %SI N90
+FIN
+%FIN
+SI P_COD_ACTION = 'CO'
+  *
+  * Copie : restauration de la valeur de la clé saisie
+  *
+  PLACER_A_GAUCHE W_SV_CLE $ZONE_ECRAN_CLE
+FIN
+TRAITER 09
+******************
+TRANSACTION 09
+******************
+SI *F03
+  P_COD_ACTION = 'EX'
+  P_COD_RETOUR = *BLANK
+  TERMINER
+FIN
+SI *F12
+  SI P_COD_ACTION = 'MO'
+    INITIALISER 08
+  FIN
+  TRAITER 08
+FIN
+VERIFIER 09
+%SI 90
+SI *PAGAV
+  PAGINER_AVANT
+FIN
+%FIN
+SI P_COD_ACTION <> 'MO'
+  VALIDER 01
+  VALIDER 02
+  VALIDER 03
+  VALIDER 04
+  VALIDER 05
+  VALIDER 06
+  VALIDER 07
+  VALIDER 08
+FIN
+VALIDER 09
+P_COD_RETOUR = *BLANK
+TERMINER
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+%FIN
+*****************
+INITIALISATION 01
+*****************
+*
+* Copie : sauvegarde de la clé de départ
+*
+SI P_COD_ACTION = 'CO'
+  W_SV_CLE_DEP = $ZONE_ECRAN_CLE
+FIN
+%SI N10
+%QUESTION *ON 98
+%%  La valeur de la clé est-elle attribuée automatiquement ?
+%%  (Exemple : numéro attribué en séquence).
+%SI N98
+*
+* En création/copie la zone clé est accessible sinon elle est
+* protégée.
+*
+SI P_COD_ACTION = 'CR';'CO'
+  PROTEGER *FAUX $LIST_ERREUR
+  SOULIGNER *VRAI $LIST_ERREUR
+SINON
+  PROTEGER *VRAI $LIST_ERREUR
+  SOULIGNER *FAUX $LIST_ERREUR
+FIN
+%FIN
+%FIN
+INSERER_STD
+%SI 10
+EFFACER 1
+GESTION_SFL 1
+INSERER_STD
+MAJ_SFL
+FIN_GESTION_SFL
+%FIN
+*****************
+VERIFICATION 01
+*****************
+%SI N10
+%SI N98
+%QUESTION *MG MSG_N_EX
+%%  Donnez l'identifiant du message "Enregistrement déjà existant"
+%%  sous forme 9999 (préfixe par défaut) ou XXX9999. Accédez au glossaire
+%%  pour retrouver ou définir ce message. Ce message est prévu
+%%  pour passer en paramètre l'ensemble des zones constituant
+%%  l'identifiant de l'entité gérée dans l'ordre des clés.
+%% Attention ! Le préfixe (XXX) doit etre saisi en majuscules !
+*
+* Test de non existence en création ou copie
+*
+SI P_COD_ACTION = 'CR';'CO'
+  REGLE_GESTION $MSG_N_EX $ZONE_ECRAN_CLE
+  LIRE $ENTITE_GEREE
+  SI $ENTITE_GEREE EXISTE
+    ENVOYER_MSG *EFF_TOUT
+    INIT_MSG $LIST_ERREUR
+    ANOMALIE
+  FIN
+FIN
+%FIN
+%FIN
+INSERER_STD
+%SI 10
+GESTION_SFL 1
+INSERER_STD
+FIN_GESTION_SFL
+%FIN
+*************
+VALIDATION 01
+*************
+INSERER_STD
+*
+* Traitement suppression si pas de problèmes détectés lors de
+* l'initialisation
+*
+SI P_COD_ACTION = 'SU' ET P_COD_RETOUR = *BLANK
+  LIRE $ENTITE_GEREE
+  SI $ENTITE_GEREE N_EXISTE_PAS
+    P_COD_RETOUR = '1'
+  FIN
+  SI *BLOQUE = '1'
+    P_COD_RETOUR = '2'
+  FIN
+  SI P_COD_RETOUR = *BLANK
+    SUPPRIMER $ENTITE_GEREE
+  FIN
+FIN
+%SI 10
+GESTION_SFL 1
+INSERER_STD
+FIN_GESTION_SFL
+%FIN
+*****************
+TRT_GUIDE 01
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%SI 02
+*****************
+TRT_GUIDE 02
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 03
+*****************
+TRT_GUIDE 03
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 04
+*****************
+TRT_GUIDE 04
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 05
+*****************
+TRT_GUIDE 05
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 06
+*****************
+TRT_GUIDE 06
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 07
+*****************
+TRT_GUIDE 07
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 08
+*****************
+TRT_GUIDE 08
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%SI 09
+*****************
+TRT_GUIDE 09
+*****************
+INSERER_STD
+SI *F04
+  ENVOYER_MSG SYS9900
+FIN
+FIN_TRT_GUIDE
+%FIN
+%QUESTION *ON 97
+%%  Voulez-vous générer le niveau II maintenant ?
+%SI 97
+%GENERER_N2 *SOUMIS
+%QUESTION *ON 96
+%%  Voulez-vous compiler maintenant ?
+%SI 96
+%COMPILATION
+%FIN
+%QUESTION **
+%%             Travaux de génération soumis.
+%%
+%%           Faire ENTREE pour continuer.
+%FIN

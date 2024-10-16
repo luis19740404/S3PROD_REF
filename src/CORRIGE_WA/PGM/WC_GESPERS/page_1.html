@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+</head>
+
+<body><form name="WC_GESPERS_1_FORM_1" id="WC_GESPERS_1_FORM_1" method="post">
+  <div align="center"><strong><font size="5">Liste des employ&eacute;s </font>
+  </strong></div>
+  <p align="right">A partir de <adelia:entryfield type="ALPHA" length="15">
+<input type="text" name="CHS_POSIT" id="CHS_POSIT" size="15" maxlength="15"/>
+</adelia:entryfield>
+    <adelia:button default="true">
+<input type="submit" name="BTN_POSIT" id="BTN_POSIT" value="Entr&eacute;e" onClick="::ADELIA_EVT"/>
+</adelia:button>
+  </p>
+  <table width="75%" border="1" align="center" cellpadding="1" cellspacing="1" cols="4">
+<tr>
+<td width="100">Code&nbsp;</td>
+<td width="300">Nom&nbsp;</td>
+<td width="300">Ville&nbsp;</td>
+<td width="60">&nbsp;</td>
+</tr>
+<adelia:tablelist name="TBL_PERSO" step="10" eveneltcolor="#00FF00" oddeltcolor="#FFFF00">
+<tr>
+<td width="100"><adelia:outputfield name="ZZ_COD_MATRICUL" type="ALPHA" length="6" lentity="PERSONNEL" lproperty="COD_MATRICULE" dataflow="yes" /></td>
+<td width="300"><adelia:outputfield name="ZZ_NOM_PERSONNE" type="ALPHA" length="30" lentity="PERSONNEL" lproperty="NOM_PERSONNE" dataflow="yes" /></td>
+<td width="300"><adelia:outputfield name="ZZ_LIB_VIL_PERS" type="ALPHA" length="30" lentity="PERSONNEL" lproperty="LIB_VIL_PERS" dataflow="yes" /></td>
+<td width="60"><adelia:checkbox type="BOOL" selection="true">
+  <input type="checkbox" name="_FLAGSEL" id="_FLAGSEL"/>
+</adelia:checkbox></td>
+</tr>
+</adelia:tablelist>
+</table>
+<p>&nbsp;</p>
+<table width="400"  border="1" align="center">
+  <tr>
+    <td><adelia:button>
+<input type="button" name="BTN_PREC" id="BTN_PREC" value="Pr&eacute;c&eacute;dent" onClick="::ADELIA_ONROLLDOWN(TBL_PERSO)"/>
+</adelia:button>
+&nbsp;</td>
+    <td><adelia:button>
+<input type="button" name="BTN_SUIVANT" id="BTN_SUIVANT" value="Suivant" onClick="::ADELIA_ONROLLUP(TBL_PERSO)"/>
+</adelia:button>
+&nbsp;</td>
+    <td><adelia:button ><input type="button" name="BTN_MODIFIER" id="BTN_MODIFIER" value="Modifier" onclick="::ADELIA_EVT" /></adelia:button></td>
+    <td><adelia:button>
+<input type="button" name="BTN_CREER" id="BTN_CREER" value="Cr&eacute;er" onClick="::ADELIA_EVT"/>
+</adelia:button>
+&nbsp;</td>
+  </tr>
+</table>
+</form>
+
+
+</body>
+</html>

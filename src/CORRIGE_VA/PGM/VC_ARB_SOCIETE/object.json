@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_ARB_SOCIETE",
+  "description" : "Arborescence des employés par société",
+  "creationDate" : "2007-09-12 14:52:58",
+  "updateDate" : "2010-12-03 09:39:59",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCARSO",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCARSO",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

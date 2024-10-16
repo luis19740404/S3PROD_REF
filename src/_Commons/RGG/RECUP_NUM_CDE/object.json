@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "RECUP_NUM_CDE",
+  "description" : "Récupérer le dernier numéro de commande",
+  "creationDate" : "1999-01-18 13:04:31",
+  "updateDate" : "1999-01-18 13:04:31",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IP",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

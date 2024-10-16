@@ -1,0 +1,16 @@
+{
+  "type" : "PGM",
+  "name" : "WC_ACCUEIL",
+  "description" : "Page d'accueil",
+  "creationDate" : "2004-07-29 15:53:43",
+  "updateDate" : "2013-05-21 20:28:19",
+  "visibility" : "PRIVATE",
+  "ibmName" : "wcaccueil",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCACCE",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL",
+  "canvasName" : "WC_CAN_AVEC_MEN",
+  "manageHistoryButtons" : " "
+}

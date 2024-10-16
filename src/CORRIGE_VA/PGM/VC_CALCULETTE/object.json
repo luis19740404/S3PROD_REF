@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "VC_CALCULETTE",
+  "description" : "Calculette Visual",
+  "creationDate" : "2007-09-11 09:31:51",
+  "updateDate" : "2007-10-11 12:22:06",
+  "visibility" : "PRIVATE",
+  "ibmName" : "VCCALC",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VCCALC",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

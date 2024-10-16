@@ -1,0 +1,51 @@
+{
+  "views" : [ {
+    "id" : {
+      "code" : "*1"
+    },
+    "guideWord" : "SFL01",
+    "fileName" : "FAMILLEL",
+    "access" : "SEQUENTIAL_KEY",
+    "update" : "NO_UPDATE",
+    "nbKeys" : 1,
+    "generation" : "NONE",
+    "accesses" : [ {
+      "id" : {
+        "code" : "*1",
+        "ordinal" : 1
+      },
+      "guideWord" : "FCOD_FAMILLE",
+      "type" : "DEFAULT"
+    } ]
+  } ],
+  "variables" : [ {
+    "id" : {
+      "guideWord" : "PCODFAM",
+      "fileName" : ""
+    },
+    "shortName" : "PCODFAM",
+    "length" : 2,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE",
+    "reference" : "FCFAM"
+  }, {
+    "id" : {
+      "guideWord" : "PCODRET",
+      "fileName" : ""
+    },
+    "shortName" : "PCODRET",
+    "length" : 2,
+    "type" : "ALPHANUMERIC",
+    "generation" : "NONE"
+  }, {
+    "id" : {
+      "guideWord" : "WRAN01",
+      "fileName" : ""
+    },
+    "shortName" : "WRAN01",
+    "length" : 4,
+    "type" : "NUMERIC",
+    "generation" : "NONE",
+    "reference" : "*NODEF"
+  } ]
+}

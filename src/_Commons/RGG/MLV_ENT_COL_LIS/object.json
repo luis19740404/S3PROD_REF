@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "MLV_ENT_COL_LIS",
+  "description" : "RGG de formation MLIVAIN",
+  "creationDate" : "2024-05-31 13:21:11",
+  "updateDate" : "2024-05-31 13:29:30",
+  "visibility" : "PUBLIC",
+  "mrClass" : "PM",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

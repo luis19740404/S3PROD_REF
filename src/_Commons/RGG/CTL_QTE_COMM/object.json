@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CTL_QTE_COMM",
+  "description" : "Controle quantité commandée/minimum de vente",
+  "creationDate" : "1999-01-18 13:04:25",
+  "updateDate" : "1999-01-18 13:04:25",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}

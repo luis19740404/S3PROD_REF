@@ -1,0 +1,15 @@
+{
+  "type" : "GRA",
+  "name" : "BOUTON_VALIDER",
+  "description" : "Bouton Validation",
+  "creationDate" : "2007-06-22 08:19:59",
+  "updateDate" : "2007-10-11 13:03:17",
+  "visibility" : "UNSPECIFIED",
+  "dllName" : "BOUTON",
+  "tooltip" : "Bouton valider",
+  "help" : "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1036{\\fonttbl{\\f0\\ftech\\fprq1\\fcharset0 Times New Roman;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs20 ###Validation du contenu de la fen\\'eatre courante\\par\r\n}\r\n",
+  "prefix" : "BTN_VALIDE",
+  "raisedBitmap" : "bitmap_up.bin",
+  "sunkenBitmap" : "bitmap_dw.bin",
+  "baseObjectName" : "BOUTON"
+}

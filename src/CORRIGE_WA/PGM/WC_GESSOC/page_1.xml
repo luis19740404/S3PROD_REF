@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_SOCIETE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="10" guide="0" kinematic="0" name="TBL_SOCIETE">
+            <properties>
+                <property id="1" stringValue="ZZ_COD_SOCIETE -6 2 2 -1 # ZZ_NOM_SOCIETE -6 2 30 -1 # BTN_EMPLOYES -6 13 0 0"/>
+                <property id="4" intValue="10"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="SOCIETE.COD_SOCIETE" name="ZZ_COD_SOCIETE">
+            <properties>
+                <property id="-9" stringValue="2 2 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="1" logicalProperty="SOCIETE.NOM_SOCIETE" name="ZZ_NOM_SOCIETE">
+            <properties>
+                <property id="-9" stringValue="2 30 -1"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="3" guide="0" kinematic="0" name="BTN_EMPLOYES">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_PREC">
+            <properties/>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="2" guide="0" kinematic="0" name="HLK_SUIVANT">
+            <properties/>
+        </control>
+    </controls>
+</page>

@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "WC_ENTETE_CAN",
+  "description" : "En tête de canevas",
+  "creationDate" : "2004-07-29 15:15:18",
+  "updateDate" : "2004-08-02 12:53:06",
+  "visibility" : "PRIVATE",
+  "ibmName" : "WCENTC",
+  "programType" : "I",
+  "sourceType" : "WADELIA",
+  "layoutCode" : "WCENTC",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "SQL"
+}

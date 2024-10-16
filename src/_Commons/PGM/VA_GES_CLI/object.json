@@ -1,0 +1,15 @@
+{
+  "type" : "PGM",
+  "name" : "VA_GES_CLI",
+  "description" : "VA Gestion client",
+  "creationDate" : "2000-02-01 11:11:58",
+  "updateDate" : "2020-08-19 12:58:01",
+  "visibility" : "PUBLIC",
+  "ibmName" : "VGSCLI",
+  "programType" : "I",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "VGSCLI",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "SQL",
+  "manageHistoryButtons" : " "
+}

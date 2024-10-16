@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<adelia:css_link/>
+<style type="text/css">
+<!--
+.Style1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<form name="WC_LISTE_CLIENT_1_FORM_1" id="WC_LISTE_CLIENT_1_FORM_1" method="post">
+<div align="center"><strong><font size="4">Liste des clients</font></strong></div>
+<p align="center"></p>
+  <div align="center">
+  <table cols="4" width="75%" border="1" cellpadding="1" cellspacing="1">
+    <tr>
+    <td><strong>Client</strong></td>
+    <td><strong>Nom du client</strong></td>
+    <td><strong>Bureau distributeur</strong></td>
+    <td><strong>Montant C.A. </strong></td>
+    </tr>
+    <adelia:tablelist name="TBL_CLIENTS" step="10" eveneltcolor="#999966" oddeltcolor="#CCCC00">
+    <tr>
+    <td><adelia:outputfield name="ZCCOD_CLIENT" type="ALPHA" length="6" lentity="CLIENT" lproperty="COD_CLIENT" dataflow="yes" /></td>
+    <td><adelia:outputfield name="ZCNOM_CLIENT" type="ALPHA" length="30" lentity="CLIENT" lproperty="NOM_CLIENT" dataflow="yes" /></td>
+    <td><adelia:outputfield name="ZCBUR_DIS_CLI" type="ALPHA" length="30" lentity="CLIENT" lproperty="BUR_DIS_CLI" dataflow="yes" /></td>
+    <td><adelia:outputfield name="ZCMHT_CAF_CLI" type="NUMP" length="11" decimals="2" editcode="CDE_J" lentity="CLIENT" lproperty="MHT_CAF_CLI" dataflow="yes" /></td>
+    </tr>
+    </adelia:tablelist>
+  </table>
+  <table width="200">
+      <tr>
+        <td><adelia:button ><input type="button" name="BTN_PREC" id="BTN_PREC" value="Pr&eacute;c&eacute;dent" onclick="::ADELIA_ONROLLDOWN(TBL_CLIENTS)" /></adelia:button></td>
+        <td><adelia:button>
+      <input type="button" name="BTN_SUIV" id="BTN_SUIV" value="Suivant" onclick="::ADELIA_ONROLLUP(TBL_CLIENTS)"/>
+    </adelia:button></td>
+      </tr>
+  </table>
+  </div>
+  <p align="center">&nbsp;  </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_PERS_TBX",
+  "description" : "Edit. personnel tableau croisé",
+  "creationDate" : "2000-03-03 09:13:17",
+  "updateDate" : "2000-03-03 09:13:17",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDPETX",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDPETX",
+  "level2GenType" : 2,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

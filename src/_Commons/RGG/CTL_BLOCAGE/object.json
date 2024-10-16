@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CTL_BLOCAGE",
+  "description" : "Controle blocage d'enregistrement",
+  "creationDate" : "1999-01-18 12:50:02",
+  "updateDate" : "2022-11-21 15:00:06",
+  "visibility" : "PUBLIC",
+  "mrClass" : "IE",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL" ]
+}

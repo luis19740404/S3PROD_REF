@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "LOG_PB_FICH",
+  "description" : "Consignation des pb d'accès aux fichiers",
+  "creationDate" : "2012-05-22 08:47:54",
+  "updateDate" : "2022-11-21 15:00:06",
+  "visibility" : "PUBLIC",
+  "mrClass" : "MJ",
+  "formal" : true,
+  "types" : [ "ADELIA", "VISUAL", "WADELIA" ]
+}

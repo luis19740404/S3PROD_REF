@@ -1,0 +1,11 @@
+{
+  "type" : "MRA",
+  "name" : "T_DOUBLE_LISTE",
+  "description" : "Double liste",
+  "creationDate" : "2011-02-18 13:23:40",
+  "updateDate" : "2011-02-18 13:23:40",
+  "visibility" : "PUBLIC",
+  "templateClass" : "DOUBLE_LIST",
+  "version" : "IG2",
+  "modelName" : "_DOUBLE_LISTE"
+}

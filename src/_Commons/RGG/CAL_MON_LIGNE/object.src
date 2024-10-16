@@ -1,0 +1,5 @@
+*ROW_METADATA(ADELIA                 )DEBUT_RGG
+*ROW_METADATA(ADELIA         00000000)   * Calcul du Montant ligne de commande
+*ROW_METADATA(FMT_LTA        20210211)   * à partir de la quantité commandée et du prix unitaire
+*ROW_METADATA(FMT_LTA        20210211)   $$MTT_LIGNE = $QTE_COMMANDE * $PRX_UNITAIRE
+*ROW_METADATA(ADELIA                 )FIN_RGG

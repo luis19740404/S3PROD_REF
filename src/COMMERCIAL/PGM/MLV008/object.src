@@ -1,0 +1,156 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)      *Variable de travail
+*ROW_METADATA(MLIVAIN        20240530)      num_bin_4 wNumLigne
+*ROW_METADATA(MLIVAIN        20240530)      alpha(15) wNomChamp
+*ROW_METADATA(MLIVAIN        20240531)      num_e(1,0) ResuMsg
+*ROW_METADATA(MLIVAIN        20240530)      * Curseur de lecture des employés
+*ROW_METADATA(MLIVAIN        20240531)      curseur curs_personnel personnel *tri(pe_cod_matricul)
+*ROW_METADATA(MLIVAIN        20240531)      ref(pe_cod_matricul) wMatricul
+*ROW_METADATA(MLIVAIN        20240530)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240530)      initialiser fen_insper
+*ROW_METADATA(MLIVAIN        20240530)      
+*ROW_METADATA(MLIVAIN        20240530)      executer fen_insper
+*ROW_METADATA(MLIVAIN        20240530)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240530)   DEBUT_FENETRE FEN_INSPER
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240530)         
+*ROW_METADATA(MLIVAIN        20240530)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240530)         * Initialisation liste graphique
+*ROW_METADATA(MLIVAIN        20240530)         Vider_lst lst_personnel:liste
+*ROW_METADATA(MLIVAIN        20240530)         * Ouverture du curseur de la trable PERSONNEL
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240530)            ouvrir_sql_c curs_personnel
+*ROW_METADATA(MLIVAIN        20240530)            *
+*ROW_METADATA(MLIVAIN        20240530)            lire_av_sql_c curs_personnel
+*ROW_METADATA(MLIVAIN        20240530)            tant_que *sqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240530)               * Transfert des zones fichier dans les zones maquettes
+*ROW_METADATA(MLIVAIN        20240530)               presenter personnel
+*ROW_METADATA(MLIVAIN        20240530)               * Protection de la colonne code matricule
+*ROW_METADATA(MLIVAIN        20240530)               zz_cod_matricul:lecture_seule=*vrai
+*ROW_METADATA(MLIVAIN        20240530)               * Passage de la date d'entrée au format date pour affichage en colonne 
+*ROW_METADATA(MLIVAIN        20240530)               zz_dat_entree = &num_date(pe_dat_entree)
+*ROW_METADATA(MLIVAIN        20240530)               col_typeaction:valeur = *blank
+*ROW_METADATA(MLIVAIN        20240530)               * Insetion dans la liste graphique
+*ROW_METADATA(MLIVAIN        20240530)               si ZZ_PRN_PERSONNE = *blank
+*ROW_METADATA(MLIVAIN        20240530)                  ZZ_PRN_PERSONNE = '##'
+*ROW_METADATA(MLIVAIN        20240530)               fin
+*ROW_METADATA(MLIVAIN        20240530)               
+*ROW_METADATA(MLIVAIN        20240530)               inserer_elt lst_personnel:liste
+*ROW_METADATA(MLIVAIN        20240530)               
+*ROW_METADATA(MLIVAIN        20240530)               lire_av_sql_c curs_personnel
+*ROW_METADATA(MLIVAIN        20240530)            refaire
+*ROW_METADATA(MLIVAIN        20240530)            fermer_sql_c curs_personnel
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240530)      FIN_INIT
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240530)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(MLIVAIN        20240530)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240530)               terminer      
+*ROW_METADATA(MLIVAIN        20240530)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240530)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240530)         DEBUT_OBJET BTN_NOUVEAU
+*ROW_METADATA(MLIVAIN        20240530)            DEBUT_EVT BTN_NOUVEAU:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240530)               * Insertion d'une nouvelle ligne
+*ROW_METADATA(MLIVAIN        20240530)               zz_cod_matricul = *blank
+*ROW_METADATA(MLIVAIN        20240530)               zz_cod_matricul:lecture_seule = *faux
+*ROW_METADATA(MLIVAIN        20240530)               zz_nom_personne = *blank
+*ROW_METADATA(MLIVAIN        20240530)               zz_prn_personne = *blank
+*ROW_METADATA(MLIVAIN        20240530)               zz_mtt_salaire = 0
+*ROW_METADATA(MLIVAIN        20240530)               zz_nbr_heure_me = 100
+*ROW_METADATA(MLIVAIN        20240530)               zz_cod_societe = *blank
+*ROW_METADATA(MLIVAIN        20240530)               * La colonne zz_date_entree prend par défaut la date du jour
+*ROW_METADATA(MLIVAIN        20240530)               col_typeaction:valeur = 'C'
+*ROW_METADATA(MLIVAIN        20240530)               * Insertion de la ligne en début de liste graphique
+*ROW_METADATA(MLIVAIN        20240530)               inserer_elt lst_personnel:liste *debut
+*ROW_METADATA(MLIVAIN        20240530)               wNumLigne = 1
+*ROW_METADATA(MLIVAIN        20240530)               appeler_methode zz_cod_matricul METTRE_FOCUS wNumLigne
+*ROW_METADATA(MLIVAIN        20240530)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240530)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240530)         DEBUT_OBJET BTN_VALIDER
+*ROW_METADATA(MLIVAIN        20240530)            DEBUT_EVT BTN_VALIDER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240530)               * Appel contrôle des saisies effectuées
+*ROW_METADATA(MLIVAIN        20240530)               verifier
+*ROW_METADATA(MLIVAIN        20240530)               * Parcours de la liste pour tous les éléments insérés ou modifiés
+*ROW_METADATA(MLIVAIN        20240530)               lecture_lst lst_personnel:liste *modif
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240530)                     rapatrier personnel
+*ROW_METADATA(MLIVAIN        20240530)                     pe_dat_entree = &date_num(zz_dat_entree)
+*ROW_METADATA(MLIVAIN        20240530)                     * Le type de mise à jour sur la table dépend de l'action
+*ROW_METADATA(MLIVAIN        20240530)                     * effectuée sur une liste
+*ROW_METADATA(MLIVAIN        20240530)                     si col_typeaction:valeur = 'C'
+*ROW_METADATA(MLIVAIN        20240530)                        creer_sql personnel
+*ROW_METADATA(MLIVAIN        20240530)                     sinon 
+*ROW_METADATA(MLIVAIN        20240530)                        maj_sql personnel *all *cond(pe_cod_matricul = :zz_cod_matricul)
+*ROW_METADATA(MLIVAIN        20240530)                     fin
+*ROW_METADATA(MLIVAIN        20240530)                     valider_maj
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240530)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)               initialiser
+*ROW_METADATA(MLIVAIN        20240530)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240530)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240531)         DEBUT_OBJET BTN_SUPPRIMER
+*ROW_METADATA(MLIVAIN        20240531)            DEBUT_EVT BTN_SUPPRIMER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240531)               
+*ROW_METADATA(MLIVAIN        20240531)               lecture_lst lst_personnel:liste *select
+*ROW_METADATA(MLIVAIN        20240531)                  wMatricul = zz_cod_matricul
+*ROW_METADATA(MLIVAIN        20240531)                  * Lecture des sélections de la liste pour suppression
+*ROW_METADATA(MLIVAIN        20240531)                  ENVOYER_MSG GEN0002 wMatricul *BOITE(*OUI_NON, ResuMsg, 2)
+*ROW_METADATA(MLIVAIN        20240531)                  * Fait afficher un message de confirmation avant suppression d'un enregistremen
+*ROW_METADATA(MLIVAIN        20240531)                  * Le bouton NON, de rang 2, est le bouton par défaut de la boîte d'affichage
+*ROW_METADATA(MLIVAIN        20240531)                  SI   (ResuMsg = *BTN_OUI)
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240531)                        * ResuMsg est une variable numérique retournant le bouton chois
+*ROW_METADATA(MLIVAIN        20240531)                        supprimer_elt lst_personnel:liste
+*ROW_METADATA(MLIVAIN        20240531)                        SUPPRIMER_SQL PERSONNEL *COND(pe_cod_matricul = :zz_cod_matricul)
+*ROW_METADATA(MLIVAIN        20240531)                        SI *SQLCODE = *NORMAL
+*ROW_METADATA(MLIVAIN        20240531)                           VALIDER_MAJ
+*ROW_METADATA(MLIVAIN        20240531)                        FIN
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240531)                  fin
+*ROW_METADATA(MLIVAIN        20240531)               fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240531)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240531)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240530)      FIN_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_VERIF
+*ROW_METADATA(MLIVAIN        20240530)         * Contrôle des saisies effectuées dans la liste
+*ROW_METADATA(MLIVAIN        20240530)         lecture_lst lst_personnel:liste *modif
+*ROW_METADATA(MLIVAIN        20240530)            * Contrôle sur le code matricule en création
+*ROW_METADATA(MLIVAIN        20240530)            si col_typeaction:valeur = 'C'
+*ROW_METADATA(MLIVAIN        20240530)               * Le matricule doit être saisi
+*ROW_METADATA(MLIVAIN        20240530)               si zz_cod_matricul = *blank
+*ROW_METADATA(MLIVAIN        20240530)                  preparer_msg PER0002 zz_cod_matricul *boite
+*ROW_METADATA(MLIVAIN        20240530)                  wNomChamp = 'Code matricule'
+*ROW_METADATA(MLIVAIN        20240530)                  init_msg wNomChamp
+*ROW_METADATA(MLIVAIN        20240530)                  erreur
+*ROW_METADATA(MLIVAIN        20240530)               fin
+*ROW_METADATA(MLIVAIN        20240530)               * Le code matricule ne doit pas déjà exister
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240530)                  lire_sql personnel *col(pe_cod_matricul) *cond (pe_cod_matricul=:zz_cod_matricul)
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240530)               si *sqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240530)                  preparer_msg PER0001 zz_cod_matricul *boite
+*ROW_METADATA(MLIVAIN        20240530)                  init_msg zz_cod_matricul
+*ROW_METADATA(MLIVAIN        20240530)                  erreur
+*ROW_METADATA(MLIVAIN        20240530)               fin
+*ROW_METADATA(MLIVAIN        20240530)            fin
+*ROW_METADATA(MLIVAIN        20240530)            * Le nom doit être saisi
+*ROW_METADATA(MLIVAIN        20240530)            si zz_nom_personne = *blank
+*ROW_METADATA(MLIVAIN        20240530)               preparer_msg PER0002 zz_nom_personne *boite
+*ROW_METADATA(MLIVAIN        20240530)               wNomChamp = 'Nom employé'
+*ROW_METADATA(MLIVAIN        20240530)               init_msg wNomChamp
+*ROW_METADATA(MLIVAIN        20240530)               erreur
+*ROW_METADATA(MLIVAIN        20240530)            fin
+*ROW_METADATA(MLIVAIN        20240530)            * Réécriture de la ligne de liste pour conserver l'état modifié
+*ROW_METADATA(MLIVAIN        20240530)            modifier_elt lst_personnel:liste *select
+*ROW_METADATA(MLIVAIN        20240530)         fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240530)      FIN_VERIF
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_VALID
+*ROW_METADATA(MLIVAIN        20240531)         
+*ROW_METADATA(MLIVAIN        20240530)      FIN_VALID
+*ROW_METADATA(MLIVAIN        20240530)      DEBUT_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240530)      FIN_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240530)   FIN_FENETRE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

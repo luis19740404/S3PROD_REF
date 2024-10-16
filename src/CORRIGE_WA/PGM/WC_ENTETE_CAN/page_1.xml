@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="1" name="PAG_ENTETE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml page.xsd">
+    <properties/>
+    <controls>
+        <control classId="0" className="ENTRYFIELD" error="5" guide="0" kinematic="0" name="IMG_BANNIERE_VEB">
+            <properties>
+                <property id="-9" stringValue="10 0 0"/>
+                <property id="20"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_DATE_JOUR">
+            <properties>
+                <property id="-9" stringValue="0 0 0"/>
+            </properties>
+        </control>
+        <control classId="0" className="ENTRYFIELD" error="1" guide="0" kinematic="0" name="CHO_TYP_TRT">
+            <properties>
+                <property id="-9" stringValue="2 15 -1"/>
+            </properties>
+        </control>
+    </controls>
+</page>

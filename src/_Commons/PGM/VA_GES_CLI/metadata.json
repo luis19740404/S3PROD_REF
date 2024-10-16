@@ -1,0 +1,16 @@
+[ {
+  "id" : {
+    "name" : "_WMDSZ_BEAN"
+  },
+  "value" : "N"
+}, {
+  "id" : {
+    "name" : "_WMDSZ_ENTRY"
+  },
+  "value" : "O"
+}, {
+  "id" : {
+    "name" : "ERROR_MESSAGE_PLATFORM"
+  },
+  "value" : "C"
+} ]

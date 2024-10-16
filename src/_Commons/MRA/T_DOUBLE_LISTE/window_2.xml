@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Confirmation de suppression d'enregistrements" help="" id="2" name="RAD1_FEN_SUPPR" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-19" intValue="1048584"/>
+        <property id="-4" intValue="314"/>
+        <property id="-3" intValue="399"/>
+        <property id="-2" intValue="287"/>
+        <property id="-1" intValue="363"/>
+        <property id="3" stringValue="Confirmation de suppression d'enregistrements"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4Xu2OCwqEMAwFPXqP1pu5DKxSHttsahL2gwMBNe/F2babL2RPmBB7BPrPuYzeXIJ+7z0koTeXoI9AREJvLnH0IxJyco2xf1ViOLcOfWNc6M0UuKs/mqHdE2v3DrqtNZeEdk/YWXsLemkCVmYGnVQBK/cK8ukCVlYhWyJg5UfIlQlYnQMypQJWD9iXCHghmyagzx7Ipgjou36bQS4soJD15smlCwB5T4fMfwp44e4t8DsCVeMV2AhWjf7r4zwAlC7rhv55wFkAAAAASUVORK5CYII=</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR4Xq2MQQrAQAwC9/+vys+2pEiJibKldMCLmbjWT+yXsewT6SCS7g/SiQg7MuROdjngRobsuhLCygrcCCXYEfSEEuwIOkIJI+1OlPc50EFPDKGIdCs90Z0HyKojSKhAVh1Bwgk58CE3FyXG6upX9HSDAAAAAElFTkSuQmCC</property>
+        <property id="22" intValue="391"/>
+        <property id="23" intValue="280"/>
+    </properties>
+    <controls>
+        <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="RAD1_LISTE_SUPPR">
+            <properties>
+                <property id="-4" intValue="192"/>
+                <property id="-3" intValue="368"/>
+                <property id="-2" intValue="42"/>
+                <property id="-1" intValue="12"/>
+                <property id="6"/>
+                <property id="14"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_VALID_SUPPR">
+            <properties>
+                <property id="-8" stringValue="Supprimer"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="248"/>
+                <property id="-1" intValue="12"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-8" stringValue="Annuler"/>
+                <property id="-4" intValue="23"/>
+                <property id="-3" intValue="75"/>
+                <property id="-2" intValue="248"/>
+                <property id="-1" intValue="94"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_SUPPRESSION">
+            <properties>
+                <property id="-21" stringValue="MS Sans Serif;8;1;0"/>
+                <property id="-8" stringValue="Cliquez sur le bouton Supprimer pour supprimer tous les enregistrements présents dans la liste ci-dessous."/>
+                <property id="-4" intValue="30"/>
+                <property id="-3" intValue="368"/>
+                <property id="-2" intValue="11"/>
+                <property id="-1" intValue="11"/>
+                <property id="4" intValue="255"/>
+                <property id="6" intValue="1"/>
+            </properties>
+        </control>
+    </controls>
+</window>

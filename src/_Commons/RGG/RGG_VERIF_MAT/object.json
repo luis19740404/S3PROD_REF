@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "RGG_VERIF_MAT",
+  "description" : "Verification",
+  "creationDate" : "1999-01-18 12:50:12",
+  "updateDate" : "1999-01-18 13:18:21",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "VISUAL" ]
+}

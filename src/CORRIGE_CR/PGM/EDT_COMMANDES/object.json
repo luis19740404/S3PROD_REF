@@ -1,0 +1,14 @@
+{
+  "type" : "PGM",
+  "name" : "EDT_COMMANDES",
+  "description" : "edition commandes",
+  "creationDate" : "2007-08-09 12:20:42",
+  "updateDate" : "2007-08-09 12:37:42",
+  "visibility" : "PRIVATE",
+  "ibmName" : "EDTCOM",
+  "programType" : "B",
+  "sourceType" : "VADELIA",
+  "layoutCode" : "EDTCOM",
+  "level2GenType" : 1,
+  "level2DatabaseGenMode" : "DEFAULT"
+}

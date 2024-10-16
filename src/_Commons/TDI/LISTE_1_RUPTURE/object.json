@@ -1,0 +1,9 @@
+{
+  "type" : "TDI",
+  "name" : "LISTE_1_RUPTURE",
+  "description" : "Q/R pour liste 1 rupture",
+  "creationDate" : "1995-11-30 12:46:34",
+  "updateDate" : "1995-11-30 12:46:34",
+  "visibility" : "PUBLIC",
+  "templateType" : "B"
+}

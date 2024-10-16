@@ -1,0 +1,204 @@
+*ROW_METADATA(MLIVAIN                )DEBUT_PGM
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240527)      
+*ROW_METADATA(MLIVAIN        20240527)      alpha(6) pcod_client
+*ROW_METADATA(MLIVAIN        20240527)      alpha(2) pcod_retour
+*ROW_METADATA(MLIVAIN        20240527)      alpha(2) pcod_action
+*ROW_METADATA(MLIVAIN        20240527)      *Initialisation de la liste pour drop list reglement
+*ROW_METADATA(MLIVAIN        20240527)      liste lsm_reglement *ref_mld(REGLEMT)
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)      *paramètres d'entrée du programme
+*ROW_METADATA(MLIVAIN        20240528)      param pcod_retour pcod_action pcod_client
+*ROW_METADATA(MLIVAIN        20240528)       
+*ROW_METADATA(MLIVAIN        20240528)      * groupes d'affichage et de protection 
+*ROW_METADATA(MLIVAIN        20240528)      groupe_objets autre fen_gest_cli.txt_cod_regl fen_gest_cli.lsv_reglement -
+*ROW_METADATA(MLIVAIN        20240528)         fen_gest_cli.txt_ca fen_gest_cli.zcmht_caf_cli
+*ROW_METADATA(MLIVAIN        20240528)      groupe_objets tout_sauf_code fen_gest_cli.lsv_reglement fen_gest_cli.zcnum_tel_cli fen_gest_cli.LBR_ETAT_CLIENT fen_gest_cli.ZCADR_01_CLI fen_gest_cli.ZCBUR_DIS_CLI -
+*ROW_METADATA(MLIVAIN        20240528)         fen_gest_cli.ZCCOD_POS_CLI  fen_gest_cli.ZCMHT_CAF_CLI fen_gest_cli.ZCNOM_CLIENT fen_gest_cli.ZZ_ADR_02_CLI 
+*ROW_METADATA(MLIVAIN        20240528)      
+*ROW_METADATA(MLIVAIN        20240528)      *Viariables pour les fonctions VaToolBx
+*ROW_METADATA(MLIVAIN        20240528)      alpha(20) wTitre
+*ROW_METADATA(MLIVAIN        20240528)      alpha(20) wTypeFiltre
+*ROW_METADATA(MLIVAIN        20240528)      alpha(40) wFiltre
+*ROW_METADATA(MLIVAIN        20240528)      alpha(300) wCheminFichier
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_4 wTaille
+*ROW_METADATA(MLIVAIN        20240528)      bool wCodeRetourBool
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_2 wCodeRetourb2
+*ROW_METADATA(MLIVAIN        20240528)      num_bin_4 wCodeRetourURL
+*ROW_METADATA(MLIVAIN        20240527)   FIN_DECL
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_INIT
+*ROW_METADATA(MLIVAIN        20240527)      pcod_retour = *blank
+*ROW_METADATA(MLIVAIN        20240527)      initialiser fen_gest_cli
+*ROW_METADATA(MLIVAIN        20240527)      si pcod_retour = *blank
+*ROW_METADATA(MLIVAIN        20240527)         executer fen_gest_cli
+*ROW_METADATA(MLIVAIN        20240528)      fin
+*ROW_METADATA(MLIVAIN        20240528)      *Centrage de la fenêtre sur le bureau Windows
+*ROW_METADATA(MLIVAIN        20240528)      APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxCenterWindows' fen_gest_cli
+*ROW_METADATA(MLIVAIN        20240527)   FIN_INIT
+*ROW_METADATA(MLIVAIN        20240527)   DEBUT_FENETRE FEN_GEST_CLI
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_DECL
+*ROW_METADATA(MLIVAIN        20240528)         alpha(6) img_origins(2)
+*ROW_METADATA(MLIVAIN        20240528)         num_e(2,0) wIndex
+*ROW_METADATA(MLIVAIN        20240527)      FIN_DECL
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_INIT
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240528)            img_origins(1)='Local'
+*ROW_METADATA(MLIVAIN        20240528)            img_origins(2)= 'URL'
+*ROW_METADATA(MLIVAIN        20240528)            wIndex = 1
+*ROW_METADATA(MLIVAIN        20240528)            tant_que wIndex <=2
+*ROW_METADATA(MLIVAIN        20240528)               ZORIGIN = img_origins(wIndex)
+*ROW_METADATA(MLIVAIN        20240528)               inserer_elt lsv_img_origin:liste
+*ROW_METADATA(MLIVAIN        20240528)               wIndex = wIndex+1
+*ROW_METADATA(MLIVAIN        20240528)            refaire
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240528)         lecture_lst LSM_REGLEMENT
+*ROW_METADATA(MLIVAIN        20240528)            zccod_reglemt = rcod_reglemt
+*ROW_METADATA(MLIVAIN        20240528)            zrlib_reglemt = rlib_reglemt
+*ROW_METADATA(MLIVAIN        20240528)            inserer_elt LSV_REGLEMENT:liste
+*ROW_METADATA(MLIVAIN        20240528)         fin_lecture_lst
+*ROW_METADATA(MLIVAIN        20240528)         si pcod_action = _MO;_VI 
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)               lire_sql client *cond(ccod_client=:pcod_client)
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)            si *sqlcode=*normal
+*ROW_METADATA(MLIVAIN        20240527)               si pcod_action = _Mo
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240528)                     maj_sql client cnom_client =  cnom_client *cond(ccod_client=:pcod_client)
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)               fin
+*ROW_METADATA(MLIVAIN        20240527)               si *bloque = '0' ou pcod_action = _VI        
+*ROW_METADATA(MLIVAIN        20240527)                  presenter client *forcer
+*ROW_METADATA(MLIVAIN        20240528)                  lsv_reglement:valeur = ccod_reglemt
+*ROW_METADATA(MLIVAIN        20240527)               sinon
+*ROW_METADATA(MLIVAIN        20240527)                  pcod_retour = 'VR'
+*ROW_METADATA(MLIVAIN        20240527)               fin
+*ROW_METADATA(MLIVAIN        20240527)            sinon
+*ROW_METADATA(MLIVAIN        20240527)               pcod_retour = 'LE'
+*ROW_METADATA(MLIVAIN        20240527)               quitter
+*ROW_METADATA(MLIVAIN        20240527)            fin
+*ROW_METADATA(MLIVAIN        20240527)            zccod_client:lecture_seule = *vrai
+*ROW_METADATA(MLIVAIN        20240528)            si pcod_action = _MO
+*ROW_METADATA(MLIVAIN        20240528)               lbr_etat_client:valeur = 'C'
+*ROW_METADATA(MLIVAIN        20240528)               autre:visibilite = *vrai
+*ROW_METADATA(MLIVAIN        20240528)               APPELER_METHODE zcnom_client METTRE_FOCUS
+*ROW_METADATA(MLIVAIN        20240528)            fin
+*ROW_METADATA(MLIVAIN        20240528)               
+*ROW_METADATA(MLIVAIN        20240527)         fin
+*ROW_METADATA(MLIVAIN        20240527)         
+*ROW_METADATA(MLIVAIN        20240527)         si pcod_action = _CR
+*ROW_METADATA(MLIVAIN        20240528)            zccod_client:lecture_seule = *faux
+*ROW_METADATA(MLIVAIN        20240528)            lbr_etat_client:valeur = 'P'
+*ROW_METADATA(MLIVAIN        20240528)            autre:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240528)            APPELER_METHODE zccod_client METTRE_FOCUS
+*ROW_METADATA(MLIVAIN        20240528)         fin
+*ROW_METADATA(MLIVAIN        20240528)         
+*ROW_METADATA(MLIVAIN        20240528)         si pcod_action = _VI
+*ROW_METADATA(MLIVAIN        20240528)            tout_sauf_code:lecture_seule = *vrai
+*ROW_METADATA(MLIVAIN        20240528)            zccod_client:lecture_seule = *vrai
+*ROW_METADATA(MLIVAIN        20240528)         fin
+*ROW_METADATA(MLIVAIN        20240527)      FIN_INIT
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240527)         DEBUT_OBJET BTN_FERMER
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT BTN_FERMER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240527)               pcod_retour = 'AN'
+*ROW_METADATA(MLIVAIN        20240527)               SI pcod_action = _MO
+*ROW_METADATA(MLIVAIN                )               DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)                     annuler_maj
+*ROW_METADATA(MLIVAIN                )               FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)               FIN
+*ROW_METADATA(MLIVAIN        20240527)               terminer
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240527)         DEBUT_OBJET BTN_VALIDER
+*ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT BTN_VALIDER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240527)               verifier
+*ROW_METADATA(MLIVAIN        20240527)               valider
+*ROW_METADATA(MLIVAIN        20240527)               terminer
+*ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240527)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240528)         DEBUT_OBJET LBR_ETAT_CLIENT
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT LBR_ETAT_CLIENT:ChangementValeur
+*ROW_METADATA(MLIVAIN        20240528)               * Test pour déterminer quel est le bouton radio coché ( par rapport à sa valeur)
+*ROW_METADATA(MLIVAIN        20240528)               si lbr_etat_client:valeur = 'C'
+*ROW_METADATA(MLIVAIN        20240528)                  * Le groupe d'objet "autre" est rendu visible
+*ROW_METADATA(MLIVAIN        20240528)                  autre:visibilite = *vrai
+*ROW_METADATA(MLIVAIN        20240528)               sinon
+*ROW_METADATA(MLIVAIN        20240528)                  * Le groupe d'objet "autre" est rendu invisible
+*ROW_METADATA(MLIVAIN        20240528)                  autre:visibilite = *faux
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240528)         DEBUT_OBJET BTN_CHARGER
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT BTN_CHARGER:BoutonGaucheClic
+*ROW_METADATA(MLIVAIN        20240528)               si lsv_img_origin:valeur = 'Local'
+*ROW_METADATA(MLIVAIN        20240528)                  wTitre = 'Liste des images'
+*ROW_METADATA(MLIVAIN        20240528)                  wTypeFiltre = 'Fichiers images'
+*ROW_METADATA(MLIVAIN        20240528)                  wFiltre = '*.jpg;*.jpeg;*.png;*gif'
+*ROW_METADATA(MLIVAIN        20240528)                  wCheminFichier = 'TEMP:\'
+*ROW_METADATA(MLIVAIN        20240528)                  wTaille = 300
+*ROW_METADATA(MLIVAIN        20240528)                  APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxOpenFileSelection' fen_gest_cli wTitre wTypeFiltre -
+*ROW_METADATA(MLIVAIN        20240528)                  wFiltre wCheminFichier wTaille wCodeRetourBool
+*ROW_METADATA(MLIVAIN        20240528)                  *Chargement du contrôle d'image
+*ROW_METADATA(MLIVAIN        20240528)                  APPELER_DLL 'VATOOLBX.DLL' 'VaToolBxLoadBitmap' img_client:bitmap wCheminFichier - 
+*ROW_METADATA(MLIVAIN        20240528)                  wCodeRetourb2
+*ROW_METADATA(MLIVAIN        20240528)               sinon_si lsv_img_origin:valeur = 'URL'
+*ROW_METADATA(MLIVAIN        20240528)                  SI CHS_VALEUR_URL:valeur <> *BLANK
+*ROW_METADATA(MLIVAIN        20240528)                     APPELER_METHODE img_client CHARGER_IMAGE_URL CHS_VALEUR_URL:valeur wCodeRetourURL
+*ROW_METADATA(MLIVAIN        20240528)                     SI wCodeRetourURL <> 0 
+*ROW_METADATA(MLIVAIN        20240528)                        ENVOYER_MSG 0044 *boite(*ok)
+*ROW_METADATA(MLIVAIN        20240528)                     FIN
+*ROW_METADATA(MLIVAIN        20240528)                  sinon
+*ROW_METADATA(MLIVAIN        20240528)                     ENVOYER_MSG CLI1001 CHS_VALEUR_URL:valeur *boite(*ok)
+*ROW_METADATA(MLIVAIN        20240528)                  FIN
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240528)         DEBUT_OBJET LSV_IMG_ORIGIN
+*ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT LSV_IMG_ORIGIN:ChangementValeur
+*ROW_METADATA(MLIVAIN        20240528)               si lsv_img_origin:valeur = 'Local'
+*ROW_METADATA(MLIVAIN        20240528)                  chs_valeur_url:lecture_seule = *vrai
+*ROW_METADATA(MLIVAIN        20240528)               sinon
+*ROW_METADATA(MLIVAIN        20240528)                  chs_valeur_url:lecture_seule = *faux
+*ROW_METADATA(MLIVAIN        20240528)               fin
+*ROW_METADATA(MLIVAIN        20240528)            FIN_EVT
+*ROW_METADATA(MLIVAIN        20240528)         FIN_OBJET
+*ROW_METADATA(MLIVAIN        20240527)      FIN_GEST_EVT
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_VERIF
+*ROW_METADATA(MLIVAIN        20240527)         si zcnom_client = *blank
+*ROW_METADATA(MLIVAIN        20240527)            preparer_msg CLI1001 zcnom_client
+*ROW_METADATA(MLIVAIN        20240527)            erreur
+*ROW_METADATA(MLIVAIN        20240527)         fin
+*ROW_METADATA(MLIVAIN        20240527)         
+*ROW_METADATA(MLIVAIN        20240527)         si pcod_action = _CR
+*ROW_METADATA(MLIVAIN        20240527)            si zccod_client = *blank
+*ROW_METADATA(MLIVAIN        20240527)               preparer_msg CLI1001 zccod_client 
+*ROW_METADATA(MLIVAIN        20240527)               erreur
+*ROW_METADATA(MLIVAIN        20240527)            fin
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)               lire_sql client *col(ccod_client) *cond(ccod_client=:zccod_client)
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)            si *sqlcode = *normal
+*ROW_METADATA(MLIVAIN        20240527)               preparer_msg CLI1002 zccod_client
+*ROW_METADATA(MLIVAIN        20240527)               init_msg zccod_client
+*ROW_METADATA(MLIVAIN        20240527)               erreur
+*ROW_METADATA(MLIVAIN        20240527)            fin
+*ROW_METADATA(MLIVAIN        20240527)         fin
+*ROW_METADATA(MLIVAIN        20240527)      FIN_VERIF
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_VALID
+*ROW_METADATA(MLIVAIN                )         DEBUT_SRV ADELIA
+*ROW_METADATA(MLIVAIN        20240527)            rapatrier client
+*ROW_METADATA(MLIVAIN        20240527)            si pcod_action = _MO
+*ROW_METADATA(MLIVAIN        20240527)               maj_sql client cnom_client=:cnom_client, cadr_01_cli = :cadr_01_cli, cadr_02_cli = :cadr_02_cli, -
+*ROW_METADATA(MLIVAIN        20240527)                  cbur_dis_cli = :cbur_dis_cli, CCOD_POS_CLI = :CCOD_POS_CLI, ccod_reglemt = :ccod_reglemt, CMHT_CAF_CLI = :CMHT_CAF_CLI -
+*ROW_METADATA(MLIVAIN        20240527)                  *cond(ccod_client=:zccod_client)
+*ROW_METADATA(MLIVAIN        20240527)            fin
+*ROW_METADATA(MLIVAIN        20240527)            si pcod_action = _CR
+*ROW_METADATA(MLIVAIN        20240527)               creer_sql client
+*ROW_METADATA(MLIVAIN        20240527)            fin
+*ROW_METADATA(MLIVAIN        20240527)            valider_maj
+*ROW_METADATA(MLIVAIN                )         FIN_SRV
+*ROW_METADATA(MLIVAIN        20240527)      FIN_VALID
+*ROW_METADATA(MLIVAIN        20240527)      DEBUT_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240527)      FIN_TRT_GUIDE
+*ROW_METADATA(MLIVAIN        20240527)   FIN_FENETRE
+*ROW_METADATA(MLIVAIN                )FIN_PGM

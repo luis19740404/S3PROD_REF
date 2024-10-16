@@ -1,0 +1,18 @@
+*
+DECLARER PCOACT;PCOD_ACTION 2
+*================================================================
+*
+RECEVOIR PCOD_ACTION $PCOD_PARAM
+*
+INITIALISER 01
+TRAITER     01
+*****************
+TRANSACTION 01
+*****************
+SI *F03
+   PCOD_ACTION  =  'EX'
+FIN
+SI *F12
+   PCOD_ACTION  =  'PR'
+FIN
+TERMINER

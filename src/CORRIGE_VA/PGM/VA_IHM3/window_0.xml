@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window description="Fiche familiale d'état civil" help="" id="0" name="FEN_FICFAM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.hardis.fr/xml window.xsd">
+    <properties>
+        <property id="-4" intValue="449"/>
+        <property id="-3" intValue="576"/>
+        <property id="-2" intValue="92"/>
+        <property id="-1" intValue="94"/>
+        <property id="3" stringValue="Fiche familiale d'état civil"/>
+        <property binaryType="icon" id="10" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABLElEQVR4XpWOAQrDMAwD9/9Pb2TQol4kKz0wWLLl5PPxfKUmTuYndx5oqIXbjFVhoIUnP9UIl1tw8lONcLkFJz9VhYEp1GasY05DJ/OTO0dLbsdpemTb0V/yx/QYZs9SOLvnNHVI7xE0/dv6Q1OH9B5B07+tPzR1SO8RNH3Lcb6JtEh9wZ57rnS+ibRIfcHead7Q2Sa4nPQFe9XqJX8Xol3Yae2drndUMMCwO6Q991zpfBNcHoOm554rnd9w4Er3LpJmtt254TKDxPnMuYpwsYWcz5yrCJeoCX0+NJWFC9SEPh+ZysIFauJ8PuQqwiVqkvyFu1Phg9Qk+Qt3p8IHqUnyF+5OhQ9Sk+Qv3J0KH6QmyV+4OxU+SE2Sv3B3KnyQmiR/4e4c8SbYZvXOD4to9xfxzIcfAAAAAElFTkSuQmCC</property>
+        <property binaryType="icon" id="11" mimeType="image/png">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAaklEQVR4XsWMUQrAMAxCe/9Lb2SQYdSk/aswZn3Gtaoe+JxGjtCVmDH/NEE+Lh0JTJae/3aVs4lL2Pnuk+KJx/f/SI8FzNDbAYRcYl8GUnxcoGHMZRkLfGhHpgHM7HFoNxBCLro/ENoVhL/kCo5yttaytQAAAABJRU5ErkJggg==</property>
+        <property id="12" intValue="1"/>
+        <property id="13" intValue="40"/>
+    </properties>
+    <tabs>
+        <tab text="Demandeur">
+            <controls>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ17">
+                    <properties>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="67"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ18">
+                    <properties>
+                        <property id="-8" stringValue="Prénom(s)"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="90"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ19">
+                    <properties>
+                        <property id="-8" stringValue="Date naissance"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="113"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ20">
+                    <properties>
+                        <property id="-8" stringValue="Lieu naissance"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="136"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_NOM_1">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="64"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ24">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="158"/>
+                        <property id="-2" intValue="87"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ25">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="110"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ26">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="311"/>
+                        <property id="-2" intValue="133"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="ID_OBJ21">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="Adoption simple"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="151"/>
+                        <property id="-2" intValue="159"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="ID_OBJ22">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="Décédé(e)"/>
+                        <property id="-6"/>
+                        <property id="-2" intValue="184"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_SUIV">
+                    <properties>
+                        <property id="-8" stringValue="&amp;&gt;"/>
+                        <property id="-3" intValue="23"/>
+                        <property id="-2" intValue="352"/>
+                        <property id="-1" intValue="538"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ29">
+                    <properties>
+                        <property id="-8" stringValue="Demandeur"/>
+                        <property id="-4" intValue="194"/>
+                        <property id="-3" intValue="525"/>
+                        <property id="-2" intValue="33"/>
+                        <property id="-1" intValue="16"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Conjoint">
+            <controls>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_MARIAGE">
+                    <properties>
+                        <property id="-8" stringValue="Date de mariage"/>
+                        <property id="-3" intValue="95"/>
+                        <property id="-2" intValue="308"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="TXT_LIEU">
+                    <properties>
+                        <property id="-8" stringValue="Lieu de mariage"/>
+                        <property id="-3" intValue="97"/>
+                        <property id="-2" intValue="331"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ27">
+                    <properties>
+                        <property id="-8" stringValue="Nom"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="67"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ28">
+                    <properties>
+                        <property id="-8" stringValue="Prénom(s)"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="90"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ30">
+                    <properties>
+                        <property id="-8" stringValue="Date naissance"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="113"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="TEXTE" dll="TSTATIC" help="" kinematic="0" name="ID_OBJ31">
+                    <properties>
+                        <property id="-8" stringValue="Lieu naissance"/>
+                        <property id="-3" intValue="84"/>
+                        <property id="-2" intValue="136"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_NOM_2">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="64"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ35">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="158"/>
+                        <property id="-2" intValue="87"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ36">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="110"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ37">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="311"/>
+                        <property id="-2" intValue="133"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="ID_OBJ32">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="Adoption simple"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="151"/>
+                        <property id="-2" intValue="159"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="ID_OBJ33">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="Décédé(e)"/>
+                        <property id="-6"/>
+                        <property id="-2" intValue="184"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="LISTE_BTN_RADIO" dll="RADIO" help="" kinematic="0" name="LBR_ETAT">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="-8" stringValue="Etat civil"/>
+                        <property id="-6" stringValue="M"/>
+                        <property id="-4" intValue="45"/>
+                        <property id="-3" intValue="395"/>
+                        <property id="-2" intValue="252"/>
+                        <property id="-1" intValue="36"/>
+                        <property id="3" intValue="1"/>
+                        <property id="8" intValue="4"/>
+                        <property id="9" intValue="4"/>
+                        <property id="14" stringValue="Mariés¤Non marié(s)¤Veuf(ve)¤Divorcé(e)¤"/>
+                        <property id="15" stringValue="M¤C¤V¤D¤"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_DATE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="306"/>
+                        <property id="-1" intValue="161"/>
+                        <property id="5" intValue="1"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_LIEU">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="328"/>
+                        <property id="-1" intValue="160"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_SUIV0">
+                    <properties>
+                        <property id="-8" stringValue="&amp;&gt;"/>
+                        <property id="-3" intValue="23"/>
+                        <property id="-2" intValue="352"/>
+                        <property id="-1" intValue="538"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ38">
+                    <properties>
+                        <property id="-8" stringValue="Conjoint"/>
+                        <property id="-4" intValue="194"/>
+                        <property id="-3" intValue="515"/>
+                        <property id="-2" intValue="33"/>
+                        <property id="-1" intValue="16"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ56">
+                    <properties>
+                        <property id="-8" stringValue="Situation des parents"/>
+                        <property id="-4" intValue="120"/>
+                        <property id="-3" intValue="517"/>
+                        <property id="-2" intValue="238"/>
+                        <property id="-1" intValue="16"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Enfants">
+            <controls>
+                <control associatedVariable="" className="LISTE" dll="CONTAINR" help="" kinematic="0" name="LST_ENFANT">
+                    <properties>
+                        <property id="-4" intValue="253"/>
+                        <property id="-3" intValue="540"/>
+                        <property id="-2" intValue="44"/>
+                        <property id="-1" intValue="15"/>
+                        <property id="6" stringValue="ID_OBJ47 -6 2 15 -1 # ID_OBJ48 -6 2 1 -1 # ID_OBJ49 -6 2 15 -1 # ID_OBJ50 -6 2 15 -1"/>
+                    </properties>
+                    <menu>
+                        <item key1="0" key2="-20" name="MNU_SUPPR" state="4112" text="&amp;Supprimer    Suppr" type="1"/>
+                    </menu>
+                    <controls>
+                        <control associatedVariable="A" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="ID_OBJ47">
+                            <properties>
+                                <property id="-13" intValue="2"/>
+                                <property id="-9" stringValue="2 15 -1"/>
+                                <property id="-8" stringValue="Nom et prénom(s)"/>
+                                <property id="-3" intValue="315"/>
+                                <property id="6"/>
+                            </properties>
+                        </control>
+                        <control associatedVariable="B" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="ID_OBJ48">
+                            <properties>
+                                <property id="-13" intValue="2"/>
+                                <property id="-12" intValue="5"/>
+                                <property id="-9" stringValue="2 1 -1"/>
+                                <property id="-8" stringValue="Sexe"/>
+                                <property id="6"/>
+                            </properties>
+                        </control>
+                        <control associatedVariable="C" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="ID_OBJ49">
+                            <properties>
+                                <property id="-13" intValue="2"/>
+                                <property id="-9" stringValue="2 15 -1"/>
+                                <property id="-8" stringValue="Date"/>
+                                <property id="6"/>
+                            </properties>
+                        </control>
+                        <control associatedVariable="D" className="COLONNE" dll="COLONNE" help="" kinematic="0" name="ID_OBJ50">
+                            <properties>
+                                <property id="-13" intValue="2"/>
+                                <property id="-9" stringValue="2 15 -1"/>
+                                <property id="-8" stringValue="Lieu"/>
+                                <property id="6"/>
+                            </properties>
+                        </control>
+                    </controls>
+                </control>
+                <control associatedVariable="A" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_NOM_3">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="263"/>
+                        <property id="-2" intValue="305"/>
+                        <property id="-1" intValue="14"/>
+                    </properties>
+                </control>
+                <control associatedVariable="B" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ57">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-12" intValue="5"/>
+                        <property id="-9" stringValue="2 1 -1"/>
+                        <property id="-3" intValue="17"/>
+                        <property id="-2" intValue="306"/>
+                        <property id="-1" intValue="288"/>
+                    </properties>
+                </control>
+                <control associatedVariable="C" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ53">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="305"/>
+                        <property id="-1" intValue="314"/>
+                    </properties>
+                </control>
+                <control associatedVariable="D" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="ID_OBJ54">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-3" intValue="144"/>
+                        <property id="-2" intValue="305"/>
+                        <property id="-1" intValue="414"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_SUIV1">
+                    <properties>
+                        <property id="-8" stringValue="&amp;&gt;"/>
+                        <property id="-3" intValue="23"/>
+                        <property id="-2" intValue="352"/>
+                        <property id="-1" intValue="538"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+        <tab text="Conformité">
+            <controls>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_ACTE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="A la copie intégrale ou à l'extrait de l'acte :"/>
+                        <property id="-3" intValue="221"/>
+                        <property id="-2" intValue="77"/>
+                        <property id="-1" intValue="47"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_NAISSANCE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="de naissance n°"/>
+                        <property id="-3" intValue="108"/>
+                        <property id="-2" intValue="103"/>
+                        <property id="-1" intValue="88"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_MARIAGE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="de mariage n°"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="108"/>
+                        <property id="-2" intValue="129"/>
+                        <property id="-1" intValue="88"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_FAMILLE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="Au livret de famille"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="112"/>
+                        <property id="-2" intValue="219"/>
+                        <property id="-1" intValue="46"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_FAM1">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="d'époux"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="221"/>
+                        <property id="-2" intValue="245"/>
+                        <property id="-1" intValue="88"/>
+                        <property id="5"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_FAM2">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="commun de parents naturels"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="221"/>
+                        <property id="-2" intValue="271"/>
+                        <property id="-1" intValue="88"/>
+                        <property id="5"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="BOITE_A_COCHER" dll="CHECKBOX" help="" kinematic="0" name="CAC_FAM3">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="7 -1 -1"/>
+                        <property id="-8" stringValue="de mère ou de père naturel"/>
+                        <property id="-6"/>
+                        <property id="-3" intValue="221"/>
+                        <property id="-2" intValue="297"/>
+                        <property id="-1" intValue="88"/>
+                        <property id="5"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ69">
+                    <properties>
+                        <property id="-8" stringValue="Conformité"/>
+                        <property id="-4" intValue="329"/>
+                        <property id="-3" intValue="515"/>
+                        <property id="-2" intValue="33"/>
+                        <property id="-1" intValue="16"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_NAISSANCE">
+                    <properties>
+                        <property id="-13" intValue="2"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="101"/>
+                        <property id="-1" intValue="232"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CHAMP_DE_SAISIE" dll="ENTFIELD" help="" kinematic="0" name="CHS_MARIAGE">
+                    <properties>
+                        <property id="-13" intValue="1"/>
+                        <property id="-9" stringValue="2 15 -1"/>
+                        <property id="-2" intValue="127"/>
+                        <property id="-1" intValue="232"/>
+                        <property id="2"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ72">
+                    <properties>
+                        <property id="-8" stringValue="                                    "/>
+                        <property id="-4" intValue="91"/>
+                        <property id="-3" intValue="410"/>
+                        <property id="-2" intValue="77"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+                <control associatedVariable="" className="CADRE" dll="GROUPBOX" help="" kinematic="0" name="ID_OBJ73">
+                    <properties>
+                        <property id="-8" stringValue="                          "/>
+                        <property id="-4" intValue="106"/>
+                        <property id="-3" intValue="410"/>
+                        <property id="-2" intValue="220"/>
+                        <property id="-1" intValue="36"/>
+                    </properties>
+                </control>
+            </controls>
+        </tab>
+    </tabs>
+    <controls>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_OK">
+            <properties>
+                <property id="-8" stringValue="&amp;OK"/>
+                <property id="-2" intValue="393"/>
+                <property id="-1" intValue="224"/>
+                <property id="5"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_PRINT">
+            <properties>
+                <property id="-8" stringValue="Im&amp;primer"/>
+                <property id="-2" intValue="393"/>
+                <property id="-1" intValue="309"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_ANNULER">
+            <properties>
+                <property id="-8" stringValue="A&amp;nnuler"/>
+                <property id="-2" intValue="393"/>
+                <property id="-1" intValue="394"/>
+            </properties>
+        </control>
+        <control associatedVariable="" className="BOUTON" dll="BOUTON" help="" kinematic="0" name="BTN_AIDE">
+            <properties>
+                <property id="-8" stringValue="&amp;Aide"/>
+                <property id="-7" intValue="1"/>
+                <property id="-2" intValue="393"/>
+                <property id="-1" intValue="479"/>
+            </properties>
+        </control>
+    </controls>
+</window>

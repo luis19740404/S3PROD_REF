@@ -1,0 +1,11 @@
+{
+  "type" : "RGG",
+  "name" : "CTR_EXIST_FAM",
+  "description" : "Contrôle existence famille",
+  "creationDate" : "1996-06-24 15:43:29",
+  "updateDate" : "1996-07-18 17:14:01",
+  "visibility" : "PUBLIC",
+  "mrClass" : "CT",
+  "formal" : true,
+  "types" : [ "ADELIA" ]
+}
