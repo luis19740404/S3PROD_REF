@@ -15,7 +15,7 @@
 *ROW_METADATA(MLIVAIN        20240528)      num_bin_4 pCodeRetourBin
 *ROW_METADATA(ADELIA         20241015)      alpha(500) buffer
 *ROW_METADATA(ADELIA         20241015)      
-*ROW_METADATA(ADELIA         20241015)      
+*ROW_METADATA(ADELIA         20241016)      * ligne ajoutée 6      
 *ROW_METADATA(MLIVAIN        20240527)   FIN_DECL
 *ROW_METADATA(MLIVAIN        20240527)   DEBUT_INIT
 *ROW_METADATA(MLIVAIN        20240527)      initialiser fen_lstcli
@@ -70,7 +70,7 @@
 *ROW_METADATA(MLIVAIN                )               FIN_SRV
 *ROW_METADATA(MLIVAIN        20240527)                     presenter client
 *ROW_METADATA(MLIVAIN        20240527)                     modifier_elt lst_client:liste *deselect
-*ROW_METADATA(MLIVAIN        20240527)                  fin   
+*ROW_METADATA(MLIVAIN        20240527)                  fin
 *ROW_METADATA(MLIVAIN        20240527)               fin_lecture_lst
 *ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
 *ROW_METADATA(MLIVAIN        20240527)            DEBUT_EVT LST_CLIENT:MNU_AJOUTER
@@ -86,7 +86,7 @@
 *ROW_METADATA(MLIVAIN        20240527)                  appeler mlv002 pcod_retour _VI zccod_client
 *ROW_METADATA(MLIVAIN        20240527)                  si pcod_retour = 'AN'
 *ROW_METADATA(MLIVAIN        20240527)                     quitter_boucle
-*ROW_METADATA(MLIVAIN        20240527)                  fin   
+*ROW_METADATA(MLIVAIN        20240527)                  fin
 *ROW_METADATA(MLIVAIN        20240527)               fin_lecture_lst
 *ROW_METADATA(MLIVAIN        20240527)            FIN_EVT
 *ROW_METADATA(MLIVAIN        20240528)            DEBUT_EVT LST_CLIENT:MNU_EXPORT
